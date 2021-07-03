@@ -967,6 +967,34 @@ CREATE TABLE `iast_replay_queue`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
+DROP TABLE IF EXISTS `iast_agent_method_pool_replay`;
+CREATE TABLE `iast_agent_method_pool_replay`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `agent_id` int(11) NULL DEFAULT NULL COMMENT 'Agent',
+  `url` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'URL',
+  `uri` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'URI',
+  `http_method` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'HTTP请求方法',
+  `http_scheme` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '协议',
+  `http_protocol` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'HTTP协议',
+  `req_header` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '请求头',
+  `req_params` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '请求参数',
+  `req_data` varchar(4000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '请求体',
+  `res_header` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '响应头',
+  `res_body` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '响应体',
+  `context_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '应用上下文',
+  `language` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '语言',
+  `method_pool` json NULL COMMENT '方法池',
+  `clent_ip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '客户端IP',
+  `create_time` int(11) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` int(11) NULL DEFAULT NULL COMMENT '修改时间',
+  `replay_id` int(11) NULL DEFAULT NULL COMMENT '重放ID',
+  `replay_type` int(11) NULL DEFAULT NULL COMMENT '重放请求类型',
+  `relation_id` int(11) NULL DEFAULT NULL COMMENT '原始请求关联ID',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `agent_id`(`agent_id`) USING BTREE,
+  INDEX `replay_id`(`replay_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
 BEGIN;
 -- 创建默认用户
 INSERT INTO `auth_user`(`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `phone`) VALUES (1, 'pbkdf2_sha256$180000$tpUFyXYrIGXh$PIqkgklZerTwKsDe5s9P+6USI/Z2Yq+5J6oXx4kbiKI=', '2021-03-23 18:32:44.117558', 1, 'admin', 'admin', 'admin', 'admin@huoxian.cn', 1, 1, '2020-01-01 00:00:00.000000', 1);
