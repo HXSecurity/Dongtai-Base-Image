@@ -35,7 +35,7 @@ jobs:
         with:
           context: ./mysql
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:5.7,"
+          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:0.1.0,"
       
       - name: Build and push Redis
         uses: docker/build-push-action@v2
