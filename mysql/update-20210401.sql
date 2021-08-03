@@ -49,11 +49,6 @@ INSERT INTO `iast_strategy`(`user_id`, `vul_type`, `level_id`, `state`, `dt`, `v
 INSERT INTO `iast_strategy`(`user_id`, `vul_type`, `level_id`, `state`, `dt`, `vul_name`, `vul_desc`, `vul_fix`) VALUES (1, 'xxe', 2, 'enable', 1, 'XXE', 'XML 指可扩展标记语言（eXtensible Markup Language），是一种用于标记电子文件使其具有结构性的标记语言，被设计用来传输和存储数据。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。目前，XML文件作为配置文件（Spring、Struts2等）、文档结构说明文件（PDF、RSS等）、图片格式文件（SVG header）应用比较广泛。 XML 的语法规范由 DTD （Document Type Definition）来进行控制。\n\nXML外部实体注入（XML External Entity Injection）漏洞是指当恶意用户在提交一个精心构造的包含外部实体引用的XML文档给未正确配置的XML解析器处理时，该攻击就会发生。', NULL);
 INSERT INTO `iast_strategy`(`user_id`, `vul_type`, `level_id`, `state`, `dt`, `vul_name`, `vul_desc`, `vul_fix`) VALUES (1, 'unsafe-json-deserialize', 1, 'enable', 1, '不安全的JSON反序列化', '不安全的JSON反序列化是指WEB应用程序对用户提交的反序列化数据未进行有效过滤，导致反序列化过程中产生命令执行、文件读取等漏洞', NULL);
 
-INSERT INTO `iast_vul_level`(`name`, `name_value`, `name_type`) VALUES ('high', '高危', '高危漏洞');
-INSERT INTO `iast_vul_level`(`name`, `name_value`, `name_type`) VALUES ('medium', '中危', '中危漏洞');
-INSERT INTO `iast_vul_level`(`name`, `name_value`, `name_type`) VALUES ('low', '低危', '低危漏洞');
-INSERT INTO `iast_vul_level`(`name`, `name_value`, `name_type`) VALUES ('info', '提示', '提示信息');
-
 -- 创建默认用户
 INSERT INTO `auth_user`(`password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `phone`) VALUES ('pbkdf2_sha256$180000$tpUFyXYrIGXh$PIqkgklZerTwKsDe5s9P+6USI/Z2Yq+5J6oXx4kbiKI=', '2021-03-23 18:32:44.117558', 2, 'admin', 'admin', 'admin', 'admin@huoxian.cn', 1, 1, '2020-01-01 00:00:00.000000', 1);
 
