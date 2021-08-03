@@ -67,4 +67,5 @@ INSERT INTO `iast_document` VALUES (6, 'DongTai探针参数配置', 'https://hxs
 INSERT INTO `iast_document` VALUES (7, '讨论区(Q&A)', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/qa', 97, 'PYTHON');
 INSERT INTO `iast_document` VALUES (8, 'Python Agent快速部署', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/tutorial/quickstart?id=python%e7%89%88%e6%9c%ac%e5%bf', 99, 'PYTHON');
 INSERT INTO `iast_document` VALUES (9, 'Python Agent Release Note', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/changes/PythonAgent', 100, 'PYTHON');
+INSERT INTO `iast_profile`(`key`, `value`) VALUES ('enable_update', 'TRUE');
 COMMIT;
