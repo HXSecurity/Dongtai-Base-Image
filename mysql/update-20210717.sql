@@ -1,3 +1,4 @@
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
 ALTER TABLE `iast_agent` ADD COLUMN `language` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'JAVA' COMMENT '语言，JAVA、PYTHON' AFTER `is_core_running`;

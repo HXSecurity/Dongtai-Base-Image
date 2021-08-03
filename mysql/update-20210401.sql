@@ -1,3 +1,4 @@
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
 INSERT INTO `django_celery_beat_intervalschedule`(`id`, `every`, `period`) VALUES (1, 10, 'seconds');
