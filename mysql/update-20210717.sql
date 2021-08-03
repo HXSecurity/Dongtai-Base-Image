@@ -21,7 +21,7 @@ ALTER TABLE `iast_heartbeat` DROP COLUMN `env`;
 
 ALTER TABLE `iast_hook_type` MODIFY COLUMN `enable` tinyint(1) NULL DEFAULT NULL COMMENT '状态：1-启用；0-禁用' AFTER `created_by`;
 
-ALTER TABLE `iast_server` ADD COLUMN `network` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '网络情况' AFTER `update_time`;
+ALTER TABLE `iast_server` ADD COLUMN `network` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '网络情况' AFTER `update_time`;
 
 ALTER TABLE `iast_server` ADD COLUMN `pid` int(11) NULL DEFAULT NULL COMMENT '进程ID ' AFTER `network`;
 
