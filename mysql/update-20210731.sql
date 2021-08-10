@@ -1,4 +1,4 @@
-
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
 ALTER TABLE `iast_agent_method_pool` ADD COLUMN `req_header_for_search` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '用于搜索功能的请求头，请求方法、uri、参数、协议、请求头的拼接' AFTER `pool_sign`;
@@ -33,15 +33,23 @@ INSERT INTO `iast_deploy` VALUES (9, '**SpringBoot**\n\n1. 下载`agent.jar`，�
 INSERT INTO `iast_deploy` VALUES (10, '修改待检测的Django项目中的settings.py, 在configure middleware位置，增加一条\r\n```bash\r\n	MIDDLEWARE = [ \r\n		\'dongtai_agent_python.middlewares.django_middleware.FireMiddleware\',\r\n		#...\r\n	]\r\n```\r\n', 'Django', 'python');
 COMMIT;
 
+-- ----------------------------
+-- Table structure for iast_document
+-- ----------------------------
+DROP TABLE IF EXISTS `iast_document`;
 CREATE TABLE `iast_document`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `url` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `url` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `weight` int(11) NOT NULL DEFAULT 0,
   `language` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
+-- ----------------------------
+-- Table structure for iast_profile
+-- ----------------------------
+DROP TABLE IF EXISTS `iast_profile`;
 CREATE TABLE `iast_profile`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `key` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -50,6 +58,10 @@ CREATE TABLE `iast_profile`  (
   UNIQUE INDEX `iast_profile_UN`(`key`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
+-- ----------------------------
+-- Table structure for iast_program_language
+-- ----------------------------
+DROP TABLE IF EXISTS `iast_program_language`;
 CREATE TABLE `iast_program_language`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -65,7 +77,7 @@ INSERT INTO `iast_document` VALUES (3, '讨论区(Q&A)', 'https://hxsecurity.git
 INSERT INTO `iast_document` VALUES (4, 'DongTai探针参数配置', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/tutorial/args', 98, 'JAVA');
 INSERT INTO `iast_document` VALUES (6, 'DongTai探针参数配置', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/tutorial/args', 98, 'PYTHON');
 INSERT INTO `iast_document` VALUES (7, '讨论区(Q&A)', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/qa', 97, 'PYTHON');
-INSERT INTO `iast_document` VALUES (8, 'Python Agent快速部署', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/tutorial/quickstart?id=python%e7%89%88%e6%9c%ac%e5%bf', 99, 'PYTHON');
+INSERT INTO `iast_document` VALUES (8, 'Python Agent快速部署', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/tutorial/quickstart?id=python%e7%89%88%e6%9c%ac%e5%bf%ab%e9%80%9f%e4%bd%93%e9%aa%8c', 99, 'PYTHON');
 INSERT INTO `iast_document` VALUES (9, 'Python Agent Release Note', 'https://hxsecurity.github.io/DongTai-Doc/#/doc/changes/PythonAgent', 100, 'PYTHON');
 INSERT INTO `iast_profile`(`key`, `value`) VALUES ('enable_update', 'TRUE');
 COMMIT;
