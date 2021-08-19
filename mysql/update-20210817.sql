@@ -79,7 +79,6 @@ SET FOREIGN_KEY_CHECKS=1;
 
 BEGIN;
 
-ALTER TABLE dongtai_webapi.iast_document MODIFY COLUMN url varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL;
 UPDATE iast_strategy SET vul_desc_zh = vul_desc WHERE  1=1;
 UPDATE iast_strategy SET vul_fix_zh = vul_fix WHERE  1=1; 
 UPDATE iast_strategy SET vul_name_zh = vul_name WHERE  1=1 ;
