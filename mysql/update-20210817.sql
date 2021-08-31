@@ -76,25 +76,3 @@ ALTER TABLE `iast_document` ADD COLUMN `url_zh` varchar(2000) NULL;
 
 
 SET FOREIGN_KEY_CHECKS=1;
-
-BEGIN;
-
-UPDATE iast_strategy SET vul_desc_zh = vul_desc WHERE  1=1;
-UPDATE iast_strategy SET vul_fix_zh = vul_fix WHERE  1=1; 
-UPDATE iast_strategy SET vul_name_zh = vul_name WHERE  1=1 ;
-UPDATE iast_vul_level SET name_value_zh = name_value WHERE  1=1 ;
-UPDATE iast_vul_level SET name_type_zh = name_type WHERE  1=1 ;
-UPDATE iast_deploy SET desc_zh = `desc` WHERE  1=1 ;
-UPDATE iast_hook_type SET name_zh = name WHERE  1=1 ;
-UPDATE iast_document SET title_zh = title WHERE  1=1 ;
-UPDATE iast_document SET url_zh = url WHERE  1=1 ;
-UPDATE iast_strategy SET vul_desc_en = vul_desc WHERE  1=1;
-UPDATE iast_strategy SET vul_fix_en = vul_fix WHERE  1=1; 
-UPDATE iast_strategy SET vul_name_en = vul_name WHERE  1=1 ;
-UPDATE iast_vul_level SET name_value_en = name_value WHERE  1=1 ;
-UPDATE iast_vul_level SET name_type_en = name_type WHERE  1=1 ;
-UPDATE iast_deploy SET desc_en = `desc` WHERE  1=1 ;
-UPDATE iast_hook_type SET name_en = name WHERE  1=1 ;
-UPDATE iast_document SET title_en = title WHERE  1=1 ;
-UPDATE iast_document SET url_en = url WHERE  1=1 ;
-COMMIT;
