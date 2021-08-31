@@ -37,7 +37,7 @@ CREATE INDEX `iast_agent__uri_sha_aac6d7_idx` ON `iast_agent_method_pool` (`uri_
 -- Alter unique_together for iastapiroute (1 constraint(s))
 --
 -- ALTER TABLE `iast_api_route` ADD CONSTRAINT `iast_api_route_path_method_id_7fbc2841_uniq` UNIQUE (`path`, `method_id`);
-ALTER TABLE iast_webapi_pre.iast_api_route ADD CONSTRAINT iast_api_route_method_agent_path_uniq UNIQUE KEY (method_id,agent_id,`path`);
+ALTER TABLE iast_api_route ADD CONSTRAINT iast_api_route_method_agent_path_uniq UNIQUE KEY (method_id,agent_id,`path`);
 --
 -- Alter unique_together for iastapiresponse (1 constraint(s))
 --
@@ -59,24 +59,23 @@ CREATE INDEX `iast_api_parameter_route_id_5eac0d6c` ON `iast_api_parameter` (`ro
 CREATE INDEX `iast_http_method_relation_api_method_id_10ea754d` ON `iast_http_method_relation` (`api_method_id`);
 CREATE INDEX `iast_http_method_relation_http_method_id_d25a1696` ON `iast_http_method_relation` (`http_method_id`);
 UPDATE iast_agent_method_pool SET uri_sha1 = SHA1(uri) WHERE 1=1;
-ALTER TABLE iast_webapi_pre.iast_api_route ADD CONSTRAINT iast_api_route_iast_api_route_path_method_agent_uniq UNIQUE KEY (method_id,agent_id,`path`);
-ALTER TABLE iast_webapi_pre.iast_api_route ADD CONSTRAINT iast_api_route_method_agent_path_uniq UNIQUE KEY (method_id,agent_id,`path`);
-ALTER TABLE iast_webapi_pre.iast_project_version ADD CONSTRAINT iast_project_version_UN UNIQUE KEY (version_name,project_id);
-ALTER TABLE iast_webapi_pre.iast_heartbeat ADD report_queue INT(3) UNSIGNED DEFAULT 0 NOT NULL COMMENT '报告队列';
-ALTER TABLE iast_webapi_pre.iast_heartbeat ADD method_queue INT(3) UNSIGNED DEFAULT 0 NOT NULL COMMENT '方法池队列';
-ALTER TABLE iast_webapi_pre.iast_heartbeat ADD replay_queue INT(3) UNSIGNED DEFAULT 0 NOT NULL COMMENT '重放队列';
+ALTER TABLE iast_api_route ADD CONSTRAINT iast_api_route_iast_api_route_path_method_agent_uniq UNIQUE KEY (method_id,agent_id,`path`);
+ALTER TABLE iast_project_version ADD CONSTRAINT iast_project_version_UN UNIQUE KEY (version_name,project_id);
+ALTER TABLE iast_heartbeat ADD report_queue INT(3) UNSIGNED DEFAULT 0 NOT NULL COMMENT '报告队列';
+ALTER TABLE iast_heartbeat ADD method_queue INT(3) UNSIGNED DEFAULT 0 NOT NULL COMMENT '方法池队列';
+ALTER TABLE iast_heartbeat ADD replay_queue INT(3) UNSIGNED DEFAULT 0 NOT NULL COMMENT '重放队列';
 CREATE TABLE `engine_monitoring_indicators` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `key` varchar(100) NOT NULL UNIQUE, `name` varchar(100) NOT NULL, `name_en` varchar(100) NULL, `name_zh` varchar(100) NULL);
 ALTER TABLE iast_vulnerability ADD hook_type_id INT UNSIGNED DEFAULT 0 NOT NULL COMMENT '漏洞类型id';
 
 
 
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id ,iht2.id as iht2_id FROM  iast_vulnerability iv,iast_hook_type iht2 
-WHERE iv.`type`  = iht2.name) as tmp
+WHERE iv.`type`  = iht2.name COLLATE utf8mb4_general_ci ) as tmp
 SET hook_type_id  = tmp.iht2_id
 WHERE v.id = tmp.iv_id ;
 
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id ,iht2.id as iht2_id FROM  iast_vulnerability iv,iast_hook_type iht2 
-WHERE iv.`type`  = iht2.name_en) as tmp
+WHERE iv.`type`  = iht2.name_en COLLATE utf8mb4_general_ci ) as tmp
 SET hook_type_id  = tmp.iht2_id
 WHERE v.id = tmp.iv_id and v.hook_type_id = 0;
 
@@ -90,7 +89,7 @@ CREATE TABLE iast_vulnerability_status (
 	name varchar(100) DEFAULT '' NOT NULL,
 	name_zh varchar(100) NULL,
 	name_en varchar(100) NULL
-)
+);
 INSERT INTO iast_vulnerability_status
 (name, name_zh, name_en)
 VALUES('待验证', '待验证', 'Pending');
@@ -108,14 +107,14 @@ INSERT INTO iast_vulnerability_status
 VALUES('已处理', '已处理', 'Solved');
 
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id, ivs.id as ivs_id FROM  iast_vulnerability iv , iast_vulnerability_status ivs
-WHERE iv.status  = ivs.name) as tmp
+WHERE iv.status  = ivs.name COLLATE utf8mb4_general_ci ) as tmp
 SET status_id = tmp.ivs_id
 WHERE v.id = tmp.iv_id ;
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id, ivs.id as ivs_id FROM  iast_vulnerability iv , iast_vulnerability_status ivs
-WHERE iv.status  = ivs.name_en) as tmp
+WHERE iv.status  = ivs.name_en COLLATE utf8mb4_general_ci ) as tmp
 SET status_id = tmp.ivs_id
 WHERE v.id = tmp.iv_id AND  status_id = 0;
-CREATE INDEX iast_vulnerability_uri_IDX USING BTREE ON dongtai_webapi_.iast_vulnerability (uri,agent_id);
+CREATE INDEX iast_vulnerability_uri_IDX USING BTREE ON iast_vulnerability (uri,agent_id);
 
 
 SET FOREIGN_KEY_CHECKS=1;
