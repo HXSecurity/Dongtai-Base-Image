@@ -5,7 +5,7 @@ on:
     branches: [ "release-*" ]
 
 jobs:
-  build:
+  Release-DongTai-Infra-Service:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
