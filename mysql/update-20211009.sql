@@ -242,27 +242,27 @@ MIDDLEWARE = [
 '
 WHERE id=10;
 ALTER TABLE iast_hook_type ADD language_id INTEGER DEFAULT 0 NOT NULL;
-CREATE INDEX iast_hook_type_language_id_IDX USING BTREE ON iast_webapi.iast_hook_type (language_id);
+CREATE INDEX iast_hook_type_language_id_IDX USING BTREE ON iast_hook_type (language_id);
 UPDATE iast_hook_type SET language_id = 1 WHERE 1 = 1;
-ALTER TABLE iast_webapi_pre.iast_vulnerability_status 
+ALTER TABLE  iast_vulnerability_status 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_http_method_relation 
+ALTER TABLE  iast_http_method_relation 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_program_language 
+ALTER TABLE  iast_program_language 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_replay_queue 
+ALTER TABLE  iast_replay_queue 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_api_route 
+ALTER TABLE  iast_api_route 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_api_response 
+ALTER TABLE  iast_api_response 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_api_parameter 
+ALTER TABLE  iast_api_parameter 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.iast_api_methods 
+ALTER TABLE  iast_api_methods 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.engine_monitoring_indicators 
+ALTER TABLE  engine_monitoring_indicators 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_webapi_pre.auth_user ADD default_language varchar(20) NULL;
+ALTER TABLE  auth_user ADD default_language varchar(20) NULL;
 UPDATE iast_vul_level
 SET name='high', name_value='高危', name_type='高危漏洞', name_type_en='HIGH', name_type_zh='高危漏洞', name_value_en='HIGH', name_value_zh='高危'
 WHERE id=1;
