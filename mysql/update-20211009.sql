@@ -263,17 +263,5 @@ DEFAULT CHARSET=utf8mb4;
 ALTER TABLE  engine_monitoring_indicators 
 DEFAULT CHARSET=utf8mb4;
 ALTER TABLE  auth_user ADD default_language varchar(20) NULL;
-UPDATE iast_vul_level
-SET name='high', name_value='高危', name_type='高危漏洞', name_type_en='HIGH', name_type_zh='高危漏洞', name_value_en='HIGH', name_value_zh='高危'
-WHERE id=1;
-UPDATE iast_vul_level
-SET name='medium', name_value='中危', name_type='中危漏洞', name_type_en='MEDIUM', name_type_zh='中危漏洞', name_value_en='MEDIUM', name_value_zh='中危'
-WHERE id=2;
-UPDATE iast_vul_level
-SET name='low', name_value='低危', name_type='低危漏洞', name_type_en='LOW', name_type_zh='低危漏洞', name_value_en='LOW', name_value_zh='低危'
-WHERE id=3;
-UPDATE iast_vul_level
-SET name='info', name_value='无风险', name_type='提示信息', name_type_en='INFO', name_type_zh='提示信息', name_value_en='INFO', name_value_zh='无风险'
-WHERE id=4;
 
 SET FOREIGN_KEY_CHECKS=1;
