@@ -263,5 +263,11 @@ DEFAULT CHARSET=utf8mb4;
 ALTER TABLE  engine_monitoring_indicators 
 DEFAULT CHARSET=utf8mb4;
 ALTER TABLE  auth_user ADD default_language varchar(20) NULL;
+INSERT INTO iast_program_language
+(id, name)
+VALUES(1, 'Java');
+INSERT INTO iast_program_language
+(id, name)
+VALUES(2, 'Python');
 
 SET FOREIGN_KEY_CHECKS=1;
