@@ -29,6 +29,13 @@ ALTER TABLE iast_api_route MODIFY COLUMN controller varchar(100) CHARACTER SET u
 ALTER TABLE iast_agent ADD startup_time int(11) DEFAULT 0 NOT NULL COMMENT '启动时间';
 ALTER TABLE iast_agent ADD alias varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NOT NULL COMMENT 'agent别名';
 ALTER TABLE iast_agent ADD register_time int(11) DEFAULT 0 NOT NULL COMMENT '注册时间';
+INSERT IGNORE INTO `iast_vul_level` (`name`, `name_value`, `name_type`, `name_type_en`, `name_type_zh`, `name_value_en`, `name_value_zh`)
+SELECT  'note', '提示', '提示信息', 'NOTE', '提示信息', 'NOTE', '提示' FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_vul_level WHERE 
+`name`='note' AND `name_value`='提示' AND `name_type`='提示信息' AND `name_type_en`='NOTE' AND `name_type_zh`='提示信息' AND `name_value_en`='NOTE' AND `name_value_zh`='提示' LIMIT 1);
+SET @VUL_LEVEL_ID = (SELECT `id` FROM iast_vul_level WHERE 
+`name`='note' AND `name_value`='提示' AND `name_type`='提示信息' AND `name_type_en`='NOTE' AND `name_type_zh`='提示信息' AND `name_value_en`='NOTE' AND `name_value_zh`='提示' LIMIT 1);
+
+
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
@@ -50,7 +57,7 @@ INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
 	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
 	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
 	, `vul_name_en`)
-VALUES ( 1,  'Response Without Content-Security-Policy Header',  4,  'enable'
+VALUES ( 1,  'Response Without Content-Security-Policy Header',  @VUL_LEVEL_ID ,  'enable'
 	,  1,  'Response Without Content-Security-Policy Header',  'Verifies that the requests sent by the application have the Content-Security-Policy or Content-Security-Policy-Read-Only header set.        ',  NULL, @HOOK_TYPE_ID
 	,  'Verifies that the requests sent by the application have the Content-Security-Policy or Content-Security-Policy-Read-Only header set.        ',  'Response Without Content-Security-Policy Header',  NULL,  NULL,  '缺少 Content-Security-Policy 响应头'
 	,  'Response Without Content-Security-Policy Header'
@@ -76,7 +83,7 @@ INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
 	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
 	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
 	, `vul_name_en`)
-VALUES ( 1,  'Response With X-XSS-Protection Disabled',  4,  'enable'
+VALUES ( 1,  'Response With X-XSS-Protection Disabled',  @VUL_LEVEL_ID,  'enable'
 	,  1,  'Response With X-XSS-Protection Disabled',  'Response With X-XSS-Protection Disabled',  NULL, @HOOK_TYPE_ID
 	,  'Verifies that the requests sent by the application have the X-XSS-Protection header left default (secure) or set correctly.        ',  'Response With X-XSS-Protection Disabled',  NULL,  NULL,  'Response With X-XSS-Protection Disabled'
 	,  'Response With X-XSS-Protection Disabled'
@@ -102,7 +109,7 @@ INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
 	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
 	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
 	, `vul_name_en`)
-VALUES ( 1,  'Response With Insecurely Configured Strict-Transport-Security Header        ',  4,  'enable'
+VALUES ( 1,  'Response With Insecurely Configured Strict-Transport-Security Header        ',  @VUL_LEVEL_ID ,  'enable'
 	,  1,  'Response With Insecurely Configured Strict-Transport-Security Header        ',  'Verifies that the requests sent by the application have the Strict Transport Security header set correctly.        ',  NULL, @HOOK_TYPE_ID
 	,  'Verifies that the requests sent by the application have the Strict Transport Security header set correctly.        ',  'Verifies that the requests sent by the application have the Strict Transport Security header set correctly.        ',  NULL,  NULL,  'Response With Insecurely Configured Strict-Transport-Security Header        '
 	,  'Response With Insecurely Configured Strict-Transport-Security Header'
@@ -128,7 +135,7 @@ INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
 	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
 	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
 	, `vul_name_en`)
-VALUES ( 1,  'Pages Without Anti-Clickjacking Controls',  4,  'enable'
+VALUES ( 1,  'Pages Without Anti-Clickjacking Controls',  @VUL_LEVEL_ID ,  'enable'
 	,  1,  'Pages Without Anti-Clickjacking Controls',  'Verifies that frame-breaking controls are used on every page.        ',  NULL, @HOOK_TYPE_ID
 	,  'Verifies that frame-breaking controls are used on every page.        ',  'Verifies that frame-breaking controls are used on every page.        ',  NULL,  NULL,  'Pages Without Anti-Clickjacking Controls'
 	,  'Pages Without Anti-Clickjacking Controls'
@@ -154,7 +161,7 @@ INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
 	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
 	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
 	, `vul_name_en`)
-VALUES ( 1,  'Response Without X-Content-Type-Options Header',  4,  'enable'
+VALUES ( 1,  'Response Without X-Content-Type-Options Header',  @VUL_LEVEL_ID ,  'enable'
 	,  1,  'Response Without X-Content-Type-Options Header',  'Verifies that the requests sent by the application have the X-Content-Type-Options header set correctly.',  '', @HOOK_TYPE_ID
 	,  'Verifies that the requests sent by the application have the X-Content-Type-Options header set correctly.',  'Verifies that the requests sent by the application have the X-Content-Type-Options header set correctly.',  NULL,  NULL,  'Response Without X-Content-Type-Options Header'
 	,  'Response Without X-Content-Type-Options Header');
