@@ -228,6 +228,1109 @@ ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255) CHARACTER SET u
 ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN code_file varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN controller varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'path-traversal',  'path-traversal',  1634110525
+	,  1634110525,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.open',  'P1',  'R',  'false',  'false',  1634110525,  1634110525,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.open' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.open' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'path-traversal',  'path-traversal',  1634110525
+	,  1634110525,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'typing.BinaryIO.readline',  'P1',  'R',  'false',  'false',  1634110525,  1634110525,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'typing.BinaryIO.readline' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'typing.BinaryIO.readline' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'sqlite3.Cursor.execute',  'P1',  'R',  'false',  'false',  1634110525,  1634110525,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'sqlite3.Cursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'sqlite3.Cursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'sqlite3.Cursor.executemany',  'P1',  'R',  'false',  'false',  1634110525,  1634110525,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'sqlite3.Cursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'sqlite3.Cursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110525 AND `update_time`=  1634110525 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'sqlite3.Cursor.executescript',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'sqlite3.Cursor.executescript' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'sqlite3.Cursor.executescript' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'psycopg2._psycopg.cursor.execute',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'psycopg2._psycopg.cursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'psycopg2._psycopg.cursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'psycopg2._psycopg.cursor.executemany',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'psycopg2._psycopg.cursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'psycopg2._psycopg.cursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'mysql.connector.cursor.CursorBase.execute',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'mysql.connector.cursor.CursorBase.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'mysql.connector.cursor.CursorBase.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'mysql.connector.cursor.CursorBase.executemany',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'mysql.connector.cursor.CursorBase.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'mysql.connector.cursor.CursorBase.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'MySQLdb.cursors.BaseCursor.execute',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'MySQLdb.cursors.BaseCursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'MySQLdb.cursors.BaseCursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'MySQLdb.cursors.BaseCursor.executemany',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'MySQLdb.cursors.BaseCursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'MySQLdb.cursors.BaseCursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'pymysql.cursors.Cursor.execute',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'pymysql.cursors.Cursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'pymysql.cursors.Cursor.execute' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'pymysql.cursors.Cursor.executemany',  'P1',  'R',  'false',  'false',  1634110526,  1634110526,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'pymysql.cursors.Cursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'pymysql.cursors.Cursor.executemany' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110526 AND `update_time`=  1634110526 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-code',  'exec-code',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-code'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.eval',  'P1',  'R',  'false',  'false',  1634110527,  1634110527,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.eval' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.eval' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-code',  'exec-code',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-code'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'yaml.unsafe_load',  'P1',  'R',  'false',  'false',  1634110527,  1634110527,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'yaml.unsafe_load' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'yaml.unsafe_load' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-code',  'exec-code',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-code'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'yaml.load',  'P1',  'R',  'false',  'false',  1634110527,  1634110527,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'yaml.load' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'yaml.load' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-command',  'exec-command',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-command'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'os.system',  'P1',  'R',  'false',  'false',  1634110527,  1634110527,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'os.system' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'os.system' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-command',  'exec-command',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-command'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'os.popen',  'P1',  'R',  'false',  'false',  1634110527,  1634110527,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'os.popen' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'os.popen' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-command',  'exec-command',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-command'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'subprocess.Popen',  'P1',  'R',  'false',  'false',  1634110527,  1634110527,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'subprocess.Popen' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'subprocess.Popen' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110527 AND `update_time`=  1634110527 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'django.utils.datastructures.MultiValueDict.get',  'P1',  'R',  'false',  'false',  1634110528,  1634110528,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'django.utils.datastructures.MultiValueDict.get' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'django.utils.datastructures.MultiValueDict.get' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'django.utils.datastructures.MultiValueDict.__getitem__',  'P1',  'R',  'false',  'false',  1634110528,  1634110528,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'django.utils.datastructures.MultiValueDict.__getitem__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'django.utils.datastructures.MultiValueDict.__getitem__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.__format__',  'P1',  'R',  'false',  'false',  1634110528,  1634110528,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.__format__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.__format__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.list.__new__',  'P1',  'R',  'false',  'false',  1634110528,  1634110528,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.__new__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.__new__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.format',  'P1',  'R',  'false',  'false',  1634110528,  1634110528,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.format' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.format' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.join',  'P1',  'R',  'false',  'false',  1634110528,  1634110528,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.join' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.join' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110528 AND `update_time`=  1634110528 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.lower',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.lower' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.lower' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.ljust',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.ljust' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.ljust' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.rjust',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.rjust' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.rjust' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+	,  1634110528,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.index',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.index' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.index' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.split',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.split' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.split' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.rjust',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.rjust' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.rjust' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.str.translate',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.translate' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.str.translate' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.list.append',  'P1',  'R',  'false',  'false',  1634110529,  1634110529,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.append' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.append' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110529 AND `update_time`=  1634110529 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.list.insert',  'P1',  'R',  'false',  'false',  1634110530,  1634110530,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.insert' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.insert' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'builtins.list.__add__',  'P1',  'R',  'false',  'false',  1634110530,  1634110530,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.__add__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'builtins.list.__add__' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'json.loads',  'P1',  'R',  'false',  'false',  1634110530,  1634110530,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'json.loads' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'json.loads' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'json.dumps',  'P1',  'R',  'false',  'false',  1634110530,  1634110530,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'json.dumps' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'json.dumps' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'path-traversal',  'path-traversal',  1634110529
+	,  1634110529,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'os.path.join',  'P1',  'R',  'false',  'false',  1634110530,  1634110530,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'os.path.join' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'os.path.join' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1634110530 AND `update_time`=  1634110530 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
 
 SET FOREIGN_KEY_CHECKS=1;
