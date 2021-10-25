@@ -17,6 +17,10 @@ CREATE TABLE `iast_message_type` (
   `name` varchar(100) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 );
+INSERT INTO iast_profile
+(`key`, value)
+VALUES('cpu_limit', '90');
+
 ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
