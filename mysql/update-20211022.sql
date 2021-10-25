@@ -19,7 +19,7 @@ CREATE TABLE `iast_message_type` (
 );
 INSERT INTO iast_profile
 (`key`, value)
-VALUES('cpu_limit', '90');
+VALUES('cpu_limit', '60');
 
 ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
