@@ -1332,6 +1332,159 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'path-traversal',  'path-traversal',  1634110525
+	,  1634110525,  1,  1,  NULL,  'path-traversal'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'path-traversal'
+AND  value =  'path-traversal' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
+	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
+	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
+	, `vul_name_en`)
+VALUES ( 1,  'path-traversal',  1,  'enable'
+	,  1,  '路径穿越',  'CWE-23，该软件使用外部输入来构建路径名，该路径名应位于受限目录内，但不能正确中和诸如“ ..”之类的序列，这些序列可以解析到该目录之外的位置。',  NULL, @HOOK_TYPE_ID
+	,  'Verifies that file paths containing untrusted data are not accessed.	',  'CWE-23，该软件使用外部输入来构建路径名，该路径名应位于受限目录内，但不能正确中和诸如“ ..”之类的序列，这些序列可以解析到该目录之外的位置。',  NULL,  NULL,  '路径穿越'
+	,  'Path Traversal'
+);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'sql-injection',  'sql-injection',  1634110525
+	,  1634110525,  1,  1,  NULL,  'sql-injection'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'sql-injection'
+AND  value =  'sql-injection' AND
+update_time= 1634110525 AND create_time= 1634110525 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'sql-injection' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
+	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
+	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
+	, `vul_name_en`)
+VALUES ( 1,  'sql-injection',  1,  'enable'
+	,  1,  'SQL注入',  '软件使用来自上游组件的外部影响的输入来构造全部或部分SQL命令，但不会中和或不正确地中和了特殊元素，这些特殊元素在将其发送到下游组件时可能会修改预期的SQL命令。',  NULL, @HOOK_TYPE_ID
+	,  'Verifies that no untrusted data is used in dynamic database queries.	',  '软件使用来自上游组件的外部影响的输入来构造全部或部分SQL命令，但不会中和或不正确地中和了特殊元素，这些特殊元素在将其发送到下游组件时可能会修改预期的SQL命令。',  NULL,  NULL,  'SQL注入'
+	,  'SQL Injection'
+);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-code',  'exec-code',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-code'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-code'
+AND  value =  'exec-code' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
+	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
+	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
+	, `vul_name_en`)
+VALUES ( 1,  'code-execution',  1,  'enable'
+	,  1,  '代码执行',  '代码执行漏洞是指应用程序对传入命令的参数过滤不严导致恶意攻击值能控制最终执行的命令，进而入侵系统，造成严重破坏的高危漏洞。',  NULL, @HOOK_TYPE_ID
+	,  'Using this vulnerability, an attacker can execute arbitrary code.',  '代码执行漏洞是指应用程序对传入命令的参数过滤不严导致恶意攻击值能控制最终执行的命令，进而入侵系统，造成严重破坏的高危漏洞。',  NULL,  NULL,  '代码执行'
+	,  'Code-execution');
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'exec-command',  'exec-command',  1634110527
+	,  1634110527,  1,  1,  NULL,  'exec-command'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'exec-command'
+AND  value =  'exec-command' AND
+update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'exec-command' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO `iast_strategy` (`user_id`, `vul_type`, `level_id`, `state`
+	, `dt`, `vul_name`, `vul_desc`, `vul_fix`, `hook_type_id`
+	, `vul_desc_en`, `vul_desc_zh`, `vul_fix_en`, `vul_fix_zh`, `vul_name_zh`
+	, `vul_name_en`)
+VALUES ( 1,  'cmd-injection',  1,  'enable'
+	,  1,  '命令执行',  '命令执行漏洞是指由于Web应用程序对用户提交的数据过滤不严格，导致黑客可以通过构造特殊命令字符串的方式，将数据提交至Web应用程序中，并利用该方式执行外部程序或系统命令实施攻击，非法获取数据或者网络资源等。',  NULL, @HOOK_TYPE_ID
+	,  'Verifies that no untrusted data is used in commands sent to the operating system.	',  '命令执行漏洞是指由于Web应用程序对用户提交的数据过滤不严格，导致黑客可以通过构造特殊命令字符串的方式，将数据提交至Web应用程序中，并利用该方式执行外部程序或系统命令实施攻击，非法获取数据或者网络资源等。',  NULL,  NULL,  '命令执行'
+	,  'OS Command Injection'
+);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'general-rules',  'general-rules',  1634110528
+	,  1634110528,  1,  1,  NULL,  'general-rules'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'general-rules'
+AND  value =  'general-rules' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'general-rules'
+AND  value =  'general-rules' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'general-rules',  'general-rules',  1634110528
+	,  1634110528,  1,  1,  NULL,  'general-rules'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'general-rules'
+AND  value =  'general-rules' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'general-rules'
+AND  value =  'general-rules' AND
+update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+
+
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'general-rules',  'general-rules',  1634110529
+	,  1634110529,  1,  1,  NULL,  'general-rules'
+	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'general-rules'
+AND  value =  'general-rules' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'general-rules'
+AND  value =  'general-rules' AND
+update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+
 
 
 SET FOREIGN_KEY_CHECKS=1;
