@@ -782,7 +782,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  1,  'path-traversal',  'path-traversal',  1634110528
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 2 AND `name`=  'path-traversal'
@@ -811,7 +811,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  1,  'path-traversal',  'path-traversal',  1634110528
+SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 2 AND `name`=  'path-traversal'
@@ -840,7 +840,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -869,7 +869,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -898,7 +898,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -927,7 +927,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -956,7 +956,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -985,7 +985,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -1014,7 +1014,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
@@ -1043,7 +1043,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
-SELECT  2,  'path-traversal',  'path-traversal',  1634110528
+SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'path-traversal'
