@@ -20,7 +20,10 @@ CREATE TABLE `iast_message_type` (
 INSERT INTO iast_profile
 (`key`, value)
 VALUES('cpu_limit', '60');
-
+ALTER TABLE dongtai_webapi.iast_profile 
+DEFAULT CHARSET=utf8mb4;
+ALTER TABLE dongtai_webapi.iast_profile MODIFY COLUMN `key` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+ALTER TABLE dongtai_webapi.iast_profile MODIFY COLUMN value varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
 ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
