@@ -41,10 +41,9 @@ jobs:
           access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
           
-      - name: Push helm chart to repo
+      - name: Push sql to OSS
         run: |
-          ossutil cp -rf mysql/db.sql  oss://huoqi-public/iast/
-          ossutil cp -rf mysql/update-*.sql oss://huoqi-public/iast/
+          ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/
 
       - name: Build and push MySql
         uses: docker/build-push-action@v2
