@@ -34,6 +34,17 @@ jobs:
           VERSION=`echo ${GITHUB_REF##*/} | awk -F'-' '{print $2}'`
           echo "::set-output name=version::$VERSION"
 
+      - name: Setup ossutil
+        uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
+          access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
+          
+      - name: Push sql to OSS
+        run: |
+          ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/
+
       - name: Build and push MySql
         uses: docker/build-push-action@v2
         with:
