@@ -785,12 +785,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'path-traversal'
+`type`= 2 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'path-traversal'
+`type`= 2 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -814,12 +814,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  1,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'path-traversal'
+`type`= 2 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'path-traversal'
+`type`= 2 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -843,12 +843,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -872,12 +872,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -901,12 +901,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -930,12 +930,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -959,12 +959,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -988,12 +988,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -1017,12 +1017,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -1046,12 +1046,12 @@ INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 SELECT  2,  'path-traversal',  'path-traversal',  1634110528
 	,  1634110528,  1,  1,  NULL,  'path-traversal'
 	,  2 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'path-traversal'
+`type`= 1 AND `name`=  'path-traversal'
 AND  value =  'path-traversal' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
 AND enable =  1 AND name_en is NULL AND name_zh =  'path-traversal' AND language_id =  2 LIMIT 1);
@@ -1331,6 +1331,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+
 
 
 SET FOREIGN_KEY_CHECKS=1;
