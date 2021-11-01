@@ -43,7 +43,7 @@ jobs:
           
       - name: Push sql to OSS
         run: |
-          ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/
+          ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
       - name: Build and push MySql
         uses: docker/build-push-action@v2
