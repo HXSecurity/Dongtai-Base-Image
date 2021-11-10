@@ -26,6 +26,7 @@ INSERT IGNORE INTO iast_program_language (name) SELECT 'PHP' FROM DUAL WHERE NOT
 
 INSERT IGNORE INTO `django_celery_beat_periodictask`(`name`, `task`, `args`, `kwargs`, `queue`, `exchange`, `routing_key`, `expires`, `enabled`, `last_run_at`, `total_run_count`, `date_changed`, `description`, `crontab_id`, `interval_id`, `solar_id`, `one_off`, `start_time`, `priority`, `headers`, `clocked_id`, `expire_seconds`) VALUES ('engine.export_report', 'core.tasks.export_report', '[]', '{}', NULL, NULL, NULL, NULL, 1, '2021-11-03 06:15:43.686509', 22, '2021-11-03 06:15:48.701943', '', NULL, 1, NULL, 0, NULL, NULL, '{}', NULL, NULL);
 
+INSERT IGNORE INTO iast_message_type (id, name) SELECT 1, 'report' FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_program_language WHERE `id` = 1 AND `name` = 'report');
 ALTER TABLE iast_agent ADD is_audit int(11) DEFAULT 0 NOT NULL COMMENT '0:未审核；1：已审核';
 
 INSERT INTO iast_document (title, url, weight, `language`, title_en, title_zh, url_en, url_zh) VALUES('PHP Agent快速部署', 'https://doc2.dongtai.io/zh/02_start/03_agent.html#php-agent', 99, 'PHP', 'PHP Agent QuickStart', 'PHP Agent快速部署', 'https://doc2.dongtai.io/en/02_start/03_agent.html#php-agent', 'https://doc2.dongtai.io/zh/02_start/03_agent.html#php-agent');
