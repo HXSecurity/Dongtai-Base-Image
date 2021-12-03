@@ -142,12 +142,12 @@ SELECT  4,  'exec-code',  'exec-code',  1634110527
 `type`= 4 AND `name`=  'exec-code'
 AND  value =  'exec-code' AND
 update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS  NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 4 AND `name`=  'exec-code'
 AND  value =  'exec-code' AND
 update_time= 1634110527 AND create_time= 1634110527 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS  NULL AND name_zh =  'exec-code' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -161,7 +161,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 `value`= 'builtins.exec' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638328448 AND `update_time`=  1638328448 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
-INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
         , `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
         , `language_id`)
@@ -171,12 +171,12 @@ SELECT  1,  'general-rules',  'general-rules',  1634110528
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS  NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS  NULL AND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -190,7 +190,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 `value`= 'builtins.str.encode' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1638533369 AND `update_time`=  1638533369 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
-INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
 
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
@@ -221,7 +221,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 `value`= 'org.springframework.web.multipart.MultipartFile.getOriginalFilename()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532625 AND `update_time`=  1638532625 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
-INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
         , `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
         , `language_id`)
@@ -250,7 +250,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 `value`= 'org.springframework.web.multipart.MultipartFile.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532661 AND `update_time`=  1638532661 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
-INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
         , `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
         , `language_id`)
@@ -279,7 +279,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 `value`= 'org.apache.commons.fileupload.FileItem.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532689 AND `update_time`=  1638532689 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
-INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
 
 INSERT
