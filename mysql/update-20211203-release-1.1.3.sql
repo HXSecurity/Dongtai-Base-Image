@@ -1,3 +1,7 @@
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS=0;
+
+
 ALTER TABLE iast_project ADD vul_validation int(11) DEFAULT 0 NOT NULL COMMENT '漏洞验证 0-跟随全局,1-启用,2-禁用';
 ALTER TABLE iast_hook_type ADD CONSTRAINT iast_hook_type_UN UNIQUE KEY (id,`type`,name,value,language_id);
 ALTER TABLE iast_sensitive_info_rule MODIFY COLUMN pattern varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NOT NULL;
@@ -350,3 +354,6 @@ VALUES(
 1,
 '\\D?(1[3-9]\\d{9})\\D?',
 1);
+
+
+SET FOREIGN_KEY_CHECKS=1;
