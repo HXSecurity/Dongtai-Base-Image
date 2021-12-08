@@ -152,6 +152,7 @@ ALTER TABLE `iast_agent_method_pool` ADD INDEX `update_time`(`update_time`) USIN
 -- Table structure for iast_deploy
 -- ----------------------------
 
+DROP TABLE IF EXISTS `iast_deploy`;
 CREATE TABLE IF NOT EXISTS `iast_deploy` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
   `desc` mediumtext COMMENT '安装描述',
