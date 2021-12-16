@@ -40,14 +40,18 @@ jobs:
         with:
           context: ./mysql
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }},"
+          tags: | 
+            dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
+            dongtai/dongtai-mysql:latest
       
       - name: Build and push Redis
         uses: docker/build-push-action@v2
         with:
           context: ./redis
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:${{ steps.release.outputs.version }},"
+          tags: | 
+            dongtai/dongtai-redis:${{ steps.release.outputs.version }}
+            dongtai/dongtai-redis:latest
 
       - name: finish build
         uses: joelwmale/webhook-action@master
