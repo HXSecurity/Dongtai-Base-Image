@@ -1838,7 +1838,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
 CREATE INDEX sca_maven_artifact_signature_IDX USING BTREE ON sca_maven_artifact (signature);
-ALTER TABLE iast_project ADD CONSTRAINT iast_project_PK PRIMARY KEY (name,user_id);
+ALTER TABLE iast_project ADD CONSTRAINT iast_project_UN UNIQUE KEY (name,user_id);
 
 
 SET FOREIGN_KEY_CHECKS=1;
