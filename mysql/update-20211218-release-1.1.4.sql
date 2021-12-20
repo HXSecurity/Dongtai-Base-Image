@@ -1837,7 +1837,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、尽量不要执行外部的应用程序或命令。
 
 2、使用自定义函数或函数库实现外部应用程序或命令的功能。
@@ -1858,7 +1858,7 @@ vul_fix_zh='1、尽量不要执行外部的应用程序或命令。
 5、使用safe_mode_exec_dir执行可执行的文件路径。将php.ini文件中的safe_mode设置为On，然后将允许执行的文件放入一个目录中，并使用safe_mode_exec_dir指定这个可执行的文件路径。这样，在需要执行相应的外部程序时，程序必须在safe_mode_exec_dir指定的目录中才会允许执行，否则执行将失败。'
 WHERE vul_name='命令执行';
 
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、输入数据验证 　　
 
 应用程序用到的所有输入数据，包括非用户直接提供的数据和应用程序内部使用的数据，都必须进行无害化处理，删掉所有可能被恶意使用的字符。在利用数据进行任何操作之前，必须进行合法性检验。如前所述，在执行一个新的IMAP/SMTP命令时，要求前面的命令必须用CRLF结束。为了确保无法注入额外的命令，您可以在将其传递给邮件服务器之前删除输入数据中的这类字符。 　　
@@ -1882,7 +1882,7 @@ vul_fix_zh='1、输入数据验证 　　
 
 如果我们已经用其它的保护系统部署了一个应用程序防火墙，那么可以添加一条规则，来过滤有邮件服务器注射缺陷的参数，从而防止这些命令被注入到邮件服务器中。比如，可以将ModSecurity用作应用程序防火墙。根据前面介绍的SquirrelMail示例，可以添加如下规则： 　　`SecFilterselective "ARG_mailbox" "rn" `　　这会过滤掉参数"mailbox"中注入的序列。'
 WHERE vul_name='SMTP注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、过滤返回信息，验证远程服务器对请求的响应是比较容易的方法。如果web应用是去获取某一种类型的文件。那么在把返回结果展示给用户之前先验证返回的信息是否符合标准。统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态。
 
 2、限制请求的端口为http常用的端口，比如，80,443,8080,8090。
@@ -1899,7 +1899,7 @@ vul_fix_zh='1、过滤返回信息，验证远程服务器对请求的响应是�
 4、禁用不需要的协议。仅仅允许http和https请求。可以防止类似于file:///,gopher://,ftp:// 等引起的问题。'
 WHERE vul_name='服务器端请求伪造';
 
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='若可以尽量不使用XMLDecoder反序列化XML内容；
 
 若使用则尽量确保参数不可由外界输入，尽量以白名单的方式限定XML文档名且结合严格的过滤机制。', 
@@ -1908,7 +1908,7 @@ vul_fix_zh='若可以尽量不使用XMLDecoder反序列化XML内容；
 若使用则尽量确保参数不可由外界输入，尽量以白名单的方式限定XML文档名且结合严格的过滤机制。'
 WHERE vul_name='不安全的XML Decode';
 
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='防范SQL注入，标准方案为输入验证与参数化查询相结合。
 
 输入验证分为白名单和黑名单两种方式，通常在系统中是结合到一起来完成输入验证，具体实现通过正则表达式来完成。需要注意以下几方面：
@@ -2096,7 +2096,7 @@ update ZX_PTASKDETAIL set BATCHJNLNOSTATE = ''4'' where JNLNO = #jnlNo#
 (5)需要使用like语句的地方可以使用''%''||#param#||''%''或concat(concat(''%'',#param#),''%'')避免注入。示例如下
 select * from ZX_PCIF where name like ''%''||#name#||''%'''
 WHERE vul_name='SQL注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、使用正面验证。字母数字过滤（A..Z,a..z,0..9）适合大部分 LDAP 查询。
 
 2、 应该过滤出或进行转义的特殊 LDAP 字符：
@@ -2124,7 +2124,7 @@ vul_fix_zh='1、使用正面验证。字母数字过滤（A..Z,a..z,0..9）适�
 [8] ;（分号）
 [9] ()（括号）'
 WHERE vul_name='LDAP注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、数据提交到服务器上端，在服务端正式处理这批数据之前，对提交数据的合法性进行验证。
 
 2、检查提交的数据是否包含特殊字符，对特殊字符进行编码转换或替换、删除敏感字符或字符串，如过滤[] ‘ “ and or 等全部过滤，像单双引号这类，可以对这类特殊字符进行编码转换或替换
@@ -2158,7 +2158,7 @@ vul_fix_zh='1、数据提交到服务器上端，在服务端正式处理这批�
 5、验证是否包含特定的 XPath 函数，可以过滤掉一些 XPath 函数，以提高安全性，当然了不能以牺牲用户体验或影响用户正常使用为前提。
 总结下就是：限制提交非法字符，对输入内容严格检查过滤，参数化XPath查询的变量'
 WHERE vul_name='XPATH注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='防止文件路径遍历漏洞的最有效方法是避免将用户提供的输入完全传递给文件系统API。
 
 如果认为不可避免的是将用户提供的输入传递给文件系统API，则应同时使用两层防御，以防止受到攻击：
@@ -2190,7 +2190,7 @@ if (file.getCanonicalPath().startsWith(BASE_DIRECTORY)) {
 }
 ```'
 WHERE vul_name='路径穿越';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、使用目前被业界专家认为较强的经过良好审核的加密PRNG算法，初始化随机数生成器时使用具有足够长度且不固定的种子。
 
 2、在安全性要求较高的应用中，应使用更安全的随机数生成器，如java.security.SecureRandom类。', 
@@ -2198,15 +2198,15 @@ vul_fix_zh='1、使用目前被业界专家认为较强的经过良好审核的�
 
 2、在安全性要求较高的应用中，应使用更安全的随机数生成器，如java.security.SecureRandom类。'
 WHERE vul_name='弱随机数算法';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='库或框架当需要存储或传输敏感数据时，请使用强大的最新加密算法来加密该数据。选择目前被该领域专家认为强大的经过充分审查的算法，并使用经过充分测试的实现。与所有加密机制一样，源代码应该可供分析。', 
 vul_fix_zh='库或框架当需要存储或传输敏感数据时，请使用强大的最新加密算法来加密该数据。选择目前被该领域专家认为强大的经过充分审查的算法，并使用经过充分测试的实现。与所有加密机制一样，源代码应该可供分析。'
 WHERE vul_name='弱哈希算法';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='DES等加密算法和 MD5、SHA1及RIPEMD160等哈希算法被视为弱加密算法。与更现代的加密算法相比，加密算法 DES 提供的安全位数更少。推荐使用更强大的加密方式，对于 DES 加密，请使用 Aes、SM4、SM7等加密。对于 SHA1 或 RIPEMD160 哈希函数，请使用SHA-2系列（例如SHA512、SHA384、SHA256），或SM3。', 
 vul_fix_zh='DES等加密算法和 MD5、SHA1及RIPEMD160等哈希算法被视为弱加密算法。与更现代的加密算法相比，加密算法 DES 提供的安全位数更少。推荐使用更强大的加密方式，对于 DES 加密，请使用 Aes、SM4、SM7等加密。对于 SHA1 或 RIPEMD160 哈希函数，请使用SHA-2系列（例如SHA512、SHA384、SHA256），或SM3。'
 WHERE vul_name='弱加密算法';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='为cookie设置Secure属性
 代码如下：
 ```java
@@ -2237,11 +2237,11 @@ cookie.setMaxAge(maxAge);
 response.addCookie(cookie);
 }
 ```';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='在开发阶段，增加验证逻辑，让数据安全地穿过信任边界，即从不受信任的一边移到受信任的一边。', 
 vul_fix_zh='在开发阶段，增加验证逻辑，让数据安全地穿过信任边界，即从不受信任的一边移到受信任的一边。'
 WHERE vul_name='信任边界';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='为cookie设置Secure属性
 代码如下：
 ```java
@@ -2273,7 +2273,7 @@ response.addCookie(cookie);
 }
 ```'
 WHERE vul_name='反射型xss';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、在设置HTTP响应头的代码中，过滤回车、换行（%0d，%0a，%0D，%0A)等字符，避免输入的数据污染到其他HTTP头。
 
 2、对参数做合法性校验以及长度限制。
@@ -2285,7 +2285,7 @@ vul_fix_zh='1、在设置HTTP响应头的代码中，过滤回车、换行（%0d
 
 3、不对用户的输入直接输出；'
 WHERE vul_name='Header头注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、创建 SQL 数据库的用户帐户时遵循最小权限原则。用户应仅具有使用其帐户所需的最低权限。如果系统要求表明用户可以读取和修改自己的数据，则限制其权限，使其无法读取/写入他人的数据。
 
 2、对于在客户端执行的任何安全检查，请确保在服务器端重复这些检查，以避免CWE-602。攻击者可以通过在执行检查后修改值来绕过客户端检查，或者通过更改客户端以完全删除客户端检查。然后，这些修改后的值将提交给服务器。
@@ -2297,7 +2297,7 @@ vul_fix_zh='1、创建 SQL 数据库的用户帐户时遵循最小权限原则�
 
 3、使用绑定变量的预准备语句实现 SQL 字符串。未绑定变量的准备好的语句可能容易受到攻击。'
 WHERE vul_name='HQL注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='建议使用`org.apache.commons.io.input.BoundedInputStream`先对流进行大小限制，再使用`readLine`方法来规避安全风险
 
 ```java
@@ -2317,7 +2317,7 @@ BufferedReader br=new BufferedReader(reader);
 String line =br.readLine();
 ```'
 WHERE vul_name='不安全的readline';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、尽量避免使用外部输入的内容作为EL表达式内容
 
 2、通过参数白名单或者黑名单控制参数的合法性
@@ -2345,11 +2345,11 @@ javax.el.ValueExpression.getValue()
 
 Spring官方推出了SimpleEvaluationContext作为安全类来防御该类漏洞，SimpleEvaluationContext旨在仅支持SpEL语言语法的一个子集。它不包括 Java类型引用，构造函数和bean引用，指定正确EvaluationContext，是防止SpEl表达式注入漏洞产生的首选。'
 WHERE vul_name='表达式注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='不要将不可信赖的数据用作正则表达式', 
 vul_fix_zh='不要将不可信赖的数据用作正则表达式'
 WHERE vul_name='正则DOS';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、重构代码以避免使用反射;
 
 2、尽量避免使用用户控制的输入来选择和加载类或代码。', 
@@ -2357,7 +2357,7 @@ vul_fix_zh='1、重构代码以避免使用反射;
 
 2、尽量避免使用用户控制的输入来选择和加载类或代码。'
 WHERE vul_name='反射注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='为了避免 NoSQL 注入，必须始终将用户输入视为不受信任，可以执行以下操作：
 使用 sanitization library 。例如，mongo-sanitize 或 mongoose。
 
@@ -2379,7 +2379,7 @@ vul_fix_zh='为了避免 NoSQL 注入，必须始终将用户输入视为不受�
 
 此外，请始终使用最小特权模型：以尽可能低的特权运行您的应用程序，以便即使被利用，攻击者也无法访问其他资源'
 WHERE vul_name='NoSql注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、若跳转的URL事先是可以确定的，包括url和参数的值，则可以在后台先配置好，url参数只需传对应url的索引即可，通过索引找到对应具体url再进行跳转；
 
 2、若跳转的URL事先不确定，但其输入是由后台生成的（不是用户通过参数传人），则可以先生成好跳转链接然后进行签名，而跳转cg首先需要进行验证签名通过才能进行跳转；
@@ -2421,7 +2421,7 @@ return (/^(https?://)?[w-.]+.(yourDomainA|yourDomainB|yourDomainC).com($|/|)/i).
 
 7、如果为struts2重定向漏洞，则需要更新相关的struts2的版本到最新。'
 WHERE vul_name='不安全的重定向';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、尽量避免使用转发机制，如果使用了，那么在定义目标URL的时候不要包含用户参数。
 
 2、如果一定要保护用户输入的参数，那么：
@@ -2433,7 +2433,7 @@ vul_fix_zh='1、尽量避免使用转发机制，如果使用了，那么在定�
 
 对每个参数都必须进行验证以确保它的合法性和正确性，或是在服务端提供映射机制，将用户的选择参数转变为真正的白名单目标页面'
 WHERE vul_name='不安全的转发';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、围绕JNI调用实现错误处理，如果使用不受信任的本机库，尽量不使用JNI调用，可调用功能相近的Java API
 
 2、出现JNI漏洞说明服务器可能存在代码执行漏洞，请检查漏洞的位置并限制执行代码的功能。', 
@@ -2441,7 +2441,7 @@ vul_fix_zh='1、围绕JNI调用实现错误处理，如果使用不受信任的�
 
 2、出现JNI漏洞说明服务器可能存在代码执行漏洞，请检查漏洞的位置并限制执行代码的功能。'
 WHERE vul_name='JNI注入';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、使用语言中推荐的禁用外部实体的方法
 
 PHP：
@@ -2485,7 +2485,7 @@ xmlData = etree.parse(xmlSource,etree.XMLParser(resolve_entities=False))
 2、手动黑名单过滤(不推荐)
 过滤关键词：'
 WHERE vul_name='XXE';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='将用户提供的数据写入 JSON 时，应该遵守以下准则：
 
 1、不要创建名称来自用户输入的 JSON 属性。
@@ -2497,7 +2497,7 @@ vul_fix_zh='将用户提供的数据写入 JSON 时，应该遵守以下准则�
 
 2、确保使用安全的序列化函数（能够以单引号或双引号分隔不可信赖的数据，并且避免任何特殊字符）执行对 JSON 的所有序列化操作。'
 WHERE vul_name='不安全的JSON反序列化';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='为cookie设置Secure属性
 代码如下：
 ```java
@@ -2529,7 +2529,7 @@ response.addCookie(cookie);
 }
 ```'
 WHERE vul_name='Response Without Content-Security-Policy Header';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='启用 X-XSS-Protection 并将值设置为 1。
 PHP
 ```
@@ -2559,7 +2559,7 @@ nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```'
 WHERE vul_name='Response With X-XSS-Protection Disabled';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、修改服务端程序，给HTTP响应头加上Strict-Transport-Security 
 如果是java 服务端，可以使用如下方式添加HTTP响应头
 ```Java
@@ -2633,7 +2633,7 @@ add_header Strict-Transport-Security value；
 Header add Strict-Transport-Security"value"。
 ```'
 WHERE vul_name='Response With Insecurely Configured Strict-Transport-Security Header';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、使用Firefox的Noscript的ClearClick功能
 
 2、阻挡iframe的执行（NoScript）或停用Javascript
@@ -2649,7 +2649,7 @@ vul_fix_zh='1、使用Firefox的Noscript的ClearClick功能
 
 <script>if（top！=self）top.location=location</script>'
 WHERE vul_name='Pages Without Anti-Clickjacking Controls';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='1、PHP配置设置
 在Headers.php文件中添加"X-Content-Type-Options:nosniff"
 通过设置""X-Content-Type-Options: nosniff""响应标头，对 script 和 styleSheet 在执行是通过MIME 类型来过滤掉不安全的文件,如果通过 styleSheet 参考检索到的响应中接收到 ""nosniff"" 指令，则 Windows Internet Explorer 不会加载“stylesheet”文件，除非 MIME 类型匹配 ""text/css""。
@@ -2679,10 +2679,11 @@ add_header X-Content-Type-Options ""nosniff"";
 }
 ```'
 WHERE vul_name='Response Without X-Content-Type-Options Header';
-UPDATE iast_strategy
+UPDATE IGNORE iast_strategy
 SET vul_fix='在任何时候都应尽可能的避免动态代码的解析，如果需要执行动态代码，应用程序不能直接执行和解析未验证的用户输入。', 
 vul_fix_zh='在任何时候都应尽可能的避免动态代码的解析，如果需要执行动态代码，应用程序不能直接执行和解析未验证的用户输入。'
 WHERE vul_name='代码执行';
+
 
 
 
