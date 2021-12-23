@@ -2207,37 +2207,6 @@ SET vul_fix='DES等加密算法和 MD5、SHA1及RIPEMD160等哈希算法被视�
 vul_fix_zh='DES等加密算法和 MD5、SHA1及RIPEMD160等哈希算法被视为弱加密算法。与更现代的加密算法相比，加密算法 DES 提供的安全位数更少。推荐使用更强大的加密方式，对于 DES 加密，请使用 Aes、SM4、SM7等加密。对于 SHA1 或 RIPEMD160 哈希函数，请使用SHA-2系列（例如SHA512、SHA384、SHA256），或SM3。'
 WHERE vul_name='弱加密算法';
 UPDATE IGNORE iast_strategy
-SET vul_fix='为cookie设置Secure属性
-代码如下：
-```java
-private void writeCookie(HttpServletResponse response, String name, String value, String domain, String path, int maxAge,boolean isSecure) {
-Cookie cookie = new Cookie(name, value);
-cookie.setVersion(0);
-cookie.setPath(path);
-cookie.setSecure(isSecure);
-if (domain != null) {
-cookie.setDomain(domain);
-}
-cookie.setMaxAge(maxAge);
-response.addCookie(cookie);
-}
-```', 
-vul_fix_zh='为cookie设置Secure属性
-代码如下：
-```java
-private void writeCookie(HttpServletResponse response, String name, String value, String domain, String path, int maxAge,boolean isSecure) {
-Cookie cookie = new Cookie(name, value);
-cookie.setVersion(0);
-cookie.setPath(path);
-cookie.setSecure(isSecure);
-if (domain != null) {
-cookie.setDomain(domain);
-}
-cookie.setMaxAge(maxAge);
-response.addCookie(cookie);
-}
-```';
-UPDATE IGNORE iast_strategy
 SET vul_fix='在开发阶段，增加验证逻辑，让数据安全地穿过信任边界，即从不受信任的一边移到受信任的一边。', 
 vul_fix_zh='在开发阶段，增加验证逻辑，让数据安全地穿过信任边界，即从不受信任的一边移到受信任的一边。'
 WHERE vul_name='信任边界';
