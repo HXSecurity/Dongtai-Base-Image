@@ -1,0 +1,23 @@
+name: sqlcheck workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [main]
+  schedule:
+    - cron: '0 15 * * 5'
+    
+jobs:
+  sqlcheck:
+    name: sqlcheck job
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: yokawasa/action-sqlcheck@v1.3.0
+      with:
+        post-comment: true
+        risk-level: 1
+        verbose: true
+        token: ${{ secrets.GITHUB_TOKEN }}
