@@ -54,8 +54,8 @@ jobs:
           context: ./mysql
           push: true
           tags: | 
-            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}
-            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-saas-prod:latest
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:latest
       
       - name: Build and push Redis
         uses: docker/build-push-action@v2
@@ -63,8 +63,8 @@ jobs:
           context: ./redis
           push: true
           tags: | 
-            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis-saas-prod:${{ steps.release.outputs.version }}
-            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis-saas-prod:latest
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }}
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:latest
 
       - name: finish build
         uses: joelwmale/webhook-action@master
