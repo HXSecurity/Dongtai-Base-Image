@@ -1,6 +1,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='**手动修改**
 进入tomcat主目录，找到`bin/catalina.sh`文件，在文件首行增加如下配置：
 ```bash
@@ -18,7 +18,7 @@ CATALINA_OPTS="-javaagent:/path/to/server/agent.jar -Dproject.name=<project name
 ```
 **注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。'
 WHERE id=1;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='####  JBossAS 6
 进入JBoss容器的主目录，在`bin/run.sh`文件中找到`# Setup JBoss specific properties`所在行，在该行的下面插入如下行：
 ```bash
@@ -66,7 +66,7 @@ JAVA_OPTS="$JAVA_OPTS "-javaagent:/path/to/server/agent.jar" "-Dproject.name=<pr
 ##### domain模式
 domain模式下的部署方式与Standalone模式类似，请自行查询'
 WHERE id=2;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='> Jetty
 #### 手工修改
 1.进入jetty的根目录，打开`bin/jetty.sh`文件，找到`Add jetty properties to Java VM options.`所在行，在下面行插入`JAVA_OPTIONS+=( "-javaagent:/opt/agent/agent.jar=token=e7509bf7-e44f-4e1f-8e25-5079e2540c63")`
@@ -94,7 +94,7 @@ java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar start.jar
 **注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
 '
 WHERE id=3;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='> Resin
 #### 手动修改
 进入resin容器的主目录，打开`conf/cluster-default.xml`文件，定位到`<server-default>`所在的行，在该行下面插入`<jvm-arg>-javaagent:/opt/agent/agent.jar</jvm-arg>`', middleware='resin', `language`='java', desc_en='#### Resin
@@ -106,7 +106,7 @@ Navigate to Resin''s conf directory and open `/cluster-default.xml` file with te
 #### 手动修改
 进入resin容器的主目录，打开`conf/cluster-default.xml`文件，定位到`<server-default>`所在的行，在该行下面插入`<jvm-arg>-javaagent:/opt/agent/agent.jar</jvm-arg>`'
 WHERE id=4;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='> WebLogic配置agent
 #### 手动修改
 **非集群方式**
@@ -175,7 +175,7 @@ JAVA_OPTIONS="-javaagent:NULL/agent/agent.jar"
 -javaagent:/opt/agent/agent.jar
 ```'
 WHERE id=5;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='> WebSphere
 ![websphere-01](/upload/masterimg/websphere-01.png)
 ![websphere-02](/upload/masterimg/websphere-02.png)
@@ -197,7 +197,7 @@ SET `desc`='> WebSphere
 ![websphere-03](https://dongtai.oss-cn-beijing.aliyuncs.com/static/weblogic-03.png )
 '
 WHERE id=6;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='**SpringBoot**
 1. 下载`agent.jar`，然后放入具有写入权限的目录中，如：`/tmp/`
 2. 针对SpringBoot应用
@@ -217,7 +217,7 @@ b). If the application is deployed by `java -jar app.jar`. Add the following arg
 	
 **注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。'
 WHERE id=9;
-UPDATE iast_deploy
+UPDATE IGNORE iast_deploy
 SET `desc`='修改待检测的Django项目中的settings.py, 在configure middleware位置，增加一条
 ```bash
 	MIDDLEWARE = [ 
@@ -243,7 +243,7 @@ MIDDLEWARE = [
 WHERE id=10;
 ALTER TABLE iast_hook_type ADD language_id INTEGER DEFAULT 0 NOT NULL;
 CREATE INDEX iast_hook_type_language_id_IDX USING BTREE ON iast_hook_type (language_id);
-UPDATE iast_hook_type SET language_id = 1 WHERE 1 = 1;
+UPDATE IGNORE iast_hook_type SET language_id = 1 WHERE 1 = 1;
 ALTER TABLE  iast_vulnerability_status 
 DEFAULT CHARSET=utf8mb4;
 ALTER TABLE  iast_http_method_relation 
@@ -264,10 +264,10 @@ ALTER TABLE  engine_monitoring_indicators
 DEFAULT CHARSET=utf8mb4;
 ALTER TABLE  auth_user ADD default_language varchar(20) NULL;
 
-INSERT INTO iast_program_language
+INSERT IGNORE INTO iast_program_language
 (id, name)
 VALUES(1, 'Java');
-INSERT INTO iast_program_language
+INSERT IGNORE INTO iast_program_language
 (id, name)
 VALUES(2, 'Python');
 
