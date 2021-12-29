@@ -37,14 +37,16 @@ jobs:
         with:
           context: ./mysql
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest,"
+          tags: | 
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
       
       - name: Build and push Redis
         uses: docker/build-push-action@v2
         with:
           context: ./redis
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:latest,"
+          tags: |
+          registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
 
       - name: finish build
         uses: joelwmale/webhook-action@master
