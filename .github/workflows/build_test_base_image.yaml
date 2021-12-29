@@ -46,7 +46,7 @@ jobs:
           context: ./redis
           push: true
           tags: |
-          registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
 
       - name: finish build
         uses: joelwmale/webhook-action@master
