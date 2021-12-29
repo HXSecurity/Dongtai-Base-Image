@@ -253,7 +253,7 @@ INSERT INTO web_role_url_relation (id, role_id, url_id) VALUES(442, 7, 22);
 INSERT INTO web_role_url_relation (id, role_id, url_id) VALUES(443, 7, 26);
 INSERT INTO web_role_url_relation (id, role_id, url_id) VALUES(444, 7, 34);
 
-ALTER TABLE iast_webapi.auth_department ADD principal_id int(11) DEFAULT 1 NOT NULL COMMENT '负责人id';
+ALTER TABLE auth_department ADD principal_id int(11) DEFAULT 1 NOT NULL COMMENT '负责人id';
 
 
 SET FOREIGN_KEY_CHECKS=1;
