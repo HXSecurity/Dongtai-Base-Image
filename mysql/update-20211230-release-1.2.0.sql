@@ -4288,6 +4288,17 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 CREATE INDEX sca_maven_artifact_signature_IDX USING BTREE ON sca_maven_artifact (signature);
 CREATE INDEX iast_agent_bind_project_id_IDX USING BTREE ON iast_agent (bind_project_id,project_version_id);
 
+UPDATE iast_hook_type ,(SELECT  id as iht_id ,vul_type as iht_vul_type FROM iast_strategy) AS iht 
+SET iast_hook_type.strategy_id = iht.iht_id 
+WHERE iast_hook_type.value= iht.iht_vul_type AND iast_hook_type.`type`  IN (3,4)
+
+
+UPDATE iast_vulnerability ,iast_hook_type
+SET iast_vulnerability.strategy_id = iast_hook_type.strategy_id
+WHERE iast_vulnerability.hook_type_id=iast_hook_type.id 
+AND iast_vulnerability.strategy_id = 0
+AND iast_hook_type.strategy_id != 0
+
 
 SET FOREIGN_KEY_CHECKS=1;
 
