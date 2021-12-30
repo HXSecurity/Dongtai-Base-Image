@@ -23,7 +23,7 @@ RUN rm /docker-entrypoint-initdb.d/*
 
 
 
-FROM mysql:5.
+FROM mysql:5.7
 
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
