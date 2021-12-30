@@ -31,7 +31,7 @@ jobs:
           registry: ${{ secrets.ALIYUN_REGISTRY }}
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
-          
+
       
       - name: SQL LINT 
         run: |
@@ -45,7 +45,7 @@ jobs:
           context: ./mysql
           push: true
           tags: | 
-          registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-hh:0.1.${{github.run_number}}
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-hh:0.1.${{github.run_number}}
       
       # - name: Build and push Redis
       #   uses: docker/build-push-action@v2
