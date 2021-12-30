@@ -4435,7 +4435,7 @@ WHERE iast_vulnerability.hook_type_id=iast_hook_type.id
 AND iast_vulnerability.strategy_id = 0
 AND iast_hook_type.strategy_id != 0;
 
-CREATE INDEX sca_maven_artifact_signature_IDX USING BTREE ON sca_maven_artifact (signature);
+
 CREATE INDEX iast_agent_bind_project_id_IDX USING BTREE ON iast_agent (bind_project_id,project_version_id);
 
 ALTER TABLE auth_department ADD principal_id int(11) DEFAULT 1 NOT NULL COMMENT '负责人id';
