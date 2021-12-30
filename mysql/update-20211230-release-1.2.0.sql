@@ -4285,5 +4285,9 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
 
+CREATE INDEX sca_maven_artifact_signature_IDX USING BTREE ON sca_maven_artifact (signature);
+CREATE INDEX iast_agent_bind_project_id_IDX USING BTREE ON iast_agent (bind_project_id,project_version_id);
+
+
 SET FOREIGN_KEY_CHECKS=1;
 
