@@ -32,11 +32,11 @@ jobs:
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
       
-      - name: Install dependencies
+      - name: SQL LINT 
         run: |
           sudo apt install npm -y
-          sudo npm i -g sql-lint
-          sql-lint .
+          sudo npm i -g sql-lint 
+          sql-lint . trailing-whitespace || true
 
       - name: Build and push MySql
         uses: docker/build-push-action@v2
