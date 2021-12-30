@@ -4,6 +4,299 @@ SET FOREIGN_KEY_CHECKS=0;
 INSERT IGNORE INTO `iast_hook_type` ( `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, language_id, strategy_id) SELECT `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, @IAST_LANGUAGE_ID, strategy_id FROM `iast_hook_type` WHERE type IN (3, 4) AND language_id = 1 AND created_by = 1;
 INSERT INTO iast_program_language (id, name) VALUES(4, 'Go');
 
+UPDATE IGNORE iast_strategy
+SET vul_fix='1、尽量不要执行外部的应用程序或命令。
+2、使用自定义函数或函数库实现外部应用程序或命令的功能。
+3、在执行system、eval等命令执行功能的函数前，确定参数内容。
+4、使用escapeshellarg函数处理相关参数。Escapeshellarg函数会将任何引起参数或命令结束的字符进行转义，如单引号“’”会被转义为“\’”，双引号“””会被转义为“\””，分号“;”会被转义为“;”，这样escapeshellarg会将参数内容限制在一对单引号或双引号里面，转义参数中所包含的单引号或双引号，使其无法对当前执行进行截断，实现防范命令注入攻击的目的。
+5、使用safe_mode_exec_dir执行可执行的文件路径。将php.ini文件中的safe_mode设置为On，然后将允许执行的文件放入一个目录中，并使用safe_mode_exec_dir指定这个可执行的文件路径。这样，在需要执行相应的外部程序时，程序必须在safe_mode_exec_dir指定的目录中才会允许执行，否则执行将失败。', 
+vul_fix_zh='1、尽量不要执行外部的应用程序或命令。
+2、使用自定义函数或函数库实现外部应用程序或命令的功能。
+3、在执行system、eval等命令执行功能的函数前，确定参数内容。
+4、使用escapeshellarg函数处理相关参数。Escapeshellarg函数会将任何引起参数或命令结束的字符进行转义，如单引号“’”会被转义为“\’”，双引号“””会被转义为“\””，分号“;”会被转义为“;”，这样escapeshellarg会将参数内容限制在一对单引号或双引号里面，转义参数中所包含的单引号或双引号，使其无法对当前执行进行截断，实现防范命令注入攻击的目的。
+5、使用safe_mode_exec_dir执行可执行的文件路径。将php.ini文件中的safe_mode设置为On，然后将允许执行的文件放入一个目录中，并使用safe_mode_exec_dir指定这个可执行的文件路径。这样，在需要执行相应的外部程序时，程序必须在safe_mode_exec_dir指定的目录中才会允许执行，否则执行将失败。'
+WHERE vul_name='命令执行';
+
+UPDATE IGNORE iast_strategy
+SET vul_fix='1、输入数据验证 　　
+应用程序用到的所有输入数据，包括非用户直接提供的数据和应用程序内部使用的数据，都必须进行无害化处理，删掉所有可能被恶意使用的字符。在利用数据进行任何操作之前，必须进行合法性检验。如前所述，在执行一个新的IMAP/SMTP命令时，要求前面的命令必须用CRLF结束。为了确保无法注入额外的命令，您可以在将其传递给邮件服务器之前删除输入数据中的这类字符。 　　
+2、IMAP/SMTP服务器的配置 　　
+如果只有通过webmail应用程序才能访问邮件服务器的话，这些服务器必须对国际互联网是不可见的。除此之外，还要对这些服务器进一步加固，比如禁用非绝对必要得命令等等。从而使邮件服务器注射攻击的影响降低到最小程度。 　　
+3、应用程序防火墙 　　
+如果我们已经用其它的保护系统部署了一个应用程序防火墙，那么可以添加一条规则，来过滤有邮件服务器注射缺陷的参数，从而防止这些命令被注入到邮件服务器中。比如，可以将ModSecurity用作应用程序防火墙。根据前面介绍的SquirrelMail示例，可以添加如下规则： 　　`SecFilterselective "ARG_mailbox" "rn" `　　这会过滤掉参数"mailbox"中注入的序列。', 
+vul_fix_zh='1、输入数据验证 　　
+应用程序用到的所有输入数据，包括非用户直接提供的数据和应用程序内部使用的数据，都必须进行无害化处理，删掉所有可能被恶意使用的字符。在利用数据进行任何操作之前，必须进行合法性检验。如前所述，在执行一个新的IMAP/SMTP命令时，要求前面的命令必须用CRLF结束。为了确保无法注入额外的命令，您可以在将其传递给邮件服务器之前删除输入数据中的这类字符。 　　
+2、IMAP/SMTP服务器的配置 　　
+如果只有通过webmail应用程序才能访问邮件服务器的话，这些服务器必须对国际互联网是不可见的。除此之外，还要对这些服务器进一步加固，比如禁用非绝对必要得命令等等。从而使邮件服务器注射攻击的影响降低到最小程度。 　　
+3、应用程序防火墙 　　
+如果我们已经用其它的保护系统部署了一个应用程序防火墙，那么可以添加一条规则，来过滤有邮件服务器注射缺陷的参数，从而防止这些命令被注入到邮件服务器中。比如，可以将ModSecurity用作应用程序防火墙。根据前面介绍的SquirrelMail示例，可以添加如下规则： 　　`SecFilterselective "ARG_mailbox" "rn" `　　这会过滤掉参数"mailbox"中注入的序列。'
+WHERE vul_name='SMTP注入';
+UPDATE IGNORE iast_strategy
+SET vul_fix='1、过滤返回信息，验证远程服务器对请求的响应是比较容易的方法。如果web应用是去获取某一种类型的文件。那么在把返回结果展示给用户之前先验证返回的信息是否符合标准。统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态。
+2、限制请求的端口为http常用的端口，比如，80,443,8080,8090。
+3、黑名单内网ip。避免应用被用来获取获取内网数据，攻击内网。
+4、禁用不需要的协议。仅仅允许http和https请求。可以防止类似于file:///,gopher://,ftp:// 等引起的问题。', 
+vul_fix_zh='1、过滤返回信息，验证远程服务器对请求的响应是比较容易的方法。如果web应用是去获取某一种类型的文件。那么在把返回结果展示给用户之前先验证返回的信息是否符合标准。统一错误信息，避免用户可以根据错误信息来判断远端服务器的端口状态。
+2、限制请求的端口为http常用的端口，比如，80,443,8080,8090。
+3、黑名单内网ip。避免应用被用来获取获取内网数据，攻击内网。
+4、禁用不需要的协议。仅仅允许http和https请求。可以防止类似于file:///,gopher://,ftp:// 等引起的问题。'
+WHERE vul_name='服务器端请求伪造';
+
+UPDATE IGNORE iast_strategy
+SET vul_fix='若可以尽量不使用XMLDecoder反序列化XML内容；
+若使用则尽量确保参数不可由外界输入，尽量以白名单的方式限定XML文档名且结合严格的过滤机制。', 
+vul_fix_zh='若可以尽量不使用XMLDecoder反序列化XML内容；
+若使用则尽量确保参数不可由外界输入，尽量以白名单的方式限定XML文档名且结合严格的过滤机制。'
+WHERE vul_name='不安全的XML Decode';
+
+UPDATE IGNORE iast_strategy
+SET vul_fix='防范SQL注入，标准方案为输入验证与参数化查询相结合。
+输入验证分为白名单和黑名单两种方式，通常在系统中是结合到一起来完成输入验证，具体实现通过正则表达式来完成。需要注意以下几方面：
+(1) 在可信系统（比如：服务器）上执行所有的数据验证。
+(2) 验证所有来自不可信数据源（比如：数据库，文件流，等）的数据。
+(3) 应当为应用程序应提供一个集中的输入验证机制和规则。
+(4) 为所有输入明确恰当的字符集，比如：UTF-8。在输入验证前，将数据按照常用字符进行编码（规范化）。如果进行关键字的验证，请先统一大小写。
+(5) 验证的不仅是参数，包含所有来自客户端的数据，包括：所有参数、URL、HTTP头信息（比如：cookie名字和数据值）。
+(6) 验证正确的数据类型、验证数据范围、验证数据长度。
+(7) 请考虑是否允许输入常见危险字符。部分常见的危险字符包括：< > "" '' % ( ) & +  '' "" 。
+(8) 特殊字符单独验证：空字节 (%00)；换行符 (%0d, %0a, 
+, 
+)；路径替代字符“点-点-斜杠”（../或 ..）。验证替代字符： %c0%ae%c0%ae/ (使用规范化 验证双编码或其他类型的编码攻击)。
+参考代码：
+(1) 使用特殊字符过滤程序防护SQL注入攻击：
+代码功能：对HTTP请求中的所有参数进行危险字符过滤，发现危险字符可跳转到相应的错误页面。
+```java
+public void doFilter(ServletRequest args0,
+ServletResponse args1,FilterChain chain)
+throws IOException, ServletException {
+HttpServletRequest req=(HttpServletRequest)args0;
+HttpServletResponse res=(HttpServletResponse)args1;
+//获得所有请求参数名
+Enumeration params = req.getParameterNames();
+String sql = """";
+while (params.hasMoreElements()) {
+//得到参数名
+String name = params.nextElement().toString();
+//得到参数对应值
+String[] value = req.getParameterValues(name);
+for (int i = 0; i < value.length; i++) {
+sql = sql + value[i];
+}
+}
+//有sql注入和XSS危险字符
+if (sqlValidate(sql)) {
+throw new IOException(""请求有非法字符：""+sql);
+} else {
+chain.doFilter(args0,args1);
+}
+}
+protected static boolean sqlValidate(String str) {
+str = str.toLowerCase(); //统一转为小写
+String badStr = ""and|exec|insert|select|delete
+|update|count|union|master|truncate|char|declare
+|cast|set|fetch|varchar|sysobjects|drop
+|`|''|""|<|>|(|)|/||=|+|-|#|*|;|%"";
+String[] badStrs = badStr.split(""|"");
+for (int i = 0; i < badStrs.length; i++) {
+if (str.indexOf(badStrs[i]) >= 0) {
+return true; //参数中包含要过滤关键字;
+}
+}
+return false; //参数中不包含要过滤关键字;
+}
+```
+(2) 通过参数化查询方式进行SQL注入攻击防护：
+```java
+String sql = “select * from product where cat=’?’ and price >’?’”;
+PreparedStatement pstmt = con.prepareStatement(sql);
+pstmt.setInt(1, request.getParameter(“cat”));
+pstmt.setString(2, request.getParameter(“price”));
+ResultSet rs = pstmt.executeQuery();
+```
+(3) 使用MyBatis技术，通过Mapper.xml文件定义SQL语句进行SQL注入攻击防护：
+```
+<mapper namespace="TestUser"> //命名空间
+<select id="getById" parameterType="java.lang.String"
+resultMap="TestFlowResult">
+select
+<include refid="TestFlowColumns" />
+```
+在编写mybatis的映射语句时，尽量采用“#{xxx}”这样的格式。若不得不使用“NULL”这样的参数，要手工地做好过滤工作，来防止sql注入攻击。
+(4) 强类型的参数化查询，即在数据库增加、查询、更新操作时，sql语句中所有输入参数统一采用#param#方式。示例如下:
+<update id=""updatePtaskDetailState"" parameterClass=""java.lang.String"">
+update ZX_PTASKDETAIL set BATCHJNLNOSTATE = ''4'' where JNLNO = #jnlNo#
+}
+(5)需要使用like语句的地方可以使用''%''||#param#||''%''或concat(concat(''%'',#param#),''%'')避免注入。示例如下
+select * from ZX_PCIF where name like ''%''||#name#||''%''', 
+vul_fix_zh='防范SQL注入，标准方案为输入验证与参数化查询相结合。
+输入验证分为白名单和黑名单两种方式，通常在系统中是结合到一起来完成输入验证，具体实现通过正则表达式来完成。需要注意以下几方面：
+(1) 在可信系统（比如：服务器）上执行所有的数据验证。
+(2) 验证所有来自不可信数据源（比如：数据库，文件流，等）的数据。
+(3) 应当为应用程序应提供一个集中的输入验证机制和规则。
+(4) 为所有输入明确恰当的字符集，比如：UTF-8。在输入验证前，将数据按照常用字符进行编码（规范化）。如果进行关键字的验证，请先统一大小写。
+(5) 验证的不仅是参数，包含所有来自客户端的数据，包括：所有参数、URL、HTTP头信息（比如：cookie名字和数据值）。
+(6) 验证正确的数据类型、验证数据范围、验证数据长度。
+(7) 请考虑是否允许输入常见危险字符。部分常见的危险字符包括：< > "" '' % ( ) & +  '' "" 。
+(8) 特殊字符单独验证：空字节 (%00)；换行符 (%0d, %0a, 
+, 
+)；路径替代字符“点-点-斜杠”（../或 ..）。验证替代字符： %c0%ae%c0%ae/ (使用规范化 验证双编码或其他类型的编码攻击)。
+参考代码：
+(1) 使用特殊字符过滤程序防护SQL注入攻击：
+代码功能：对HTTP请求中的所有参数进行危险字符过滤，发现危险字符可跳转到相应的错误页面。
+```java
+public void doFilter(ServletRequest args0,
+ServletResponse args1,FilterChain chain)
+throws IOException, ServletException {
+HttpServletRequest req=(HttpServletRequest)args0;
+HttpServletResponse res=(HttpServletResponse)args1;
+//获得所有请求参数名
+Enumeration params = req.getParameterNames();
+String sql = """";
+while (params.hasMoreElements()) {
+//得到参数名
+String name = params.nextElement().toString();
+//得到参数对应值
+String[] value = req.getParameterValues(name);
+for (int i = 0; i < value.length; i++) {
+sql = sql + value[i];
+}
+}
+//有sql注入和XSS危险字符
+if (sqlValidate(sql)) {
+throw new IOException(""请求有非法字符：""+sql);
+} else {
+chain.doFilter(args0,args1);
+}
+}
+protected static boolean sqlValidate(String str) {
+str = str.toLowerCase(); //统一转为小写
+String badStr = ""and|exec|insert|select|delete
+|update|count|union|master|truncate|char|declare
+|cast|set|fetch|varchar|sysobjects|drop
+|`|''|""|<|>|(|)|/||=|+|-|#|*|;|%"";
+String[] badStrs = badStr.split(""|"");
+for (int i = 0; i < badStrs.length; i++) {
+if (str.indexOf(badStrs[i]) >= 0) {
+return true; //参数中包含要过滤关键字;
+}
+}
+return false; //参数中不包含要过滤关键字;
+}
+```
+(2) 通过参数化查询方式进行SQL注入攻击防护：
+```java
+String sql = “select * from product where cat=’?’ and price >’?’”;
+PreparedStatement pstmt = con.prepareStatement(sql);
+pstmt.setInt(1, request.getParameter(“cat”));
+pstmt.setString(2, request.getParameter(“price”));
+ResultSet rs = pstmt.executeQuery();
+```
+(3) 使用MyBatis技术，通过Mapper.xml文件定义SQL语句进行SQL注入攻击防护：
+```
+<mapper namespace="TestUser"> //命名空间
+<select id="getById" parameterType="java.lang.String"
+resultMap="TestFlowResult">
+select
+<include refid="TestFlowColumns" />
+```
+在编写mybatis的映射语句时，尽量采用“#{xxx}”这样的格式。若不得不使用“NULL”这样的参数，要手工地做好过滤工作，来防止sql注入攻击。
+(4) 强类型的参数化查询，即在数据库增加、查询、更新操作时，sql语句中所有输入参数统一采用#param#方式。示例如下:
+<update id=""updatePtaskDetailState"" parameterClass=""java.lang.String"">
+update ZX_PTASKDETAIL set BATCHJNLNOSTATE = ''4'' where JNLNO = #jnlNo#
+}
+(5)需要使用like语句的地方可以使用''%''||#param#||''%''或concat(concat(''%'',#param#),''%'')避免注入。示例如下
+select * from ZX_PCIF where name like ''%''||#name#||''%'''
+WHERE vul_name='SQL注入';
+UPDATE IGNORE iast_strategy
+SET vul_fix='1、使用正面验证。字母数字过滤（A..Z,a..z,0..9）适合大部分 LDAP 查询。
+2、 应该过滤出或进行转义的特殊 LDAP 字符：
+[1] 在字符串开头的空格或“#”字符
+[2] 在字符串结尾的空格字符
+[3] ,（逗号）
+[4] +（加号）
+[5] ""（引号）
+[6] （反斜杠）
+[7] <>（尖括号）
+[8] ;（分号）
+[9] ()（括号）', 
+vul_fix_zh='1、使用正面验证。字母数字过滤（A..Z,a..z,0..9）适合大部分 LDAP 查询。
+2、 应该过滤出或进行转义的特殊 LDAP 字符：
+[1] 在字符串开头的空格或“#”字符
+[2] 在字符串结尾的空格字符
+[3] ,（逗号）
+[4] +（加号）
+[5] ""（引号）
+[6] （反斜杠）
+[7] <>（尖括号）
+[8] ;（分号）
+[9] ()（括号）'
+WHERE vul_name='LDAP注入';
+UPDATE IGNORE iast_strategy
+SET vul_fix='1、数据提交到服务器上端，在服务端正式处理这批数据之前，对提交数据的合法性进行验证。
+2、检查提交的数据是否包含特殊字符，对特殊字符进行编码转换或替换、删除敏感字符或字符串，如过滤[] ‘ “ and or 等全部过滤，像单双引号这类，可以对这类特殊字符进行编码转换或替换
+3、对于系统出现的错误信息，以IE错误编码信息替换，屏蔽系统本身的出错信息或者用统一的报错页面代替（如updataxml()这类）
+参数化XPath查询，将需要构建的XPath查询表达式，以变量的形式表示，变量不是可以执行的脚本。。如下代码可以通过创建保存查询的外部文件使查询参数化：
+```
+    declare variable $loginID as xs：string external；
+    declare variable $password as xs：string external；
+    //users/user[@loginid=$loginID and@password= $password]
+```
+4、通过MD5、SSL等加密算法，对于数据敏感信息和在数据传输过程中加密，即使某些非法用户通过非法手法获取数据包，看到的也是加密后的信息。 总结下就是：限制提交非法字符，对输入内容严格检查过滤，参数化XPath查询的变量。
+5、验证是否包含特定的 XPath 函数，可以过滤掉一些 XPath 函数，以提高安全性，当然了不能以牺牲用户体验或影响用户正常使用为前提。
+总结下就是：限制提交非法字符，对输入内容严格检查过滤，参数化XPath查询的变量', 
+vul_fix_zh='1、数据提交到服务器上端，在服务端正式处理这批数据之前，对提交数据的合法性进行验证。
+2、检查提交的数据是否包含特殊字符，对特殊字符进行编码转换或替换、删除敏感字符或字符串，如过滤[] ‘ “ and or 等全部过滤，像单双引号这类，可以对这类特殊字符进行编码转换或替换
+3、对于系统出现的错误信息，以IE错误编码信息替换，屏蔽系统本身的出错信息或者用统一的报错页面代替（如updataxml()这类）
+参数化XPath查询，将需要构建的XPath查询表达式，以变量的形式表示，变量不是可以执行的脚本。。如下代码可以通过创建保存查询的外部文件使查询参数化：
+```
+    declare variable $loginID as xs：string external；
+    declare variable $password as xs：string external；
+    //users/user[@loginid=$loginID and@password= $password]
+```
+4、通过MD5、SSL等加密算法，对于数据敏感信息和在数据传输过程中加密，即使某些非法用户通过非法手法获取数据包，看到的也是加密后的信息。 总结下就是：限制提交非法字符，对输入内容严格检查过滤，参数化XPath查询的变量。
+5、验证是否包含特定的 XPath 函数，可以过滤掉一些 XPath 函数，以提高安全性，当然了不能以牺牲用户体验或影响用户正常使用为前提。
+总结下就是：限制提交非法字符，对输入内容严格检查过滤，参数化XPath查询的变量'
+WHERE vul_name='XPATH注入';
+UPDATE IGNORE iast_strategy
+SET vul_fix='防止文件路径遍历漏洞的最有效方法是避免将用户提供的输入完全传递给文件系统API。
+如果认为不可避免的是将用户提供的输入传递给文件系统API，则应同时使用两层防御，以防止受到攻击：
+应用程序应在处理之前验证用户输入。理想情况下，验证应与允许值的白名单进行比较。如果所需的功能无法做到这一点，则验证应验证输入内容仅包含允许的内容，例如纯字母数字字符。
+验证提供的输入后，应用程序应将输入附加到基本目录，并使用平台文件系统API规范化路径。验证规范化路径以预期的基本目录开头。
+以下是一些简单的Java代码示例，用于根据用户输入来验证文件的规范路径：
+```java
+File file = new File(BASE_DIRECTORY, userInput);
+if (file.getCanonicalPath().startsWith(BASE_DIRECTORY)) {
+// process file
+}
+```', 
+vul_fix_zh='防止文件路径遍历漏洞的最有效方法是避免将用户提供的输入完全传递给文件系统API。
+如果认为不可避免的是将用户提供的输入传递给文件系统API，则应同时使用两层防御，以防止受到攻击：
+应用程序应在处理之前验证用户输入。理想情况下，验证应与允许值的白名单进行比较。如果所需的功能无法做到这一点，则验证应验证输入内容仅包含允许的内容，例如纯字母数字字符。
+验证提供的输入后，应用程序应将输入附加到基本目录，并使用平台文件系统API规范化路径。验证规范化路径以预期的基本目录开头。
+以下是一些简单的Java代码示例，用于根据用户输入来验证文件的规范路径：
+```java
+File file = new File(BASE_DIRECTORY, userInput);
+if (file.getCanonicalPath().startsWith(BASE_DIRECTORY)) {
+// process file
+}
+```'
+WHERE vul_name='路径穿越';
+UPDATE IGNORE iast_strategy
+SET vul_fix='1、使用目前被业界专家认为较强的经过良好审核的加密PRNG算法，初始化随机数生成器时使用具有足够长度且不固定的种子。
+2、在安全性要求较高的应用中，应使用更安全的随机数生成器，如java.security.SecureRandom类。', 
+vul_fix_zh='1、使用目前被业界专家认为较强的经过良好审核的加密PRNG算法，初始化随机数生成器时使用具有足够长度且不固定的种子。
+2、在安全性要求较高的应用中，应使用更安全的随机数生成器，如java.security.SecureRandom类。'
+WHERE vul_name='弱随机数算法';
+UPDATE IGNORE iast_strategy
+SET vul_fix='库或框架当需要存储或传输敏感数据时，请使用强大的最新加密算法来加密该数据。选择目前被该领域专家认为强大的经过充分审查的算法，并使用经过充分测试的实现。与所有加密机制一样，源代码应该可供分析。', 
+vul_fix_zh='库或框架当需要存储或传输敏感数据时，请使用强大的最新加密算法来加密该数据。选择目前被该领域专家认为强大的经过充分审查的算法，并使用经过充分测试的实现。与所有加密机制一样，源代码应该可供分析。'
+WHERE vul_name='弱哈希算法';
+UPDATE IGNORE iast_strategy
+SET vul_fix='DES等加密算法和 MD5、SHA1及RIPEMD160等哈希算法被视为弱加密算法。与更现代的加密算法相比，加密算法 DES 提供的安全位数更少。推荐使用更强大的加密方式，对于 DES 加密，请使用 Aes、SM4、SM7等加密。对于 SHA1 或 RIPEMD160 哈希函数，请使用SHA-2系列（例如SHA512、SHA384、SHA256），或SM3。', 
+vul_fix_zh='DES等加密算法和 MD5、SHA1及RIPEMD160等哈希算法被视为弱加密算法。与更现代的加密算法相比，加密算法 DES 提供的安全位数更少。推荐使用更强大的加密方式，对于 DES 加密，请使用 Aes、SM4、SM7等加密。对于 SHA1 或 RIPEMD160 哈希函数，请使用SHA-2系列（例如SHA512、SHA384、SHA256），或SM3。'
+WHERE vul_name='弱加密算法';
+
+
 DELETE FROM iast_hook_strategy_type  
 WHERE hookstrategy_id IN
 (SELECT id FROM iast_hook_strategy ihs 
