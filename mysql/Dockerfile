@@ -30,9 +30,9 @@ ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
 COPY --from=builder /var/lib/mysql /var/lib/mysql
 
-COPY db.sql /docker-entrypoint-initdb.d/
+COPY db.sql /sql/
 
-COPY update-*release*.sql /docker-entrypoint-initdb.d/
+COPY update-*release*.sql /sql/
 
 CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci" ]
 
