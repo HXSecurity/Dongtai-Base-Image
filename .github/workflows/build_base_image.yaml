@@ -31,6 +31,12 @@ jobs:
           registry: ${{ secrets.ALIYUN_REGISTRY }}
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
+      
+      - name: Install dependencies
+        run: |
+          apt install npm -y
+          npm i -g sql-lint
+          sql-lint .
 
       - name: Build and push MySql
         uses: docker/build-push-action@v2
