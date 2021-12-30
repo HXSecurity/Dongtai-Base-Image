@@ -137,10 +137,104 @@ CREATE TABLE IF NOT EXISTS `iast_license` (
   UNIQUE KEY `iast_license_UN` (`key`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
-
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = '弱加密算法' AND vul_type = 'crypto-bad-cipher' AND state='enable' ; 
+SET @FIRST_STRATEGY_ID = (SELECT id FROM iast_strategy is2 WHERE vul_name = '路径穿越' AND state='enable' LIMIT 1 ); 
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = '路径穿越' AND state='enable' ; 
+UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID; 
+SET @FIRST_STRATEGY_ID = (SELECT id FROM iast_strategy is2 WHERE vul_name = '命令执行' AND state='enable' LIMIT 1 ); 
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = '命令执行' AND state='enable' ;
+UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID; 
+SET @FIRST_STRATEGY_ID = (SELECT id FROM iast_strategy is2 WHERE vul_name = 'SQL注入' AND state='enable' LIMIT 1 ); 
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = 'SQL注入' AND state='enable'; 
+UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID;
 
 INSERT IGNORE INTO `iast_hook_type` ( `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, language_id, strategy_id) SELECT `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, @IAST_LANGUAGE_ID, strategy_id FROM `iast_hook_type` WHERE type IN (3, 4) AND language_id = 1 AND created_by = 1;
-INSERT INTO iast_program_language (id, name) VALUES(4, 'Go');
+INSERT IGNORE INTO iast_program_language (id, name) VALUES(4, 'Go');
+
+UPDATE IGNORE iast_sensitive_info_rule SET pattern='(?<!\\d)(86|086|(?<!\\d))[1][345789][0-9]{9}(?!\\d)' WHERE pattern='\\D?(1[3-9]\\d{9})\\D?' ;
+INSERT IGNORE INTO iast_strategy (user_id, vul_type, level_id, state, dt, vul_name, vul_desc, vul_fix, hook_type_id, vul_desc_en, vul_desc_zh, vul_fix_en, vul_fix_zh, vul_name_zh, vul_name_en) VALUES(1, '硬编码', 5, 'enable', 1639744419, '硬编码', '代码中存在硬编码的内容', '替换源文件中的硬编码，从配置文件或远程配置服务读取', NULL, NULL, '代码中存在硬编码的内容', NULL, '替换源文件中的硬编码，从配置文件或远程配置服务读取', '硬编码', NULL);
+
+UPDATE IGNORE iast_strategy_user SET content='1,2,3,4,5,6,7,8,16,18,20,21,25,27,33,34,35,36,14,26,9,10,11,12,13,15,17,19,22,23,24,28,29,30,31,32,37' WHERE name='插桩测试标准模板' AND user_id=1;
+
+
+UPDATE IGNORE iast_strategy
+SET vul_fix='将服务器配置为使用安全策略的“Content-Security-Policy”头。
+在web.config 配置文件中添加如下HTTP响应头：
+```
+　<system.webServer>
+        ?
+　　<add name="Content-Security-Policy" value="default-src ''self'';"/>
+　　</system.webServer>
+```
+使用meta标签：
+```
+　<meta http-equiv=”Content-Security-Policy” content=”default-src ''self''”/>
+```', 
+vul_fix_zh='将服务器配置为使用安全策略的“Content-Security-Policy”头。
+在web.config 配置文件中添加如下HTTP响应头：
+```
+　<system.webServer>
+        ?
+　　<add name="Content-Security-Policy" value="default-src ''self'';"/>
+　　</system.webServer>
+```
+使用meta标签：
+```
+　<meta http-equiv=”Content-Security-Policy” content=”default-src ''self''”/>
+```'
+WHERE vul_name='Response Without Content-Security-Policy Header';
+UPDATE IGNORE iast_strategy
+SET vul_fix='对所有用户提交内容进行可靠的输入验证，包括对URL、查询关键字、HTTP头、REFER、POST数据等，仅接受 指定长度范围内、采用适当格式、采用所预期的字符的内容提交，对其他的一律过滤。尽量采用POST 而非GET 提交表单；对"<"，">",";","''"，"javascript"，"jscript"，"vbscript"等字符做过滤。
+
+1、在HTML/XML中显示""用户可控数据""前，应该进行html escape转义。
+
+2、在javascript内容中输出的""用户可控数据""，需要做javascript escape转义。
+
+3、对输出到富文本中的""用户可控数据""，做富文本安全过滤（允许用户输出HTML的情况）。
+
+4、输出在url中的数据，做url安全输出。', 
+vul_fix_zh='对所有用户提交内容进行可靠的输入验证，包括对URL、查询关键字、HTTP头、REFER、POST数据等，仅接受 指定长度范围内、采用适当格式、采用所预期的字符的内容提交，对其他的一律过滤。尽量采用POST 而非GET 提交表单；对"<"，">",";","''"，"javascript"，"jscript"，"vbscript"等字符做过滤。
+
+1、在HTML/XML中显示""用户可控数据""前，应该进行html escape转义。
+
+2、在javascript内容中输出的""用户可控数据""，需要做javascript escape转义。
+
+3、对输出到富文本中的""用户可控数据""，做富文本安全过滤（允许用户输出HTML的情况）。
+
+4、输出在url中的数据，做url安全输出。'
+WHERE vul_name='反射型xss';
+UPDATE IGNORE iast_strategy
+SET vul_fix='为cookie设置Secure属性
+代码如下：
+```java
+private void writeCookie(HttpServletResponse response, String name, String value, String domain, String path, int maxAge,boolean isSecure) {
+Cookie cookie = new Cookie(name, value);
+cookie.setVersion(0);
+cookie.setPath(path);
+cookie.setSecure(isSecure);
+if (domain != null) {
+cookie.setDomain(domain);
+}
+cookie.setMaxAge(maxAge);
+response.addCookie(cookie);
+}
+```', 
+vul_fix_zh='为cookie设置Secure属性
+代码如下：
+```java
+private void writeCookie(HttpServletResponse response, String name, String value, String domain, String path, int maxAge,boolean isSecure) {
+Cookie cookie = new Cookie(name, value);
+cookie.setVersion(0);
+cookie.setPath(path);
+cookie.setSecure(isSecure);
+if (domain != null) {
+cookie.setDomain(domain);
+}
+cookie.setMaxAge(maxAge);
+response.addCookie(cookie);
+}
+```'
+WHERE vul_name='Cookie未设置secure';
 
 UPDATE IGNORE iast_strategy
 SET vul_fix='1、尽量不要执行外部的应用程序或命令。
