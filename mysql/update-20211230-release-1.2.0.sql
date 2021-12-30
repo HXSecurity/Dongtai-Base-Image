@@ -137,7 +137,16 @@ CREATE TABLE IF NOT EXISTS `iast_license` (
   UNIQUE KEY `iast_license_UN` (`key`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
-
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = '弱加密算法' AND vul_type = 'crypto-bad-cipher' AND state='enable' ; 
+SET @FIRST_STRATEGY_ID = (SELECT id FROM iast_strategy is2 WHERE vul_name = '路径穿越' AND state='enable' LIMIT 1 ); 
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = '路径穿越' AND state='enable' ; 
+UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID; 
+SET @FIRST_STRATEGY_ID = (SELECT id FROM iast_strategy is2 WHERE vul_name = '命令执行' AND state='enable' LIMIT 1 ); 
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = '命令执行' AND state='enable' ;
+UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID; 
+SET @FIRST_STRATEGY_ID = (SELECT id FROM iast_strategy is2 WHERE vul_name = 'SQL注入' AND state='enable' LIMIT 1 ); 
+UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = 'SQL注入' AND state='enable'; 
+UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID;
 
 INSERT IGNORE INTO `iast_hook_type` ( `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, language_id, strategy_id) SELECT `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, @IAST_LANGUAGE_ID, strategy_id FROM `iast_hook_type` WHERE type IN (3, 4) AND language_id = 1 AND created_by = 1;
 INSERT INTO iast_program_language (id, name) VALUES(4, 'Go');
