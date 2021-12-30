@@ -1,6 +1,144 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
+
+-- iast_webapi_buss_test.web_api_button_relations definition
+
+CREATE TABLE IF NOT EXISTS `web_api_button_relations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `api_id` int(11) NOT NULL DEFAULT '0',
+  `button_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_api_role_relation definition
+
+CREATE TABLE IF NOT EXISTS `web_api_role_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL DEFAULT '0',
+  `api_id` int(11) NOT NULL DEFAULT '0',
+  `state` int(11) NOT NULL DEFAULT '2',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_api_url_relations definition
+
+CREATE TABLE IF NOT EXISTS `web_api_url_relations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `api_id` int(11) NOT NULL DEFAULT '0',
+  `url_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_button definition
+
+CREATE TABLE IF NOT EXISTS `web_button` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `webroute_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_role definition
+
+CREATE TABLE IF NOT EXISTS `web_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `state` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_role_button_relation definition
+
+CREATE TABLE IF NOT EXISTS `web_role_button_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL DEFAULT '0',
+  `button_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_role_url_relation definition
+
+CREATE TABLE IF NOT EXISTS `web_role_url_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL DEFAULT '0',
+  `url_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=411 DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_role_user_relation definition
+
+CREATE TABLE IF NOT EXISTS `web_role_user_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+
+
+-- iast_webapi_buss_test.web_url_route definition
+
+CREATE TABLE IF NOT EXISTS `web_url_route` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `path` varchar(100) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `component` varchar(100) NOT NULL DEFAULT '',
+  `meta_keepAlive` varchar(100) NOT NULL DEFAULT '',
+  `meta_disabled` varchar(100) NOT NULL DEFAULT '',
+  `meta_i18n` varchar(100) NOT NULL DEFAULT '',
+  `meta_isMenu` varchar(100) NOT NULL DEFAULT '',
+  `parent` int(11) NOT NULL DEFAULT '0',
+  `meta_name` varchar(100) NOT NULL DEFAULT '',
+  `redirect` varchar(100) NOT NULL DEFAULT '',
+  `name_i18n_zh` varchar(100) NOT NULL DEFAULT '',
+  `name_i18n_en` varchar(100) NOT NULL DEFAULT '',
+  `name_i18n` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
+
+-- iast_webapi_buss_test.iast_request_chains definition
+
+CREATE TABLE IF NOT EXISTS `iast_request_chains` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
+  `source_id` int(11) DEFAULT NULL COMMENT '来源调用ID',
+  `target_id` int(11) DEFAULT NULL COMMENT '目标调用ID',
+  `project_id` int(11) DEFAULT NULL COMMENT '项目ID',
+  `source_agent_id` int(11) DEFAULT NULL COMMENT '来源agentID',
+  `target_agent_id` int(11) DEFAULT NULL COMMENT '目标agentID',
+  `level_id` int(11) DEFAULT NULL COMMENT '层级ID',
+  `request_hash` varchar(255) DEFAULT NULL COMMENT '请求链hash',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- iast_webapi_buss_test.webapi_api_site definition
+
+CREATE TABLE IF NOT EXISTS `webapi_api_site` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `path` varchar(100) NOT NULL DEFAULT '',
+  `method` varchar(100) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `webapi_api_site_UN` (`path`,`method`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+-- iast_webapi_buss_test.iast_license definition
+
+CREATE TABLE IF NOT EXISTS `iast_license` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `key` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `iast_license_UN` (`key`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+
+
 INSERT IGNORE INTO `iast_hook_type` ( `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, language_id, strategy_id) SELECT `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, @IAST_LANGUAGE_ID, strategy_id FROM `iast_hook_type` WHERE type IN (3, 4) AND language_id = 1 AND created_by = 1;
 INSERT INTO iast_program_language (id, name) VALUES(4, 'Go');
 
@@ -4284,6 +4422,23 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
+
+
+UPDATE IGNORE iast_hook_type ,(SELECT  id as iht_id ,vul_type as iht_vul_type FROM iast_strategy) AS iht 
+SET iast_hook_type.strategy_id = iht.iht_id 
+WHERE iast_hook_type.value= iht.iht_vul_type AND iast_hook_type.`type`  IN (3,4);
+
+
+UPDATE IGNORE iast_vulnerability ,iast_hook_type
+SET iast_vulnerability.strategy_id = iast_hook_type.strategy_id
+WHERE iast_vulnerability.hook_type_id=iast_hook_type.id 
+AND iast_vulnerability.strategy_id = 0
+AND iast_hook_type.strategy_id != 0;
+
+
+CREATE INDEX iast_agent_bind_project_id_IDX USING BTREE ON iast_agent (bind_project_id,project_version_id);
+
+ALTER TABLE auth_department ADD principal_id int(11) DEFAULT 1 NOT NULL COMMENT '负责人id';
 
 SET FOREIGN_KEY_CHECKS=1;
 
