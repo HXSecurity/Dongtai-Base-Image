@@ -149,9 +149,13 @@ UPDATE IGNORE iast_strategy SET state='delete' WHERE vul_name = 'SQL注入' AND 
 UPDATE IGNORE iast_strategy SET state='enable' WHERE id = @FIRST_STRATEGY_ID;
 
 INSERT IGNORE INTO `iast_hook_type` ( `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, language_id, strategy_id) SELECT `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, @IAST_LANGUAGE_ID, strategy_id FROM `iast_hook_type` WHERE type IN (3, 4) AND language_id = 1 AND created_by = 1;
-INSERT INTO iast_program_language (id, name) VALUES(4, 'Go');
+INSERT IGNORE INTO iast_program_language (id, name) VALUES(4, 'Go');
 
 UPDATE IGNORE iast_sensitive_info_rule SET pattern='(?<!\\d)(86|086|(?<!\\d))[1][345789][0-9]{9}(?!\\d)' WHERE pattern='\\D?(1[3-9]\\d{9})\\D?' ;
+INSERT IGNORE INTO iast_strategy (user_id, vul_type, level_id, state, dt, vul_name, vul_desc, vul_fix, hook_type_id, vul_desc_en, vul_desc_zh, vul_fix_en, vul_fix_zh, vul_name_zh, vul_name_en) VALUES(1, '硬编码', 5, 'enable', 1639744419, '硬编码', '代码中存在硬编码的内容', '替换源文件中的硬编码，从配置文件或远程配置服务读取', NULL, NULL, '代码中存在硬编码的内容', NULL, '替换源文件中的硬编码，从配置文件或远程配置服务读取', '硬编码', NULL);
+
+UPDATE IGNORE iast_strategy_user SET content='1,2,3,4,5,6,7,8,16,18,20,21,25,27,33,34,35,36,14,26,9,10,11,12,13,15,17,19,22,23,24,28,29,30,31,32,37' WHERE name='插桩测试标准模板' AND user_id=1;
+
 
 UPDATE IGNORE iast_strategy
 SET vul_fix='将服务器配置为使用安全策略的“Content-Security-Policy”头。
