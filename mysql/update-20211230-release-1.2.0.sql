@@ -1,6 +1,9 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
+INSERT IGNORE INTO `iast_hook_type` ( `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, language_id, strategy_id) SELECT `type`, `name`, `value`, `create_time`, created_by, enable, update_time, name_en, name_zh, @IAST_LANGUAGE_ID, strategy_id FROM `iast_hook_type` WHERE type IN (3, 4) AND language_id = 1 AND created_by = 1;
+INSERT INTO iast_program_language (id, name) VALUES(4, 'Go');
+
 DELETE FROM iast_hook_strategy_type  
 WHERE hookstrategy_id IN
 (SELECT id FROM iast_hook_strategy ihs 
