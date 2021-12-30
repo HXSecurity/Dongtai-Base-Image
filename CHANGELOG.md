@@ -6,7 +6,7 @@
      * Add component LICENSE display
 * Improve
      * Increase index to improve query speed
-     * Synchronized the latest Agent HOOK strategy
+     * Synchronized the latest agent hook strategy
      * Synchronized mobile phone number leakage rules @SpenserCai
 
 ## [1.1.4](https://github.com/HXSecurity/Dongtai-Base-Image/releases/tag/v1.1.4)-2021-12-18
