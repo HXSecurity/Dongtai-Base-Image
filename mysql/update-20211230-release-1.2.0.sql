@@ -4533,6 +4533,10 @@ AND iast_hook_type.strategy_id != 0;
 CREATE INDEX iast_agent_bind_project_id_IDX USING BTREE ON iast_agent (bind_project_id,project_version_id);
 
 ALTER TABLE auth_department ADD principal_id int(11) DEFAULT 1 NOT NULL COMMENT '负责人id';
+ALTER TABLE iast_request_chains ADD dt int(11) DEFAULT 0 NOT NULL COMMENT '储存时间';
+CREATE INDEX iast_request_chains_dt_IDX USING BTREE ON iast_request_chains (dt,request_hash,target_id);
+CREATE INDEX iast_request_chains_level_id_IDX USING BTREE ON iast_request_chains (level_id,request_hash);
+
 
 SET FOREIGN_KEY_CHECKS=1;
 
