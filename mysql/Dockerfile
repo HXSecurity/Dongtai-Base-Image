@@ -16,6 +16,8 @@ COPY db.sql /docker-entrypoint-initdb.d/
 
 COPY update-*release*.sql /docker-entrypoint-initdb.d/
 
+RUN chmod 777 /docker-entrypoint-initdb.d -R
+
 RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--datadir", "/initialized-db"]
 
 FROM mysql:5.7
