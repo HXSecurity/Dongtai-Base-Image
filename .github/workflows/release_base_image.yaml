@@ -51,6 +51,8 @@ jobs:
         run: |
           ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
 
       - name: Build mySql to local
         uses: docker/build-push-action@v2
