@@ -57,6 +57,7 @@ jobs:
         with:
           context: ./mysql
           load: true
+          buildkitd-flags: --debug
           tags: | 
             dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
             dongtai/dongtai-mysql:latest
