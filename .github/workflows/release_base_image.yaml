@@ -62,9 +62,9 @@ jobs:
         working-directory: ./mysql
         run: |
           docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
-          # docker build -t dongtai/dongtai-mysql:latest
-          docker build -t registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
-          # docker build -t registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
+          # docker build -t dongtai/dongtai-mysql:latest .
+          docker build -t registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }} .
+          # docker build -t registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest .
 
       - name: Save image to tar file
         run: |
