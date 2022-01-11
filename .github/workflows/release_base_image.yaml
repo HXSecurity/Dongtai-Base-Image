@@ -90,7 +90,9 @@ jobs:
 
       - name: Push images
         run: |
-          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker images
+          dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
+          # docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
 
 
 
