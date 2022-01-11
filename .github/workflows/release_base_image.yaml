@@ -75,9 +75,7 @@ jobs:
           load: true
           tags: | 
             dongtai/dongtai-redis:${{ steps.release.outputs.version }}
-            #dongtai/dongtai-redis:latest
             registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:${{ steps.release.outputs.version }}
-            #registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:latest
 
       - name: Save image to tar file
         run: |
