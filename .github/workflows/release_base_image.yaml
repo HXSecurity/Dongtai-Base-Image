@@ -55,8 +55,6 @@ jobs:
         run: |
           ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
-      # - name: Setup upterm session
-      #   uses: lhotari/action-upterm@v1
 
       - name: Build by docker 
         working-directory: ./mysql
@@ -70,6 +68,9 @@ jobs:
       - name: Tag images
         run: |
           docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }}  registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
+
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
 
       - name: Save image to tar file
         run: |
