@@ -131,7 +131,7 @@ INSERT IGNORE INTO  web_role_button_relation (id, role_id, button_id) VALUES(110
 INSERT IGNORE INTO  web_role_button_relation (id, role_id, button_id) VALUES(111, 6, 9);
 INSERT IGNORE INTO  web_role_button_relation (id, role_id, button_id) VALUES(112, 6, 11);
 
-INSERT IGNORE INTO  iast_profile (`key`, value) VALUES('auto_audit', '0');
+INSERT IGNORE INTO  iast_profile (`key`, value) VALUES('auto_audit', '1');
 
 
 
