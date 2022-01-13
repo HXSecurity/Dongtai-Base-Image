@@ -142,6 +142,7 @@ WHERE
 	value IN 
 ('java.lang.String.<init>(java.lang.String)', 'java.lang.String.<init>(java.lang.StringBuffer)','java.lang.String.<init>(java.lang.StringBuilder)', 'java.lang.String.<init>(byte[])', 'java.lang.String.<init>(byte[],int,int)', 'java.lang.String.<init>(byte[],int,int,int)', 'java.lang.String.<init>(byte[],int,int,java.nio.charset.Charset)', 'java.lang.String.<init>(byte[],int,int,java.lang.String)', 'java.lang.String.<init>(char[])', 'java.lang.String.<init>(char[],int,int)', 'java.lang.String.replace(java.lang.CharSequence,java.lang.CharSequence)', 'java.lang.String.toLowerCase(java.util.Locale)', 'java.lang.String.toUpperCase(java.util.Locale)', 'java.lang.String.getBytes()', 'java.lang.String.getBytes(java.lang.String)', 'java.lang.String.getBytes(java.nio.charset.Charset)', 'java.lang.String.getBytes(int,int,byte[],int)', 'java.lang.String.getChars(int,int,char[],int)', 'java.lang.String.concat(java.lang.String)', 'java.lang.String.substring(int,int)', 'java.lang.String.substring(int)', 'java.lang.String.toCharArray()', 'java.lang.String.<init>(char[],int,int,boolean)', 'java.lang.String.split(java.lang.String)', 'java.lang.String.split(java.lang.String, int)', 'java.lang.StringBuilder.replace(int,int,java.lang.String)', 'java.lang.StringBuilder.toString()', 'java.lang.StringBuilder.<init>(java.lang.String)', 'java.lang.StringBuilder.<init>(java.lang.CharSequence)', 'java.lang.StringBuilder.append(java.lang.Object)', 'java.lang.StringBuilder.append(java.lang.String)', 'java.lang.StringBuilder.append(java.lang.StringBuffer)', 'java.lang.StringBuilder.append(java.lang.CharSequence)', 'java.lang.StringBuilder.append(java.lang.CharSequence,int,int)', 'java.lang.StringBuilder.append(char[],int,int)', 'java.util.List.<init>(java.util.Collection)', 'java.util.List.add(int,java.lang.Object)', 'java.util.List.add(java.lang.Object)', 'java.util.List.addAll(int,java.util.Collection)', 'java.util.List.addAll(java.util.Collection)', 'java.util.List.set(int,java.lang.Object)', 'java.util.List.get(int)', 'java.util.List.clone()', 'java.util.List.toArray()', 'java.util.List.toArray(java.lang.Object[])', 'java.util.Map.get(java.lang.Object)', 'java.util.Map.getOrDefault(java.lang.Object,java.lang.Object)', 'java.util.Map.put(java.lang.Object,java.lang.Object)', 'java.util.Map.putAll(java.util.Map)', 'java.util.Map.putIfAbsent(java.lang.Object,java.lang.Object)', 'java.util.Enumeration.nextElement()', 'java.net.Socket.<init>(java.lang.String,int)', 'java.net.Socket.getOutputStream()', 'java.io.BufferedReader.<init>(java.io.Reader)', 'java.io.BufferedReader.<init>(java.io.Reader,int)', 'java.io.BufferedReader.<init>(java.io.FileReader)', 'java.io.BufferedReader.<init>(java.io.InputStreamReader)', 'java.io.BufferedReader.readLine()', 'java.io.InputStreamReader.<init>(java.io.InputStream)', 'java.io.InputStreamReader.<init>(java.io.InputStream,java.nio.charset.Charset)', 'java.io.StringReader.<init>(java.lang.String)', 'java.io.FileInputStream.<init>(java.io.File)', 'java.io.FileInputStream.<init>(java.lang.String)', 'java.io.FileReader.<init>(java.io.File)', 'java.io.InputStreamReader.read(char[],int,int)', 'java.io.ByteArrayInputStream.<init>(byte[])', 'java.io.ByteArrayInputStream.<init>(byte[],int,int)', 'java.io.InputStream.read(byte[],int,int)', 'java.io.PushbackInputStream.<init>(java.io.InputStream,int)', 'java.io.InputStream.<init>(java.io.InputStream)', 'java.io.ObjectInputStream.<init>(java.io.InputStream)', 'java.io.CharArrayReader.<init>(char[])', 'java.io.CharArrayReader.<init>(char[],int,int)', 'java.io.CharArrayReader.read(char[],int,int)', 'java.io.ByteArrayOutputStream.write(byte[],int,int)', 'java.io.ByteArrayOutputStream.toByteArray()', 'java.io.ByteArrayOutputStream.reset()', 'java.net.URI.<init>(java.lang.String)', 'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String)', 'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)', 'java.net.URI.toURL()', 'org.apache.commons.httpclient.URI.parseUriReference(java.lang.String, boolean)', 'java.net.URL.<init>(java.lang.String)', 'java.net.URL.<init>(java.lang.String,java.lang.String,int,java.lang.String)', 'java.net.URL.<init>(java.lang.String,java.lang.String,int,java.lang.String,java.net.URLStreamHandler)', 'java.net.URL.<init>(java.lang.String,java.lang.String,java.lang.String)', 'java.net.URL.<init>(java.net.URL,java.lang.String)', 'java.net.URLDecoder.decode(java.lang.String,java.lang.String)', 'javax.servlet.ServletRequest.getParameterNames()', 'javax.servlet.ServletRequest.getParameterValues(java.lang.String)', 'javax.servlet.http.Cookie.getValue()', 'javax.servlet.http.Cookie.<init>(java.lang.String,java.lang.String)', 'java.lang.ProcessBuilder.command(java.lang.String[])', 'java.lang.ProcessBuilder.command(java.util.List)', 'java.lang.ProcessBuilder.<init>(java.lang.String[])', 'java.lang.ProcessBuilder.<init>(java.util.List)', 'java.util.Base64$Decoder.decode(byte[])', 'java.util.Base64$Decoder.decode(java.lang.String)', 'java.util.Base64$Decoder.decode(java.nio.ByteBuffer)', 'java.util.Base64$Decoder.decode(byte[],byte[])', 'org.apache.commons.codec.binary.Base64.decodeBase64(java.lang.String)', 'org.apache.commons.codec.binary.Base64.decodeBase64(byte[])', 'org.apache.commons.codec.binary.Base64.decodeInteger(byte[])', 'org.apache.commons.codec.binary.BaseNCodec.decode(java.lang.Object)', 'org.apache.commons.codec.binary.BaseNCodec.decode(byte[])', 'org.apache.commons.codec.binary.BaseNCodec.decode(java.lang.String)', 'org.apache.commons.codec.binary.Base64.decode(byte[],int,int,org.apache.commons.codec.binary.BaseNCodec$Context)', 'java.util.Base64$Encoder.encode(byte[])', 'java.util.Base64$Encoder.encodeToString(byte[])', 'java.util.Base64$Encoder.encode(java.nio.ByteBuffer)', 'java.util.Base64$Encoder.encode(byte[],byte[])', 'org.apache.commons.codec.binary.BaseNCodec.encode(byte[])', 'org.apache.commons.codec.binary.BaseNCodec.encode(byte[],int,int)', 'org.apache.commons.codec.binary.BaseNCodec.encode(java.lang.Object)', 'org.apache.commons.codec.binary.BaseNCodec.encodeAsString(byte[])', 'org.apache.commons.codec.binary.BaseNCodec.encodeToString(byte[])', 'org.apache.commons.codec.binary.Base64.encodeBase64(byte[])', 'org.apache.commons.codec.binary.Base64.encodeBase64(byte[],boolean)', 'org.apache.commons.codec.binary.Base64.encodeBase64(byte[],boolean,boolean)', 'org.apache.commons.codec.binary.Base64.encodeBase64(byte[],boolean,boolean,int)', 'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)', 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)', 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)', 'javax.xml.transform.stream.StreamSource.<init>(java.io.File)', 'javax.xml.transform.stream.StreamSource.<init>(java.io.Reader)', 'javax.xml.transform.stream.StreamSource.<init>(java.io.Reader,java.lang.String)', 'javax.xml.transform.stream.StreamSource.<init>(java.io.InputStream)', 'javax.xml.transform.stream.StreamSource.<init>(java.io.InputStream,java.lang.String)', 'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.io.Reader)', 'javax.xml.stream.XMLInputFactory.createXMLStreamReader(javax.xml.transform.Source)', 'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.io.InputStream)', 'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.io.InputStream,java.lang.String)', 'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.lang.String,java.io.InputStream)', 'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.lang.String,java.io.Reader)', 'javax.xml.bind.Unmarshaller.unmarshal(java.io.Reader)', 'javax.xml.bind.Unmarshaller.unmarshal(java.io.InputStream)', 'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)', 'javax.xml.bind.JAXBElement.getValue()', 'javax.xml.transform.sax.SAXSource.<init>(org.xml.sax.InputSource)', 'javax.xml.transform.sax.SAXSource.<init>(org.xml.sax.XMLReader,org.xml.sax.InputSource)', 'javax.xml.transform.sax.SAXSource.setInputSource(org.xml.sax.InputSource)', 'org.xml.sax.InputSource.<init>(java.lang.String)', 'org.xml.sax.InputSource.<init>(java.io.InputStream)', 'org.xml.sax.InputSource.<init>(java.io.Reader)', 'org.xml.sax.InputSource.setCharacterStream(java.io.Reader)', 'org.xml.sax.InputSource.getCharacterStream()', 'org.xml.sax.InputSource.setByteStream(java.io.InputStream)', 'org.xml.sax.InputSource.getByteStream()', 'org.xml.sax.InputSource.setSystemId(java.lang.String', 'org.xml.sax.InputSource.getSystemId()', 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)', 'org.springframework.cloud.config.server.resource.ResourceController.retrieve(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)', 'org.springframework.cloud.config.server.resource.GenericResourceRepository.findOne(java.lang.String,java.lang.String,java.lang.String,java.lang.String)', 'org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.getLocations(java.lang.String,java.lang.String,java.lang.String)', 'org.apache.hc.core5.http.message.BasicHttpRequest.setUri(java.net.URI)', 'org.apache.hc.core.http.message.BasicHttpRequest.setUri(java.net.URI)', 'org.apache.hc.client5.http.classic.methods.HttpGet.<init>(java.lang.String)', 'org.apache.hc.client5.http.classic.methods.HttpGet.<init>(java.net.URI)', 'org.apache.hc.core5.http.HttpHost.<init>(java.lang.String,int)', 'org.apache.hc.core5.http.HttpHost.<init>(java.lang.String,java.lang.String)', 'com.squareup.okhttp.Request$Builder.build()', 'com.squareup.okhttp.Request$Builder.url(com.squareup.okhttp.HttpUrl)', 'com.squareup.okhttp.HttpUrl.parse(java.lang.String)', 'com.squareup.okhttp.OkHttpClient.newCall(com.squareup.okhttp.Request)', 'okhttp3.Request$Builder.build()', 'okhttp3.Request$Builder.url(okhttp3.HttpUrl)', 'okhttp3.HttpUrl.get(java.lang.String)', 'okhttp3.Call$Factory.newCall(okhttp3.Request)', 'org.springframework.expression.ExpressionParser.parseExpression(java.lang.String,org.springframework.expression.ParserContext)', 'org.springframework.expression.ExpressionParser.parseExpression(java.lang.String)', 'ognl.Ognl.parseExpression(java.lang.String)', 'ognl.OgnlParser.<init>(java.io.Reader)', 'ognl.OgnlParser.<init>(java.io.InputStream)', 'ognl.OgnlParser.<init>(ognl.OgnlParserTokenManager)', 'ognl.OgnlParser.topLevelExpression()', 'java.util.function.BiConsumer.accept(java.lang.Object,java.lang.Object', 'org.apache.catalina.connector.CoyoteInputStream.read(byte[])', 'org.apache.catalina.connector.CoyoteInputStream.read(byte[],int,int)', 'org.apache.catalina.connector.CoyoteInputStream.read(java.nio.ByteBuffer)', 'java.sql.Connection.nativeSQL(java.lang.String)', 'javax.mail.Message.setFrom(javax.mail.Address)', 'javax.mail.Message.setHeader(java.lang.String,java.lang.String)', 'javax.mail.Message.setRecipient(javax.mail.Message.RecipientType,javax.mail.Address)', 'javax.mail.internet.MimeMessage.setRecipients(javax.mail.Message.RecipientType,java.lang.String)', 'javax.mail.Message.setSubject(java.lang.String)', 'javax.mail.internet.MimeMessage.setSubject(java.lang.String,java.lang.String)', 'javax.mail.Part.setText(java.lang.String)', 'javax.mail.internet.MimeBodyPart.setText(javax.mail.internet.MimePart,java.lang.String,java.lang.String,java.lang.String)', 'javax.mail.internet.InternetHeaders.setHeader(java.lang.String,java.lang.String)', 'javax.mail.internet.InternetHeaders.addHeader(java.lang.String,java.lang.String)', 'javax.mail.internet.InternetHeaders.addHeaderLine(java.lang.String)', 'java.net.URL.openConnection()', 'java.net.URL.openConnection(java.net.Proxy)', 'org.apache.http.client.methods.HttpRequestBase.setURI(java.net.URI)', 'org.apache.commons.httpclient.HttpMethodBase.<init>(java.lang.String)', 'org.apache.commons.httpclient.HttpMethodBase.setURI(java.net.URI)', 'org.apache.hc.client5.http.impl.classic.CloseableHttpClient.doExecute(org.apache.hc.core5.http.HttpHost,org.apache.hc.core5.http.ClassicHttpRequest,org.apache.hc.core5.http.protocol.HttpContext)', 'com.squareup.okhttp.Call.execute()', 'com.squareup.okhttp.Call.enqueue(com.squareup.okhttp.Callback)', 'okhttp3.Call.execute()', 'okhttp3.Call.enqueue(okhttp3.Callback)', 'java.beans.XMLDecoder.<init>(org.xml.sax.InputSource)', 'java.beans.XMLDecoder.<init>(java.io.InputStream)', 'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object)', 'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object,java.beans.ExceptionListener)', 'java.lang.ProcessImpl.start(java.lang.String[],java.util.Map,java.lang.String,java.lang.ProcessBuilder$Redirect[],boolean)', 'java.lang.ProcessBuilder.start()', 'java.lang.Runtime.exec(java.lang.String[],java.lang.String[])', 'java.lang.Runtime.exec(java.lang.String[])', 'java.lang.Runtime.exec(java.lang.String)', 'java.lang.Runtime.exec(java.lang.String[],java.lang.String[],java.io.File)', 'java.lang.Runtime.exec(java.lang.String,java.lang.String[],java.io.File)', 'java.lang.Runtime.exec(java.lang.String,java.lang.String[])', 'java.sql.Statement.addBatch(java.lang.String)', 'java.sql.Statement.execute(java.lang.String)', 'java.sql.Statement.execute(java.lang.String,int)', 'java.sql.Statement.execute(java.lang.String,int[])', 'java.sql.Statement.execute(java.lang.String,java.lang.String[])', 'java.sql.Statement.executeQuery(java.lang.String)', 'java.sql.Statement.executeUpdate(java.lang.String)', 'java.sql.Statement.executeUpdate(java.lang.String,int)', 'java.sql.Statement.executeUpdate(java.lang.String,int[])', 'java.sql.Statement.executeUpdate(java.lang.String,java.lang.String[])', 'java.sql.Connection.prepareCall(java.lang.String)', 'java.sql.Connection.prepareCall(java.lang.String,int,int)', 'java.sql.Connection.prepareCall(java.lang.String,int,int,int)', 'java.sql.Connection.prepareStatement(java.lang.String)', 'java.sql.Connection.prepareStatement(java.lang.String,int)', 'java.sql.Connection.prepareStatement(java.lang.String,int,int)', 'java.sql.Connection.prepareStatement(java.lang.String,int,int,int)', 'java.sql.Connection.prepareStatement(java.lang.String,int[])', 'java.sql.Connection.prepareStatement(java.lang.String,java.lang.String[])', 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)', 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)', 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls', 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)', 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)', 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls', 'javax.xml.xpath.XPath.compile(java.lang.String)', 'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource)', 'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)', 'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object)', 'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)', 'javax.xml.xpath.XPath.eval(org.w3c.dom.Node,java.lang.String)', 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String)', 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.w3c.dom.Node)', 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.apache.xml.utils.PrefixResolver)', 'net.sf.saxon.s9api.XPathCompiler.compile(java.lang.String)', 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)', 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)', 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)', 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(java.lang.String)', 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)', 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)', 'org.apache.xpath.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)', 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)', 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)', 'org.apache.xpath.jaxp.XPathImpl.compile(java.lang.String)', 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)', 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)', 'java.nio.file.Paths.get(java.lang.String,java.lang.String[])', 'java.nio.file.Paths.get(java.net.URI)', 'java.io.File.<init>(java.lang.String)', 'java.io.File.<init>(java.lang.String,java.lang.String)', 'java.io.File.<init>(java.io.File,java.lang.String)', 'java.io.File.<init>(java.net.URI)', 'java.io.RandomAccessFile.<init>(java.lang.String,java.lang.String)', 'java.lang.Math.random()', 'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean,char[])', 'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean)', 'org.apache.commons.lang.RandomStringUtils.randomAlphabetic(int)', 'org.apache.commons.lang.RandomStringUtils.randomAlphanumeric(int)', 'org.apache.commons.lang.RandomStringUtils.randomAscii(int)', 'org.apache.commons.lang.RandomStringUtils.randomNumeric(int)', 'java.util.Random.nextInt()', 'java.util.Random.nextBoolean()', 'java.util.Random.nextDouble()', 'java.util.Random.nextFloat()', 'java.util.Random.nextGaussian()', 'java.util.Random.nextInt()', 'java.util.Random.nextLong()', 'java.security.MessageDigest.getInstance(java.lang.String)', 'java.security.MessageDigest.getInstance(java.lang.String,java.security.Provider)', 'java.security.MessageDigest.getInstance(java.lang.String,java.lang.String)', 'javax.crypto.Cipher.getInstance(java.lang.String)', 'javax.crypto.Cipher.getInstance(java.lang.String,java.security.Provider)', 'javax.crypto.Cipher.getInstance(java.lang.String,java.lang.String)', 'javax.servlet.http.Cookie.setSecure(boolean)', 'org.glassfish.grizzly.http.Cookie.setSecure(boolean)', 'javax.ws.rs.core.NewCookie.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,int,java.util.Date,boolean,boolean)', 'javax.ws.rs.core.NewCookie.<init>(javax.ws.rs.core.Cookie,java.lang.String,int,java.util.Date,boolean,boolean)', 'javax.servlet.http.HttpSession.setAttribute(java.lang.String,java.lang.Object)', 'javax.servlet.http.HttpSession.putValue(java.lang.String,java.lang.Object)', 'org.apache.struts2.dispatcher.SessionMap.put(java.lang.Object,java.lang.Object)', 'coldfusion.runtime.SessionScope.bind(java.lang.String,java.lang.Object)', 'play.mvc.Http$Session.put(java.lang.String,java.lang.String)', 'org.springframework.http.converter.StringHttpMessageConverter.writeInternal(java.lang.String,org.springframework.http.HttpOutputMessage)', 'play.twirl.api.Html$.apply(java.lang.String)', 'org.glassfish.jersey.message.internal.ByteArrayProvider.writeTo(byte[],java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)', 'org.glassfish.jersey.message.internal.DataSourceProvider.writeTo(javax.activation.DataSource,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)', 'org.glassfish.jersey.message.internal.FileProvider.writeTo(java.io.File,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)', 'org.glassfish.jersey.message.internal.InputStreamProvider.writeTo(java.io.InputStream,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)', 'org.glassfish.jersey.message.internal.ReaderProvider.writeTo(java.io.Reader,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)', 'org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(java.lang.String,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)', 'org.glassfish.jersey.message.internal.AbstractMessageReaderWriterProvider.writeToAsString(java.lang.String,java.io.OutputStream,javax.ws.rs.core.MediaType)', 'com.github.mustachejava.codes.ValueCode.execute(java.io.Writer,java.lang.String)', 'javax.servlet.jsp.JspWriter.print(java.lang.String)', 'javax.servlet.jsp.JspWriter.println(java.lang.String)', 'javax.servlet.jsp.JspWriter.write(java.lang.String)', 'javax.servlet.jsp.JspWriter.write(java.lang.String,int,int)', 'javax.servlet.jsp.JspWriter.write(char[])', 'javax.servlet.jsp.JspWriter.write(char[],int,int)', 'java.io.PrintWriter.format(java.util.Locale,java.lang.String,java.lang.Object[])', 'java.io.PrintWriter.format(java.lang.String,java.lang.Object[])', 'java.io.PrintWriter.print(char[])', 'java.io.PrintWriter.print(java.lang.Object)', 'java.io.PrintWriter.print(java.lang.String)', 'java.io.PrintWriter.printf(java.util.Locale,java.lang.String,java.lang.Object[])', 'java.io.PrintWriter.printf(java.lang.String,java.lang.Object[])', 'java.io.PrintWriter.println(char[])', 'java.io.PrintWriter.println(java.lang.Object)', 'java.io.PrintWriter.println(java.lang.String)', 'java.io.PrintWriter.write(char[])', 'java.io.PrintWriter.write(char[],int,int)', 'java.io.PrintWriter.write(java.lang.String)', 'java.io.PrintWriter.write(java.lang.String,int,int)', 'org.apache.tapestry5.internal.services.MarkupWriterImpl.writeRaw(java.lang.String)', 'com.sun.faces.renderkit.html_basic.HtmlResponseWriter.write(java.lang.String)', 'org.mule.module.http.internal.domain.response.DefaultHttpResponse.<init>(org.mule.module.http.internal.domain.response.ResponseStatus,org.apache.commons.collections.MultiMap,org.mule.module.http.internal.domain.HttpEntity)', 'org.mule.module.http.internal.domain.response.HttpResponseBuilder.setEntity(org.mule.module.http.internal.domain.HttpEntity)', 'org.mule.module.http.internal.domain.response.HttpResponseBuilder.build(org.mule.module.http.internal.domain.HttpEntity)', 'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.DefaultMuleEvent,java.lang.Object)', 'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.api.MuleEvent,java.lang.Object)', 'org.apache.jasper.runtime.JspWriterImpl.println(java.lang.String)', 'javax.xml.parsers.DocumentBuilder.parse(java.io.File)', 'javax.xml.parsers.DocumentBuilder.parse(java.io.InputStream)', 'javax.xml.parsers.DocumentBuilder.parse(java.io.InputStream,java.lang.String)', 'javax.xml.parsers.DocumentBuilder.parse(java.lang.String)', 'javax.xml.parsers.DocumentBuilder.parse(org.xml.sax.InputSource)', 'nu.xom.Builder.build(java.io.File)', 'nu.xom.Builder.build(java.io.InputStream)', 'nu.xom.Builder.build(java.io.InputStream,java.lang.String)', 'nu.xom.Builder.build(java.io.Reader)', 'nu.xom.Builder.build(java.io.Reader,java.lang.String)', 'nu.xom.Builder.build(java.lang.String)', 'javax.xml.bind.Unmarshaller.unmarshal(java.io.InputStream)', 'javax.xml.bind.Unmarshaller.unmarshal(java.io.Reader)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)', 'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader)', 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)', 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase)', 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase,java.lang.String)', 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)', 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler,java.lang.String)', 'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.HandlerBase)', 'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.helpers.DefaultHandler)', 'org.xml.sax.XMLReader.parse(org.xml.sax.InputSource)', 'javax.xml.stream.XMLStreamReader.getElementText()', 'javax.servlet.jsp.el.ExpressionEvaluator.evaluate(java.lang.String,java.lang.Class,javax.servlet.jsp.el.VariableResolver,javax.servlet.jsp.el.FunctionMapper)', 'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object)', 'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object,java.lang.Class)', 'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object)', 'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object,java.lang.Class)', 'ognl.Ognl.getValue(java.lang.Object,java.lang.Object)', 'ognl.Ognl.getValue(java.lang.Object,java.lang.Object,java.lang.Class)', 'ognl.Ognl.getValue(java.lang.String,java.lang.Object)', 'ognl.Ognl.getValue(java.lang.String,java.lang.Object,java.lang.Class)', 'org.apache.commons.ognl.Ognl.parseExpression(java.lang.String)', 'org.springframework.expression.Expression.getValue()', 'org.springframework.expression.Expression.getValue(java.lang.Class)', 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext)', 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Class)', 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Class)', 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object)', 'org.springframework.expression.Expression.getValue(java.lang.Object)', 'org.springframework.expression.Expression.getValue(java.lang.Object,java.lang.Class)', 'org.springframework.expression.Expression.getValueTypeDescriptor(java.lang.Object)', 'org.springframework.expression.Expression.getValueTypeDescriptor()', 'org.springframework.expression.Expression.getValueTypeDescriptor(org.springframework.expression.EvaluationContext,java.lang.Object)', 'org.springframework.expression.Expression.getValueTypeDescriptor(org.springframework.expression.EvaluationContext)', 'java.util.regex.Pattern.matcher(java.lang.CharSequence)', 'jregex.Pattern.matcher(java.lang.String)', 'java.lang.Class.forName(java.lang.String)', 'java.lang.Class.forName(java.lang.String,boolean,java.lang.ClassLoader)', 'java.io.ObjectInput.readObject()', 'java.io.ObjectInputStream.readObject()', 'com.thoughtworks.xstream.XStream.fromXML(java.lang.String)', 'com.thoughtworks.xstream.XStream.fromXML(java.lang.String,java.lang.Object)', 'com.thoughtworks.xstream.XStream.fromXML(java.io.Reader)', 'com.thoughtworks.xstream.XStream.fromXML(java.io.Reader,java.lang.Object)', 'com.thoughtworks.xstream.XStream.fromXML(java.io.InputStream)', 'com.thoughtworks.xstream.XStream.fromXML(java.io.InputStream,java.lang.Object)', 'com.thoughtworks.xstream.XStream.fromXML(java.net.URL)', 'com.thoughtworks.xstream.XStream.fromXML(java.net.URL,java.lang.Object)', 'com.esotericsoftware.kryo.Kryo.readObject(com.esotericsoftware.kryo.io.Input,java.lang.Class)', 'com.esotericsoftware.kryo.Kryo.readObjectOrNull(com.esotericsoftware.kryo.io.Input,java.lang.Class)', 'com.esotericsoftware.kryo.Kryo.readObject(com.esotericsoftware.kryo.io.Input,java.lang.Class,com.esotericsoftware.kryo.Serializer)', 'com.esotericsoftware.kryo.Kryo.readObjectOrNull(com.esotericsoftware.kryo.io.Input,java.lang.Class,com.esotericsoftware.kryo.Serializer)', 'com.esotericsoftware.kryo.Kryo.readClassAndObject(com.esotericsoftware.kryo.io.Input)', 'org.hibernate.Session.createFilter(java.lang.Object,java.lang.String)', 'org.hibernate.Session.createQuery(java.lang.String)', 'org.hibernate.Session.createSQLQuery(java.lang.String,java.lang.String,java.lang.Class)', 'org.hibernate.Session.createSQLQuery(java.lang.String,java.lang.String[],java.lang.Class[])', 'org.hibernate.Session.createSQLQuery(java.lang.String)', 'org.hibernate.Session.delete(java.lang.String)', 'org.hibernate.Session.delete(java.lang.String,java.lang.Object,org.hibernate.type.Type)', 'org.hibernate.Session.delete(java.lang.String,java.lang.Object[],org.hibernate.type.Type[])', 'org.hibernate.Session.filter(java.lang.Object,java.lang.String)', 'org.hibernate.Session.filter(java.lang.Object,java.lang.String,java.lang.Object,org.hibernate.type.Type)', 'org.hibernate.Session.filter(java.lang.Object,java.lang.String,java.lang.Object[],org.hibernate.type.Type[])', 'org.hibernate.Session.find(java.lang.String)', 'org.hibernate.Session.find(java.lang.String,java.lang.Object,org.hibernate.type.Type)', 'org.hibernate.Session.find(java.lang.String,java.lang.Object[],org.hibernate.type.Type[])', 'org.hibernate.Session.iterate(java.lang.String)', 'org.hibernate.Session.iterate(java.lang.String,java.lang.Object,org.hibernate.type.Type)', 'org.hibernate.Session.iterate(java.lang.String,java.lang.Object[],org.hibernate.type.Type[])', 'org.hibernate.SharedSessionContract.createQuery(java.lang.String)', 'org.hibernate.SharedSessionContract.createSQLQuery(java.lang.String)', 'com.mongodb.DB.doEval(java.lang.String,java.lang.Object[])', 'java.io.BufferedReader.readLine()', 'javax.servlet.ServletRequest.getRequestDispatcher(java.lang.String)', 'javax.servlet.jsp.PageContext.forward(java.lang.String)', 'org.glassfish.grizzly.http.server.Response.sendRedirect(java.lang.String)', 'play.mvc.Results.redirect(java.lang.String)', 'javax.ws.rs.core.Response.temporaryRedirect(java.net.URI)', 'javax.servlet.http.HttpServletResponse.sendRedirect(java.lang.String)', 'javax.servlet.http.HttpServletResponse.setHeader(java.lang.String,java.lang.String)', 'io.netty.handler.codec.http.DefaultHttpHeaders.add0(int,int,java.lang.CharSequence,java.lang.CharSequence)', 'javax.servlet.http.HttpServletResponse.addHeader(java.lang.String,java.lang.String)', 'javax.servlet.http.HttpServletResponse.setHeader(java.lang.String,java.lang.String)', 'javax.servlet.http.HttpServletResponse.addHeader(java.lang.String,java.lang.String)', 'javax.ws.rs.core.Response$ResponseBuilder.header(java.lang.String,java.lang.Object)', 'java.lang.Runtime.load0(java.lang.Class,java.lang.String)', 'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)', 'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])', 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)', 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)', 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])', 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)', 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)', 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)', 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])', 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)', 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)', 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)', 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])', 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)', 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)', 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)', 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])', 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)', 'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)', 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])', 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)', 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])', 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)', 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])', 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)', 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])', 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)', 'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)', 'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)', 'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)', 'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)', 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)', 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)', 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)', 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)', 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)', 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)', 'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)', 'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)', 'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)', 'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)', 'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)', 'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)', 'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)', 'java.util.Arrays.asList(java.lang.Object[])', 'java.util.Collection.addAll(java.util.Collection)', 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)', 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)', 'org.apache.solr.common.params.SolrParams.get(java.lang.String)', 'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)', 'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)', 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)', 'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)', 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)', 'java.lang.StringUTF16.newString(byte[],int,int)', 'java.lang.StringLatin1.newString(byte[],int,int)', 'java.lang.StringConcatHelper.newString(byte[],int,byte)', 'java.lang.StringBuilder.delete(int,int)', 'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)', 'java.lang.String.getBytes(byte[],int,byte)', 'javax.servlet.ServletRequest.getInputStream()', 'javax.servlet.ServletRequest.getParameter(java.lang.String)', 'javax.servlet.ServletRequest.getParameterNames()', 'javax.servlet.ServletRequest.getParameterValues(java.lang.String)', 'javax.servlet.ServletRequest.getParameterMap()', 'javax.servlet.ServletRequest.getReader()', 'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)', 'javax.servlet.http.HttpServletRequest.getHeaderNames()', 'javax.servlet.http.HttpServletRequest.getParts()', 'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)', 'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)', 'javax.servlet.http.HttpServletRequest.getCookies()', 'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)', 'javax.servlet.http.HttpServletRequest.getQueryString()', 'javax.servlet.http.HttpServletRequest.getInputStream()', 'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)', 'javax.servlet.http.HttpServletRequest.getParameterNames()', 'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)', 'javax.servlet.http.HttpServletRequest.getParameterMap()', 'javax.servlet.http.HttpServletRequest.getReader()', 'org.iast.springsec.common.DataManager.doManage(java.lang.String)', 'org.apache.commons.fileupload.FileItem.write(java.io.File)', 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)', 'java.lang.StringConcatHelper.newString(byte[],long)', 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)', 'org.apache.commons.fileupload.FileItem.write(java.io.File)', 'java.sql.Statement.executeLargeUpdate(java.lang.String,java.lang.String[])', 'java.sql.Statement.executeLargeUpdate(java.lang.String,int[])', 'java.sql.Statement.executeLargeUpdate(java.lang.String,int)', 'java.sql.Statement.executeLargeUpdate(java.lang.String)', 'com.alibaba.fastjson.JSON.parseObject(java.lang.String)', 'com.caucho.hessian.io.HessianInput.readObject()', 'org.springframework.web.multipart.MultipartFile.getOriginalFilename()', 'org.springframework.web.multipart.MultipartFile.getName()', 'org.apache.commons.fileupload.FileItem.getName()', 'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()', 'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)', 'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])');
 
+
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
@@ -1792,6 +1793,35 @@ WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
 `value`= 'java.io.BufferedReader.<init>(java.io.InputStreamReader)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536828 AND `update_time`=  1610536828 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'IO传播',  'io',  1610535130
+	,  1610535130,  1,  1,  'Propagator:IO',  'IO传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'IO传播'
+AND  value =  'io' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:IO'AND name_zh =  'IO传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'IO传播'
+AND  value =  'io' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:IO'AND name_zh =  'IO传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.io.BufferedReader.readLine()',  'O',  'R',  'false',  '',  1610536828,  1610536828,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.io.BufferedReader.readLine()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536828 AND `update_time`=  1610536828 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.io.BufferedReader.readLine()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536828 AND `update_time`=  1610536828 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
@@ -4018,6 +4048,151 @@ AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' 
 
 INSERT IGNORE INTO iast_hook_strategy
 (value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.bind.Unmarshaller.unmarshal(java.io.Reader)',  'P1',  'R',  'true',  '',  1610536830,  1610536830,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(java.io.Reader)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(java.io.Reader)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Javax传播',  'javax',  1610535131
+	,  1610535131,  1,  1,  'Propagator:For XXE',  'Javax传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.bind.Unmarshaller.unmarshal(java.io.InputStream)',  'P1',  'R',  'true',  '',  1610536830,  1610536830,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Javax传播',  'javax',  1610535131
+	,  1610535131,  1,  1,  'Propagator:For XXE',  'Javax传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)',  'P1',  'R',  'true',  '',  1610536830,  1610536830,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Javax传播',  'javax',  1610535131
+	,  1610535131,  1,  1,  'Propagator:For XXE',  'Javax传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source)',  'P1',  'R',  'true',  '',  1610536830,  1610536830,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Javax传播',  'javax',  1610535131
+	,  1610535131,  1,  1,  'Propagator:For XXE',  'Javax传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)',  'P1',  'R',  'true',  '',  1610536830,  1610536830,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536830 AND `update_time`=  1610536830 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Javax传播',  'javax',  1610535131
+	,  1610535131,  1,  1,  'Propagator:For XXE',  'Javax传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Javax传播'
+AND  value =  'javax' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:For XXE'AND name_zh =  'Javax传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
 SELECT  'javax.xml.bind.JAXBElement.getValue()',  'O',  'R',  'false',  '',  1610536830,  1610536830,  1,  1
  FROM DUAL 
 WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
@@ -5243,6009 +5418,6 @@ WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
 `value`= 'java.sql.Connection.nativeSQL(java.lang.String)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536831 AND `update_time`=  1610536831 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SpringCloudConfigServer',  'spring-cloud-config-server',  1610535131
-	,  1610535131,  1,  0,  'SpringCloudConfigServer',  'SpringCloudConfigServer'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SpringCloudConfigServer'
-AND  value =  'spring-cloud-config-server' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'SpringCloudConfigServer'AND name_zh =  'SpringCloudConfigServer' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SpringCloudConfigServer'
-AND  value =  'spring-cloud-config-server' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'SpringCloudConfigServer'AND name_zh =  'SpringCloudConfigServer' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)',  'P1',  '',  'false',  'true',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)',  'P1,2',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)',  'P1,2',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)',  'P1',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
-	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SQL越权类型'
-AND  value =  'sql-over-power' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)',  'P1',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)',  '',  '',  'false',  '',  1610536839,  1610536839,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)',  '',  '',  'false',  '',  1610536839,  1610536839,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
-	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  '反射型XSS过滤类型'
-AND  value =  'reflected-xss-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 3 AND `name`=  'XXE过滤类型'
-AND  value =  'xxe-filter' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Arrays辅助传播策略',  'Arrays',  1614601101
-	,  1614601101,  1,  1,  'Propagator:Arrays',  'Arrays辅助传播策略'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Arrays辅助传播策略'
-AND  value =  'Arrays' AND
-update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Arrays'AND name_zh =  'Arrays辅助传播策略' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Arrays辅助传播策略'
-AND  value =  'Arrays' AND
-update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Arrays'AND name_zh =  'Arrays辅助传播策略' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.util.Arrays.asList(java.lang.Object[])',  'P1',  'R',  'false',  'false',  1614601101,  1614601101,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.util.Arrays.asList(java.lang.Object[])' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.util.Arrays.asList(java.lang.Object[])' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Collection辅助传播识别策略',  'Collection',  1614601101
-	,  1614601101,  1,  1,  'Propagator:Collection',  'Collection辅助传播识别策略'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Collection辅助传播识别策略'
-AND  value =  'Collection' AND
-update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Collection'AND name_zh =  'Collection辅助传播识别策略' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Collection辅助传播识别策略'
-AND  value =  'Collection' AND
-update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Collection'AND name_zh =  'Collection辅助传播识别策略' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.util.Collection.addAll(java.util.Collection)',  'P1',  'O',  'true',  ' ',  1614601101,  1614601101,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.util.Collection.addAll(java.util.Collection)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'true' AND `track`= ' ' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.util.Collection.addAll(java.util.Collection)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'true' AND `track`= ' ' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
-	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)',  'P1',  'P2',  'false',  'false',  1616036872,  1616036872,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)' AND `source`= 'P1' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616036872 AND `update_time`=  1616036872 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)' AND `source`= 'P1' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616036872 AND `update_time`=  1616036872 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
-	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)',  'P1',  'R',  'false',  'false',  1616037935,  1616037935,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616037935 AND `update_time`=  1616037935 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616037935 AND `update_time`=  1616037935 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
-	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.solr.common.params.SolrParams.get(java.lang.String)',  'O',  'R',  'true',  'false',  1616038118,  1616038118,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.common.params.SolrParams.get(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038118 AND `update_time`=  1616038118 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.common.params.SolrParams.get(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038118 AND `update_time`=  1616038118 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
-	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Solr参数解析'
-AND  value =  'SolrParamParser' AND
-update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)',  'O',  'R',  'true',  'false',  1616038139,  1616038139,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038139 AND `update_time`=  1616038139 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038139 AND `update_time`=  1616038139 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'Struts2接口读取参数',  'Struts2',  1616579090
-	,  1616579090,  1,  1,  'Source:Struts2 Param',  'Struts2接口读取参数'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'Struts2接口读取参数'
-AND  value =  'Struts2' AND
-update_time= 1616579090 AND create_time= 1616579090 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Struts2 Param'AND name_zh =  'Struts2接口读取参数' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'Struts2接口读取参数'
-AND  value =  'Struts2' AND
-update_time= 1616579090 AND create_time= 1616579090 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Struts2 Param'AND name_zh =  'Struts2接口读取参数' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)',  'P1',  'R',  'true',  'false',  1616579162,  1618796536,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616579162 AND `update_time`=  1618796536 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616579162 AND `update_time`=  1618796536 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'OGNL传播',  'ognl',  1610535131
-	,  1610535131,  1,  1,  'Propagator:OGNL',  'OGNL传播'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'OGNL传播'
-AND  value =  'ognl' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'OGNL传播'
-AND  value =  'ognl' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)',  'P1',  'R',  'true',  'false',  1618480153,  1618480153,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480153 AND `update_time`=  1618480153 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480153 AND `update_time`=  1618480153 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'OGNL传播',  'ognl',  1610535131
-	,  1610535131,  1,  1,  'Propagator:OGNL',  'OGNL传播'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'OGNL传播'
-AND  value =  'ognl' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'OGNL传播'
-AND  value =  'ognl' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)',  'P1',  'R',  'true',  'false',  1618480192,  1618480192,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480192 AND `update_time`=  1618480192 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480192 AND `update_time`=  1618480192 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'OGNL传播',  'ognl',  1610535131
-	,  1610535131,  1,  1,  'Propagator:OGNL',  'OGNL传播'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'OGNL传播'
-AND  value =  'ognl' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'OGNL传播'
-AND  value =  'ognl' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)',  'P1',  'R',  'true',  'false',  1618480209,  1618480209,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480209 AND `update_time`=  1618480209 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480209 AND `update_time`=  1618480209 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringUTF16.newString(byte[],int,int)',  'P1',  'R',  'false',  'false',  1618827358,  1618827358,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringUTF16.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827358 AND `update_time`=  1618827358 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringUTF16.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827358 AND `update_time`=  1618827358 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringLatin1.newString(byte[],int,int)',  'P1',  'R',  'false',  'false',  1618827438,  1618827438,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringLatin1.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827438 AND `update_time`=  1618827438 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringLatin1.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827438 AND `update_time`=  1618827438 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringConcatHelper.newString(byte[],int,byte)',  'P1',  'R',  'false',  'false',  1618827508,  1618827508,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.newString(byte[],int,byte)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827508 AND `update_time`=  1618827508 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.newString(byte[],int,byte)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827508 AND `update_time`=  1618827508 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-02',  'StringBuilder',  1610535130
-	,  1610535130,  1,  1,  'Propagator:StringBuilder',  '字符串传播-02'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-02'
-AND  value =  'StringBuilder' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-02'
-AND  value =  'StringBuilder' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringBuilder.delete(int,int)',  'O',  'O',  'false',  'false',  1618827778,  1618827778,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringBuilder.delete(int,int)' AND `source`= 'O' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827778 AND `update_time`=  1618827778 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringBuilder.delete(int,int)' AND `source`= 'O' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827778 AND `update_time`=  1618827778 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)',  'P4',  'P2',  'false',  'false',  1618892316,  1618893712,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)' AND `source`= 'P4' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618892316 AND `update_time`=  1618893712 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)' AND `source`= 'P4' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618892316 AND `update_time`=  1618893712 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.String.getBytes(byte[],int,byte)',  'O',  'P1',  'false',  'false',  1618893583,  1618893644,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.String.getBytes(byte[],int,byte)' AND `source`= 'O' AND `target`= 'P1' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618893583 AND `update_time`=  1618893644 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.String.getBytes(byte[],int,byte)' AND `source`= 'O' AND `target`= 'P1' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618893583 AND `update_time`=  1618893644 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
-	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.ServletRequest.getInputStream()',  'O',  'R',  'true',  'false',  1622522113,  1622522113,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522113 AND `update_time`=  1622522113 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522113 AND `update_time`=  1622522113 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
-	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.ServletRequest.getParameter(java.lang.String)',  'P1',  'R',  'true',  'false',  1622522239,  1622522239,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522239 AND `update_time`=  1622522239 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522239 AND `update_time`=  1622522239 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
-	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.ServletRequest.getParameterNames()',  'O',  'R',  'true',  'false',  1622522255,  1622522255,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522255 AND `update_time`=  1622522255 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522255 AND `update_time`=  1622522255 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
-	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.ServletRequest.getParameterValues(java.lang.String)',  'P1',  'R',  'true',  'false',  1622522275,  1622522275,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522275 AND `update_time`=  1622522275 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522275 AND `update_time`=  1622522275 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
-	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.ServletRequest.getParameterMap()',  'O',  'R',  'true',  'false',  1622522288,  1622522288,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522288 AND `update_time`=  1622522288 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522288 AND `update_time`=  1622522288 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
-	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'ServletRequest接口'
-AND  value =  'javax.servlet.ServletRequest' AND
-update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.ServletRequest.getReader()',  'O',  'R',  'true',  'false',  1622522303,  1622522303,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522303 AND `update_time`=  1622522303 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.ServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522303 AND `update_time`=  1622522303 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)',  'P1',  'R',  'true',  'false',  1622524240,  1622524240,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524240 AND `update_time`=  1622524240 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524240 AND `update_time`=  1622524240 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getHeaderNames()',  'O',  'R',  'true',  'false',  1622524294,  1622524294,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getHeaderNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524294 AND `update_time`=  1622524294 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getHeaderNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524294 AND `update_time`=  1622524294 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getParts()',  'O',  'R',  'true',  'false',  1622524335,  1622524335,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParts()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524335 AND `update_time`=  1622524335 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParts()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524335 AND `update_time`=  1622524335 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)',  'P1',  'R',  'true',  'false',  1622524349,  1622524349,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524349 AND `update_time`=  1622524349 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524349 AND `update_time`=  1622524349 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'Spring参数处理接口',  'org.springframework.web.method.support.HandlerMethodArgumentResolver',  1622524533
-	,  1622524533,  1,  1,  'Source:Spring',  'Spring参数处理接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'Spring参数处理接口'
-AND  value =  'org.springframework.web.method.support.HandlerMethodArgumentResolver' AND
-update_time= 1622524533 AND create_time= 1622524533 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Spring'AND name_zh =  'Spring参数处理接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'Spring参数处理接口'
-AND  value =  'org.springframework.web.method.support.HandlerMethodArgumentResolver' AND
-update_time= 1622524533 AND create_time= 1622524533 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Spring'AND name_zh =  'Spring参数处理接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)',  'P1',  'R',  'true',  'false',  1622524675,  1622524675,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524675 AND `update_time`=  1622524675 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524675 AND `update_time`=  1622524675 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getCookies()',  'O',  'R',  'true',  'false',  1622528104,  1622528104,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getCookies()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528104 AND `update_time`=  1622528104 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getCookies()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528104 AND `update_time`=  1622528104 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)',  'P1',  'R',  'true',  'false',  1622528147,  1622528147,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528147 AND `update_time`=  1622528147 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528147 AND `update_time`=  1622528147 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getQueryString()',  'O',  'R',  'true',  'false',  1622528180,  1622528180,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getQueryString()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528180 AND `update_time`=  1622528180 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getQueryString()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528180 AND `update_time`=  1622528180 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getInputStream()',  'O',  'R',  'true',  'false',  1624450208,  1624450208,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450208 AND `update_time`=  1624450208 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450208 AND `update_time`=  1624450208 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)',  'P1',  'R',  'true',  'false',  1624450230,  1624450230,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450230 AND `update_time`=  1624450230 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450230 AND `update_time`=  1624450230 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getParameterNames()',  'O',  'R',  'true',  'false',  1624450243,  1624450243,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450243 AND `update_time`=  1624450243 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450243 AND `update_time`=  1624450243 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)',  'P1',  'R',  'true',  'false',  1624450258,  1624450258,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450258 AND `update_time`=  1624450258 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450258 AND `update_time`=  1624450258 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getParameterMap()',  'O',  'R',  'true',  'false',  1624450274,  1624450274,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450274 AND `update_time`=  1624450274 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450274 AND `update_time`=  1624450274 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
-	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 2 AND `name`=  'HttpServletRequest接口'
-AND  value =  'javax.servlet.http.HttpServletRequest' AND
-update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpServletRequest.getReader()',  'O',  'R',  'true',  'false',  1624450293,  1624450293,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450293 AND `update_time`=  1624450293 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450293 AND `update_time`=  1624450293 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '自定义加密算法',  'custom-encrypt',  1632667036
-	,  1632667036,  1,  1,  NULL,  '自定义加密算法'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '自定义加密算法'
-AND  value =  'custom-encrypt' AND
-update_time= 1632667036 AND create_time= 1632667036 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '自定义加密算法' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '自定义加密算法'
-AND  value =  'custom-encrypt' AND
-update_time= 1632667036 AND create_time= 1632667036 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '自定义加密算法' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.iast.springsec.common.DataManager.doManage(java.lang.String)',  'P1',  'R',  'false',  'false',  1632667104,  1632758980,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.iast.springsec.common.DataManager.doManage(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1632667104 AND `update_time`=  1632758980 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.iast.springsec.common.DataManager.doManage(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1632667104 AND `update_time`=  1632758980 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Propagator:Hessian',  'Propagator:Hessian',  1636081832
-	,  1636081832,  1,  1,  NULL,  'Propagator:Hessian'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Propagator:Hessian'
-AND  value =  'Propagator:Hessian' AND
-update_time= 1636081832 AND create_time= 1636081832 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Propagator:Hessian' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Propagator:Hessian'
-AND  value =  'Propagator:Hessian' AND
-update_time= 1636081832 AND create_time= 1636081832 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Propagator:Hessian' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)',  'P1',  'O',  'false',  'false',  1636081860,  1636081860,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636081860 AND `update_time`=  1636081860 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636081860 AND `update_time`=  1636081860 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  '字符串传播-01',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringConcatHelper.newString(byte[],long)',  'P1',  'R',  'false',  'false',  1636082001,  1636082001,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.newString(byte[],long)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082001 AND `update_time`=  1636082001 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.newString(byte[],long)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082001 AND `update_time`=  1636082001 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '字符串传播-01',  'String',  1610535130
-	,  1610535130,  1,  1,  '字符串传播-01',  '字符串传播-01'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '字符串传播-01'
-AND  value =  'String' AND
-update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
-AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)',  'P1',  'R',  'false',  'false',  1636082015,  1636082015,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082015 AND `update_time`=  1636082015 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082015 AND `update_time`=  1636082015 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '文件上传',  'Spring',  1638532562
-	,  1638532562,  1,  1,  NULL,  '文件上传'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '文件上传'
-AND  value =  'Spring' AND
-update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '文件上传'
-AND  value =  'Spring' AND
-update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.multipart.MultipartFile.getOriginalFilename()',  'O',  'R',  'true',  'false',  1638532625,  1638532625,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.multipart.MultipartFile.getOriginalFilename()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532625 AND `update_time`=  1638532625 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.multipart.MultipartFile.getOriginalFilename()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532625 AND `update_time`=  1638532625 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '文件上传',  'Spring',  1638532562
-	,  1638532562,  1,  1,  NULL,  '文件上传'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '文件上传'
-AND  value =  'Spring' AND
-update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '文件上传'
-AND  value =  'Spring' AND
-update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.web.multipart.MultipartFile.getName()',  'O',  'R',  'true',  'false',  1638532661,  1638532661,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.multipart.MultipartFile.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532661 AND `update_time`=  1638532661 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.web.multipart.MultipartFile.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532661 AND `update_time`=  1638532661 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '文件上传',  'Spring',  1638532562
-	,  1638532562,  1,  1,  NULL,  '文件上传'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '文件上传'
-AND  value =  'Spring' AND
-update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '文件上传'
-AND  value =  'Spring' AND
-update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.fileupload.FileItem.getName()',  'O',  'R',  'true',  'false',  1638532689,  1638532689,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.fileupload.FileItem.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532689 AND `update_time`=  1638532689 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.fileupload.FileItem.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532689 AND `update_time`=  1638532689 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Html5EscapeSymbols',  'Html5EscapeSymbolsInitializer',  1640074986
-	,  1640074986,  1,  1,  NULL,  'Html5EscapeSymbols'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Html5EscapeSymbols'
-AND  value =  'Html5EscapeSymbolsInitializer' AND
-update_time= 1640074986 AND create_time= 1640074986 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Html5EscapeSymbols' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Html5EscapeSymbols'
-AND  value =  'Html5EscapeSymbolsInitializer' AND
-update_time= 1640074986 AND create_time= 1640074986 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Html5EscapeSymbols' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()',  'O',  'R',  'false',  'false',  1640075015,  1640075015,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640075015 AND `update_time`=  1640075015 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640075015 AND `update_time`=  1640075015 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Mybatis传播',  'Mybatis传播',  1640834833
-	,  1640834833,  1,  1,  NULL,  'Mybatis传播'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Mybatis传播'
-AND  value =  'Mybatis传播' AND
-update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Mybatis传播'
-AND  value =  'Mybatis传播' AND
-update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)',  'P1',  'R',  'false',  'false',  1640835229,  1640835229,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835229 AND `update_time`=  1640835229 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835229 AND `update_time`=  1640835229 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  'Mybatis传播',  'Mybatis传播',  1640834833
-	,  1640834833,  1,  1,  NULL,  'Mybatis传播'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Mybatis传播'
-AND  value =  'Mybatis传播' AND
-update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  'Mybatis传播'
-AND  value =  'Mybatis传播' AND
-update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])',  'P1,2',  'R',  'false',  'false',  1640835306,  1640835306,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835306 AND `update_time`=  1640835306 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835306 AND `update_time`=  1640835306 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.Message.setHeader(java.lang.String,java.lang.String)',  'P1,2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.Message.setHeader(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.Message.setHeader(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.Message.setRecipient(javax.mail.Message.RecipientType,javax.mail.Address)',  'P2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.Message.setRecipient(javax.mail.Message.RecipientType,javax.mail.Address)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.Message.setRecipient(javax.mail.Message.RecipientType,javax.mail.Address)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.internet.MimeMessage.setRecipients(javax.mail.Message.RecipientType,java.lang.String)',  'P2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.MimeMessage.setRecipients(javax.mail.Message.RecipientType,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.MimeMessage.setRecipients(javax.mail.Message.RecipientType,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.internet.MimeMessage.setSubject(java.lang.String,java.lang.String)',  'P1',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.MimeMessage.setSubject(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.MimeMessage.setSubject(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.internet.MimeBodyPart.setText(javax.mail.internet.MimePart,java.lang.String,java.lang.String,java.lang.String)',  'P2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.MimeBodyPart.setText(javax.mail.internet.MimePart,java.lang.String,java.lang.String,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.MimeBodyPart.setText(javax.mail.internet.MimePart,java.lang.String,java.lang.String,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.internet.InternetHeaders.setHeader(java.lang.String,java.lang.String)',  'P1,2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.InternetHeaders.setHeader(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.InternetHeaders.setHeader(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'SMTP注入',  'smtp-injection',  1610535131
-	,  1610535131,  1,  1,  'SMTP Injection',  'SMTP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'SMTP注入'
-AND  value =  'smtp-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SMTP Injection'AND name_zh =  'SMTP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.mail.internet.InternetHeaders.addHeader(java.lang.String,java.lang.String)',  'P1,2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.InternetHeaders.addHeader(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.mail.internet.InternetHeaders.addHeader(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '服务器端请求伪造',  'ssrf',  1610535131
-	,  1610535131,  1,  1,  'Server-Side Request Forgery (SSRF)',  '服务器端请求伪造'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '服务器端请求伪造'
-AND  value =  'ssrf' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '服务器端请求伪造'
-AND  value =  'ssrf' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.hc.client5.http.impl.classic.CloseableHttpClient.doExecute(org.apache.hc.core5.http.HttpHost,org.apache.hc.core5.http.ClassicHttpRequest,org.apache.hc.core5.http.protocol.HttpContext)',  'P2',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.hc.client5.http.impl.classic.CloseableHttpClient.doExecute(org.apache.hc.core5.http.HttpHost,org.apache.hc.core5.http.ClassicHttpRequest,org.apache.hc.core5.http.protocol.HttpContext)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.hc.client5.http.impl.classic.CloseableHttpClient.doExecute(org.apache.hc.core5.http.HttpHost,org.apache.hc.core5.http.ClassicHttpRequest,org.apache.hc.core5.http.protocol.HttpContext)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的XMl Decode',  'unsafe-xml-decode',  1610535131
-	,  1610535131,  1,  1,  'Unsafe XML Decoding',  '不安全的XMl Decode'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的XMl Decode'
-AND  value =  'unsafe-xml-decode' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Unsafe XML Decoding'AND name_zh =  '不安全的XMl Decode' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的XMl Decode'
-AND  value =  'unsafe-xml-decode' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Unsafe XML Decoding'AND name_zh =  '不安全的XMl Decode' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的XMl Decode',  'unsafe-xml-decode',  1610535131
-	,  1610535131,  1,  1,  'Unsafe XML Decoding',  '不安全的XMl Decode'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的XMl Decode'
-AND  value =  'unsafe-xml-decode' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Unsafe XML Decoding'AND name_zh =  '不安全的XMl Decode' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的XMl Decode'
-AND  value =  'unsafe-xml-decode' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Unsafe XML Decoding'AND name_zh =  '不安全的XMl Decode' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object,java.beans.ExceptionListener)',  'P1',  '',  'all',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object,java.beans.ExceptionListener)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.beans.XMLDecoder.<init>(java.io.InputStream,java.lang.Object,java.beans.ExceptionListener)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '命令执行 ',  'cmd-injection',  1610535131
-	,  1610535131,  1,  1,  'OS Command Injection',  '命令执行 '
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.ProcessImpl.start(java.lang.String[],java.util.Map,java.lang.String,java.lang.ProcessBuilder$Redirect[],boolean)',  'P1,2',  '',  'false',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.ProcessImpl.start(java.lang.String[],java.util.Map,java.lang.String,java.lang.ProcessBuilder$Redirect[],boolean)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.ProcessImpl.start(java.lang.String[],java.util.Map,java.lang.String,java.lang.ProcessBuilder$Redirect[],boolean)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '命令执行 ',  'cmd-injection',  1610535131
-	,  1610535131,  1,  1,  'OS Command Injection',  '命令执行 '
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.Runtime.exec(java.lang.String[],java.lang.String[])',  'P1,2',  '',  'false',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String[],java.lang.String[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String[],java.lang.String[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '命令执行 ',  'cmd-injection',  1610535131
-	,  1610535131,  1,  1,  'OS Command Injection',  '命令执行 '
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.Runtime.exec(java.lang.String[],java.lang.String[],java.io.File)',  'P1,2',  '',  'false',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String[],java.lang.String[],java.io.File)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String[],java.lang.String[],java.io.File)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '命令执行 ',  'cmd-injection',  1610535131
-	,  1610535131,  1,  1,  'OS Command Injection',  '命令执行 '
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.Runtime.exec(java.lang.String,java.lang.String[],java.io.File)',  'P1,2',  '',  'false',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String,java.lang.String[],java.io.File)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String,java.lang.String[],java.io.File)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '命令执行 ',  'cmd-injection',  1610535131
-	,  1610535131,  1,  1,  'OS Command Injection',  '命令执行 '
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '命令执行 '
-AND  value =  'cmd-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'OS Command Injection'AND name_zh =  '命令执行 ' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.lang.Runtime.exec(java.lang.String,java.lang.String[])',  'P1,2',  '',  'false',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String,java.lang.String[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.lang.Runtime.exec(java.lang.String,java.lang.String[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Statement.execute(java.lang.String,int)',  'P1',  '',  'true',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.execute(java.lang.String,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.execute(java.lang.String,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Statement.execute(java.lang.String,int[])',  'P1',  '',  'true',  'true',  1610536832,  1610536832,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.execute(java.lang.String,int[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.execute(java.lang.String,int[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536832 AND `update_time`=  1610536832 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Statement.execute(java.lang.String,java.lang.String[])',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.execute(java.lang.String,java.lang.String[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.execute(java.lang.String,java.lang.String[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Statement.executeUpdate(java.lang.String,int)',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.executeUpdate(java.lang.String,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.executeUpdate(java.lang.String,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Statement.executeUpdate(java.lang.String,int[])',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.executeUpdate(java.lang.String,int[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.executeUpdate(java.lang.String,int[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Statement.executeUpdate(java.lang.String,java.lang.String[])',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.executeUpdate(java.lang.String,java.lang.String[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Statement.executeUpdate(java.lang.String,java.lang.String[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareCall(java.lang.String,int,int)',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareCall(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareCall(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareCall(java.lang.String,int,int,int)',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareCall(java.lang.String,int,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareCall(java.lang.String,int,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareStatement(java.lang.String,int)',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareStatement(java.lang.String,int,int)',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareStatement(java.lang.String,int,int,int)',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareStatement(java.lang.String,int[])',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,int[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Sql注入',  'sql-injection',  1610535131
-	,  1610535131,  1,  1,  'SQL Injection',  'Sql注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Sql注入'
-AND  value =  'sql-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'SQL Injection'AND name_zh =  'Sql注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.sql.Connection.prepareStatement(java.lang.String,java.lang.String[])',  'P1',  '',  'true',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,java.lang.String[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.sql.Connection.prepareStatement(java.lang.String,java.lang.String[])' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'LDAP注入',  'ldap-injection',  1610535131
-	,  1610535131,  1,  1,  'LDAP Injection',  'LDAP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'LDAP注入',  'ldap-injection',  1610535131
-	,  1610535131,  1,  1,  'LDAP Injection',  'LDAP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'LDAP注入',  'ldap-injection',  1610535131
-	,  1610535131,  1,  1,  'LDAP Injection',  'LDAP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'LDAP注入',  'ldap-injection',  1610535131
-	,  1610535131,  1,  1,  'LDAP Injection',  'LDAP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'LDAP注入',  'ldap-injection',  1610535131
-	,  1610535131,  1,  1,  'LDAP Injection',  'LDAP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'LDAP注入',  'ldap-injection',  1610535131
-	,  1610535131,  1,  1,  'LDAP Injection',  'LDAP注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'LDAP注入'
-AND  value =  'ldap-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'LDAP Injection'AND name_zh =  'LDAP注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.xpath.XPath.eval(org.w3c.dom.Node,java.lang.String)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.eval(org.w3c.dom.Node,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.xpath.XPath.eval(org.w3c.dom.Node,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.w3c.dom.Node)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.w3c.dom.Node)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.w3c.dom.Node)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.apache.xml.utils.PrefixResolver)',  'P2',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.apache.xml.utils.PrefixResolver)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.XPathAPI.eval(org.w3c.dom.Node,java.lang.String,org.apache.xml.utils.PrefixResolver)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)',  'P1',  '',  'all',  'true',  1610536833,  1610536833,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536833 AND `update_time`=  1610536833 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)',  'P1',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)',  'P1',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XPATH注入',  'xpath-injection',  1610535131
-	,  1610535131,  1,  1,  'XPath Injection',  'XPATH注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XPATH注入'
-AND  value =  'xpath-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XPath Injection'AND name_zh =  'XPATH注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)',  'P1',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '路径穿越',  'path-traversal',  1610535131
-	,  1610535131,  1,  1,  'Path Traversal',  '路径穿越'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.nio.file.Paths.get(java.lang.String,java.lang.String[])',  'P1,2',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.nio.file.Paths.get(java.lang.String,java.lang.String[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.nio.file.Paths.get(java.lang.String,java.lang.String[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '路径穿越',  'path-traversal',  1610535131
-	,  1610535131,  1,  1,  'Path Traversal',  '路径穿越'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.File.<init>(java.lang.String,java.lang.String)',  'P1,2',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.File.<init>(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.File.<init>(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '路径穿越',  'path-traversal',  1610535131
-	,  1610535131,  1,  1,  'Path Traversal',  '路径穿越'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.File.<init>(java.io.File,java.lang.String)',  'P2',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.File.<init>(java.io.File,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.File.<init>(java.io.File,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '路径穿越',  'path-traversal',  1610535131
-	,  1610535131,  1,  1,  'Path Traversal',  '路径穿越'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '路径穿越'
-AND  value =  'path-traversal' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Path Traversal'AND name_zh =  '路径穿越' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.RandomAccessFile.<init>(java.lang.String,java.lang.String)',  'P1',  '',  'all',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.RandomAccessFile.<init>(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.RandomAccessFile.<init>(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的随机数',  'crypto-weak-randomness',  1610535131
-	,  1610535131,  1,  1,  'Weak Random Number Generation',  '不安全的随机数'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的随机数'
-AND  value =  'crypto-weak-randomness' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Weak Random Number Generation'AND name_zh =  '不安全的随机数' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的随机数'
-AND  value =  'crypto-weak-randomness' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Weak Random Number Generation'AND name_zh =  '不安全的随机数' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean,char[])',  '',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean,char[])' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean,char[])' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的随机数',  'crypto-weak-randomness',  1610535131
-	,  1610535131,  1,  1,  'Weak Random Number Generation',  '不安全的随机数'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的随机数'
-AND  value =  'crypto-weak-randomness' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Weak Random Number Generation'AND name_zh =  '不安全的随机数' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的随机数'
-AND  value =  'crypto-weak-randomness' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Weak Random Number Generation'AND name_zh =  '不安全的随机数' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean)',  '',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的hash算法',  'crypto-bad-mac',  1610535131
-	,  1610535131,  1,  1,  'Insecure Hash Algorithms',  '不安全的hash算法'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的hash算法'
-AND  value =  'crypto-bad-mac' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Hash Algorithms'AND name_zh =  '不安全的hash算法' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的hash算法'
-AND  value =  'crypto-bad-mac' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Hash Algorithms'AND name_zh =  '不安全的hash算法' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.security.MessageDigest.getInstance(java.lang.String,java.security.Provider)',  'P1',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.security.MessageDigest.getInstance(java.lang.String,java.security.Provider)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.security.MessageDigest.getInstance(java.lang.String,java.security.Provider)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的hash算法',  'crypto-bad-mac',  1610535131
-	,  1610535131,  1,  1,  'Insecure Hash Algorithms',  '不安全的hash算法'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的hash算法'
-AND  value =  'crypto-bad-mac' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Hash Algorithms'AND name_zh =  '不安全的hash算法' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的hash算法'
-AND  value =  'crypto-bad-mac' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Hash Algorithms'AND name_zh =  '不安全的hash算法' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.security.MessageDigest.getInstance(java.lang.String,java.lang.String)',  'P1',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.security.MessageDigest.getInstance(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.security.MessageDigest.getInstance(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的加密算法',  'crypto-bad-ciphers',  1610535131
-	,  1610535131,  1,  1,  'Insecure Encryption Algorithms',  '不安全的加密算法'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的加密算法'
-AND  value =  'crypto-bad-ciphers' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Encryption Algorithms'AND name_zh =  '不安全的加密算法' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的加密算法'
-AND  value =  'crypto-bad-ciphers' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Encryption Algorithms'AND name_zh =  '不安全的加密算法' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.crypto.Cipher.getInstance(java.lang.String,java.security.Provider)',  'P1',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.crypto.Cipher.getInstance(java.lang.String,java.security.Provider)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.crypto.Cipher.getInstance(java.lang.String,java.security.Provider)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '不安全的加密算法',  'crypto-bad-ciphers',  1610535131
-	,  1610535131,  1,  1,  'Insecure Encryption Algorithms',  '不安全的加密算法'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的加密算法'
-AND  value =  'crypto-bad-ciphers' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Encryption Algorithms'AND name_zh =  '不安全的加密算法' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '不安全的加密算法'
-AND  value =  'crypto-bad-ciphers' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Insecure Encryption Algorithms'AND name_zh =  '不安全的加密算法' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.crypto.Cipher.getInstance(java.lang.String,java.lang.String)',  'P1',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.crypto.Cipher.getInstance(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.crypto.Cipher.getInstance(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Cookie-flag缺失',  'cookie-flags-missing',  1610535131
-	,  1610535131,  1,  1,  'Application Disables ''''secure'''' Flag on Cookies',  'Cookie-flag缺失'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Cookie-flag缺失'
-AND  value =  'cookie-flags-missing' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Application Disables ''''secure'''' Flag on Cookies'AND name_zh =  'Cookie-flag缺失' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Cookie-flag缺失'
-AND  value =  'cookie-flags-missing' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Application Disables ''''secure'''' Flag on Cookies'AND name_zh =  'Cookie-flag缺失' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.ws.rs.core.NewCookie.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,int,java.util.Date,boolean,boolean)',  'P9',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.ws.rs.core.NewCookie.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,int,java.util.Date,boolean,boolean)' AND `source`= 'P9' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.ws.rs.core.NewCookie.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,int,java.util.Date,boolean,boolean)' AND `source`= 'P9' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'Cookie-flag缺失',  'cookie-flags-missing',  1610535131
-	,  1610535131,  1,  1,  'Application Disables ''''secure'''' Flag on Cookies',  'Cookie-flag缺失'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Cookie-flag缺失'
-AND  value =  'cookie-flags-missing' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Application Disables ''''secure'''' Flag on Cookies'AND name_zh =  'Cookie-flag缺失' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'Cookie-flag缺失'
-AND  value =  'cookie-flags-missing' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Application Disables ''''secure'''' Flag on Cookies'AND name_zh =  'Cookie-flag缺失' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.ws.rs.core.NewCookie.<init>(javax.ws.rs.core.Cookie,java.lang.String,int,java.util.Date,boolean,boolean)',  'P5',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.ws.rs.core.NewCookie.<init>(javax.ws.rs.core.Cookie,java.lang.String,int,java.util.Date,boolean,boolean)' AND `source`= 'P5' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.ws.rs.core.NewCookie.<init>(javax.ws.rs.core.Cookie,java.lang.String,int,java.util.Date,boolean,boolean)' AND `source`= 'P5' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '信任边界',  'trust-boundary-violation',  1610535131
-	,  1610535131,  1,  1,  'Trust Boundary Violation',  '信任边界'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpSession.setAttribute(java.lang.String,java.lang.Object)',  'P1,2',  '',  'true',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpSession.setAttribute(java.lang.String,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpSession.setAttribute(java.lang.String,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '信任边界',  'trust-boundary-violation',  1610535131
-	,  1610535131,  1,  1,  'Trust Boundary Violation',  '信任边界'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.http.HttpSession.putValue(java.lang.String,java.lang.Object)',  'P1,2',  '',  'true',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpSession.putValue(java.lang.String,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.http.HttpSession.putValue(java.lang.String,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '信任边界',  'trust-boundary-violation',  1610535131
-	,  1610535131,  1,  1,  'Trust Boundary Violation',  '信任边界'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.struts2.dispatcher.SessionMap.put(java.lang.Object,java.lang.Object)',  'P1,2',  '',  'false',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.struts2.dispatcher.SessionMap.put(java.lang.Object,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.struts2.dispatcher.SessionMap.put(java.lang.Object,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '信任边界',  'trust-boundary-violation',  1610535131
-	,  1610535131,  1,  1,  'Trust Boundary Violation',  '信任边界'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'coldfusion.runtime.SessionScope.bind(java.lang.String,java.lang.Object)',  'P1,2',  '',  'false',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'coldfusion.runtime.SessionScope.bind(java.lang.String,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'coldfusion.runtime.SessionScope.bind(java.lang.String,java.lang.Object)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '信任边界',  'trust-boundary-violation',  1610535131
-	,  1610535131,  1,  1,  'Trust Boundary Violation',  '信任边界'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '信任边界'
-AND  value =  'trust-boundary-violation' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Trust Boundary Violation'AND name_zh =  '信任边界' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'play.mvc.Http$Session.put(java.lang.String,java.lang.String)',  'P1,2',  '',  'false',  'true',  1610536834,  1610536834,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'play.mvc.Http$Session.put(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'play.mvc.Http$Session.put(java.lang.String,java.lang.String)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.http.converter.StringHttpMessageConverter.writeInternal(java.lang.String,org.springframework.http.HttpOutputMessage)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.http.converter.StringHttpMessageConverter.writeInternal(java.lang.String,org.springframework.http.HttpOutputMessage)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.http.converter.StringHttpMessageConverter.writeInternal(java.lang.String,org.springframework.http.HttpOutputMessage)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.ByteArrayProvider.writeTo(byte[],java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.ByteArrayProvider.writeTo(byte[],java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.ByteArrayProvider.writeTo(byte[],java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.DataSourceProvider.writeTo(javax.activation.DataSource,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.DataSourceProvider.writeTo(javax.activation.DataSource,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.DataSourceProvider.writeTo(javax.activation.DataSource,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.FileProvider.writeTo(java.io.File,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.FileProvider.writeTo(java.io.File,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.FileProvider.writeTo(java.io.File,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.InputStreamProvider.writeTo(java.io.InputStream,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.InputStreamProvider.writeTo(java.io.InputStream,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.InputStreamProvider.writeTo(java.io.InputStream,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.ReaderProvider.writeTo(java.io.Reader,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.ReaderProvider.writeTo(java.io.Reader,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.ReaderProvider.writeTo(java.io.Reader,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(java.lang.String,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(java.lang.String,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(java.lang.String,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.glassfish.jersey.message.internal.AbstractMessageReaderWriterProvider.writeToAsString(java.lang.String,java.io.OutputStream,javax.ws.rs.core.MediaType)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.AbstractMessageReaderWriterProvider.writeToAsString(java.lang.String,java.io.OutputStream,javax.ws.rs.core.MediaType)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.glassfish.jersey.message.internal.AbstractMessageReaderWriterProvider.writeToAsString(java.lang.String,java.io.OutputStream,javax.ws.rs.core.MediaType)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'com.github.mustachejava.codes.ValueCode.execute(java.io.Writer,java.lang.String)',  'P2',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.github.mustachejava.codes.ValueCode.execute(java.io.Writer,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'com.github.mustachejava.codes.ValueCode.execute(java.io.Writer,java.lang.String)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.jsp.JspWriter.write(java.lang.String,int,int)',  'P1',  '',  'all',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.jsp.JspWriter.write(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.jsp.JspWriter.write(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.jsp.JspWriter.write(char[],int,int)',  'P1',  '',  'all',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.jsp.JspWriter.write(char[],int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.jsp.JspWriter.write(char[],int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.PrintWriter.format(java.util.Locale,java.lang.String,java.lang.Object[])',  'P2,3',  '',  'all',  'true',  1610536835,  1630428661,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.format(java.util.Locale,java.lang.String,java.lang.Object[])' AND `source`= 'P2,3' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428661 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.format(java.util.Locale,java.lang.String,java.lang.Object[])' AND `source`= 'P2,3' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428661 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.PrintWriter.format(java.lang.String,java.lang.Object[])',  'P1,2',  '',  'all',  'true',  1610536835,  1630428683,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.format(java.lang.String,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428683 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.format(java.lang.String,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428683 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.PrintWriter.printf(java.util.Locale,java.lang.String,java.lang.Object[])',  'P2,3',  '',  'all',  'true',  1610536835,  1630428717,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.printf(java.util.Locale,java.lang.String,java.lang.Object[])' AND `source`= 'P2,3' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428717 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.printf(java.util.Locale,java.lang.String,java.lang.Object[])' AND `source`= 'P2,3' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428717 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.PrintWriter.printf(java.lang.String,java.lang.Object[])',  'P1,2',  '',  'all',  'true',  1610536835,  1630428721,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.printf(java.lang.String,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428721 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.printf(java.lang.String,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428721 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.PrintWriter.write(char[],int,int)',  'P1',  '',  'all',  'true',  1610536835,  1630428754,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.write(char[],int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428754 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.write(char[],int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428754 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'java.io.PrintWriter.write(java.lang.String,int,int)',  'P1',  '',  'all',  'true',  1610536835,  1630428764,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.write(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428764 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'java.io.PrintWriter.write(java.lang.String,int,int)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1630428764 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.mule.module.http.internal.domain.response.DefaultHttpResponse.<init>(org.mule.module.http.internal.domain.response.ResponseStatus,org.apache.commons.collections.MultiMap,org.mule.module.http.internal.domain.HttpEntity)',  'P3',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.mule.module.http.internal.domain.response.DefaultHttpResponse.<init>(org.mule.module.http.internal.domain.response.ResponseStatus,org.apache.commons.collections.MultiMap,org.mule.module.http.internal.domain.HttpEntity)' AND `source`= 'P3' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.mule.module.http.internal.domain.response.DefaultHttpResponse.<init>(org.mule.module.http.internal.domain.response.ResponseStatus,org.apache.commons.collections.MultiMap,org.mule.module.http.internal.domain.HttpEntity)' AND `source`= 'P3' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.DefaultMuleEvent,java.lang.Object)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.DefaultMuleEvent,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.DefaultMuleEvent,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '反射型XSS',  'reflected-xss',  1610535131
-	,  1610535131,  1,  1,  'Cross-Site Scripting',  '反射型XSS'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '反射型XSS'
-AND  value =  'reflected-xss' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Cross-Site Scripting'AND name_zh =  '反射型XSS' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.api.MuleEvent,java.lang.Object)',  'P1',  '',  'false',  'true',  1610536835,  1610536835,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.api.MuleEvent,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.api.MuleEvent,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536835 AND `update_time`=  1610536835 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.DocumentBuilder.parse(java.io.InputStream,java.lang.String)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.DocumentBuilder.parse(java.io.InputStream,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.DocumentBuilder.parse(java.io.InputStream,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'nu.xom.Builder.build(java.io.InputStream,java.lang.String)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'nu.xom.Builder.build(java.io.InputStream,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'nu.xom.Builder.build(java.io.InputStream,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'nu.xom.Builder.build(java.io.Reader,java.lang.String)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'nu.xom.Builder.build(java.io.Reader,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'nu.xom.Builder.build(java.io.Reader,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase,java.lang.String)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.HandlerBase,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler,java.lang.String)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler,java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.HandlerBase)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.HandlerBase)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.HandlerBase)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'XML外部实体注入',  'xxe',  1610535131
-	,  1610535131,  1,  1,  'XML External Entity Injection (XXE)',  'XML外部实体注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'XML外部实体注入'
-AND  value =  'xxe' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'XML External Entity Injection (XXE)'AND name_zh =  'XML外部实体注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.helpers.DefaultHandler)',  'P1',  '',  'true',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.helpers.DefaultHandler)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.helpers.DefaultHandler)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.servlet.jsp.el.ExpressionEvaluator.evaluate(java.lang.String,java.lang.Class,javax.servlet.jsp.el.VariableResolver,javax.servlet.jsp.el.FunctionMapper)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.jsp.el.ExpressionEvaluator.evaluate(java.lang.String,java.lang.Class,javax.servlet.jsp.el.VariableResolver,javax.servlet.jsp.el.FunctionMapper)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.servlet.jsp.el.ExpressionEvaluator.evaluate(java.lang.String,java.lang.Class,javax.servlet.jsp.el.VariableResolver,javax.servlet.jsp.el.FunctionMapper)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object,java.lang.Class)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object,java.lang.Class)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.util.Map,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.Object,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.Object,java.lang.Object,java.lang.Class)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.Object,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.String,java.lang.Object)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.lang.Object)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'ognl.Ognl.getValue(java.lang.String,java.lang.Object,java.lang.Class)',  'P1',  '',  'all',  'true',  1610536836,  1610536836,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'ognl.Ognl.getValue(java.lang.String,java.lang.Object,java.lang.Class)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'all' AND `track`= 'true' AND `create_time`=  1610536836 AND `update_time`=  1610536836 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Class)',  'O',  '',  'true',  'true',  1610536837,  1610536837,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Class)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Class)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Class)',  'O',  '',  'true',  'true',  1610536837,  1610536837,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Class)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Class)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object)',  'O',  '',  'true',  'true',  1610536837,  1610536837,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(org.springframework.expression.EvaluationContext,java.lang.Object)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '表达式注入',  'expression-language-injection',  1610535131
-	,  1610535131,  1,  1,  'Expression Language Injection',  '表达式注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '表达式注入'
-AND  value =  'expression-language-injection' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Expression Language Injection'AND name_zh =  '表达式注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.springframework.expression.Expression.getValue(java.lang.Object,java.lang.Class)',  'O',  '',  'true',  'true',  1610536837,  1610536837,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(java.lang.Object,java.lang.Class)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.springframework.expression.Expression.getValue(java.lang.Object,java.lang.Class)' AND `source`= 'O' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1610536837 AND `update_time`=  1610536837 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '服务器端请求伪造',  'ssrf',  1610535131
-	,  1610535131,  1,  1,  'Server-Side Request Forgery (SSRF)',  '服务器端请求伪造'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '服务器端请求伪造'
-AND  value =  'ssrf' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '服务器端请求伪造'
-AND  value =  'ssrf' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)',  'P2',  '',  'false',  'true',  1638182301,  1638182301,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182301 AND `update_time`=  1638182301 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182301 AND `update_time`=  1638182301 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  '服务器端请求伪造',  'ssrf',  1610535131
-	,  1610535131,  1,  1,  'Server-Side Request Forgery (SSRF)',  '服务器端请求伪造'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '服务器端请求伪造'
-AND  value =  'ssrf' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  '服务器端请求伪造'
-AND  value =  'ssrf' AND
-update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
-AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)',  'P2',  '',  'false',  'true',  1638182340,  1638182340,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182340 AND `update_time`=  1638182340 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182340 AND `update_time`=  1638182340 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  4,  'JNDI注入',  'JNDI注入',  1641449965
-	,  1641449965,  1,  1,  NULL,  'JNDI注入'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'JNDI注入'
-AND  value =  'JNDI注入' AND
-update_time= 1641449965 AND create_time= 1641449965 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'JNDI注入' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 4 AND `name`=  'JNDI注入'
-AND  value =  'JNDI注入' AND
-update_time= 1641449965 AND create_time= 1641449965 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  'JNDI注入' AND language_id =  1 LIMIT 1);
-
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'javax.naming.Context.lookup(java.lang.String)',  'P1',  '',  'true',  'true',  1641540990,  1641540990,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.Context.lookup(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1641540990 AND `update_time`=  1641540990 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'javax.naming.Context.lookup(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1641540990 AND `update_time`=  1641540990 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
@@ -14117,6 +8289,35 @@ WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
 `value`= 'java.util.Random.nextGaussian()' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  '不安全的随机数',  'crypto-weak-randomness',  1610535131
+	,  1610535131,  1,  1,  'Weak Random Number Generation',  '不安全的随机数'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  '不安全的随机数'
+AND  value =  'crypto-weak-randomness' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Weak Random Number Generation'AND name_zh =  '不安全的随机数' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  '不安全的随机数'
+AND  value =  'crypto-weak-randomness' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Weak Random Number Generation'AND name_zh =  '不安全的随机数' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.util.Random.nextInt()',  '',  '',  'false',  'false',  1610536834,  1610536834,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.util.Random.nextInt()' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.util.Random.nextInt()' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536834 AND `update_time`=  1610536834 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
@@ -18676,18 +12877,2367 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
+SELECT  4,  'SpringCloudConfigServer',  'spring-cloud-config-server',  1610535131
+	,  1610535131,  1,  0,  'SpringCloudConfigServer',  'SpringCloudConfigServer'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SpringCloudConfigServer'
+AND  value =  'spring-cloud-config-server' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'SpringCloudConfigServer'AND name_zh =  'SpringCloudConfigServer' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SpringCloudConfigServer'
+AND  value =  'spring-cloud-config-server' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'SpringCloudConfigServer'AND name_zh =  'SpringCloudConfigServer' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)',  'P1',  '',  'false',  'true',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.core.io.FileUrlResource.createRelative(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536838,  1610536838,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536838 AND `update_time`=  1610536838 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.cj.mysqla.MysqlaSession.execSQL(com.mysql.cj.api.Query,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,com.mysql.cj.api.mysqla.io.ProtocolEntityFactory,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)',  'P4',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)' AND `source`= 'P4' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)',  'P1,2',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.postgresql.jdbc.PgStatement.executeInternal(org.postgresql.core.CachedQuery,org.postgresql.core.ParameterList,int)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)',  'P1,2',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.postgresql.core.v3.QueryExecutorImpl.sendParse(org.postgresql.core.v3.SimpleQuery,org.postgresql.core.v3.SimpleParameterList,boolean)' AND `source`= 'P1,2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)',  'P1',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'SQL越权类型',  'sql-over-power',  1610535131
+	,  1610535131,  1,  0,  'Over Power',  'SQL越权类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'SQL越权类型'
+AND  value =  'sql-over-power' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Over Power'AND name_zh =  'SQL越权类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)',  'P1',  '',  'false',  'false',  1610536839,  1610536839,  1,  0
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(com.microsoft.sqlserver.jdbc.TDSCommand)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  0
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)',  '',  '',  'false',  '',  1610536839,  1610536839,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)',  '',  '',  'false',  '',  1610536839,  1610536839,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536839 AND `update_time`=  1610536839 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  '反射型XSS过滤类型',  'reflected-xss-filter',  1610535131
+	,  1610535131,  1,  0,  'Cross-Site Scripting Filter',  '反射型XSS过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  '反射型XSS过滤类型'
+AND  value =  'reflected-xss-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  0 AND name_en =  'Cross-Site Scripting Filter'AND name_zh =  '反射型XSS过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)',  '',  '',  'false',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.owasp.esapi.reference.DefaultEncoder.encodeForHTML(java.lang.String)' AND `source`= '' AND `target`= '' AND `inherit`= 'false' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
+	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.parsers.DocumentBuilderFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
+	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.parsers.SAXParserFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
+	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.xml.sax.XMLReader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
+	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
+	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  3,  'XXE过滤类型',  'xxe-filter',  1610535131
+	,  1610535131,  1,  1,  'XML External Entity Injection (XXE) Filter',  'XXE过滤类型'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 3 AND `name`=  'XXE过滤类型'
+AND  value =  'xxe-filter' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'XML External Entity Injection (XXE) Filter'AND name_zh =  'XXE过滤类型' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)',  '',  '',  'true',  '',  1610536840,  1610536840,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)' AND `source`= '' AND `target`= '' AND `inherit`= 'true' AND `track`= '' AND `create_time`=  1610536840 AND `update_time`=  1610536840 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Arrays辅助传播策略',  'Arrays',  1614601101
+	,  1614601101,  1,  1,  'Propagator:Arrays',  'Arrays辅助传播策略'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Arrays辅助传播策略'
+AND  value =  'Arrays' AND
+update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Arrays'AND name_zh =  'Arrays辅助传播策略' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Arrays辅助传播策略'
+AND  value =  'Arrays' AND
+update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Arrays'AND name_zh =  'Arrays辅助传播策略' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.util.Arrays.asList(java.lang.Object[])',  'P1',  'R',  'false',  'false',  1614601101,  1614601101,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.util.Arrays.asList(java.lang.Object[])' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.util.Arrays.asList(java.lang.Object[])' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Collection辅助传播识别策略',  'Collection',  1614601101
+	,  1614601101,  1,  1,  'Propagator:Collection',  'Collection辅助传播识别策略'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Collection辅助传播识别策略'
+AND  value =  'Collection' AND
+update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Collection'AND name_zh =  'Collection辅助传播识别策略' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Collection辅助传播识别策略'
+AND  value =  'Collection' AND
+update_time= 1614601101 AND create_time= 1614601101 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Collection'AND name_zh =  'Collection辅助传播识别策略' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.util.Collection.addAll(java.util.Collection)',  'P1',  'O',  'true',  ' ',  1614601101,  1614601101,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.util.Collection.addAll(java.util.Collection)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'true' AND `track`= ' ' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.util.Collection.addAll(java.util.Collection)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'true' AND `track`= ' ' AND `create_time`=  1614601101 AND `update_time`=  1614601101 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
+	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)',  'P1',  'P2',  'false',  'false',  1616036872,  1616036872,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)' AND `source`= 'P1' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616036872 AND `update_time`=  1616036872 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)' AND `source`= 'P1' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616036872 AND `update_time`=  1616036872 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
+	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)',  'P1',  'R',  'false',  'false',  1616037935,  1616037935,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616037935 AND `update_time`=  1616037935 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1616037935 AND `update_time`=  1616037935 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
+	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.solr.common.params.SolrParams.get(java.lang.String)',  'O',  'R',  'true',  'false',  1616038118,  1616038118,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.common.params.SolrParams.get(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038118 AND `update_time`=  1616038118 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.common.params.SolrParams.get(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038118 AND `update_time`=  1616038118 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Solr参数解析',  'SolrParamParser',  1616036563
+	,  1616036563,  1,  1,  'Propagator:Apache Solr',  'Solr参数解析'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Solr参数解析'
+AND  value =  'SolrParamParser' AND
+update_time= 1616036563 AND create_time= 1616036563 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:Apache Solr'AND name_zh =  'Solr参数解析' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)',  'O',  'R',  'true',  'false',  1616038139,  1616038139,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038139 AND `update_time`=  1616038139 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.solr.common.params.SolrParams.getParams(java.lang.String)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616038139 AND `update_time`=  1616038139 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'Struts2接口读取参数',  'Struts2',  1616579090
+	,  1616579090,  1,  1,  'Source:Struts2 Param',  'Struts2接口读取参数'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'Struts2接口读取参数'
+AND  value =  'Struts2' AND
+update_time= 1616579090 AND create_time= 1616579090 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Struts2 Param'AND name_zh =  'Struts2接口读取参数' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'Struts2接口读取参数'
+AND  value =  'Struts2' AND
+update_time= 1616579090 AND create_time= 1616579090 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Struts2 Param'AND name_zh =  'Struts2接口读取参数' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)',  'P1',  'R',  'true',  'false',  1616579162,  1618796536,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616579162 AND `update_time`=  1618796536 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.struts2.dispatcher.multipart.MultiPartRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1616579162 AND `update_time`=  1618796536 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'OGNL传播',  'ognl',  1610535131
+	,  1610535131,  1,  1,  'Propagator:OGNL',  'OGNL传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'OGNL传播'
+AND  value =  'ognl' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'OGNL传播'
+AND  value =  'ognl' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)',  'P1',  'R',  'true',  'false',  1618480153,  1618480153,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480153 AND `update_time`=  1618480153 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480153 AND `update_time`=  1618480153 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'OGNL传播',  'ognl',  1610535131
+	,  1610535131,  1,  1,  'Propagator:OGNL',  'OGNL传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'OGNL传播'
+AND  value =  'ognl' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'OGNL传播'
+AND  value =  'ognl' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)',  'P1',  'R',  'true',  'false',  1618480192,  1618480192,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480192 AND `update_time`=  1618480192 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480192 AND `update_time`=  1618480192 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'OGNL传播',  'ognl',  1610535131
+	,  1610535131,  1,  1,  'Propagator:OGNL',  'OGNL传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'OGNL传播'
+AND  value =  'ognl' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'OGNL传播'
+AND  value =  'ognl' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:OGNL'AND name_zh =  'OGNL传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)',  'P1',  'R',  'true',  'false',  1618480209,  1618480209,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480209 AND `update_time`=  1618480209 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1618480209 AND `update_time`=  1618480209 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringUTF16.newString(byte[],int,int)',  'P1',  'R',  'false',  'false',  1618827358,  1618827358,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringUTF16.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827358 AND `update_time`=  1618827358 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringUTF16.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827358 AND `update_time`=  1618827358 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringLatin1.newString(byte[],int,int)',  'P1',  'R',  'false',  'false',  1618827438,  1618827438,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringLatin1.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827438 AND `update_time`=  1618827438 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringLatin1.newString(byte[],int,int)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827438 AND `update_time`=  1618827438 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringConcatHelper.newString(byte[],int,byte)',  'P1',  'R',  'false',  'false',  1618827508,  1618827508,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.newString(byte[],int,byte)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827508 AND `update_time`=  1618827508 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.newString(byte[],int,byte)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827508 AND `update_time`=  1618827508 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-02',  'StringBuilder',  1610535130
+	,  1610535130,  1,  1,  'Propagator:StringBuilder',  '字符串传播-02'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringBuilder.delete(int,int)',  'O',  'O',  'false',  'false',  1618827778,  1618827778,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringBuilder.delete(int,int)' AND `source`= 'O' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827778 AND `update_time`=  1618827778 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringBuilder.delete(int,int)' AND `source`= 'O' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618827778 AND `update_time`=  1618827778 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)',  'P4',  'P2',  'false',  'false',  1618892316,  1618893712,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)' AND `source`= 'P4' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618892316 AND `update_time`=  1618893712 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.prepend(int,byte[],byte,java.lang.String)' AND `source`= 'P4' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618892316 AND `update_time`=  1618893712 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.String.getBytes(byte[],int,byte)',  'O',  'P1',  'false',  'false',  1618893583,  1618893644,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.String.getBytes(byte[],int,byte)' AND `source`= 'O' AND `target`= 'P1' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618893583 AND `update_time`=  1618893644 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.String.getBytes(byte[],int,byte)' AND `source`= 'O' AND `target`= 'P1' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1618893583 AND `update_time`=  1618893644 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
+	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.ServletRequest.getInputStream()',  'O',  'R',  'true',  'false',  1622522113,  1622522113,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522113 AND `update_time`=  1622522113 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522113 AND `update_time`=  1622522113 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
+	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.ServletRequest.getParameter(java.lang.String)',  'P1',  'R',  'true',  'false',  1622522239,  1622522239,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522239 AND `update_time`=  1622522239 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522239 AND `update_time`=  1622522239 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
+	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.ServletRequest.getParameterNames()',  'O',  'R',  'true',  'false',  1622522255,  1622522255,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522255 AND `update_time`=  1622522255 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522255 AND `update_time`=  1622522255 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
+	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.ServletRequest.getParameterValues(java.lang.String)',  'P1',  'R',  'true',  'false',  1622522275,  1622522275,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522275 AND `update_time`=  1622522275 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522275 AND `update_time`=  1622522275 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
+	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.ServletRequest.getParameterMap()',  'O',  'R',  'true',  'false',  1622522288,  1622522288,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522288 AND `update_time`=  1622522288 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522288 AND `update_time`=  1622522288 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'ServletRequest接口',  'javax.servlet.ServletRequest',  1622521929
+	,  1622521929,  1,  1,  'Source:Servlet Request Interface',  'ServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'ServletRequest接口'
+AND  value =  'javax.servlet.ServletRequest' AND
+update_time= 1622521929 AND create_time= 1622521929 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Servlet Request Interface'AND name_zh =  'ServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.ServletRequest.getReader()',  'O',  'R',  'true',  'false',  1622522303,  1622522303,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522303 AND `update_time`=  1622522303 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.ServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622522303 AND `update_time`=  1622522303 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)',  'P1',  'R',  'true',  'false',  1622524240,  1622524240,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524240 AND `update_time`=  1622524240 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524240 AND `update_time`=  1622524240 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getHeaderNames()',  'O',  'R',  'true',  'false',  1622524294,  1622524294,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getHeaderNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524294 AND `update_time`=  1622524294 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getHeaderNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524294 AND `update_time`=  1622524294 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getParts()',  'O',  'R',  'true',  'false',  1622524335,  1622524335,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParts()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524335 AND `update_time`=  1622524335 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParts()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524335 AND `update_time`=  1622524335 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)',  'P1',  'R',  'true',  'false',  1622524349,  1622524349,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524349 AND `update_time`=  1622524349 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getPart(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524349 AND `update_time`=  1622524349 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'Spring参数处理接口',  'org.springframework.web.method.support.HandlerMethodArgumentResolver',  1622524533
+	,  1622524533,  1,  1,  'Source:Spring',  'Spring参数处理接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'Spring参数处理接口'
+AND  value =  'org.springframework.web.method.support.HandlerMethodArgumentResolver' AND
+update_time= 1622524533 AND create_time= 1622524533 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Spring'AND name_zh =  'Spring参数处理接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'Spring参数处理接口'
+AND  value =  'org.springframework.web.method.support.HandlerMethodArgumentResolver' AND
+update_time= 1622524533 AND create_time= 1622524533 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Spring'AND name_zh =  'Spring参数处理接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)',  'P1',  'R',  'true',  'false',  1622524675,  1622524675,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524675 AND `update_time`=  1622524675 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.method.support.HandlerMethodArgumentResolver.resolveArgument(org.springframework.core.MethodParameter,org.springframework.web.method.support.ModelAndViewContainer,org.springframework.web.context.request.NativeWebRequest,org.springframework.web.bind.support.WebDataBinderFactory)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622524675 AND `update_time`=  1622524675 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getCookies()',  'O',  'R',  'true',  'false',  1622528104,  1622528104,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getCookies()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528104 AND `update_time`=  1622528104 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getCookies()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528104 AND `update_time`=  1622528104 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)',  'P1',  'R',  'true',  'false',  1622528147,  1622528147,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528147 AND `update_time`=  1622528147 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528147 AND `update_time`=  1622528147 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getQueryString()',  'O',  'R',  'true',  'false',  1622528180,  1622528180,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getQueryString()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528180 AND `update_time`=  1622528180 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getQueryString()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1622528180 AND `update_time`=  1622528180 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getInputStream()',  'O',  'R',  'true',  'false',  1624450208,  1624450208,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450208 AND `update_time`=  1624450208 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getInputStream()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450208 AND `update_time`=  1624450208 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)',  'P1',  'R',  'true',  'false',  1624450230,  1624450230,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450230 AND `update_time`=  1624450230 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450230 AND `update_time`=  1624450230 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getParameterNames()',  'O',  'R',  'true',  'false',  1624450243,  1624450243,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450243 AND `update_time`=  1624450243 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameterNames()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450243 AND `update_time`=  1624450243 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)',  'P1',  'R',  'true',  'false',  1624450258,  1624450258,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450258 AND `update_time`=  1624450258 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameterValues(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450258 AND `update_time`=  1624450258 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getParameterMap()',  'O',  'R',  'true',  'false',  1624450274,  1624450274,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450274 AND `update_time`=  1624450274 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getParameterMap()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450274 AND `update_time`=  1624450274 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  2,  'HttpServletRequest接口',  'javax.servlet.http.HttpServletRequest',  1622522441
+	,  1622522441,  1,  1,  'Source:Http Servlet Request Interface',  'HttpServletRequest接口'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 2 AND `name`=  'HttpServletRequest接口'
+AND  value =  'javax.servlet.http.HttpServletRequest' AND
+update_time= 1622522441 AND create_time= 1622522441 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Source:Http Servlet Request Interface'AND name_zh =  'HttpServletRequest接口' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.servlet.http.HttpServletRequest.getReader()',  'O',  'R',  'true',  'false',  1624450293,  1624450293,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450293 AND `update_time`=  1624450293 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.servlet.http.HttpServletRequest.getReader()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1624450293 AND `update_time`=  1624450293 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '自定义加密算法',  'custom-encrypt',  1632667036
+	,  1632667036,  1,  1,  NULL,  '自定义加密算法'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '自定义加密算法'
+AND  value =  'custom-encrypt' AND
+update_time= 1632667036 AND create_time= 1632667036 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '自定义加密算法' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '自定义加密算法'
+AND  value =  'custom-encrypt' AND
+update_time= 1632667036 AND create_time= 1632667036 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '自定义加密算法' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.iast.springsec.common.DataManager.doManage(java.lang.String)',  'P1',  'R',  'false',  'false',  1632667104,  1632758980,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.iast.springsec.common.DataManager.doManage(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1632667104 AND `update_time`=  1632758980 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.iast.springsec.common.DataManager.doManage(java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1632667104 AND `update_time`=  1632758980 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
 SELECT  4,  '文件写入',  'FileWrite',  1633666003
 	,  1633666003,  1,  1,  NULL,  '文件写入'
 	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 4 AND `name`=  '文件写入'
 AND  value =  'FileWrite' AND
 update_time= 1633666003 AND create_time= 1633666003 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件写入' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件写入' AND language_id =  1 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 4 AND `name`=  '文件写入'
 AND  value =  'FileWrite' AND
 update_time= 1633666003 AND create_time= 1633666003 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '文件写入' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件写入' AND language_id =  1 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -18821,6 +15371,93 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringConcatHelper.newString(byte[],long)',  'P1',  'R',  'false',  'false',  1635410554,  1635410554,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.newString(byte[],long)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635410554 AND `update_time`=  1635410554 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.newString(byte[],long)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635410554 AND `update_time`=  1635410554 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)',  'P4',  'P2',  'false',  'false',  1635410695,  1635410695,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)' AND `source`= 'P4' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635410695 AND `update_time`=  1635410695 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)' AND `source`= 'P4' AND `target`= 'P2' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635410695 AND `update_time`=  1635410695 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-02',  'StringBuilder',  1610535130
+	,  1610535130,  1,  1,  'Propagator:StringBuilder',  '字符串传播-02'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.github.pagehelper.parser.CountSqlParser.getSmartCountSql(java.lang.String,java.lang.String)',  'P1',  'R',  'false',  'false',  1635475796,  1635475796,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.github.pagehelper.parser.CountSqlParser.getSmartCountSql(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635475796 AND `update_time`=  1635475796 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.github.pagehelper.parser.CountSqlParser.getSmartCountSql(java.lang.String,java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635475796 AND `update_time`=  1635475796 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
 SELECT  4,  '不安全的反序列化',  'unsafe-json-deserialize',  1610535131
 	,  1610535131,  1,  1,  'Untrusted Deserialization',  '不安全的反序列化'
 	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
@@ -18844,6 +15481,64 @@ WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
 `value`= 'com.alibaba.fastjson.JSON.parseObject(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1635478051 AND `update_time`=  1635478051 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Propagator:Jackson',  'Propagator:Jackson',  1635484681
+	,  1635484681,  1,  1,  NULL,  'Propagator:Jackson'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Propagator:Jackson'
+AND  value =  'Propagator:Jackson' AND
+update_time= 1635484681 AND create_time= 1635484681 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Propagator:Jackson' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Propagator:Jackson'
+AND  value =  'Propagator:Jackson' AND
+update_time= 1635484681 AND create_time= 1635484681 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Propagator:Jackson' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.fasterxml.jackson.databind.ObjectMapper.readValue(java.io.InputStream,com.fasterxml.jackson.databind.JavaType)',  'P1',  'R',  'false',  'false',  1635484712,  1635484712,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.fasterxml.jackson.databind.ObjectMapper.readValue(java.io.InputStream,com.fasterxml.jackson.databind.JavaType)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635484712 AND `update_time`=  1635484712 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.fasterxml.jackson.databind.ObjectMapper.readValue(java.io.InputStream,com.fasterxml.jackson.databind.JavaType)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635484712 AND `update_time`=  1635484712 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Propagator:Hessian',  'Propagator:Hessian',  1635996780
+	,  1635996780,  1,  1,  NULL,  'Propagator:Hessian'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Propagator:Hessian'
+AND  value =  'Propagator:Hessian' AND
+update_time= 1635996780 AND create_time= 1635996780 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Propagator:Hessian' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Propagator:Hessian'
+AND  value =  'Propagator:Hessian' AND
+update_time= 1635996780 AND create_time= 1635996780 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Propagator:Hessian' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)',  'P1',  'O',  'false',  'false',  1635996843,  1635996843,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635996843 AND `update_time`=  1635996843 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1635996843 AND `update_time`=  1635996843 AND `created_by`= 1 AND `enable` =  1
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
@@ -18879,18 +15574,105 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
+SELECT  1,  'Propagator:Hessian',  'Propagator:Hessian',  1636081832
+	,  1636081832,  1,  1,  NULL,  'Propagator:Hessian'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Propagator:Hessian'
+AND  value =  'Propagator:Hessian' AND
+update_time= 1636081832 AND create_time= 1636081832 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Propagator:Hessian' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Propagator:Hessian'
+AND  value =  'Propagator:Hessian' AND
+update_time= 1636081832 AND create_time= 1636081832 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Propagator:Hessian' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)',  'P1',  'O',  'false',  'false',  1636081860,  1636081860,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636081860 AND `update_time`=  1636081860 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)' AND `source`= 'P1' AND `target`= 'O' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636081860 AND `update_time`=  1636081860 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  '字符串传播-01',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringConcatHelper.newString(byte[],long)',  'P1',  'R',  'false',  'false',  1636082001,  1636082001,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.newString(byte[],long)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082001 AND `update_time`=  1636082001 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.newString(byte[],long)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082001 AND `update_time`=  1636082001 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  '字符串传播-01',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  '字符串传播-01'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)',  'P1',  'R',  'false',  'false',  1636082015,  1636082015,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082015 AND `update_time`=  1636082015 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636082015 AND `update_time`=  1636082015 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
 SELECT  4,  '任意文件写入',  'FileWrite',  1636085906
 	,  1636085906,  1,  1,  NULL,  '任意文件写入'
 	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 4 AND `name`=  '任意文件写入'
 AND  value =  'FileWrite' AND
 update_time= 1636085906 AND create_time= 1636085906 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '任意文件写入' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '任意文件写入' AND language_id =  1 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 4 AND `name`=  '任意文件写入'
 AND  value =  'FileWrite' AND
 update_time= 1636085906 AND create_time= 1636085906 AND `created_by`= 1
-AND enable =  1 AND name_en  IS NULL AND  name_zh =  '任意文件写入' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '任意文件写入' AND language_id =  1 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -19079,6 +15861,355 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-01',  'String',  1610535130
+	,  1610535130,  1,  1,  'Propagator:String',  '字符串传播-01'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-01'
+AND  value =  'String' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:String'AND name_zh =  '字符串传播-01' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.String.valueOf(java.lang.Object)',  'P1',  'R',  'false',  'false',  1636721551,  1636721551,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.String.valueOf(java.lang.Object)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636721551 AND `update_time`=  1636721551 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.String.valueOf(java.lang.Object)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1636721551 AND `update_time`=  1636721551 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  '服务器端请求伪造',  'ssrf',  1610535131
+	,  1610535131,  1,  1,  'Server-Side Request Forgery (SSRF)',  '服务器端请求伪造'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  '服务器端请求伪造'
+AND  value =  'ssrf' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  '服务器端请求伪造'
+AND  value =  'ssrf' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)',  'P2',  '',  'false',  'true',  1638182301,  1638182301,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182301 AND `update_time`=  1638182301 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182301 AND `update_time`=  1638182301 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  '服务器端请求伪造',  'ssrf',  1610535131
+	,  1610535131,  1,  1,  'Server-Side Request Forgery (SSRF)',  '服务器端请求伪造'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  '服务器端请求伪造'
+AND  value =  'ssrf' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  '服务器端请求伪造'
+AND  value =  'ssrf' AND
+update_time= 1610535131 AND create_time= 1610535131 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Server-Side Request Forgery (SSRF)'AND name_zh =  '服务器端请求伪造' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)',  'P2',  '',  'false',  'true',  1638182340,  1638182340,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182340 AND `update_time`=  1638182340 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)' AND `source`= 'P2' AND `target`= '' AND `inherit`= 'false' AND `track`= 'true' AND `create_time`=  1638182340 AND `update_time`=  1638182340 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '文件上传',  'Spring',  1638532562
+	,  1638532562,  1,  1,  NULL,  '文件上传'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '文件上传'
+AND  value =  'Spring' AND
+update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '文件上传'
+AND  value =  'Spring' AND
+update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.multipart.MultipartFile.getOriginalFilename()',  'O',  'R',  'true',  'false',  1638532625,  1638532625,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.multipart.MultipartFile.getOriginalFilename()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532625 AND `update_time`=  1638532625 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.multipart.MultipartFile.getOriginalFilename()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532625 AND `update_time`=  1638532625 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '文件上传',  'Spring',  1638532562
+	,  1638532562,  1,  1,  NULL,  '文件上传'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '文件上传'
+AND  value =  'Spring' AND
+update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '文件上传'
+AND  value =  'Spring' AND
+update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.springframework.web.multipart.MultipartFile.getName()',  'O',  'R',  'true',  'false',  1638532661,  1638532661,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.multipart.MultipartFile.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532661 AND `update_time`=  1638532661 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.springframework.web.multipart.MultipartFile.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532661 AND `update_time`=  1638532661 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '文件上传',  'Spring',  1638532562
+	,  1638532562,  1,  1,  NULL,  '文件上传'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '文件上传'
+AND  value =  'Spring' AND
+update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '文件上传'
+AND  value =  'Spring' AND
+update_time= 1638532562 AND create_time= 1638532562 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '文件上传' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.commons.fileupload.FileItem.getName()',  'O',  'R',  'true',  'false',  1638532689,  1638532689,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.fileupload.FileItem.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532689 AND `update_time`=  1638532689 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.commons.fileupload.FileItem.getName()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'true' AND `track`= 'false' AND `create_time`=  1638532689 AND `update_time`=  1638532689 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Invalid:Html5EscapeSymbols',  'Invalid:Html5EscapeSymbols',  1640304468
+	,  1640304468,  1,  1,  NULL,  'Invalid:Html5EscapeSymbols'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Invalid:Html5EscapeSymbols'
+AND  value =  'Invalid:Html5EscapeSymbols' AND
+update_time= 1640304468 AND create_time= 1640304468 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Invalid:Html5EscapeSymbols' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Invalid:Html5EscapeSymbols'
+AND  value =  'Invalid:Html5EscapeSymbols' AND
+update_time= 1640304468 AND create_time= 1640304468 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Invalid:Html5EscapeSymbols' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()',  'O',  'R',  'false',  'false',  1640304501,  1640304501,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640304501 AND `update_time`=  1640304501 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640304501 AND `update_time`=  1640304501 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Mybatis传播',  'Mybatis传播',  1640834833
+	,  1640834833,  1,  1,  NULL,  'Mybatis传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Mybatis传播'
+AND  value =  'Mybatis传播' AND
+update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Mybatis传播'
+AND  value =  'Mybatis传播' AND
+update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)',  'P1',  'R',  'false',  'false',  1640835229,  1640835229,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835229 AND `update_time`=  1640835229 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)' AND `source`= 'P1' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835229 AND `update_time`=  1640835229 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  'Mybatis传播',  'Mybatis传播',  1640834833
+	,  1640834833,  1,  1,  NULL,  'Mybatis传播'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Mybatis传播'
+AND  value =  'Mybatis传播' AND
+update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  'Mybatis传播'
+AND  value =  'Mybatis传播' AND
+update_time= 1640834833 AND create_time= 1640834833 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'Mybatis传播' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])',  'P1,2',  'R',  'false',  'false',  1640835306,  1640835306,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835306 AND `update_time`=  1640835306 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])' AND `source`= 'P1,2' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1640835306 AND `update_time`=  1640835306 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-02',  'StringBuilder',  1610535130
+	,  1610535130,  1,  1,  'Propagator:StringBuilder',  '字符串传播-02'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringBuilder.substring(int,int)',  'O',  'R',  'false',  'false',  1641455266,  1641455266,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringBuilder.substring(int,int)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1641455266 AND `update_time`=  1641455266 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringBuilder.substring(int,int)' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1641455266 AND `update_time`=  1641455266 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  1,  '字符串传播-02',  'StringBuilder',  1610535130
+	,  1610535130,  1,  1,  'Propagator:StringBuilder',  '字符串传播-02'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 1 AND `name`=  '字符串传播-02'
+AND  value =  'StringBuilder' AND
+update_time= 1610535130 AND create_time= 1610535130 AND `created_by`= 1
+AND enable =  1 AND name_en =  'Propagator:StringBuilder'AND name_zh =  '字符串传播-02' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'java.lang.StringBuilder.getChars(int,int,char[],int)',  'O',  'P3',  'false',  'false',  1641455703,  1641455703,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringBuilder.getChars(int,int,char[],int)' AND `source`= 'O' AND `target`= 'P3' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1641455703 AND `update_time`=  1641455703 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'java.lang.StringBuilder.getChars(int,int,char[],int)' AND `source`= 'O' AND `target`= 'P3' AND `inherit`= 'false' AND `track`= 'false' AND `create_time`=  1641455703 AND `update_time`=  1641455703 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
+	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
+	, `language_id`)
+SELECT  4,  'JNDI注入',  'JNDI注入',  1641449965
+	,  1641449965,  1,  1,  NULL,  'JNDI注入'
+	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'JNDI注入'
+AND  value =  'JNDI注入' AND
+update_time= 1641449965 AND create_time= 1641449965 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'JNDI注入' AND language_id =  1 LIMIT 1);
+SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
+`type`= 4 AND `name`=  'JNDI注入'
+AND  value =  'JNDI注入' AND
+update_time= 1641449965 AND create_time= 1641449965 AND `created_by`= 1
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'JNDI注入' AND language_id =  1 LIMIT 1);
+
+
+INSERT IGNORE INTO iast_hook_strategy
+(value, source, target, inherit, track, create_time, update_time, created_by, enable)
+SELECT  'javax.naming.Context.lookup(java.lang.String)',  'P1',  '',  'true',  'true',  1641540990,  1641540990,  1,  1
+ FROM DUAL 
+WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.naming.Context.lookup(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1641540990 AND `update_time`=  1641540990 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
+`value`= 'javax.naming.Context.lookup(java.lang.String)' AND `source`= 'P1' AND `target`= '' AND `inherit`= 'true' AND `track`= 'true' AND `create_time`=  1641540990 AND `update_time`=  1641540990 AND `created_by`= 1 AND `enable` =  1
+ LIMIT 1);
+
+INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
+
 
 
 SET FOREIGN_KEY_CHECKS=1;
