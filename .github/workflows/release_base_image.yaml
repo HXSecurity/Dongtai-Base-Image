@@ -61,7 +61,7 @@ jobs:
         run: |
           docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
 
-       - name: Tag only schema images
+      - name: Tag only schema images
         run: |
           docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
           docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:latest
