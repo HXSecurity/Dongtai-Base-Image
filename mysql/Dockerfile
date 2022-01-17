@@ -6,7 +6,6 @@ RUN ["sed", "-i", "s/exec \"$@\"/echo \"not running $@\"/", "/usr/local/bin/dock
 # needed for intialization
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
-COPY my.cnf /etc/mysql/conf.d/mysqlutf8.cnf
 
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca-schema.sql /docker-entrypoint-initdb.d/sca-0.sql
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/rule.sql /docker-entrypoint-initdb.d/rule.sql
@@ -19,13 +18,12 @@ COPY update-*release*.sql /docker-entrypoint-initdb.d/
 
 RUN chmod 777 /docker-entrypoint-initdb.d -R
 
-RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--datadir", "/initialized-db"]
+RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--datadir", "/initialized-db"]
 
 FROM mysql:5.7
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
-COPY my.cnf /etc/mysql/conf.d/mysqlutf8.cnf
 
 COPY --from=builder /initialized-db /var/lib/mysql
 
