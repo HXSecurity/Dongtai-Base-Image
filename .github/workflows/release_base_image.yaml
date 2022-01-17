@@ -1,8 +1,8 @@
 name: Release DongTai IAST Base Image
 
 on:
-  push:
-    branches: [ "release-*" ]
+  release:
+    types: [ created, edited ]
 
 jobs:
   Release-DongTai-Infra-Service:
@@ -10,11 +10,11 @@ jobs:
     strategy:
       max-parallel: 4
     steps:
-      # - name: start-build
-      #   uses: joelwmale/webhook-action@master
-      #   with:
-      #     url: ${{ secrets.WEBHOOK_URL }}
-      #     body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+      - name: start-build
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -41,8 +41,9 @@ jobs:
 
       - id: release
         run: |
-          VERSION=`echo ${GITHUB_REF##*/} | awk -F'-' '{print $2}'`
-          echo "::set-output name=version::$VERSION"
+          TAG_NAME=${{ github.event.release.tag_name }}
+          ID=`echo ${TAG_NAME##v}`
+          echo "::set-output name=version::$ID"
 
       - name: Setup ossutil
         uses: manyuanrong/setup-ossutil@v2.0
@@ -112,9 +113,15 @@ jobs:
         run: |
           docker images
           docker push dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }}
-          docker push dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
           docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-sca:${{ steps.release.outputs.version }}
+          docker push dongtai/dongtai-mysql-sca:latest
+          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-sca:latest
+
+          docker push dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
           docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker push dongtai/dongtai-mysql:latest
+          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
+
 
       - name: Build and push Redis
         uses: docker/build-push-action@v2
@@ -124,10 +131,12 @@ jobs:
           tags: | 
             dongtai/dongtai-redis:${{ steps.release.outputs.version }}
             registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:${{ steps.release.outputs.version }}
+            dongtai/dongtai-redis:latest
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:latest
 
-      # - name: finish build
-      #   uses: joelwmale/webhook-action@master
-      #   with:
-      #     url: ${{ secrets.WEBHOOK_URL }}
-      #     body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+      - name: finish build
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
 
