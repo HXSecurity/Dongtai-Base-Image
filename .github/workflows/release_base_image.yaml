@@ -1,15 +1,14 @@
 name: Release DongTai IAST Base Image
 
 on:
-  push:
-    branches: [ "release-*" ]
+  release:
+    types: [ created, edited ]
 
 jobs:
   Release-DongTai-Infra-Service:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     strategy:
       max-parallel: 4
-
     steps:
       - name: start-build
         uses: joelwmale/webhook-action@master
@@ -20,6 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+    
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
@@ -29,10 +32,18 @@ jobs:
           username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
           password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
 
+      - name: Login to AliyunRegistry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ secrets.ALIYUN_REGISTRY }}
+          username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
+          password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
+
       - id: release
         run: |
-          VERSION=`echo ${GITHUB_REF##*/} | awk -F'-' '{print $2}'`
-          echo "::set-output name=version::$VERSION"
+          TAG_NAME=${{ github.event.release.tag_name }}
+          ID=`echo ${TAG_NAME##v}`
+          echo "::set-output name=version::$ID"
 
       - name: Setup ossutil
         uses: manyuanrong/setup-ossutil@v2.0
@@ -45,15 +56,73 @@ jobs:
         run: |
           ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
-      - name: Build and push MySql
+
+      - name: Build Mysql only schema to local 
+        working-directory: ./mysql
+        run: |
+          docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
+
+      - name: Tag only schema images
+        run: |
+          docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:latest
+          docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
+
+      - name: Build Mysql all data to local 
+        working-directory: ./mysql
+        run: |
+          docker build -t dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }} -f Dockerfile-sca .
+
+      - name: Tag all sca data images
+        run: |
+          docker tag dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }} dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }}
+          docker tag dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }} dongtai/dongtai-mysql-sca:latest
+          docker tag dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-sca:${{ steps.release.outputs.version }}
+          docker tag dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-sca:latest
+
+      - name: Build redis to local
         uses: docker/build-push-action@v2
         with:
-          context: ./mysql
-          push: true
+          context: ./redis
+          load: true
           tags: | 
-            dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
-            dongtai/dongtai-mysql:latest
-      
+            dongtai/dongtai-redis:${{ steps.release.outputs.version }}
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:${{ steps.release.outputs.version }}
+
+      - name: Save image to tar file
+        run: |
+          docker save dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }} | gzip > /tmp/dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz
+          docker save dongtai/dongtai-mysql:${{ steps.release.outputs.version }}     | gzip > /tmp/dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz
+          docker save dongtai/dongtai-redis:${{ steps.release.outputs.version }}     | gzip > /tmp/dongtai-redis-${{ steps.release.outputs.version }}.tar.gz
+
+      - name: Setup Ossutil
+        uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
+          access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
+
+      - name: Upload images to oss
+        run: |
+          ossutil cp -f /tmp/dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
+          ossutil cp -f /tmp/dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz     oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
+          ossutil cp -f /tmp/dongtai-redis-${{ steps.release.outputs.version }}.tar.gz     oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
+
+      - name: Push Mysql 
+        run: |
+          docker images
+          docker push dongtai/dongtai-mysql-sca:${{ steps.release.outputs.version }}
+          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-sca:${{ steps.release.outputs.version }}
+          docker push dongtai/dongtai-mysql-sca:latest
+          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-sca:latest
+
+          docker push dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker push dongtai/dongtai-mysql:latest
+          docker push registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
+
+
       - name: Build and push Redis
         uses: docker/build-push-action@v2
         with:
@@ -61,7 +130,9 @@ jobs:
           push: true
           tags: | 
             dongtai/dongtai-redis:${{ steps.release.outputs.version }}
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:${{ steps.release.outputs.version }}
             dongtai/dongtai-redis:latest
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:latest
 
       - name: finish build
         uses: joelwmale/webhook-action@master

@@ -13,11 +13,11 @@ jobs:
     strategy:
       max-parallel: 4
     steps:
-      - name: start-build
-        uses: joelwmale/webhook-action@master
-        with:
-          url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+      # - name: start-build
+      #   uses: joelwmale/webhook-action@master
+      #   with:
+      #     url: ${{ secrets.WEBHOOK_URL }}
+      #     body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -31,6 +31,7 @@ jobs:
           registry: ${{ secrets.ALIYUN_REGISTRY }}
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
+
       
       - name: SQL LINT 
         run: |
@@ -43,17 +44,19 @@ jobs:
         with:
           context: ./mysql
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest,"
+          tags: | 
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql-hh:0.1.${{github.run_number}}
       
-      - name: Build and push Redis
-        uses: docker/build-push-action@v2
-        with:
-          context: ./redis
-          push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:latest,"
+      # - name: Build and push Redis
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     context: ./redis
+      #     push: true
+      #     tags: | 
+      #       registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis:0.1.${{github.run_number}}
 
-      - name: finish build
-        uses: joelwmale/webhook-action@master
-        with:
-          url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+      # - name: finish build
+      #   uses: joelwmale/webhook-action@master
+      #   with:
+      #     url: ${{ secrets.WEBHOOK_URL }}
+      #     body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
