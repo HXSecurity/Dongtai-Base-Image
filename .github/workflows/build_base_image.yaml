@@ -36,7 +36,7 @@ jobs:
         working-directory: ./mysql
         run: |
           docker build -t dongtai/dongtai-mysql-unittest:0.1.${{github.run_number}} .
-          docker tag dongtai/dongtai-mysql-unittest:0.1.${{github.run_number}} dongtai/dongtai-mysql-unittest:latest .
+          docker tag dongtai/dongtai-mysql-unittest:0.1.${{github.run_number}} dongtai/dongtai-mysql-unittest:latest
 
       - name: Push to DockerHub
         run: | 
