@@ -63,35 +63,7 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
  LIMIT 1);
 
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
-INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
-	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
-	, `language_id`)
-SELECT  1,  '无效的传播方法',  'InvalidPropagator',  1645587869
-	,  1645587869,  1,  1,  NULL,  '无效的传播方法'
-	,  1 FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '无效的传播方法'
-AND  value =  'InvalidPropagator' AND
-update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
-SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
-`type`= 1 AND `name`=  '无效的传播方法'
-AND  value =  'InvalidPropagator' AND
-update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 
-
-INSERT IGNORE INTO iast_hook_strategy
-(value, source, target, inherit, track, create_time, update_time, created_by, enable)
-SELECT  'org.jruby.ir.IRScope.prepareForCompilation()',  'O',  'R',  'all',  'false',  1645614576,  1645614576,  1,  1
- FROM DUAL 
-WHERE NOT EXISTS (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.jruby.ir.IRScope.prepareForCompilation()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'all' AND `track`= 'false' AND `create_time`=  1645614576 AND `update_time`=  1645614576 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE 
-`value`= 'org.jruby.ir.IRScope.prepareForCompilation()' AND `source`= 'O' AND `target`= 'R' AND `inherit`= 'all' AND `track`= 'false' AND `create_time`=  1645614576 AND `update_time`=  1645614576 AND `created_by`= 1 AND `enable` =  1
- LIMIT 1);
-
-INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
