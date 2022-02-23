@@ -14,12 +14,12 @@ SELECT  1,  '无效的传播方法',  'InvalidPropagator',  1645587869
 `type`= 1 AND `name`=  '无效的传播方法'
 AND  value =  'InvalidPropagator' AND
 update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  '无效的传播方法'
 AND  value =  'InvalidPropagator' AND
 update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -43,12 +43,12 @@ SELECT  1,  '无效的传播方法',  'InvalidPropagator',  1645587869
 `type`= 1 AND `name`=  '无效的传播方法'
 AND  value =  'InvalidPropagator' AND
 update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  '无效的传播方法'
 AND  value =  'InvalidPropagator' AND
 update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -72,12 +72,12 @@ SELECT  1,  '无效的传播方法',  'InvalidPropagator',  1645587869
 `type`= 1 AND `name`=  '无效的传播方法'
 AND  value =  'InvalidPropagator' AND
 update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  '无效的传播方法'
 AND  value =  'InvalidPropagator' AND
 update_time= 1645587869 AND create_time= 1645587869 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  '无效的传播方法' AND language_id =  1 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -101,12 +101,12 @@ SELECT  1,  'general-rules',  'general-rules',  1634110528
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -130,12 +130,12 @@ SELECT  1,  'general-rules',  'general-rules',  1634110528
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -159,12 +159,12 @@ SELECT  1,  'general-rules',  'general-rules',  1634110528
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -188,12 +188,12 @@ SELECT  1,  'general-rules',  'general-rules',  1634110528
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -217,12 +217,12 @@ SELECT  1,  'general-rules',  'general-rules',  1634110528
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 1 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110528 AND create_time= 1634110528 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
@@ -884,12 +884,12 @@ SELECT  3,  'general-rules',  'general-rules',  1634110529
 `type`= 3 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 SET @HOOK_TYPE_ID = (SELECT `id` FROM iast_hook_type WHERE 
 `type`= 3 AND `name`=  'general-rules'
 AND  value =  'general-rules' AND
 update_time= 1634110529 AND create_time= 1634110529 AND `created_by`= 1
-AND enable =  1 AND name_en =  NULLAND name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
+AND enable =  1 AND name_en IS NULL AND  name_zh =  'general-rules' AND language_id =  2 LIMIT 1);
 
 
 INSERT IGNORE INTO iast_hook_strategy
