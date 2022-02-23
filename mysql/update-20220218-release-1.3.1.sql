@@ -6,7 +6,8 @@ WHERE value IN
 ('yaml.unsafe_load', 'yaml.load', 'yaml.unsafe_load_all', 'yaml.load_all', 'builtins.str.fstring');
 
 UPDATE IGNORE iast_strategy_user SET content='1,2,3,4,5,6,7,8,16,18,20,21,25,27,33,34,35,36,14,26,9,10,11,12,13,15,17,19,22,23,24,28,29,30,31,32,37,39,38' WHERE name='插桩测试标准模板';
-
+UPDATE IGNORE iast_profile SET value='1' WHERE `key`='vul_verifiy';
+UPDATE IGNORE `django_celery_beat_periodictask` SET interval_id=3 WHERE task='core.tasks.export_report' ;
 
 
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
