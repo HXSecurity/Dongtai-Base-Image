@@ -26,12 +26,6 @@ jobs:
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
           
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
-          
       - name: SQL LINT 
         run: |
           sudo apt install npm -y
@@ -54,7 +48,3 @@ jobs:
           tags: |
             registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
 
-      - name: Push to DockerHub
-        run: | 
-          docker push dongtai/dongtai-mysql-unittest:0.1.${{github.run_number}}
-          docker push dongtai/dongtai-mysql-unittest:latest
