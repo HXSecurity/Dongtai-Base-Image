@@ -11,4 +11,5 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 .idea/
 .DS_Store
-test/conf/*.ini
+utils/conf/*.ini
+*/__pycache__/*

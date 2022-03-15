@@ -9,8 +9,6 @@ status = config.read('conf/config.ini')
 if len(status) == 0:
     print("config file not exist. stop running")
     sys.exit(0)
-
-
 DBCONFIG = {
     'user': config.get("mysql", 'user'),
     'db': config.get("mysql", 'name'),
@@ -25,10 +23,12 @@ TARGETDBCONFIG = {
     'host': config.get("prodmysql", 'host'),
     'port': int(config.get("prodmysql", 'port')),
 }
-#class TestDB:
-#    db = MySQLdb.connect(**DBCONFIG, use_unicode=True, charset="utf8mb4",cursorclass=pymysql.cursors.DictCursor)
+class TestDB:
+    db = MySQLdb.connect(**DBCONFIG, use_unicode=True, charset="utf8mb4",cursorclass=pymysql.cursors.DictCursor)
 class TargetDB:
     db = MySQLdb.connect(**TARGETDBCONFIG, use_unicode=True, charset="utf8mb4",cursorclass=pymysql.cursors.DictCursor)
+
+
 def test_hook_strategy():
     cursor = TestDB.db.cursor()
     cursor.execute("SELECT * FROM iast_hook_type;")

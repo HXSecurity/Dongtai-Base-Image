@@ -6,7 +6,7 @@
 # @description :
 ######################################################################
 
-from test_strategy import TargetDB
+from test_strategy import TestDB,TargetDB
 
 cursor = TargetDB.db.cursor()
 hook_type_query_sql = '''
@@ -122,4 +122,16 @@ for data in cursor.fetchall():
         'INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);'
     )
 
-#print(hook_strategy_dict)
+hook_strategy_value_sql = '''
+SELECT value FROM iast_hook_strategy ihs ;
+'''
+
+DELETE_EXIST_STRATEGY_SQL = '''
+DELETE FROM iast_hook_strategy WHERE value IN ({});
+'''
+testcursor = TestDB.db.cursor()
+testcursor.execute(hook_strategy_value_sql)
+result = testcursor.fetchall()
+values = map(lambda x:x['value'], result)
+res = DELETE_EXIST_STRATEGY_SQL.format(','.join(cursor._escape_args(list(values),cursor._get_db())))
+print(res)
