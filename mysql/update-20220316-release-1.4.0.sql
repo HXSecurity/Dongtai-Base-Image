@@ -47,12 +47,12 @@ CREATE TABLE IF NOT EXISTS `iast_agent_upload_type_url` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `type_id` int(5) DEFAULT NULL COMMENT '需要转发数据类型',
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '数据转发地址',
+  `url` varchar(255)  DEFAULT NULL COMMENT '数据转发地址',
   `create_time` int(11) DEFAULT NULL COMMENT '创建时间',
   `headers` json DEFAULT NULL COMMENT '请求头',
   `send_num` int(11) DEFAULT '0' COMMENT '转发次数',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 ;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
@@ -62,8 +62,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 -- Table structure for iast_server
 -- ----------------------------
-ALTER TABLE iast_server ADD cluster_name varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '集群名称';
-ALTER TABLE iast_server ADD cluster_version varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '集群名称';
+ALTER TABLE iast_server ADD cluster_name varchar(255) CHARACTER SET utf8mb4  NULL COMMENT '集群名称';
+ALTER TABLE iast_server ADD cluster_version varchar(100) CHARACTER SET utf8mb4  NULL COMMENT '集群名称';
 
 
 SET FOREIGN_KEY_CHECKS = 1;
