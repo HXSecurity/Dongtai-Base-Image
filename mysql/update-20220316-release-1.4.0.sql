@@ -64,6 +64,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 ALTER TABLE iast_server ADD cluster_name varchar(255) CHARACTER SET utf8mb4  NULL COMMENT '集群名称';
 ALTER TABLE iast_server ADD cluster_version varchar(100) CHARACTER SET utf8mb4  NULL COMMENT '集群名称';
+ALTER TABLE iast_agent_method_pool MODIFY COLUMN pool_sign varchar(64) CHARACTER SET utf8mb4  NULL COMMENT '方法池签名';
 
 
 SET FOREIGN_KEY_CHECKS = 1;
