@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `iast_third_party_service` (
   `address` varchar(255) DEFAULT NULL COMMENT '地址',
   `service_type` varchar(255) DEFAULT NULL COMMENT '服务类型',
   PRIMARY KEY (`id`)
-)
+);
 
 ALTER TABLE iast_agent ADD filepathsimhash varchar(255)  DEFAULT '' NOT NULL COMMENT 'agent目录结构相似度哈希';
 ALTER TABLE iast_third_party_service ADD CONSTRAINT iast_third_party_service_UN UNIQUE KEY (address,service_type,port,agent_id);
