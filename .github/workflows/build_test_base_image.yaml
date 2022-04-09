@@ -42,7 +42,17 @@ jobs:
         run: | 
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
-          
+      
+      - name: Build Mysql only schema to local 
+        working-directory: ./mysql
+        run: |
+          docker build -t registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:0.1.${{github.run_number}} . -f Dockerfile-sca
+          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:latest
+      
+      - name: Push to DockerHub
+        run: | 
+          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:0.1.${{github.run_number}}
+          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:latest
           
       - name: Build and push Redis
         uses: docker/build-push-action@v2
