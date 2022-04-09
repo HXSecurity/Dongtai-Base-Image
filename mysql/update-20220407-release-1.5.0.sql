@@ -17,6 +17,1057 @@ ALTER TABLE iast_third_party_service ADD CONSTRAINT iast_third_party_service_UN 
 ALTER TABLE iast_agent ADD servicetype varchar(255)  DEFAULT '' NOT NULL COMMENT '部署的方式';
 CREATE INDEX iast_vulnerability_level_id_IDX USING BTREE ON iast_vulnerability (level_id,agent_id);
 
+DELETE  FROM  iast_deploy WHERE  1=1;
+INSERT IGNORE INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('**手动修改**
+
+进入tomcat主目录，找到`bin/catalina.sh`文件，在文件首行增加如下配置：
+```bash
+CATALINA_OPTS="-javaagent:/path/to/server/agent.jar -Dproject.name=<project name>"
+```
+
+**注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。', 'tomcat', 'java', '<Tabs
+className="java-tomcat-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 在 `tomcat/bin/catalina.sh`，`if [ "$1" = "debug" ];` 前面一行添加以下内容：
+
+    ```shell title="/tomcat/bin/catalina.sh"
+    if [ "$1" = "start" -o "$1" = "run" ]; then
+    JAVA_OPTS="-javaagent:/${CATALINA_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    fi
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `tomcat/bin/catalina.sh`，找到并删除以下内容：
+
+    ```shell title="/tomcat/bin/catalina.sh"
+    if [ "$1" = "start" -o "$1" = "run" ]; then
+    JAVA_OPTS="-javaagent:/${CATALINA_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    fi
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 在 `tomcat/bin/catalina.bat`， `:setArgs` 后面一行添加以下内容：
+
+    ```bash title="/tomcat/bin/catalina.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%CATALINA_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `tomcat/bin/catalina.bat`，找到并删除以下内容：
+
+    ```bash title="/tomcat/bin/catalina.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%CATALINA_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>', '<Tabs
+className="java-tomcat-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 在 `tomcat/bin/catalina.sh`，`if [ "$1" = "debug" ];` 前面一行添加以下内容：
+
+    ```shell title="/tomcat/bin/catalina.sh"
+    if [ "$1" = "start" -o "$1" = "run" ]; then
+    JAVA_OPTS="-javaagent:/${CATALINA_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    fi
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `tomcat/bin/catalina.sh`，找到并删除以下内容：
+
+    ```shell title="/tomcat/bin/catalina.sh"
+    if [ "$1" = "start" -o "$1" = "run" ]; then
+    JAVA_OPTS="-javaagent:/${CATALINA_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    fi
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 在 `tomcat/bin/catalina.bat`， `:setArgs` 后面一行添加以下内容：
+
+    ```bash title="/tomcat/bin/catalina.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%CATALINA_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Tomcat**，进入 **Tomcat** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `tomcat/bin/catalina.bat`，找到并删除以下内容：
+
+    ```bash title="/tomcat/bin/catalina.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%CATALINA_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('####  JBossAS 6
+
+进入JBoss容器的主目录，在`bin/run.sh`文件中找到`# Setup JBoss specific properties`所在行，在该行的下面插入如下行：
+```bash
+JAVA_OPTS="$JAVA_OPTS "-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project name>
+```
+**注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+
+
+#### JBossAS 7、JBossWildfly
+
+进入JBoss容器的主目录，根据当前服务器的启动类型：standalone、domain修改对应的配置文件
+
+##### Standalone模式
+打开`bin/standalone.sh`文件，定位`# Display our environment`所在的行，在其上方插入自定义配置，如下：
+```bash
+JAVA_OPTS="$JAVA_OPTS "-javaagent:/path/to/server/agent.jar" "-Dproject.name=<project name>
+```
+**注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。
+
+##### domain模式
+domain模式下的部署方式与Standalone模式类似，请自行查询', 'jboss', 'java', '<Tabs
+className="java-jboss-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `jboss/bin/standalone.sh`，在 `# Display our environment` 前面一行添加如下内容：
+
+    ```shell title="/jboss/bin/standalone.sh"
+    JAVA_OPTS="-javaagent:/${JBOSS_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+3. 第三步：启动应用服务器。
+
+**卸载**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `jboss/bin/standalone.sh`，找到并删除以下内容：
+
+    ```shell title="/jboss/bin/standalone.sh"
+    JAVA_OPTS="-javaagent:/${JBOSS_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 在 `jboss/bin/standalone.bat`， `:set JAVA_OPTS=-Dprogram.name=%PROGNAME% %JAVA_OPTS%` 后面一行添加以下内容：
+
+    ```bash title="/jboss/bin/standalone.bat"
+    set JAVA_OPTS=-javaagent:%JBOSS_HOME%\\iast-tool\\agent.jar %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `jboss/bin/standalone.bat`，找到并删除以下内容：
+
+    ```bash title="/jboss/bin/standalone.bat"
+    set JAVA_OPTS=-javaagent:%JBOSS_HOME%\\iast-tool\\agent.jar %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>
+', '<Tabs
+className="java-jboss-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `jboss/bin/standalone.sh`，在 `# Display our environment` 前面一行添加如下内容：
+
+    ```shell title="/jboss/bin/standalone.sh"
+    JAVA_OPTS="-javaagent:/${JBOSS_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+3. 第三步：启动应用服务器。
+
+**卸载**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `jboss/bin/standalone.sh`，找到并删除以下内容：
+
+    ```shell title="/jboss/bin/standalone.sh"
+    JAVA_OPTS="-javaagent:/${JBOSS_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 在 `jboss/bin/standalone.bat`， `:set JAVA_OPTS=-Dprogram.name=%PROGNAME% %JAVA_OPTS%` 后面一行添加以下内容：
+
+    ```bash title="/jboss/bin/standalone.bat"
+    set JAVA_OPTS=-javaagent:%JBOSS_HOME%\\iast-tool\\agent.jar %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **JBoss**，进入 **JBoss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 在 `jboss/bin/standalone.bat`，找到并删除以下内容：
+
+    ```bash title="/jboss/bin/standalone.bat"
+    set JAVA_OPTS=-javaagent:%JBOSS_HOME%\\iast-tool\\agent.jar %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>
+');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('> Jetty
+
+修改 java 启动参数，增加 -javaagent 参数（注意将 `-jar` 放在命令最末尾):
+
+```
+java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar start.jar
+```
+
+**注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。', 'jetty', 'java', '#### Jetty 
+Navigate to Jetty''s bin directory and open the `/jetty.sh` file with text editor. Find `Add jetty properties to Java VM options.` and add the following line below it: 
+```bash
+JAVA_OPTIONS+=( "-javaagent:/opt/agent/agent.jar=token=e7509bf7-e44f-4e1f-8e25-5079e2540c63 --Dproject.name=<application name>")
+```
+Save the change and restart Jetty service. 
+##### Automatic Configuration
+Navigate to Tomcat''s bin directory and find `/jetty.sh` file. Modify it with the following shell command: 
+```bash
+sed"$(cat jetty.sh |grep -n "Add jetty properties to Java VM options"|cut -d ":" -f1) aJAVA_OPTS="$JAVA_OPTS "-javaagent:/opt/agent/agent.jar=token=e7509bf7-e44f-4e1f-8e25-5079e2540c63 --Dproject.name=<application name>" -i jetty.sh
+```
+**Notice:** Keep the `<application name>` consistent with the application name that has created. The agent will associate the application automatically; You also can manually associate it in application settings at the SaaS Platform to keep the parameters value blank.', '> Jetty
+
+修改 java 启动参数，增加 -javaagent 参数（注意将 `-jar` 放在命令最末尾):
+
+```
+java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar start.jar
+```
+
+**注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES(':::tip
+
+`TWNT_HOME` : iast-tool文件夹的绝对路径
+
+:::
+
+<Tabs
+className="java-TWNT-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `TongWeb/bin/startserver.sh`，在 `if [ "${ACTION}" = "start" ] ; then` 后面添加如下内容：
+
+    ```shell title="/TongWeb/bin/startserver.sh"
+    JAVA_OPTS="-javaagent:/${TWNT_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `TongWeb/bin/startserver.sh`，找到并删除以下内容：
+
+    ```shell title="/TongWeb/bin/startserver.sh"
+    JAVA_OPTS="-javaagent:/${TWNT_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `TongWeb/bin/startserver.bat`，在 `if [ "${ACTION}" = "start" ] ; then` 后面添加如下内容：
+
+    ```bash title="/TongWeb/bin/startserver.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%TWNT_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `TongWeb/bin/startserver.bat`，找到并删除以下内容：
+
+    ```bash title="/TongWeb/bin/startserver.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%TWNT_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>
+', '东方通', 'java', ':::tip
+
+`TWNT_HOME` : iast-tool文件夹的绝对路径
+
+:::
+
+<Tabs
+className="java-TWNT-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `TongWeb/bin/startserver.sh`，在 `if [ "${ACTION}" = "start" ] ; then` 后面添加如下内容：
+
+    ```shell title="/TongWeb/bin/startserver.sh"
+    JAVA_OPTS="-javaagent:/${TWNT_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `TongWeb/bin/startserver.sh`，找到并删除以下内容：
+
+    ```shell title="/TongWeb/bin/startserver.sh"
+    JAVA_OPTS="-javaagent:/${TWNT_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `TongWeb/bin/startserver.bat`，在 `if [ "${ACTION}" = "start" ] ; then` 后面添加如下内容：
+
+    ```bash title="/TongWeb/bin/startserver.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%TWNT_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `TongWeb/bin/startserver.bat`，找到并删除以下内容：
+
+    ```bash title="/TongWeb/bin/startserver.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%TWNT_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>
+', ':::tip
+
+`TWNT_HOME` : iast-tool文件夹的绝对路径
+
+:::
+
+<Tabs
+className="java-TWNT-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `TongWeb/bin/startserver.sh`，在 `if [ "${ACTION}" = "start" ] ; then` 后面添加如下内容：
+
+    ```shell title="/TongWeb/bin/startserver.sh"
+    JAVA_OPTS="-javaagent:/${TWNT_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `TongWeb/bin/startserver.sh`，找到并删除以下内容：
+
+    ```shell title="/TongWeb/bin/startserver.sh"
+    JAVA_OPTS="-javaagent:/${TWNT_HOME}/iast-tool/agent.jar ${JAVA_OPTS}"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `TongWeb/bin/startserver.bat`，在 `if [ "${ACTION}" = "start" ] ; then` 后面添加如下内容：
+
+    ```bash title="/TongWeb/bin/startserver.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%TWNT_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **TongWeb**，进入 **TongWeb** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `TongWeb/bin/startserver.bat`，找到并删除以下内容：
+
+    ```bash title="/TongWeb/bin/startserver.bat"
+    if "%ACTION%" == "start" set JAVA_OPTS="-javaagent:%TWNT_HOME%\\iast-tool\\agent.jar" %JAVA_OPTS%
+    ```
+
+</TabItem>	
+</Tabs>
+');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('> Resin
+#### 手动修改
+进入resin容器的主目录，打开`conf/cluster-default.xml`文件，定位到`<server-default>`所在的行，在该行下面插入`<jvm-arg>-javaagent:/opt/agent/agent.jar</jvm-arg>`', 'resin', 'java', ':::tip
+
+`RESIN_HOME` : iast-tool 文件夹的绝对路径
+
+:::
+
+<Tabs
+className="java-resin-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `resin/conf/resin.properties`，在 `jvm\_args : -Xmx2048m -XX:MaxPermSize=256m` 后面添加如下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:${RESIN_HOME}/iast-tool/agent.jar
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `resin/conf/resin.properties`，找到并删除以下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:${RESIN_HOME}/iast-tool/agent.jar
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `resin/conf/resin.properties`，在 `jvm\_args : -Xmx2048m -XX:MaxPermSize=256m` 后面添加如下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:%RESIN_HOME%\\iast-tool\\agent.jar
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `resin/conf/resin.properties`，找到并删除以下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:%RESIN_HOME%\\iast-tool\\agent.jar
+    ```
+
+</TabItem>	
+</Tabs>
+', ':::tip
+
+`RESIN_HOME` : iast-tool 文件夹的绝对路径
+
+:::
+
+<Tabs
+className="java-resin-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `resin/conf/resin.properties`，在 `jvm\_args : -Xmx2048m -XX:MaxPermSize=256m` 后面添加如下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:${RESIN_HOME}/iast-tool/agent.jar
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `resin/conf/resin.properties`，找到并删除以下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:${RESIN_HOME}/iast-tool/agent.jar
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 `resin/conf/resin.properties`，在 `jvm\_args : -Xmx2048m -XX:MaxPermSize=256m` 后面添加如下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:%RESIN_HOME%\\iast-tool\\agent.jar
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **Resin**，进入 **Resin** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入 `resin/conf/resin.properties`，找到并删除以下内容：
+
+    ```bash title="/resin/conf/resin.properties"
+    -javaagent:%RESIN_HOME%\\iast-tool\\agent.jar
+    ```
+
+</TabItem>	
+</Tabs>
+');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('> WebLogic配置agent
+
+#### 手动修改
+**非集群方式**
+
+进入WebLogic目录，打开`bin/startWebLogic.sh`文件，找到`JAVA_OPTIONS="${SAVE_JAVA_OPTIONS}"`所在行，在该行的下面增加一行
+
+```
+JAVA_OPTIONS="-javaagent:${DOMAIN_HOME}/agent/agent.jar"
+```
+
+**集群方式**
+
+##### 方式一、通过weblogic的console
+
+访问weblogic的console，例如：
+
+1.找到“环境”下的“服务器”，然后在服务器列表中点击需要安装agent的服务器，如：AdminServer
+
+![img](https://i0x0fy4ibf.feishu.cn/space/api/box/stream/download/asynccode/?code=6920cd75d5484b9dcae5f67a8aad155f_8f118824ce50c961_boxcngZyBvKQSo849VNXlQBJuge_YuAYCtHZdJXJCwvIlL3fxPrHcOQuN1Ce)
+
+2.进入服务器详情，点击“服务器启动”，在下方的参数一栏中填入javaagent的参数`-javaagent:/opt/agent/agent.jar`，如：
+
+![img](https://i0x0fy4ibf.feishu.cn/space/api/box/stream/download/asynccode/?code=e32f0fdef6dc3e199632ee96e9e14aa5_8f118824ce50c961_boxcnfxBALg44nqZNvWICeYo93f_mfxihZ670SCKmxtDiZ3ykAkC556TiWMW)
+
+3.重启服务器，使配置生效
+
+![img](https://i0x0fy4ibf.feishu.cn/space/api/box/stream/download/asynccode/?code=346e5344abca7fae8d3cdc89c05f2fbd_8f118824ce50c961_boxcn3SbZEAQhl0B4RSMJpZbibv_o17TRySNfvsOwiyoAYdmpC7GU9XmegU4)
+
+
+
+##### 方式二、通过配置weblogic的config.xml文件
+
+找到`/u01/oracle/weblogic/user_projects/domains/base_domain/config`目录下的config.xml文件，定位到`<server-start>`标签下的`<arguments>`标签，在标签内添加如下配置：
+```
+-javaagent:/opt/agent/agent.jar
+```
+
+
+', 'weblogic', 'java', '<Tabs
+className="java-weblogic-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.sh` 中的 `DOMAIN_HOME` 的值），新建一个 `iast-tool` 文件夹，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.sh`，在 `JAVA_OPTIONS="${SAVE_JAVA_OPTIONS}"` 后面一行添加如下内容：
+
+    ```shell title="/bin/startWebLogic.sh"
+    JAVA_OPTIONS="$JAVA_OPTIONS -javaagent:${DOMAIN_HOME}/iast-tool/agent.jar"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.sh` 中的 `DOMAIN_HOME` 的值），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.sh`，找到并删除以下内容：
+
+    ```shell title="/bin/startWebLogic.sh"
+    JAVA_OPTIONS="$JAVA_OPTIONS -javaagent:${DOMAIN_HOME}/iast-tool/agent.jar"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.sh` 中的 `DOMAIN_HOME` 的值），新建一个 `iast-tool` 文件夹，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.cmd`，在 `set CLASSPATH=%SAVE\_CLASSPATH%` 后面一行添加如下内容：
+
+    ```bash title="/bin/startWebLogic.cmd"
+    set JAVA_OPTIONS=%JAVA_OPTIONS% -javaagent:"%DOMAIN_HOME%\\iast-tool\\agent.jar"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.cmd` 中的 `DOMAIN_HOME` 的值），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.cmd`，找到并删除以下内容：
+
+    ```bash title="/bin/startWebLogic.cmd"
+    set JAVA_OPTIONS=%JAVA_OPTIONS% -javaagent:"%DOMAIN_HOME%\\iast-tool\\agent.jar"
+    ```
+
+</TabItem>	
+</Tabs>', '<Tabs
+className="java-weblogic-tabs"
+defaultValue="linux"
+values={[
+{label: ''Linux'', value: ''linux''},
+{label: ''Windows'', value: ''win''},
+]}>
+
+<TabItem value="linux">
+
+**安装**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.sh` 中的 `DOMAIN_HOME` 的值），新建一个 `iast-tool` 文件夹，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.sh`，在 `JAVA_OPTIONS="${SAVE_JAVA_OPTIONS}"` 后面一行添加如下内容：
+
+    ```shell title="/bin/startWebLogic.sh"
+    JAVA_OPTIONS="$JAVA_OPTIONS -javaagent:${DOMAIN_HOME}/iast-tool/agent.jar"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.sh` 中的 `DOMAIN_HOME` 的值），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.sh`，找到并删除以下内容：
+
+    ```shell title="/bin/startWebLogic.sh"
+    JAVA_OPTIONS="$JAVA_OPTIONS -javaagent:${DOMAIN_HOME}/iast-tool/agent.jar"
+    ```
+
+</TabItem> 
+<TabItem value="win">
+
+**安装**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.sh` 中的 `DOMAIN_HOME` 的值），新建一个 `iast-tool` 文件夹，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.cmd`，在 `set CLASSPATH=%SAVE\_CLASSPATH%` 后面一行添加如下内容：
+
+    ```bash title="/bin/startWebLogic.cmd"
+    set JAVA_OPTIONS=%JAVA_OPTIONS% -javaagent:"%DOMAIN_HOME%\\iast-tool\\agent.jar"
+    ```
+
+3. 启动应用服务器。
+
+**卸载**
+
+1. 停止 **WebLogic** 对应域的服务，进入 **WebLogic** 对应域的根目录（域启动脚本 `startWeblogic.cmd` 中的 `DOMAIN_HOME` 的值），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 进入对应服务域目录的 `/bin/startWebLogic.cmd`，找到并删除以下内容：
+
+    ```bash title="/bin/startWebLogic.cmd"
+    set JAVA_OPTIONS=%JAVA_OPTIONS% -javaagent:"%DOMAIN_HOME%\\iast-tool\\agent.jar"
+    ```
+
+</TabItem>	
+</Tabs>');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('> WebSphere
+![websphere-01](/upload/masterimg/websphere-01.png)
+![websphere-02](/upload/masterimg/websphere-02.png)
+![websphere-03](/upload/masterimg/websphere-03.png)
+', 'websphere', 'java', '**安装**
+
+1. 进入 **Websphere** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 WebSphere WEB 端的管理后台，在控制台左侧的导航栏里，选择 **`Server > Server Types > WebSphere Application Server`**。
+
+    ![Image](/img/docs/getting-started/agent/java-websphere-1.png "")
+
+3. 选择需要安装 Agent 的应用程序服务器，点击进入管理页面。并在新页面下方找到 **`Server Infrastructure > Process definition`**。
+
+    ![Image](/img/docs/getting-started/agent/java-websphere-2.png "")
+
+3. 点击 **`Additional Properties > Java Virtual Machine`** 进入JVM启动参数编辑界面。
+
+    ![Image](/img/docs/getting-started/agent/java-websphere-3.png "")
+
+4. 找到 **`Generic JVM arguments`**, 添加以下配置并保存：
+
+    ```bash
+    -javaagent:${WAS_INSTALL_ROOT}/iast-tool/agent.jar
+    ```
+
+5. 重启对应修改后的应用 server。
+
+**卸载**
+
+1. 停止 **Websphere** 上添加过 `iast-tool` 的应用 server，进入 **Websphere** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 打开 Websphere 对应的应用 server 配置 Java Virtual Machine 选项的界面
+
+3. 删除 `-javaagent:${WAS\_INSTALL\_ROOT}/iast-tool/agent.jar` 后并保存。', '**安装**
+
+1. 进入 **Websphere** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 进入 WebSphere WEB 端的管理后台，在控制台左侧的导航栏里，选择 **`Server > Server Types > WebSphere Application Server`**。
+
+    ![Image](/img/docs/getting-started/agent/java-websphere-1.png "")
+
+3. 选择需要安装 Agent 的应用程序服务器，点击进入管理页面。并在新页面下方找到 **`Server Infrastructure > Process definition`**。
+
+    ![Image](/img/docs/getting-started/agent/java-websphere-2.png "")
+
+3. 点击 **`Additional Properties > Java Virtual Machine`** 进入JVM启动参数编辑界面。
+
+    ![Image](/img/docs/getting-started/agent/java-websphere-3.png "")
+
+4. 找到 **`Generic JVM arguments`**, 添加以下配置并保存：
+
+    ```bash
+    -javaagent:${WAS_INSTALL_ROOT}/iast-tool/agent.jar
+    ```
+
+5. 重启对应修改后的应用 server。
+
+**卸载**
+
+1. 停止 **Websphere** 上添加过 `iast-tool` 的应用 server，进入 **Websphere** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+2. 打开 Websphere 对应的应用 server 配置 Java Virtual Machine 选项的界面
+
+3. 删除 `-javaagent:${WAS\_INSTALL\_ROOT}/iast-tool/agent.jar` 后并保存。');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('**SpringBoot**
+
+1. 下载`agent.jar`，然后放入具有写入权限的目录中，如：`/tmp/`
+
+2. 针对SpringBoot应用
+	1). 如果使用**war包**的方式部署，agent的安装方式为具体中间件的安装方式
+	2). 如果使用`java -jar app.jar`的方式部署，则直接在启动命令中增加启动参数`-javaagent:/path/to/agent.jar`即可，如：`java -javaagent:/path/to/agent.jar -Dproject.name=<project name> -jar app.jar`
+	
+**注意：**`<project name>`与创建的项目名称保持一致，agent将自动关联至项目；如果不配置该参数，需要进入项目管理中进行手工绑定。', 'SpringBoot', 'java', '**安装**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 启动服务时，增加如下内容：
+
+    ```bash
+    -javaagent:"<server_root>/iast-tool/agent.jar"
+    ```
+* 完整启动方法参考示例： 
+
+    ```bash
+    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar
+    ```
+
+**卸载**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+
+2. 下次启动 **Springboot/Netty/Jetty/Sofa** 服务时正常启动即可
+
+', '**安装**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 启动服务时，增加如下内容：
+
+    ```bash
+    -javaagent:"<server_root>/iast-tool/agent.jar"
+    ```
+* 完整启动方法参考示例： 
+
+    ```bash
+    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar
+    ```
+
+**卸载**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+
+2. 下次启动 **Springboot/Netty/Jetty/Sofa** 服务时正常启动即可
+
+');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('
+### Spring-boot/Netty/Jetty/Sofa
+
+**安装**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 启动服务时，增加如下内容：
+
+    ```bash
+    -javaagent:"<server_root>/iast-tool/agent.jar"
+    ```
+* 完整启动方法参考示例： 
+
+    ```bash
+    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar
+    ```
+
+**卸载**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+
+2. 下次启动 **Springboot/Netty/Jetty/Sofa** 服务时正常启动即可
+', 'Spring-boot/Netty/Jetty/Sofa', 'java', '
+### Spring-boot/Netty/Jetty/Sofa
+
+**安装**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 启动服务时，增加如下内容：
+
+    ```bash
+    -javaagent:"<server_root>/iast-tool/agent.jar"
+    ```
+* 完整启动方法参考示例： 
+
+    ```bash
+    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar
+    ```
+
+**卸载**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+
+2. 下次启动 **Springboot/Netty/Jetty/Sofa** 服务时正常启动即可
+', '
+### Spring-boot/Netty/Jetty/Sofa
+
+**安装**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+
+2. 启动服务时，增加如下内容：
+
+    ```bash
+    -javaagent:"<server_root>/iast-tool/agent.jar"
+    ```
+* 完整启动方法参考示例： 
+
+    ```bash
+    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar
+    ```
+
+**卸载**
+
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
+
+
+2. 下次启动 **Springboot/Netty/Jetty/Sofa** 服务时正常启动即可
+');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('修改待检测的Django项目中的settings.py, 在configure middleware位置，增加一条
+```bash
+	MIDDLEWARE = [ 
+		''dongtai_agent_python.middlewares.django_middleware.FireMiddleware'',
+		#...
+	]
+```
+', 'Django', 'python', '#### Django 
+Modify the `settings.py` file in the Django application which is going to install the agent. Find `configure middleware` in the file and add the following line: 
+
+```python
+MIDDLEWARE = [ 
+    ''dongtai_agent_python.middlewares.django_middleware.FireMiddleware'',
+#   ...
+]
+```', '修改待检测的Django项目中的settings.py, 在configure middleware位置，增加一条
+```bash
+	MIDDLEWARE = [ 
+		''dongtai_agent_python.middlewares.django_middleware.FireMiddleware'',
+		#...
+	]
+```
+');
+INSERT INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('#### Flask 
+修改项目的入口文件(如 app.py), 增加如下内容
+```python
+app = Flask(__name__)
+
+from dongtai_agent_python.middlewares.flask_middleware import AgentMiddleware
+app.wsgi_app = AgentMiddleware(app.wsgi_app, app)
+
+
+@app.route(''/'')
+def hello_world():
+    return ''Hello World!''
+
+
+if __name__ == ''__main__'':
+    app.run()
+```
+', 'Flask', 'python', '#### Flask 
+Modify the entry file of the project (such as app.py) and add the following content
+```python
+app = Flask(__name__)
+
+from dongtai_agent_python.middlewares.flask_middleware import AgentMiddleware
+app.wsgi_app = AgentMiddleware(app.wsgi_app, app)
+
+
+@app.route(''/'')
+def hello_world():
+    return ''Hello World!''
+
+
+if __name__ == ''__main__'':
+    app.run()
+```', '#### Flask 
+修改项目的入口文件(如 app.py), 增加如下内容
+```python
+app = Flask(__name__)
+
+from dongtai_agent_python.middlewares.flask_middleware import AgentMiddleware
+app.wsgi_app = AgentMiddleware(app.wsgi_app, app)
+
+
+@app.route(''/'')
+def hello_world():
+    return ''Hello World!''
+
+
+if __name__ == ''__main__'':
+    app.run()
+```
+');
 
 
 
