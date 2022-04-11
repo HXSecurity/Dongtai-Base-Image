@@ -17,6 +17,15 @@ ALTER TABLE iast_third_party_service ADD CONSTRAINT iast_third_party_service_UN 
 ALTER TABLE iast_agent ADD servicetype varchar(255)  DEFAULT '' NOT NULL COMMENT '部署的方式';
 CREATE INDEX iast_vulnerability_level_id_IDX USING BTREE ON iast_vulnerability (level_id,agent_id);
 
+
+INSERT IGNORE INTO `web_url_route` (`name`, `path`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `meta_name`, `redirect`, `name_i18n`, `name_i18n_en`, `name_i18n_zh`, `parent`) VALUES ('agentConfig', 'agentConfig', 'views/setting/agentConfig.vue', 'False', 'True', 'menu.agentConfig', 'False', 'menu.agentConfig', '', '', '', '', 6);
+INSERT IGNORE INTO `web_button` (`name`, `webroute_id`) VALUES ('降级配置', 21);
+
+
+INSERT IGNORE INTO `web_role_url_relation` (`role_id`, `url_id`) VALUES (6, 41);
+INSERT IGNORE INTO `web_role_button_relation` (`role_id`, `button_id`) VALUES (6, 13); 
+
+
 DELETE  FROM  iast_deploy WHERE  1=1;
 INSERT IGNORE INTO iast_deploy (`desc`, middleware, `language`, desc_en, desc_zh) VALUES('**手动修改**
 
