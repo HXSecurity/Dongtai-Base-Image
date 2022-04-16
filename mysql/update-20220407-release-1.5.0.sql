@@ -18,8 +18,9 @@ ALTER TABLE iast_agent ADD servicetype varchar(255)  DEFAULT '' NOT NULL COMMENT
 CREATE INDEX iast_vulnerability_level_id_IDX USING BTREE ON iast_vulnerability (level_id,agent_id);
 
 
-INSERT IGNORE INTO `web_url_route` (`name`, `path`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `meta_name`, `redirect`, `name_i18n`, `name_i18n_en`, `name_i18n_zh`, `parent`) VALUES ('agentConfig', 'agentConfig', 'views/setting/agentConfig.vue', 'False', 'True', 'menu.agentConfig', 'False', 'menu.agentConfig', '', '', '', '', 6);
-INSERT IGNORE INTO `web_button` (`name`, `webroute_id`) VALUES ('降级配置', 21);
+INSERT IGNORE INTO web_url_route (id, `path`, name, component, meta_keepAlive, meta_disabled, meta_i18n, meta_isMenu, parent, meta_name, redirect, name_i18n_zh, name_i18n_en, name_i18n) VALUES(41, 'agentConfig', 'agentConfig', 'views/setting/agentConfig.vue', 'False', 'True', 'menu.agentConfig', 'False', 6, 'menu.agentConfig', '', '', '', '');
+INSERT IGNORE INTO web_button (id, name, webroute_id) VALUES(13, '降级配置', 21);
+
 
 
 INSERT IGNORE INTO `web_role_url_relation` (`role_id`, `url_id`) VALUES (6, 41);
