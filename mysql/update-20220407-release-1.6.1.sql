@@ -6,6 +6,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Records of engine_monitoring_indicators
 -- ----------------------------
 ALTER TABLE iast_vulnerability MODIFY COLUMN taint_value varchar(4000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '污点值';
+ALTER TABLE iast_server ADD protocol varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NOT NULL COMMENT 'protocol';
 CREATE INDEX iast_vulnerability_latest_time_IDX USING BTREE ON iast_vulnerability (latest_time,level_id);
 CREATE INDEX iast_asset_level_id_IDX USING BTREE ON iast_asset (level_id,dt);
 CREATE INDEX iast_vulnerability_uri_agent_id_IDX USING BTREE ON iast_vulnerability (uri,agent_id);
@@ -13,6 +14,7 @@ ALTER TABLE iast_api_route ADD from_where INT DEFAULT 1 NOT NULL COMMENT '1-agen
 CREATE INDEX iast_agent_method_pool_id_IDX USING BTREE ON iast_agent_method_pool (id,agent_id,http_scheme);
 CREATE INDEX iast_agent_bind_project_id_single_IDX USING BTREE ON iast_agent (bind_project_id);
 CREATE INDEX iast_agent_id_IDX USING BTREE ON iast_agent (id,bind_project_id);
+
 
 INSERT INTO iast_profile (`key`, value) VALUES('circuit_break', '0');
 INSERT
