@@ -14,7 +14,25 @@ ALTER TABLE iast_api_route ADD from_where INT DEFAULT 1 NOT NULL COMMENT '1-agen
 CREATE INDEX iast_agent_method_pool_id_IDX USING BTREE ON iast_agent_method_pool (id,agent_id,http_scheme);
 CREATE INDEX iast_agent_bind_project_id_single_IDX USING BTREE ON iast_agent (bind_project_id);
 CREATE INDEX iast_agent_id_IDX USING BTREE ON iast_agent (id,bind_project_id);
-
+--
+-- Create model IastCircuitConfig
+--
+CREATE TABLE `iast_circuit_configs` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(200) NULL, `metric_types` varchar(2000) NULL, `targets` varchar(2000) NULL, `system_type` integer NULL, `is_enable` integer NULL, `is_deleted` integer NULL, `deal` integer NULL, `interval` integer NULL, `metric_group` integer NULL, `priority` integer NULL, `create_time` integer NULL, `update_time` integer NULL, `user_id` integer NOT NULL);
+--
+-- Create model IastCircuitTarget
+--
+CREATE TABLE `iast_circuit_targets` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `target_type` integer NULL, `opt` integer NULL, `value` varchar(200) NULL, `circuit_config_id` integer NOT NULL);
+--
+-- Create model IastCircuitMetric
+--
+CREATE TABLE `iast_circuit_metrics` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `metric_type` int(11) DEFAULT NULL,
+  `opt` int(11) DEFAULT NULL,
+  `value` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `circuit_config_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
 INSERT INTO iast_profile (`key`, value) VALUES('circuit_break', '0');
 INSERT
