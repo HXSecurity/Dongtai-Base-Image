@@ -926,7 +926,7 @@ UPDATE `iast_profile` SET value='0' WHERE `key`='auto_audit';
 
 UPDATE IGNORE iast_request_chains as v , (SELECT irc.id as irc_id , iamp.http_scheme as iamp_http_scheme FROM  iast_request_chains irc ,iast_agent_method_pool iamp 
 WHERE irc.target_id = iamp.id  ) as tmp
-SET http_protocol  = iamp_http_scheme
+SET protocol  = iamp_http_scheme
 WHERE v.id = tmp.irc_id ;
 
 
