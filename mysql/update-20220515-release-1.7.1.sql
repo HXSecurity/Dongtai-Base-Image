@@ -1,3 +1,4 @@
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
 ALTER TABLE `dongtai_webapi`.`auth_department` ADD INDEX `auth_department_principal_id_IDX`(`principal_id`) USING BTREE;
@@ -369,7 +370,7 @@ ALTER TABLE `dongtai_webapi`.`iast_request_chains` ADD INDEX `iast_request_chain
 
 ALTER TABLE `dongtai_webapi`.`iast_server` ADD COLUMN `protocol` varchar(255)  NOT NULL DEFAULT '' COMMENT 'protocol' AFTER `cluster_version`;
 
-ALTER TABLE `dongtai_webapi`.`iast_server` MODIFY COLUMN `env` varchar(255)  NULL DEFAULT NULL COMMENT '环境变量' AFTER `command`;
+ALTER TABLE `dongtai_webapi`.`iast_server` MODIFY COLUMN `env` TEXT  NULL DEFAULT NULL COMMENT '环境变量' AFTER `command`;
 
 ALTER TABLE `dongtai_webapi`.`iast_server` MODIFY COLUMN `network` varchar(255)  NULL DEFAULT NULL COMMENT '网络情况' AFTER `update_time`;
 
@@ -919,6 +920,7 @@ UPDATE `dongtai_webapi`.`web_url_route` SET `path` = 'userSetting', `name` = 'us
 UPDATE `dongtai_webapi`.`web_url_route` SET `path` = 'roleSetting', `name` = 'roleSetting', `component` = 'views/department/roleSetting.vue', `meta_keepAlive` = '', `meta_disabled` = '', `meta_i18n` = 'menu.roleSetting', `meta_isMenu` = '', `parent` = 6, `meta_name` = 'menu.roleSetting', `redirect` = '', `name_i18n_zh` = '', `name_i18n_en` = '', `name_i18n` = '' WHERE `id` = 30;
 
 UPDATE `dongtai_webapi`.`web_url_route` SET `path` = 'agentConfig', `name` = 'agentConfig', `component` = 'views/setting/agentConfig.vue', `meta_keepAlive` = 'False', `meta_disabled` = 'True', `meta_i18n` = 'menu.agentConfig', `meta_isMenu` = 'False', `parent` = 0, `meta_name` = 'menu.agentConfig', `redirect` = '', `name_i18n_zh` = '', `name_i18n_en` = '', `name_i18n` = '' WHERE `id` = 41;
+
 
 SET FOREIGN_KEY_CHECKS=1;
 
