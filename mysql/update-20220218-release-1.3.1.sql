@@ -971,7 +971,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 
 
 
-ALTER TABLE iast_api_methods MODIFY COLUMN `method` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_http_method MODIFY COLUMN `method` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+ALTER TABLE iast_api_methods MODIFY COLUMN `method` varchar(100)  NOT NULL;
+ALTER TABLE iast_http_method MODIFY COLUMN `method` varchar(100)  NOT NULL;
 
 SET FOREIGN_KEY_CHECKS=1;

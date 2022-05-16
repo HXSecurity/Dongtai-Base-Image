@@ -1,7 +1,7 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
-ALTER TABLE `iast_agent_method_pool` ADD COLUMN `req_header_for_search` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '用于搜索功能的请求头，请求方法、uri、参数、协议、请求头的拼接' AFTER `pool_sign`;
+ALTER TABLE `iast_agent_method_pool` ADD COLUMN `req_header_for_search` text  NULL COMMENT '用于搜索功能的请求头，请求方法、uri、参数、协议、请求头的拼接' AFTER `pool_sign`;
 
 ALTER TABLE `iast_agent_method_pool` ADD CONSTRAINT `iast_agent_method_pool_ibfk_1` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
@@ -39,12 +39,12 @@ COMMIT;
 DROP TABLE IF EXISTS `iast_document`;
 CREATE TABLE `iast_document`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `url` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `title` varchar(100)  NULL DEFAULT NULL,
+  `url` varchar(2000)  NULL DEFAULT NULL,
   `weight` int(11) NOT NULL DEFAULT 0,
-  `language` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `language` varchar(100)  NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1  ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for iast_profile
@@ -52,11 +52,11 @@ CREATE TABLE `iast_document`  (
 DROP TABLE IF EXISTS `iast_profile`;
 CREATE TABLE `iast_profile`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `key` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `value` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `key` varchar(100)  NOT NULL,
+  `value` varchar(100)  NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `iast_profile_UN`(`key`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1  ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for iast_program_language
@@ -64,9 +64,9 @@ CREATE TABLE `iast_profile`  (
 DROP TABLE IF EXISTS `iast_program_language`;
 CREATE TABLE `iast_program_language`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(100)  NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1  ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS=1;
 

@@ -158,7 +158,7 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 
 ALTER TABLE iast_vulnerability ADD strategy_id INT(11) DEFAULT 0 NOT NULL COMMENT '漏洞类型-策略id';
 ALTER TABLE iast_hook_type ADD strategy_id int(11) DEFAULT 0 NOT NULL;
-ALTER TABLE iast_agent_method_pool MODIFY COLUMN res_body TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '响应体';
+ALTER TABLE iast_agent_method_pool MODIFY COLUMN res_body TEXT  NULL COMMENT '响应体';
 
 
 SET FOREIGN_KEY_CHECKS=1;

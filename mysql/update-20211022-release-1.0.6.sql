@@ -22,15 +22,15 @@ INSERT IGNORE INTO iast_profile
 VALUES('cpu_limit', '60');
 ALTER TABLE iast_profile 
 DEFAULT CHARSET=utf8mb4;
-ALTER TABLE iast_profile MODIFY COLUMN `key` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_profile MODIFY COLUMN value varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN code_file varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN controller varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+ALTER TABLE iast_profile MODIFY COLUMN `key` varchar(100)  NOT NULL;
+ALTER TABLE iast_profile MODIFY COLUMN value varchar(100)  NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN code_file varchar(500)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN controller varchar(100)  NOT NULL;
 ALTER TABLE iast_agent ADD startup_time int(11) DEFAULT 0 NOT NULL COMMENT '启动时间';
-ALTER TABLE iast_agent ADD alias varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NOT NULL COMMENT 'agent别名';
+ALTER TABLE iast_agent ADD alias varchar(255)  DEFAULT '' NOT NULL COMMENT 'agent别名';
 ALTER TABLE iast_agent ADD register_time int(11) DEFAULT 0 NOT NULL COMMENT '注册时间';
 INSERT IGNORE INTO `iast_vul_level` (`name`, `name_value`, `name_type`, `name_type_en`, `name_type_zh`, `name_value_en`, `name_value_zh`)
 SELECT  'note', '提示', '提示信息', 'NOTE', '提示信息', 'NOTE', '提示' FROM DUAL WHERE NOT EXISTS (SELECT `id` FROM iast_vul_level WHERE 
@@ -221,16 +221,16 @@ if __name__ == ''__main__'':
     app.run()
 ```
 ');
-ALTER TABLE iast_api_methods MODIFY COLUMN `method` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_parameter MODIFY COLUMN name varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_parameter MODIFY COLUMN `type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_parameter MODIFY COLUMN annotation varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_response MODIFY COLUMN return_type varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN code_file varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
-ALTER TABLE iast_api_route MODIFY COLUMN controller varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+ALTER TABLE iast_api_methods MODIFY COLUMN `method` varchar(100)  NOT NULL;
+ALTER TABLE iast_api_parameter MODIFY COLUMN name varchar(100)  NOT NULL;
+ALTER TABLE iast_api_parameter MODIFY COLUMN `type` varchar(100)  NOT NULL;
+ALTER TABLE iast_api_parameter MODIFY COLUMN annotation varchar(500)  NOT NULL;
+ALTER TABLE iast_api_response MODIFY COLUMN return_type varchar(100)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN `path` varchar(255)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN code_class varchar(255)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN description varchar(500)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN code_file varchar(500)  NOT NULL;
+ALTER TABLE iast_api_route MODIFY COLUMN controller varchar(100)  NOT NULL;
 INSERT IGNORE INTO `iast_hook_type` (`type`, `name`, `value`, `create_time`
 	, `update_time`, `created_by`, `enable`, `name_en`, `name_zh`
 	, `language_id`)
