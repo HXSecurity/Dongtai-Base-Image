@@ -70,12 +70,12 @@ ALTER TABLE iast_vulnerability ADD hook_type_id INT UNSIGNED DEFAULT 0 NOT NULL 
 
 
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id ,iht2.id as iht2_id FROM  iast_vulnerability iv,iast_hook_type iht2 
-WHERE iv.`type`  = iht2.name COLLATE utf8mb4_general_ci ) as tmp
+WHERE iv.`type`  = iht2.name  ) as tmp
 SET hook_type_id  = tmp.iht2_id
 WHERE v.id = tmp.iv_id ;
 
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id ,iht2.id as iht2_id FROM  iast_vulnerability iv,iast_hook_type iht2 
-WHERE iv.`type`  = iht2.name_en COLLATE utf8mb4_general_ci ) as tmp
+WHERE iv.`type`  = iht2.name_en  ) as tmp
 SET hook_type_id  = tmp.iht2_id
 WHERE v.id = tmp.iv_id and v.hook_type_id = 0;
 
@@ -107,11 +107,11 @@ INSERT INTO iast_vulnerability_status
 VALUES('已处理', '已处理', 'Solved');
 
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id, ivs.id as ivs_id FROM  iast_vulnerability iv , iast_vulnerability_status ivs
-WHERE iv.status  = ivs.name COLLATE utf8mb4_general_ci ) as tmp
+WHERE iv.status  = ivs.name  ) as tmp
 SET status_id = tmp.ivs_id
 WHERE v.id = tmp.iv_id ;
 UPDATE iast_vulnerability as v , (SELECT iv.id as iv_id, ivs.id as ivs_id FROM  iast_vulnerability iv , iast_vulnerability_status ivs
-WHERE iv.status  = ivs.name_en COLLATE utf8mb4_general_ci ) as tmp
+WHERE iv.status  = ivs.name_en  ) as tmp
 SET status_id = tmp.ivs_id
 WHERE v.id = tmp.iv_id AND  status_id = 0;
 CREATE INDEX iast_vulnerability_uri_IDX USING BTREE ON iast_vulnerability (uri,agent_id);
