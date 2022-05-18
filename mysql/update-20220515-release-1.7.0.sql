@@ -3,14 +3,6 @@ SET FOREIGN_KEY_CHECKS=0;
 
 ALTER TABLE `auth_department` ADD INDEX `auth_department_principal_id_IDX`(`principal_id`) USING BTREE;
 
-ALTER TABLE `auth_department_talent` ADD CONSTRAINT `auth_department_talent_ibfk_1` FOREIGN KEY (`talent_id`) REFERENCES `auth_talent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_department_talent` ADD CONSTRAINT `auth_department_talent_ibfk_2` FOREIGN KEY (`department_id`) REFERENCES `auth_department` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 CREATE TABLE `auth_group_routes`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `routes` json NULL COMMENT '可访问的路由',
@@ -22,37 +14,9 @@ CREATE TABLE `auth_group_routes`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 ROW_FORMAT = Dynamic;
 
-ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_user_department` ADD CONSTRAINT `auth_user_department_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
-ALTER TABLE `auth_user_department` ADD CONSTRAINT `auth_user_department_ibfk_2` FOREIGN KEY (`department_id`) REFERENCES `auth_department` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
 ALTER TABLE `auth_user_department` ADD INDEX `auth_user_department_user_id_IDX`(`user_id`, `department_id`) USING BTREE;
 
 ALTER TABLE `auth_user_department` ADD INDEX `auth_user_department_department_id_IDX`(`department_id`, `user_id`) USING BTREE;
-
-ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `authtoken_token` ADD CONSTRAINT `authtoken_token_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `django_celery_beat_periodictask` ADD CONSTRAINT `django_celery_beat_p_clocked_id_47a69f82_fk_django_ce` FOREIGN KEY (`clocked_id`) REFERENCES `django_celery_beat_clockedschedule` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `django_celery_beat_periodictask` ADD CONSTRAINT `django_celery_beat_p_crontab_id_d3cba168_fk_django_ce` FOREIGN KEY (`crontab_id`) REFERENCES `django_celery_beat_crontabschedule` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `django_celery_beat_periodictask` ADD CONSTRAINT `django_celery_beat_p_interval_id_a8ca27da_fk_django_ce` FOREIGN KEY (`interval_id`) REFERENCES `django_celery_beat_intervalschedule` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `django_celery_beat_periodictask` ADD CONSTRAINT `django_celery_beat_p_solar_id_a87ce72c_fk_django_ce` FOREIGN KEY (`solar_id`) REFERENCES `django_celery_beat_solarschedule` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `engine_monitoring_indicators` MODIFY COLUMN `key` varchar(100)  NOT NULL AFTER `id`;
 
@@ -68,10 +32,6 @@ ALTER TABLE `iast_agent` MODIFY COLUMN `alias` varchar(255)  NOT NULL DEFAULT ''
 
 ALTER TABLE `iast_agent` MODIFY COLUMN `is_audit` int(11) NULL DEFAULT 1 COMMENT '是否审核' AFTER `register_time`;
 
-ALTER TABLE `iast_agent` ADD CONSTRAINT `iast_agent_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `iast_agent` ADD CONSTRAINT `iast_agent_ibfk_2` FOREIGN KEY (`server_id`) REFERENCES `iast_server` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 ALTER TABLE `iast_agent` ADD INDEX `iast_agent_bind_project_id_single_IDX`(`bind_project_id`) USING BTREE;
 
 ALTER TABLE `iast_agent` ADD INDEX `iast_agent_id_IDX`(`id`, `bind_project_id`) USING BTREE;
@@ -84,13 +44,9 @@ ALTER TABLE `iast_agent` ADD INDEX `iast_agent_user_id_IDX`(`user_id`, `bind_pro
 
 ALTER TABLE `iast_agent` ADD INDEX `iast_agent_bind_project_id2_IDX`(`bind_project_id`, `user_id`) USING BTREE;
 
-ALTER TABLE `iast_agent_method_pool` DROP FOREIGN KEY `iast_agent_method_pool_ibfk_1`;
-
 ALTER TABLE `iast_agent_method_pool` ADD INDEX `iast_agent_method_pool_id_IDX`(`id`, `agent_id`, `http_scheme`) USING BTREE;
 
 ALTER TABLE `iast_agent_method_pool` ADD INDEX `iast_agent_method_pool_http_scheme_IDX`(`http_scheme`) USING BTREE;
-
-ALTER TABLE `iast_agent_method_pool_sinks` ADD CONSTRAINT `iast_agent_method_pool_sinks_ibfk_1` FOREIGN KEY (`methodpool_id`) REFERENCES `iast_agent_method_pool` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `iast_api_parameter` MODIFY COLUMN `name` varchar(100)  NOT NULL AFTER `id`;
 
@@ -169,10 +125,6 @@ ALTER TABLE `iast_asset` ADD COLUMN `talent_id` int(5) NULL DEFAULT 0 COMMENT '�
 ALTER TABLE `iast_asset` MODIFY COLUMN `signature_value` varchar(255)  NULL DEFAULT NULL COMMENT '签名值' AFTER `signature_algorithm`;
 
 ALTER TABLE `iast_asset` MODIFY COLUMN `vul_count` int(11) NULL DEFAULT NULL COMMENT '总漏洞数量' AFTER `level_id`;
-
-ALTER TABLE `iast_asset` ADD CONSTRAINT `iast_asset_ibfk_2` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `iast_asset` ADD CONSTRAINT `iast_asset_ibfk_3` FOREIGN KEY (`level_id`) REFERENCES `iast_vul_level` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `iast_asset` ADD INDEX `iast_asset_level_id_IDX`(`level_id`, `dt`) USING BTREE;
 
@@ -309,10 +261,6 @@ CREATE TABLE `iast_circuit_targets`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 ROW_FORMAT = Dynamic;
 
-ALTER TABLE `iast_errorlog` ADD CONSTRAINT `iast_errorlog_ibfk_2` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `iast_heartbeat` ADD CONSTRAINT `iast_heartbeat_ibfk_2` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 ALTER TABLE `iast_hook_type` MODIFY COLUMN `type` int(11) NULL DEFAULT NULL COMMENT '策略总类型，2-source节点、1-propagator节点、3-filter节点、4-sink节点' AFTER `id`;
 
 ALTER TABLE `iast_hook_type` MODIFY COLUMN `enable` tinyint(1) NULL DEFAULT NULL COMMENT '状态：1-启用；0-禁用;-1-删除' AFTER `created_by`;
@@ -343,10 +291,6 @@ ALTER TABLE `iast_profile` MODIFY COLUMN `value` varchar(100)  NULL DEFAULT NULL
 
 ALTER TABLE `iast_project` DROP INDEX `iast_project_UN`;
 
-ALTER TABLE `iast_project` ADD CONSTRAINT `iast_project_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `iast_project` ADD CONSTRAINT `iast_project_ibfk_2` FOREIGN KEY (`scan_id`) REFERENCES `iast_strategy_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 ALTER TABLE `iast_project` ADD INDEX `iast_project_name_IDX`(`name`) USING BTREE;
 
 ALTER TABLE `iast_project` ADD INDEX `iast_project_id_IDX`(`id`, `name`) USING BTREE;
@@ -374,12 +318,7 @@ ALTER TABLE `iast_server` MODIFY COLUMN `env` TEXT  NULL DEFAULT NULL COMMENT '�
 
 ALTER TABLE `iast_server` MODIFY COLUMN `network` varchar(255)  NULL DEFAULT NULL COMMENT '网络情况' AFTER `update_time`;
 
-
 ALTER TABLE `iast_strategy` MODIFY COLUMN `vul_name_en` varchar(255)  NULL DEFAULT NULL AFTER `vul_name_zh`;
-
-
-ALTER TABLE `iast_system` ADD CONSTRAINT `iast_system_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 
 ALTER TABLE `iast_third_party_service` MODIFY COLUMN `port` varchar(255)  NULL DEFAULT NULL COMMENT '端口' AFTER `agent_id`;
 
@@ -426,8 +365,6 @@ CREATE TABLE `iast_vul_log`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB  ROW_FORMAT = Dynamic;
 
-ALTER TABLE `iast_vul_overpower` ADD CONSTRAINT `iast_vul_overpower_ibfk_2` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
 ALTER TABLE `iast_vulnerability` ADD COLUMN `level_id_desc` int(11) NOT NULL DEFAULT -1 COMMENT '-1 * level，解决mysql7 mix order无法使用索引的问题' AFTER `level_id`;
 
 ALTER TABLE `iast_vulnerability` ADD COLUMN `latest_time_desc` int(11) NOT NULL DEFAULT 0 COMMENT '-1*latest_time,为了解决mysql7中 mix order无法使用索引的问题' AFTER `latest_time`;
@@ -441,10 +378,6 @@ ALTER TABLE `iast_vulnerability` ADD COLUMN `vul_title` varchar(255)  NULL DEFAU
 ALTER TABLE `iast_vulnerability` MODIFY COLUMN `taint_value` varchar(4000)  NULL DEFAULT NULL COMMENT '污点值' AFTER `bottom_stack`;
 
 ALTER TABLE `iast_vulnerability` DROP COLUMN `type`;
-
-ALTER TABLE `iast_vulnerability` ADD CONSTRAINT `iast_vulnerability_ibfk_2` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
-ALTER TABLE `iast_vulnerability` ADD CONSTRAINT `iast_vulnerability_ibfk_3` FOREIGN KEY (`level_id`) REFERENCES `iast_vul_level` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `iast_vulnerability` ADD INDEX `iast_vulnerability_method_pool_id_IDX`(`method_pool_id`, `hook_type_id`, `strategy_id`) USING BTREE;
 
@@ -37798,8 +37731,6 @@ INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_e
 ALTER TABLE `iast_project` ADD UNIQUE INDEX `iast_project_UN`(`name`, `user_id`) USING BTREE;
 
 ALTER TABLE iast_server MODIFY COLUMN network TEXT NULL COMMENT '网络情况';
-
-
 
 
 
