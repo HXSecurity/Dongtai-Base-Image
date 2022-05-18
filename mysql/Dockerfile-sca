@@ -16,7 +16,7 @@ COPY db.sql /docker-entrypoint-initdb.d/
 COPY update-*release*.sql /docker-entrypoint-initdb.d/
 
 RUN cd /docker-entrypoint-initdb.d/ && tar -xvf sca-20220516-170.sql.tar && mv sca-20220516-170.sql update-20220515-release-1.7.0-sca.sql && rm -rf sca-20220516-170.sql.tar && chmod 777 /docker-entrypoint-initdb.d -R
-
+RUN cd /docker-entrypoint-initdb.d/ && tar -zcvf sql.tar *.sql && mkdir /sql && mv sql.tar /sql/
 RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci", "--datadir", "/initialized-db"]
 
 FROM mysql:5.7
@@ -26,6 +26,6 @@ ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
 COPY --from=builder /initialized-db /var/lib/mysql
 
-COPY update-*release*.sql /sql/
+COPY --from=builder /sql/sql.tar /sql/
 
 CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
