@@ -38034,6 +38034,11 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 
 
 
+
+
+
+
+
 INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('系统配置', '系统CPU使用率阈值、系统内存使用率阈值、系统内存使用值阈值', '全部', 1, 1, 0, 1, 1, 1, -6, 1652181113, 1652181113, 1);
 INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('JVM', 'JVM内存使用率阈值、JVM内存使用值阈值、总线程数阈值、守护线程数阈值、洞态IAST线程数阈值', '全部', 1, 1, 0, 1, 1, 2, -1, 1652003124, 1652003124, 1);
 INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('应用配置', '单请求HOOK限流、每秒限制处理请求数量（QPS）', '全部', 1, 1, 0, 1, 1, 3, -3, 1652181113, 1652181113, 1);
@@ -38041,6 +38046,16 @@ INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_e
 ALTER TABLE `iast_project` ADD UNIQUE INDEX `iast_project_UN`(`name`, `user_id`) USING BTREE;
 
 ALTER TABLE iast_server MODIFY COLUMN network TEXT NULL COMMENT '网络情况';
+
+ALTER TABLE iast_replay_queue ADD payload_id int(11) DEFAULT -1 NOT NULL COMMENT 'Payload ID，外键';
+
+CREATE TABLE `iast_vul_recheck_payload` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+`value` varchar(255) NOT NULL,
+`status` integer NOT NULL,
+`create_time` integer NULL,
+`language_id` integer NOT NULL,
+`strategy_id` integer NULL,
+`user_id` integer NULL);
 
 
 
