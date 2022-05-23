@@ -28,4 +28,6 @@ COPY --from=builder /initialized-db /var/lib/mysql
 
 COPY --from=builder /sql/sql.tar /sql/
 
+COPY mysqld.cnf /etc/mysql/mysql.conf.d/
+
 CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
