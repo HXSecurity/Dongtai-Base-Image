@@ -18,7 +18,7 @@ COPY update-*release*.sql /docker-entrypoint-initdb.d/
 
 RUN chmod 777 /docker-entrypoint-initdb.d -R
 
-RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--datadir", "/initialized-db"]
+RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci", "--datadir", "/initialized-db"]
 
 FROM mysql:5.7
 ENV MYSQL_DATABASE dongtai_webapi
@@ -29,4 +29,4 @@ COPY --from=builder /initialized-db /var/lib/mysql
 
 COPY update-*release*.sql /sql/
 
-CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci" ]
+CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
