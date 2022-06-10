@@ -27,4 +27,4 @@ COPY --from=builder /initialized-db /var/lib/mysql
 
 COPY update-*release*.sql /sql/
 
-CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
+CMD [ "mysqld", "--max_allowed_packet=1024M", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
