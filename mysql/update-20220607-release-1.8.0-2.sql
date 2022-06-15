@@ -19855,4 +19855,20 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
 INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);
 
 
+DELETE FROM `dongtai_webapi`.`django_celery_beat_periodictask` WHERE `id` = 2;
+
+DELETE FROM `dongtai_webapi`.`django_celery_beat_periodictask` WHERE `id` = 4;
+
+DELETE FROM `dongtai_webapi`.`django_celery_beat_periodictask` WHERE `id` = 7;
+
+UPDATE `dongtai_webapi`.`django_celery_beat_periodictask` SET `name` = 'celery.backend_cleanup', `task` = 'celery.backend_cleanup', `args` = '[]', `kwargs` = '{}', `queue` = NULL, `exchange` = NULL, `routing_key` = NULL, `expires` = NULL, `enabled` = 0, `last_run_at` = NULL, `total_run_count` = 24, `date_changed` = '2022-06-15 19:46:01.444426', `description` = '', `crontab_id` = 2, `interval_id` = NULL, `solar_id` = NULL, `one_off` = 0, `start_time` = NULL, `priority` = NULL, `headers` = '{}', `clocked_id` = NULL, `expire_seconds` = 43200 WHERE `id` = 1;
+
+UPDATE `dongtai_webapi`.`django_celery_beat_periodictask` SET `name` = 'engine.update_agent_status', `task` = 'dongtai_engine.tasks.update_agent_status', `args` = '[]', `kwargs` = '{}', `queue` = NULL, `exchange` = NULL, `routing_key` = NULL, `expires` = NULL, `enabled` = 1, `last_run_at` = '2022-06-15 12:03:20.379717', `total_run_count` = 104485, `date_changed` = '2022-06-15 20:04:50.494395', `description` = '', `crontab_id` = NULL, `interval_id` = 3, `solar_id` = NULL, `one_off` = 0, `start_time` = NULL, `priority` = NULL, `headers` = '{}', `clocked_id` = NULL, `expire_seconds` = NULL WHERE `id` = 3;
+
+UPDATE `dongtai_webapi`.`django_celery_beat_periodictask` SET `name` = 'engine.clear_error_log', `task` = 'dongtai_engine.tasks.clear_error_log', `args` = '[]', `kwargs` = '{}', `queue` = NULL, `exchange` = NULL, `routing_key` = NULL, `expires` = NULL, `enabled` = 1, `last_run_at` = '2022-06-15 06:11:53.054154', `total_run_count` = 347, `date_changed` = '2022-06-15 14:13:28.167947', `description` = '', `crontab_id` = NULL, `interval_id` = 4, `solar_id` = NULL, `one_off` = 0, `start_time` = NULL, `priority` = NULL, `headers` = '{}', `clocked_id` = NULL, `expire_seconds` = NULL WHERE `id` = 5;
+
+UPDATE `dongtai_webapi`.`django_celery_beat_periodictask` SET `name` = 'engine.vul_recheck', `task` = 'dongtai_engine.tasks.vul_recheck', `args` = '[]', `kwargs` = '{}', `queue` = NULL, `exchange` = NULL, `routing_key` = NULL, `expires` = NULL, `enabled` = 1, `last_run_at` = '2022-06-15 12:06:13.477870', `total_run_count` = 99777, `date_changed` = '2022-06-15 20:07:53.607352', `description` = '', `crontab_id` = NULL, `interval_id` = 3, `solar_id` = NULL, `one_off` = 0, `start_time` = NULL, `priority` = NULL, `headers` = '{}', `clocked_id` = NULL, `expire_seconds` = NULL WHERE `id` = 6;
+
+
+
 SET FOREIGN_KEY_CHECKS=1;
