@@ -144,7 +144,9 @@ SET FOREIGN_KEY_CHECKS=0;
 
 ALTER TABLE `iast_agent_method_pool` ADD COLUMN `req_header_for_search` text  NULL COMMENT '用于搜索功能的请求头，请求方法、uri、参数、协议、请求头的拼接' AFTER `pool_sign`;
 
-ALTER TABLE `iast_agent_method_pool` ADD CONSTRAINT `iast_agent_method_pool_ibfk_1` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+-- ----------------------------
+-- ALTER TABLE `iast_agent_method_pool` ADD CONSTRAINT `iast_agent_method_pool_ibfk_1` FOREIGN KEY (`agent_id`) REFERENCES `iast_agent` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+-- ----------------------------
 
 ALTER TABLE `iast_agent_method_pool` ADD INDEX `update_time`(`update_time`) USING BTREE;
 

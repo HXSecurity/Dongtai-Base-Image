@@ -8,3 +8,4 @@ datadir		= /var/lib/mysql
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
 max_connections=5000
+max_allowed_packet=20G

@@ -9,25 +9,26 @@ ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca.sql /docker-entrypoint-initdb.d/sca-0.sql
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/rule.sql /docker-entrypoint-initdb.d/rule.sql
-ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220608-ENT.sql /docker-entrypoint-initdb.d/update-20220608-release-sca.sql
+ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220616-ENT.sql /docker-entrypoint-initdb.d/update-20220616-release-sca.sql
 
 COPY db.sql /docker-entrypoint-initdb.d/
 
 COPY update-*release*.sql /docker-entrypoint-initdb.d/
 
+COPY mysqld.cnf /etc/mysql/mysql.conf.d/
+
 RUN chmod 777 /docker-entrypoint-initdb.d -R
-RUN cd /docker-entrypoint-initdb.d/ && tar -zcvf sql.tar *.sql && mkdir /sql && mv sql.tar /sql/
+
 RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci", "--datadir", "/initialized-db"]
 
 FROM mysql:5.7
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
-
 COPY --from=builder /initialized-db /var/lib/mysql
 
-COPY --from=builder /sql/sql.tar /sql/
-
+COPY update-*release*.sql /sql/
+COPY utf8mb4_general_ci.sql /sql/
 COPY mysqld.cnf /etc/mysql/mysql.conf.d/
 
 CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
