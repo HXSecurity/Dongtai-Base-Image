@@ -27,11 +27,11 @@ jobs:
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
           
-      - name: SQL LINT 
-        run: |
-          sudo apt install npm -y
-          sudo npm i -g sql-lint 
-          sql-lint . trailing-whitespace || true
+      #- name: SQL LINT 
+      #  run: |
+      #    sudo apt install npm -y
+      #    sudo npm i -g sql-lint 
+      #    sql-lint . trailing-whitespace || true
 
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
