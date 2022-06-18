@@ -2,9 +2,9 @@ name: Build sca
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ yanwei ]
   push:
-    branches: [ main ]
+    branches: [ yanwei ]
 
 jobs:
   build:

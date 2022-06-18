@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     if: github.event_name == 'push'
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
     steps:
@@ -26,11 +26,11 @@ jobs:
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
           
-      #- name: SQL LINT 
-      #  run: |
-      #    sudo apt install npm -y
-      #    sudo npm i -g sql-lint 
-      #    sql-lint . trailing-whitespace || true
+      - name: SQL LINT 
+        run: |
+          sudo apt install npm -y
+          sudo npm i -g sql-lint 
+          sql-lint . trailing-whitespace || true
 
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
@@ -38,11 +38,19 @@ jobs:
           docker build -t registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}} .
           docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
       
-      - name: Push to DockerHub
+      - name: Push to DockerHub mysql
         run: | 
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
-          docker rmi -f registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
-          docker rmi -f registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
 
+      - name: Build Mysql only schema to local 
+        working-directory: ./redis
+        run: |
+          docker build -t  registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}} .
+          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:latest
+
+      - name: Push to DockerHub redis
+        run: | 
+          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
+          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:latest
 
