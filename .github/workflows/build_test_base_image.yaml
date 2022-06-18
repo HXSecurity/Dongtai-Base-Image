@@ -9,7 +9,8 @@ on:
 jobs:
   build:
     if: github.event_name == 'push'
-    runs-on: ubuntu-latest
+    runs-on: action
+    #runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
     steps:
