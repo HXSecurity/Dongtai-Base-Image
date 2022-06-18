@@ -1,4 +1,4 @@
-name: Build And Push DongTai Base Image To Aliyun Repo
+name: Build sca
 
 on:
   pull_request:
@@ -10,7 +10,6 @@ jobs:
   build:
     if: github.event_name == 'push'
     runs-on: self-hosted
-    #runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
     steps:
@@ -36,20 +35,6 @@ jobs:
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
-          docker build -t registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}} .
-          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
-      
-      - name: Push to DockerHub
-        run: | 
-          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
-          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
-          docker rmi -f registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
-          docker rmi -f registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
-          
-      
-      - name: Build Mysql only schema to local 
-        working-directory: ./mysql
-        run: |
           docker build -t registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:0.1.${{github.run_number}} . -f Dockerfile-sca
           docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:latest
       
@@ -59,13 +44,5 @@ jobs:
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:latest
           docker rmi -f registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:0.1.${{github.run_number}}
           docker rmi -f registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-sca-test:latest
-          
-          
-      - name: Build and push Redis
-        uses: docker/build-push-action@v2
-        with:
-          context: ./redis
-          push: true
-          tags: |
-            registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
+
 

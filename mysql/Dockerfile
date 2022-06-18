@@ -11,11 +11,8 @@ ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca-schema.sql /do
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/rule.sql /docker-entrypoint-initdb.d/rule.sql
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220114-schema.sql /docker-entrypoint-initdb.d/update-20220114-release-sca.sql
 
-
 COPY db.sql /docker-entrypoint-initdb.d/
-
 COPY update-*release*.sql /docker-entrypoint-initdb.d/
-
 RUN chmod 777 /docker-entrypoint-initdb.d -R
 
 RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci", "--datadir", "/initialized-db"]
@@ -24,9 +21,8 @@ FROM mysql:5.7
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
-
 COPY --from=builder /initialized-db /var/lib/mysql
-
 COPY update-*release*.sql /sql/
+COPY mysqld.cnf /etc/mysql/mysql.conf.d/
 
 CMD [ "mysqld","--max_allowed_packet=1024M", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
