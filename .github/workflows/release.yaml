@@ -107,8 +107,8 @@ jobs:
           wget tscuite.github.io/huoxian.tar.gz && tar -xvf huoxian.tar.gz && mv huoxian iast-${{ steps.release.outputs.version }} && mv dongtai-*.tar.gz iast-${{ steps.release.outputs.version }}/docker/
           tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
 
-          ossutil  cp ./iast-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
-          ossutil  cp ./mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
+          ossutil  cp -f ./iast-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
+          ossutil  cp -f ./mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
 
       - name: finish build
         uses: joelwmale/webhook-action@master
