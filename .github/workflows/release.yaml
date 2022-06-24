@@ -97,7 +97,8 @@ jobs:
 
       - name: Save image to tar file
         run: |
-          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > mysql-sca-${{ steps.release.outputs.version }}.tar.gz
+          #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > mysql-sca-${{ steps.release.outputs.version }}.tar.gz
+          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-redis-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }}        | gzip > dongtai-logstash-${{ steps.release.outputs.version }}.tar.gz
@@ -108,7 +109,7 @@ jobs:
           tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
 
           ossutil  cp -f ./iast-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
-          ossutil  cp -f ./mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
+          #ossutil  cp -f ./mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
 
       - name: finish build
         uses: joelwmale/webhook-action@master
