@@ -99,7 +99,7 @@ jobs:
         run: |
           #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > mysql-sca-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz
+          #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-redis-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }}        | gzip > dongtai-logstash-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }}       | gzip > dongtai-logrotate-${{ steps.release.outputs.version }}.tar.gz

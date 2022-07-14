@@ -346,40 +346,6 @@ INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1736, 7,
 
 INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1737, 7, 51);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (16, 6, 3);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (17, 6, 4);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (18, 6, 6);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (19, 6, 13);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (20, 7, 213);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (21, 7, 564);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (22, 6, 566);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (25, 7, 570);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (27, 7, 572);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (30, 7, 573);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (31, 7, 574);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (32, 7, 575);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (33, 6, 576);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (34, 7, 577);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (35, 7, 578);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (36, 7, 579);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (37, 7, 203);
-
 INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (47, 'about', 'about', 'views/setting/about.vue', 'False', 'True', 'menu.about', 'False', 6, 'menu.about', '', '', '', '');
 
 INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (48, 'feishu', 'feishu', 'views/setting/feishu.vue', 'False', 'True', 'menu.feishu', 'False', 6, 'menu.feishu', '', '', '', '');

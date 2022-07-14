@@ -1,8 +1,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
-INSERT INTO `web_role` (`id`, `name`, `state`) VALUES (8, '收到发生的', 0);
-
 DELETE FROM `web_role_button_relation` WHERE `id` = 226;
 
 DELETE FROM `web_role_button_relation` WHERE `id` = 227;
@@ -396,14 +394,6 @@ INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (2085, 6,
 INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (2086, 6, 57);
 
 INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (2087, 6, 58);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (38, 7, 580);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (41, 7, 581);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (42, 7, 304);
-
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (44, 6, 583);
 
 INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (53, 'reportCenter', 'reportCenter', 'views/project/reportCenter.vue', '', 'True', 'menu.reportCenter', '', 0, '', '', '', '', '');
 
