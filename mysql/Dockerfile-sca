@@ -10,6 +10,7 @@ ENV MYSQL_ROOT_PASSWORD dongtai-iast
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca.sql /docker-entrypoint-initdb.d/sca-0.sql
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/rule.sql /docker-entrypoint-initdb.d/rule.sql
 ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220616-ENT.sql /docker-entrypoint-initdb.d/update-20220616-release-sca.sql
+ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/1.8.2-sca-patch.sql /docker-entrypoint-initdb.d/update-20220715-release-sca-patch.sql
 
 COPY db.sql /docker-entrypoint-initdb.d/
 COPY update-*release*.sql /docker-entrypoint-initdb.d/
