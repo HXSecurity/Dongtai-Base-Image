@@ -1,0 +1,9 @@
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+
+ALTER TABLE iast_vulnerability MODIFY COLUMN hook_type_id INT(11) DEFAULT 0 NOT NULL COMMENT '漏洞类型id';
+
+
+SET FOREIGN_KEY_CHECKS = 1;
+
