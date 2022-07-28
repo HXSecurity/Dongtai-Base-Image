@@ -28,5 +28,13 @@ UPDATE iast_agent SET except_running_status  = actual_running_status
 WHERE online = 0;
 
 
+ALTER TABLE iast_asset_vul_relation ADD effected_version_list json NULL COMMENT '漏洞影响版本';
+ALTER TABLE iast_asset_vul_relation ADD fixed_version_list json NULL COMMENT '漏洞修复版本';
+ALTER TABLE iast_asset_vul_relation ADD nearest_fixed_version json NULL COMMENT '最近修复版本';
+ALTER TABLE iast_asset_vul_relation ADD vul_dependency_path json NULL COMMENT '漏洞依赖';
+ALTER TABLE iast_asset ADD save_version_list json NULL COMMENT '漏洞安全版本';
+ALTER TABLE iast_asset ADD nearest_save_version json NULL COMMENT '最近版本';
+ALTER TABLE iast_asset_vul ADD sid varchar(64) DEFAULT '' NULL COMMENT '漏洞唯一编号';
+
 SET FOREIGN_KEY_CHECKS = 1;
 
