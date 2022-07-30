@@ -35,6 +35,7 @@ ALTER TABLE iast_asset_vul_relation ADD vul_dependency_path json NULL COMMENT '�
 ALTER TABLE iast_asset ADD safe_version_list json NULL COMMENT '漏洞安全版本';
 ALTER TABLE iast_asset ADD nearest_safe_version json NULL COMMENT '最近版本';
 ALTER TABLE iast_asset_vul ADD sid varchar(64) DEFAULT '' NULL COMMENT '漏洞唯一编号';
+ALTER TABLE iast_asset ADD latest_safe_version json NULL COMMENT '最新版本';
 
 SET FOREIGN_KEY_CHECKS = 1;
 
