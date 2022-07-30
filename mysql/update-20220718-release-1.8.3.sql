@@ -36,6 +36,9 @@ ALTER TABLE iast_asset ADD safe_version_list json NULL COMMENT '漏洞安全版�
 ALTER TABLE iast_asset ADD nearest_safe_version json NULL COMMENT '最近版本';
 ALTER TABLE iast_asset_vul ADD sid varchar(64) DEFAULT '' NULL COMMENT '漏洞唯一编号';
 ALTER TABLE iast_asset ADD latest_safe_version json NULL COMMENT '最新版本';
+ALTER TABLE iast_asset ADD license_list  json NULL COMMENT '开源协议版本';
+ALTER TABLE iast_asset ADD highest_license  json NULL COMMENT '最高风险开源协议';
+
 
 SET FOREIGN_KEY_CHECKS = 1;
 
