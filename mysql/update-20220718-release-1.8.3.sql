@@ -38,7 +38,9 @@ ALTER TABLE iast_asset_vul ADD sid varchar(64) DEFAULT '' NULL COMMENT '漏洞�
 ALTER TABLE iast_asset ADD latest_safe_version json NULL COMMENT '最新版本';
 ALTER TABLE iast_asset ADD license_list  json NULL COMMENT '开源协议版本';
 ALTER TABLE iast_asset ADD highest_license  json NULL COMMENT '最高风险开源协议';
-
+ALTER TABLE iast_asset ADD poc json NULL COMMENT 'poc';
+ALTER TABLE iast_asset ADD fix_plan json NULL COMMENT 'fix_plan';
+ALTER TABLE iast_asset ADD descriptions json NULL COMMENT 'descriptions';
 
 SET FOREIGN_KEY_CHECKS = 1;
 
