@@ -9,9 +9,9 @@ ALTER TABLE `iast_asset` ADD COLUMN `nearest_safe_version` json NULL COMMENT '�
 ALTER TABLE `iast_asset` ADD COLUMN `latest_safe_version` json NULL COMMENT '最新版本' AFTER `nearest_safe_version`;
 ALTER TABLE `iast_asset` ADD COLUMN `license_list` json NULL COMMENT '开源协议版本' AFTER `latest_safe_version`;
 ALTER TABLE `iast_asset` ADD COLUMN `highest_license` json NULL COMMENT '最高风险开源协议' AFTER `license_list`;
-ALTER TABLE `iast_asset` ADD COLUMN `poc` json NULL COMMENT 'poc' AFTER `highest_license`;
-ALTER TABLE `iast_asset` ADD COLUMN `fix_plan` json NULL COMMENT 'fix_plan' AFTER `poc`;
-ALTER TABLE `iast_asset` ADD COLUMN `descriptions` json NULL COMMENT 'descriptions' AFTER `fix_plan`;
+ALTER TABLE `iast_asset_vul` ADD poc json NULL COMMENT 'poc';
+ALTER TABLE `iast_asset_vul` ADD fix_plan json NULL COMMENT 'fix_plan';
+ALTER TABLE `iast_asset_vul` ADD descriptions json NULL COMMENT 'descriptions';
 ALTER TABLE `iast_asset_vul` DROP INDEX `create_time_order`;
 ALTER TABLE `iast_asset_vul` DROP INDEX `update_time_order`;
 ALTER TABLE `iast_asset_vul` DROP INDEX `have_poc_index`;
