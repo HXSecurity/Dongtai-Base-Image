@@ -35,23 +35,23 @@ jobs:
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
-          docker build -t registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}} .
-          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
+          docker build -t registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:1.0.${{github.run_number}} .
+          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:1.0.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
       
       - name: Push to DockerHub mysql
         run: | 
-          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:0.1.${{github.run_number}}
+          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:1.0.${{github.run_number}}
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-test:latest
 
       - name: Build Mysql only schema to local 
         working-directory: ./redis
         run: |
-          docker build -t  registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}} .
-          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:latest
+          docker build -t  registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:1.0.${{github.run_number}} .
+          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:1.0.${{github.run_number}} registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:latest
 
       - name: Push to DockerHub redis
         run: | 
-          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:0.1.${{github.run_number}}
+          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:1.0.${{github.run_number}}
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-test:latest
 
       - uses: actions/checkout@master
