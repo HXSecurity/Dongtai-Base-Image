@@ -12,6 +12,7 @@ ALTER TABLE `iast_asset` ADD COLUMN `highest_license` json NULL COMMENT '最高�
 ALTER TABLE `iast_asset_vul` ADD poc json NULL COMMENT 'poc';
 ALTER TABLE `iast_asset_vul` ADD fix_plan json NULL COMMENT 'fix_plan';
 ALTER TABLE `iast_asset_vul` ADD descriptions json NULL COMMENT 'descriptions';
+ALTER TABLE `iast_asset_vul` ADD `references` json NULL COMMENT 'references';
 ALTER TABLE `iast_asset_vul` DROP INDEX `create_time_order`;
 ALTER TABLE `iast_asset_vul` DROP INDEX `update_time_order`;
 ALTER TABLE `iast_asset_vul` DROP INDEX `have_poc_index`;
