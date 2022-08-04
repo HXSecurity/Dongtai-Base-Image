@@ -58,3 +58,4 @@ jobs:
           args: |
             find .github/deploy/deploy-dongtai-mysql-test.yml -type f -exec sed -i 's/VERSION/1.0.${{github.run_number}}/g' {} \;
             ls .github/deploy/deploy-dongtai-mysql-test.yml | xargs -I {} kubectl apply -f {}
+            kubectl rollout -n iast-test restart statefulset redis
