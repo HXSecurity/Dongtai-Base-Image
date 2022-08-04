@@ -63,17 +63,6 @@ jobs:
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:latest
 
-      #- name: mysql build sca
-      #  working-directory: ./mysql
-      #  run: |
-      #    docker build -t  registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} -f Dockerfile-sca .
-
-      #- name: mysql push sca
-      #  run: |
-      #    docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:latest
-      #    docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }}
-      #    docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:latest
-
       - name: Build redis
         uses: docker/build-push-action@v2
         with:
@@ -97,19 +86,19 @@ jobs:
 
       - name: Save image to tar file
         run: |
+          mkdir iast-${{ steps.release.outputs.version }} && cd iast-${{ steps.release.outputs.version }}
           #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > mysql-sca-${{ steps.release.outputs.version }}.tar.gz
           #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz
           docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }} \
-                      registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }} \
-                      registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }} \
-                      registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }} \
-                      registry.cn-beijing.aliyuncs.com/secnium/dongtai-web-saas-prod:${{ steps.release.outputs.version }} \
-                      registry.cn-beijing.aliyuncs.com/secnium/dongtai-server-entri:${{ steps.release.outputs.version }} | gzip > dongtai-${{ steps.release.outputs.version }}.tar.gz
-          wget tscuite.github.io/huoxian.tar.gz && tar -xvf huoxian.tar.gz && mv huoxian iast-${{ steps.release.outputs.version }} && mv dongtai-*.tar.gz iast-${{ steps.release.outputs.version }}/docker/
-          tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
-
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }} \
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }} \
+            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }} \
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-web-saas-prod:${{ steps.release.outputs.version }} \
+            registry.cn-beijing.aliyuncs.com/secnium/dongtai-server-entri:${{ steps.release.outputs.version }} | gzip > dongtai-${{ steps.release.outputs.version }}.tar.gz
+          wget https://download.docker.com/linux/static/stable/x86_64/docker-20.10.10.tgz && wget https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64 \
+          && git clone https://github.com/HXSecurityBusiness/DongTai.git && cp -r DongTai/deploy/iast .  && tar -xvf docker-20.10.10.tgz && rm -rf docker-20.10.10.tgz DongTai && mv docker-compose-linux-x86_64 docker/docker-compose \
+          && mv docker bin && mkdir docker && mv dongtai-${{ steps.release.outputs.version }}.tar.gz docker/ && tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
           ossutil  cp -f ./iast-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
-          #ossutil  cp -f ./mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
 
       - name: finish build
         uses: joelwmale/webhook-action@master
