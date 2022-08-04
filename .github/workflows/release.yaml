@@ -6,7 +6,7 @@ on:
     
 jobs:
   Release-DongTai-Infra-Service:
-    runs-on: self-hosted
+    runs-on: ubuntu-18.04
     strategy:
       max-parallel: 4
     steps:
@@ -63,16 +63,16 @@ jobs:
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}
           docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:latest
 
-      - name: mysql build sca
-        working-directory: ./mysql
-        run: |
-          docker build -t  registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} -f Dockerfile-sca .
+      #- name: mysql build sca
+      #  working-directory: ./mysql
+      #  run: |
+      #    docker build -t  registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} -f Dockerfile-sca .
 
-      - name: mysql push sca
-        run: |
-          docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:latest
-          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }}
-          docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:latest
+      #- name: mysql push sca
+      #  run: |
+      #    docker tag registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:latest
+      #    docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }}
+      #    docker push registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:latest
 
       - name: Build redis
         uses: docker/build-push-action@v2
@@ -98,13 +98,13 @@ jobs:
       - name: Save image to tar file
         run: |
           #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > mysql-sca-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz
-          #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }}     | gzip > dongtai-redis-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }}        | gzip > dongtai-logstash-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }}       | gzip > dongtai-logrotate-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-web-saas-prod:${{ steps.release.outputs.version }}       | gzip > dongtai-web-${{ steps.release.outputs.version }}.tar.gz
-          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-server-entri:${{ steps.release.outputs.version }}        | gzip > dongtai-server-${{ steps.release.outputs.version }}.tar.gz
+          #docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod-sca:${{ steps.release.outputs.version }} | gzip > dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz
+          docker save registry.cn-beijing.aliyuncs.com/secnium/dongtai-mysql-saas-prod:${{ steps.release.outputs.version }} \
+                      registry.cn-beijing.aliyuncs.com/secnium/dongtai-redis-saas-prod:${{ steps.release.outputs.version }} \
+                      registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }} \
+                      registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }} \
+                      registry.cn-beijing.aliyuncs.com/secnium/dongtai-web-saas-prod:${{ steps.release.outputs.version }} \
+                      registry.cn-beijing.aliyuncs.com/secnium/dongtai-server-entri:${{ steps.release.outputs.version }} | gzip > dongtai-${{ steps.release.outputs.version }}.tar.gz
           wget tscuite.github.io/huoxian.tar.gz && tar -xvf huoxian.tar.gz && mv huoxian iast-${{ steps.release.outputs.version }} && mv dongtai-*.tar.gz iast-${{ steps.release.outputs.version }}/docker/
           tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
 
