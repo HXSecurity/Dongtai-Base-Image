@@ -133,8 +133,8 @@ jobs:
       - name: Upload images to oss
         run: |
           #ossutil cp -f /tmp/dongtai-mysql-sca-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
-          ossutil cp -f /tmp/dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz     oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
-          ossutil cp -f /tmp/dongtai-redis-${{ steps.release.outputs.version }}.tar.gz     oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
+          #ossutil cp -f /tmp/dongtai-mysql-${{ steps.release.outputs.version }}.tar.gz     oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
+          #ossutil cp -f /tmp/dongtai-redis-${{ steps.release.outputs.version }}.tar.gz     oss://huoqi-public/iast/server-package/${{ steps.release.outputs.version }}/
 
       - name: finish build
         uses: joelwmale/webhook-action@master
