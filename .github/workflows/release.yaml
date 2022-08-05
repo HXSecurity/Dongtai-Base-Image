@@ -97,7 +97,7 @@ jobs:
             registry.cn-beijing.aliyuncs.com/secnium/dongtai-server-entri:${{ steps.release.outputs.version }} | gzip > dongtai-${{ steps.release.outputs.version }}.tar.gz
           wget https://download.docker.com/linux/static/stable/x86_64/docker-20.10.10.tgz && wget https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64 \
           && git clone https://${{ secrets.selefra_TOKEN }}@github.com/HXSecurityBusiness/DongTai.git && cp -r DongTai/deploy/iast . && cd iast/ && find * -type f -exec sed -i 's/VERSION/1.0.0/g' {} \; && cd .. && tar -xvf docker-20.10.10.tgz && rm -rf docker-20.10.10.tgz DongTai && mv docker-compose-linux-x86_64 docker/docker-compose \
-          && mv docker bin && mkdir docker && mv dongtai-${{ steps.release.outputs.version }}.tar.gz docker/ && tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
+          && mv docker bin && mkdir docker && mv dongtai-${{ steps.release.outputs.version }}.tar.gz docker/ && cd .. && tar -cvf iast-${{ steps.release.outputs.version }}.tar.gz iast-${{ steps.release.outputs.version }}
           ossutil  cp -f ./iast-${{ steps.release.outputs.version }}.tar.gz oss://huoqi-public/iast_buss/${{ steps.release.outputs.version }}/
 
       - name: finish build
