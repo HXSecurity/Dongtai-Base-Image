@@ -74,9 +74,28 @@ WHERE  sid  IS NOT NULL
 GROUP BY sid 
 HAVING  count_sid > 1)tmp ) );
 
+DELETE
+FROM 
+	iast_asset_vul_type
+WHERE
+	cwe_id IN 
+(
+	SELECT
+		cwe_id
+	FROM
+		(
+		SELECT
+			cwe_id,
+			count(*) AS _count
+		FROM
+			iast_asset_vul_type iavt
+		GROUP BY
+			cwe_id ) tmp );
+
 ALTER TABLE iast_asset DROP KEY signature_value;
 ALTER TABLE iast_asset_vul_relation ADD CONSTRAINT iast_asset_vul_relation_UN UNIQUE KEY (asset_id,asset_vul_id);
 ALTER TABLE iast_asset_vul_type_relation ADD CONSTRAINT iast_asset_vul_type_relation_UN UNIQUE KEY (asset_vul_id,asset_vul_type_id);
 ALTER TABLE iast_asset_vul ADD CONSTRAINT iast_asset_vul_UN UNIQUE KEY (sid);
+ALTER TABLE iast_asset_vul_type ADD CONSTRAINT iast_asset_vul_type_UN UNIQUE KEY (cwe_id);
 
 SET FOREIGN_KEY_CHECKS=1;
