@@ -55,15 +55,16 @@ jobs:
         run: |
           ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
-      - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          file: Dockerfile
-          context: ./mysql
-          push: true
-          tags: |
-            dongtai/dongtai-mysql:latest
-            dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
+      - name: Build Mysql only schema to local 
+        working-directory: ./mysql
+        run: |
+          docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
+          docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:latest
+
+      - name: Push to DockerHub
+        run: | 
+          docker push dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
+          docker push dongtai/dongtai-mysql:latest
 
       - name: Build and push Redis
         uses: docker/build-push-action@v2
