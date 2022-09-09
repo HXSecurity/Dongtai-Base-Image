@@ -10,7 +10,7 @@ CREATE TABLE `sca2_license_level` (
   `create_at` datetime DEFAULT NULL COMMENT '创建时间',
   `update_at` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 ROW_FORMAT = Dynamic;
 
 ALTER TABLE `iast_agent` ADD COLUMN `actual_running_status` int(11) NOT NULL DEFAULT 1 COMMENT '实际运行状态' AFTER `servicetype`;
 ALTER TABLE `iast_agent` ADD COLUMN `except_running_status` int(11) NOT NULL DEFAULT 1 COMMENT '期望运行状态' AFTER `actual_running_status`;
