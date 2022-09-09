@@ -1,6 +1,17 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
+DROP TABLE IF EXISTS `sca2_license_level`;
+CREATE TABLE `sca2_license_level` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `identifier` varchar(64) DEFAULT NULL,
+  `level_id` tinyint(4) DEFAULT NULL COMMENT '风险等级 1高危，2中危，3低危，0无风险',
+  `level_desc` varchar(64) DEFAULT NULL COMMENT '风险等级描述',
+  `create_at` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_at` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 1 ROW_FORMAT = Dynamic;
+
 ALTER TABLE `iast_agent` ADD COLUMN `actual_running_status` int(11) NOT NULL DEFAULT 1 COMMENT '实际运行状态' AFTER `servicetype`;
 ALTER TABLE `iast_agent` ADD COLUMN `except_running_status` int(11) NOT NULL DEFAULT 1 COMMENT '期望运行状态' AFTER `actual_running_status`;
 ALTER TABLE `iast_agent` ADD COLUMN `state_status` int(11) NOT NULL DEFAULT 1 COMMENT 'Agent位置状态的原因' AFTER `except_running_status`;
