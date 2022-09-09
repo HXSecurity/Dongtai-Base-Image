@@ -32,16 +32,16 @@ jobs:
           sudo npm i -g sql-lint 
           sql-lint . trailing-whitespace || true
 
-      - name: Build and push
+      - name: Build and push MySql
         uses: docker/build-push-action@v2
         with:
-          working-directory: ./mysql
-          file: Dockerfile
-          context: .
+          context: ./mysql
           push: true
           tags: |
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql-test:latest
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql-test:1.0.${{github.run_number}}
+
+
 
       - uses: actions/checkout@master
       - name: deploy to cluster
