@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           file: Dockerfile
-          context: ./mysql
+          context: ./mysql/
           push: true
           tags: |
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql-test:latest
