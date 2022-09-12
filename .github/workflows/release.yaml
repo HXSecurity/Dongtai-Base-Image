@@ -75,8 +75,8 @@ jobs:
         run: |
           docker pull registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:latest
           docker pull registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:latest
-          registry.cn-hongkong.aliyuncs.com/secnium/dongtai-web:${{ steps.release.outputs.version }}
-          registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }}
+          docker pull registry.cn-hongkong.aliyuncs.com/secnium/dongtai-web:${{ steps.release.outputs.version }}
+          docker pull registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }}
 
       - name: Save image to tar file
         run: |
