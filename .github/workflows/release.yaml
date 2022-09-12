@@ -74,7 +74,7 @@ jobs:
       - name: Build logstash
         run: |
           docker pull dongtai/dongtai-logstash:${{ steps.release.outputs.version }}
-          docerk pull dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
+          docker pull dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
           docker tag dongtai/dongtai-logstash:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }}
           docker tag dongtai/dongtai-logrotate:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }}
           docker pull registry.cn-hongkong.aliyuncs.com/secnium/dongtai-web:${{ steps.release.outputs.version }}
