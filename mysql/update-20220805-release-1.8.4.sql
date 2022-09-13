@@ -8,6 +8,7 @@ DELETE FROM iast_hook_strategy WHERE 1=1;
 DELETE FROM iast_hook_strategy_type  WHERE 1=1;
 DELETE FROM iast_hook_type  WHERE 1=1;
 
+
 INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5799,'.$_GET','P1','R','false','false',NULL,NULL,1,1),
 	 (5800,'template.(*Template).ExecuteTemplate()','P3','','false','true',NULL,NULL,1,1),
@@ -236,7 +237,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6048,'java.net.URL.openConnection()','O','','all','true',NULL,NULL,1,1),
 	 (6049,'java.net.URL.openConnection(java.net.Proxy)','O','','all','true',NULL,NULL,1,1),
 	 (6050,'org.apache.http.client.methods.HttpRequestBase.setURI(java.net.URI)','P1','','all','true',NULL,NULL,1,1),
-	 (6052,'org.apache.commons.httpclient.HttpMethodBase.setURI(java.net.URI)','P1','','all','true',NULL,NULL,1,1),
+	 (6052,'org.apache.commons.httpclient.HttpMethodBase.setURI(org.apache.commons.httpclient.URI)','P1','','all','true',NULL,1663051161,1,1),
 	 (6053,'org.apache.hc.client5.http.impl.classic.CloseableHttpClient.doExecute(org.apache.hc.core5.http.HttpHost,org.apache.hc.core5.http.ClassicHttpRequest,org.apache.hc.core5.http.protocol.HttpContext)','P2','','all','true',NULL,NULL,1,1),
 	 (6054,'com.squareup.okhttp.Call.execute()','O','','false','true',NULL,NULL,1,1),
 	 (6055,'com.squareup.okhttp.Call.enqueue(com.squareup.okhttp.Callback)','O','','false','true',NULL,NULL,1,1),
@@ -817,15 +818,15 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6628,'java.lang.String.trim()','O','R','false','false',1662088104,1662088104,1,1),
 	 (6629,'org.springframework.web.util.pattern.PathPattern.getPatternString()','O','R','false','false',1662088131,1662088131,1,1);
 INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
-	 (6630,'java.net.URI.<init>(java.lang.String)','P1','O','false','false',1662091052,1662091052,1,1),
-	 (6631,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','O','false','false',1662091130,1662091130,1,1),
-	 (6632,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)','P2,3,4,5','O','false','false',1662091177,1662091177,1,1),
-	 (6633,'java.net.URI.toURL()','O','R','false','false',1662091194,1662091194,1,1),
-	 (6634,'java.net.URL.<init>(java.lang.String)','P1','O','false','false',1662091210,1662091210,1,1),
-	 (6635,'java.net.URL.<init>(java.lang.String,java.lang.String,int,java.lang.String)','P1,2,4','O','false','false',1662091225,1662091225,1,1),
-	 (6636,'java.net.URL.<init>(java.lang.String,java.lang.String,int,java.lang.String,java.net.URLStreamHandler)','P1,2,4','O','false','false',1662091240,1662091240,1,1),
-	 (6637,'java.net.URL.<init>(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','O','false','false',1662091262,1662091262,1,1),
-	 (6638,'java.net.URL.<init>(java.net.URL,java.lang.String)','P1,2','O','false','false',1662091275,1662091275,1,1);
+	 (6630,'java.net.URI.<init>(java.lang.String)','P1','O','false','false',1662091052,1662091052,1,0),
+	 (6631,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','O','false','false',1662091130,1662091130,1,0),
+	 (6632,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)','P2,3,4,5','O','false','false',1662091177,1662091177,1,0),
+	 (6633,'java.net.URI.toURL()','O','R','false','false',1662091194,1662091194,1,0),
+	 (6634,'java.net.URL.<init>(java.lang.String)','P1','O','false','false',1662091210,1662091210,1,0),
+	 (6635,'java.net.URL.<init>(java.lang.String,java.lang.String,int,java.lang.String)','P1,2,4','O','false','false',1662091225,1662091225,1,0),
+	 (6636,'java.net.URL.<init>(java.lang.String,java.lang.String,int,java.lang.String,java.net.URLStreamHandler)','P1,2,4','O','false','false',1662091240,1662091240,1,0),
+	 (6637,'java.net.URL.<init>(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','O','false','false',1662091262,1662091262,1,0),
+	 (6638,'java.net.URL.<init>(java.net.URL,java.lang.String)','P1,2','O','false','false',1662091275,1662091275,1,0);
 INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1,1,13),
 	 (2,2,13),
@@ -6822,7 +6823,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6604,6049,38),
 	 (6605,6050,38),
 	 (6606,6051,38),
-	 (6607,6052,38),
+	 (7231,6052,38),
 	 (6608,6053,38),
 	 (6609,6054,38),
 	 (6610,6055,38),
