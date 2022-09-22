@@ -15,7 +15,8 @@ COPY db.sql /docker-entrypoint-initdb.d/
 COPY update-*release*.sql /docker-entrypoint-initdb.d/
 RUN chmod 777 /docker-entrypoint-initdb.d -R
 
-RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci", "--datadir", "/initialized-db"]
+RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci", "--datadir", "/initialized-db"] \
+  && mysqldump -d dongtai_webapi -u root -p'dongtai-iast' --single-transaction --skip-set-charset --skip-comments --allow-keywords --skip-opt | sed 's/ AUTO_INCREMENT=[0-9]*//g' | sed 's/\/\*!*.*//g' > /sql/sca-schema-pro.sql 
 
 FROM mysql:5.7
 ENV MYSQL_DATABASE dongtai_webapi
