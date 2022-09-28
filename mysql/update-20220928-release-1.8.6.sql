@@ -1,6 +1,8 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
+ALTER TABLE dongtai_webapi.iast_asset_vul_relation ADD vul_asset_metadata_id varchar(256) NOT NULL;
+
 -- dongtai_webapi.iast_asset_vul_relation_metadata definition
 
 CREATE TABLE `iast_asset_vul_relation_metadata` (
