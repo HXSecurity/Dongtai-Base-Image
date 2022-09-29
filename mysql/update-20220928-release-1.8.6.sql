@@ -1,7 +1,7 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
-ALTER TABLE dongtai_webapi.iast_asset_vul_relation ADD vul_asset_metadata_id varchar(256) NOT NULL;
+ALTER TABLE iast_asset_vul_relation ADD vul_asset_metadata_id varchar(256) NOT NULL;
 
 -- dongtai_webapi.iast_asset_vul_relation_metadata definition
 
@@ -14,5 +14,12 @@ CREATE TABLE `iast_asset_vul_relation_metadata` (
   PRIMARY KEY (`vul_asset_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+
+INSERT INTO iast_http_method (`method`) VALUES ('DELETE')
+  ON DUPLICATE KEY UPDATE `method`=`method`  ;
+  
+ INSERT INTO iast_http_method (`method`) VALUES ('PUT')
+  ON DUPLICATE KEY UPDATE `method`=`method`  ;
 
 SET FOREIGN_KEY_CHECKS=1;
