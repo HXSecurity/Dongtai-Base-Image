@@ -75,8 +75,8 @@ jobs:
         run: |
           docker pull dongtai/dongtai-logstash:${{ steps.release.outputs.version }}
           docker pull dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
-          docker tag dongtai/dongtai-logstash:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }}
-          docker tag dongtai/dongtai-logrotate:${{ steps.release.outputs.version }} registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }}
+          docker tag dongtai/dongtai-logstash:${{ steps.release.outputs.version }} registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logstash:${{ steps.release.outputs.version }}
+          docker tag dongtai/dongtai-logrotate:${{ steps.release.outputs.version }} registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logrotate:${{ steps.release.outputs.version }}
           docker pull registry.cn-hongkong.aliyuncs.com/secnium/dongtai-web:${{ steps.release.outputs.version }}
           docker pull registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }}
 
@@ -85,8 +85,8 @@ jobs:
           mkdir iast-${{ steps.release.outputs.version }} && cd iast-${{ steps.release.outputs.version }}
           docker save registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.release.outputs.version }} \
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-redis:${{ steps.release.outputs.version }} \
-            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logstash:${{ steps.release.outputs.version }} \
-            registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-logrotate:${{ steps.release.outputs.version }} \
+            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logstash:${{ steps.release.outputs.version }} \
+            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logrotate:${{ steps.release.outputs.version }} \
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-web:${{ steps.release.outputs.version }} \
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }} | gzip > dongtai-${{ steps.release.outputs.version }}.tar.gz
           wget https://download.docker.com/linux/static/stable/x86_64/docker-20.10.10.tgz && wget https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64 \
