@@ -5,9 +5,9 @@ ALTER TABLE iast_hook_strategy ADD hooktype_id int(11) DEFAULT 0 NULL COMMENT '�
 ALTER TABLE iast_hook_strategy ADD strategy_id int(11) DEFAULT 0 NOT NULL;
 ALTER TABLE iast_hook_strategy ADD `type` int(11) DEFAULT 0 NOT NULL COMMENT '策略总类型，1-source节点、2-propagator节点、3-filter节点、4-sink节点';
 ALTER TABLE iast_hook_strategy ADD language_id int(11) DEFAULT 0 NOT NULL;
-ALTER TABLE dongtai_webapi.iast_hook_type ADD system_type int(11) DEFAULT 0 NOT NULL;
-ALTER TABLE dongtai_webapi.iast_hook_strategy ADD system_type int(11) DEFAULT 0 NOT NULL;
-ALTER TABLE dongtai_webapi.iast_strategy ADD system_type int(11) DEFAULT 0 NOT NULL;
+ALTER TABLE iast_hook_type ADD system_type int(11) DEFAULT 0 NOT NULL;
+ALTER TABLE iast_hook_strategy ADD system_type int(11) DEFAULT 0 NOT NULL;
+ALTER TABLE iast_strategy ADD system_type int(11) DEFAULT 0 NOT NULL;
 UPDATE
 	iast_hook_strategy ihs ,
 	iast_hook_strategy_type ihst
