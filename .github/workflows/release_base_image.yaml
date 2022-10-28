@@ -58,7 +58,6 @@ jobs:
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
-          cp dongtai-mysql-schema.txt /tmp/
           docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
           docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:latest
 
@@ -121,7 +120,7 @@ jobs:
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
-          docker exec -i  dongtai-mysql /bin/bash -c "mysqldump -d dongtai_webapi -u root -p'dongtai-iast' --single-transaction --skip-set-charset --skip-comments --allow-keywords --skip-opt | sed 's/ AUTO_INCREMENT=[0-9]*//g' | sed 's/\/\*!*.*//g'" > /tmp/dongtai-mysql-schema.txt || exit 1
+          docker exec -i  dongtai-mysql /bin/bash -c "mysqldump -d dongtai_webapi -u root -p'dongtai-iast' --single-transaction --skip-set-charset --skip-comments --allow-keywords --skip-opt | sed 's/ AUTO_INCREMENT=[0-9]*//g' | sed 's/\/\*!*.*//g'" > dongtai-mysql-schema.txt || exit 1
           docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
           docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:latest
 

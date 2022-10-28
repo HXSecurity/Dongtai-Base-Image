@@ -28,6 +28,6 @@ COPY --from=builder /initialized-db /var/lib/mysql
 COPY update-*release*.sql /sql/
 COPY utf8mb4_general_ci.sql /sql/
 COPY mysqld.cnf /etc/mysql/mysql.conf.d/
-COPY /tmp/dongtai-mysql-schema.txt /schema/
+COPY dongtai-mysql-schema.txt /schema/
 
 CMD [ "mysqld", "--max_allowed_packet=1024M", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci" ]
