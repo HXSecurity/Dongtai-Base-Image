@@ -58,6 +58,7 @@ jobs:
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
+          cp dongtai-mysql-schema.txt /tmp/
           docker build -t dongtai/dongtai-mysql:${{ steps.release.outputs.version }} .
           docker tag dongtai/dongtai-mysql:${{ steps.release.outputs.version }} dongtai/dongtai-mysql:latest
 
