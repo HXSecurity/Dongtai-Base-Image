@@ -70,6 +70,9 @@ jobs:
     services:
       dongtai-mysql:
         image: registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:latest
+        credentials:
+          username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
+          password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
