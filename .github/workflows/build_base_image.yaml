@@ -13,18 +13,12 @@ jobs:
     strategy:
       max-parallel: 4
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3
-      -
-        # Add support for more platforms with QEMU (optional)
-        # https://github.com/docker/setup-qemu-action
-        name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
-      -
-        name: Set up Docker Buildx
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-
       - name: Login to Aliyun
         uses: docker/login-action@v1
         with:
@@ -53,18 +47,6 @@ jobs:
           tags: | 
             dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}
             dongtai/dongtai-mysql-unittest:latest
-
-
-      # - name: Build Mysql only schema to local 
-      #   working-directory: ./mysql
-      #   run: |
-      #     docker buildx build --platform linux/arm64,linux/amd64 -t dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}} -t dongtai/dongtai-mysql-unittest:latest . --push
-      #     # docker tag dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}} dongtai/dongtai-mysql-unittest:latest
-
-      # - name: Push to DockerHub
-      #   run: | 
-      #     docker push dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}
-      #     docker push dongtai/dongtai-mysql-unittest:latest
 
       - uses: actions/checkout@master
       - name: deploy to cluster
