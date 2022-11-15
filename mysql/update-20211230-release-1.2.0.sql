@@ -131,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `webapi_api_site` (
 
 CREATE TABLE IF NOT EXISTS `iast_license` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `key` varchar(100)  NOT NULL,
+  `value` varchar(1000)  DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `iast_license_UN` (`key`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
