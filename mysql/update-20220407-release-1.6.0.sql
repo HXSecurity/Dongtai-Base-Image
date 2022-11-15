@@ -39,7 +39,6 @@ CREATE TABLE iast_agent_config_1 (
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
-COLLATE=utf8mb4_general_ci
 COMMENT='';
 CREATE INDEX user_id USING BTREE ON iast_agent_config_1 (user_id);
 CREATE INDEX iast_agent_config_1_user_id_IDX USING BTREE ON iast_agent_config_1 (user_id,vul_id);
