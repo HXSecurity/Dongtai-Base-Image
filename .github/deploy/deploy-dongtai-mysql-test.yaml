@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: dongtai-mysql-container
-          image: dongtai/dongtai-mysql-unittest:VERSION
+          image: registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:VERSION
           imagePullPolicy: Always
           lifecycle:
             postStart:

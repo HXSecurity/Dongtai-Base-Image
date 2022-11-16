@@ -45,8 +45,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: | 
-            dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}
-            dongtai/dongtai-mysql-unittest:latest
+            registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:1.0.${{github.run_number}}
+            registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:latest
 
       - uses: actions/checkout@master
       - name: deploy to cluster
