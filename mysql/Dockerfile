@@ -15,7 +15,7 @@ ENV MYSQL_ROOT_PASSWORD dongtai-iast
 COPY --from=builder /tmp/initialized-db /var/lib/mysql
 
 COPY update-*release*.sql /sql/
-COPY mysqld.cnf /etc/mysql/mysql.conf.d/
+COPY mysqld.cnf /etc/mysql/conf.d/
 COPY dongtai-mysql-schema.txt /schema/
 
 CMD [ "mysqld", "--max_allowed_packet=1024M", "--character-set-server=utf8mb4" ]
