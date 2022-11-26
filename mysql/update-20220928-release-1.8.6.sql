@@ -16,13 +16,13 @@ CREATE TABLE `iast_asset_vul_relation_metadata` (
 
 
 
-INSERT INTO iast_http_method (`method`) VALUES ('DELETE')
+INSERT IGNORE INTO iast_http_method (`method`) VALUES ('DELETE')
   ON DUPLICATE KEY UPDATE `method`=`method`  ;
   
- INSERT INTO iast_http_method (`method`) VALUES ('PUT')
+ INSERT IGNORE INTO iast_http_method (`method`) VALUES ('PUT')
   ON DUPLICATE KEY UPDATE `method`=`method`  ;
 
-INSERT INTO iast_vulnerability_status
+INSERT IGNORE INTO iast_vulnerability_status
 (id, name, name_zh, name_en)
 VALUES(6, '已修复', '已修复', 'Fixed');
 
@@ -31,7 +31,7 @@ DELETE FROM iast_hook_strategy WHERE 1 = 1;
 DELETE FROM iast_hook_strategy_type  WHERE 1 = 1;
 DELETE FROM iast_hook_type  WHERE 1 = 1;
 
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5799,'.$_GET','P1','R','false','false',NULL,NULL,1,1),
 	 (5800,'template.(*Template).ExecuteTemplate()','P3','','false','true',NULL,NULL,1,1),
 	 (5801,'http.(*Client).Do()','P2','','false','true',NULL,NULL,1,1),
@@ -42,7 +42,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5806,'gorm.(*DB).Having()','P1,2','','false','true',NULL,NULL,1,1),
 	 (5807,'gorm.(*DB).Order()','P1','','false','true',NULL,NULL,1,1),
 	 (5808,'gorm.(*DB).Pluck()','P1,2','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5809,'gorm.(*DB).Raw()','P1,2','','false','true',NULL,NULL,1,1),
 	 (5810,'gorm.(*DB).Select()','P1,2','','false','true',NULL,NULL,1,1),
 	 (5811,'io.grpc.MethodDescriptor.parseRequest(java.io.InputStream)','P1','R','false','false',NULL,NULL,1,1),
@@ -53,7 +53,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5817,'Crypto.Cipher.Blowfish.new','P','R','false','false',NULL,NULL,1,1),
 	 (5818,'Crypto.Cipher.DES.new','P','R','false','false',NULL,NULL,1,1),
 	 (5819,'Cryptodome.Cipher.Blowfish.new','P','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5820,'Cryptodome.Cipher.DES.new','P','R','false','false',NULL,NULL,1,1),
 	 (5821,'Crypto.Cipher._mode_cbc.CbcMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
 	 (5822,'Crypto.Cipher._mode_cfb.CfbMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
@@ -64,7 +64,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5827,'Crypto.Cipher._mode_openpgp.OpenPgpMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
 	 (5828,'Cryptodome.Cipher._mode_cbc.CbcMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
 	 (5829,'Cryptodome.Cipher._mode_cfb.CfbMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5830,'Cryptodome.Cipher._mode_ctr.CtrMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
 	 (5831,'Cryptodome.Cipher._mode_eax.EaxMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
 	 (5832,'Cryptodome.Cipher._mode_ecb.EcbMode.encrypt','P1,2,plaintext','','false','true',NULL,NULL,1,1),
@@ -75,7 +75,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5837,'re.search','P1,pattern','','false','true',NULL,NULL,1,1),
 	 (5838,'re.sub','P1,pattern','','false','true',NULL,NULL,1,1),
 	 (5839,'re.subn','P1,pattern','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5840,'re.split','P1,pattern','','false','true',NULL,NULL,1,1),
 	 (5841,'re.findall','P1,pattern','','false','true',NULL,NULL,1,1),
 	 (5842,'re.finditer','P1,pattern','','false','true',NULL,NULL,1,1),
@@ -86,7 +86,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5847,'org.unbescape.html.HtmlEscape.escapeHtml4(java.lang.String)','P1','R','false','false',NULL,NULL,1,1),
 	 (5848,'org.unbescape.html.HtmlEscape.escapeHtml4Xml(java.lang.String)','P1','R','false','false',NULL,NULL,1,1),
 	 (5849,'org.unbescape.html.HtmlEscape.escapeHtml(java.lang.String,org.unbescape.html.HtmlEscapeType,org.unbescape.html.HtmlEscapeLevel)','P1','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5850,'org.unbescape.html.HtmlEscape.escapeHtml5(java.lang.String,java.io.Writer)','P1','R','false','false',NULL,NULL,1,1),
 	 (5851,'org.unbescape.html.HtmlEscape.escapeHtml5Xml(java.lang.String,java.io.Writer)','P1','R','false','false',NULL,NULL,1,1),
 	 (5852,'org.unbescape.html.HtmlEscape.escapeHtml4(java.lang.String,java.io.Writer)','P1','R','false','false',NULL,NULL,1,1),
@@ -97,7 +97,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5857,'java.lang.String.<init>(java.lang.StringBuilder)','P1','O','false','',NULL,NULL,1,1),
 	 (5858,'java.lang.String.<init>(byte[])','P1','O','false','',NULL,NULL,1,1),
 	 (5859,'java.lang.String.<init>(byte[],int,int)','P1','O','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5860,'java.lang.String.<init>(byte[],int,int,int)','P1','O','false','',NULL,NULL,1,1),
 	 (5861,'java.lang.String.<init>(byte[],int,int,java.nio.charset.Charset)','P1','O','false','',NULL,NULL,1,1),
 	 (5862,'java.lang.String.<init>(byte[],int,int,java.lang.String)','P1','O','false','',NULL,NULL,1,1),
@@ -108,7 +108,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5867,'java.lang.String.toUpperCase(java.util.Locale)','O','R','false','',NULL,NULL,1,1),
 	 (5868,'java.lang.String.getBytes()','O','R','false','',NULL,NULL,1,1),
 	 (5869,'java.lang.String.getBytes(java.lang.String)','O','R','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5870,'java.lang.String.getBytes(java.nio.charset.Charset)','O','R','false','false',NULL,1662712600,1,1),
 	 (5871,'java.lang.String.getBytes(int,int,byte[],int)','O','P3','false','',NULL,NULL,1,1),
 	 (5872,'java.lang.String.getChars(int,int,char[],int)','O','P3','false','',NULL,NULL,1,1),
@@ -119,7 +119,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5877,'java.lang.String.<init>(char[],int,int,boolean)','P1','O','false','',NULL,NULL,1,1),
 	 (5878,'java.lang.String.split(java.lang.String)','O','R','false','',NULL,NULL,1,1),
 	 (5879,'java.lang.String.split(java.lang.String, int)','O','R','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5880,'java.lang.StringBuilder.replace(int,int,java.lang.String)','P3','O','false','false',NULL,1662712628,1,1),
 	 (5881,'java.lang.StringBuilder.toString()','O','R','false','',NULL,NULL,1,1),
 	 (5882,'java.lang.StringBuilder.<init>(java.lang.String)','P1','O','false','',NULL,NULL,1,1),
@@ -130,7 +130,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5887,'java.lang.StringBuilder.append(java.lang.CharSequence)','P1','O','false','',NULL,NULL,1,1),
 	 (5888,'java.lang.StringBuilder.append(java.lang.CharSequence,int,int)','P1','O','false','',NULL,NULL,1,1),
 	 (5889,'java.lang.StringBuilder.append(char[],int,int)','P1','O','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5890,'java.util.List.<init>(java.util.Collection)','P1','O','true','',NULL,NULL,1,1),
 	 (5891,'java.util.List.add(int,java.lang.Object)','P2','O','true','',NULL,NULL,1,1),
 	 (5892,'java.util.List.add(java.lang.Object)','P1','O','true','',NULL,NULL,1,1),
@@ -141,7 +141,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5898,'java.util.List.toArray()','O','R','true','',NULL,NULL,1,1),
 	 (5899,'java.util.List.toArray(java.lang.Object[])','O','R','true','',NULL,NULL,1,1),
 	 (5902,'java.util.Map.put(java.lang.Object,java.lang.Object)','P1,2','O','true','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5903,'java.util.Map.putAll(java.util.Map)','P1','O','true','',NULL,NULL,1,1),
 	 (5904,'java.util.Map.putIfAbsent(java.lang.Object,java.lang.Object)','P1,2','O','true','',NULL,NULL,1,1),
 	 (5905,'java.util.Enumeration.nextElement()','O','R','true','',NULL,NULL,1,1),
@@ -152,7 +152,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5910,'java.io.BufferedReader.<init>(java.io.FileReader)','P1','O','false','',NULL,NULL,1,1),
 	 (5911,'java.io.BufferedReader.<init>(java.io.InputStreamReader)','P1','O','false','',NULL,NULL,1,1),
 	 (5912,'java.io.BufferedReader.readLine()','O','R','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5913,'java.io.InputStreamReader.<init>(java.io.InputStream)','P1','O','false','',NULL,NULL,1,1),
 	 (5914,'java.io.InputStreamReader.<init>(java.io.InputStream,java.nio.charset.Charset)','P1','O','false','',NULL,NULL,1,1),
 	 (5915,'java.io.StringReader.<init>(java.lang.String)','P1','O','false','',NULL,NULL,1,1),
@@ -163,7 +163,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5920,'java.io.ByteArrayInputStream.<init>(byte[])','P1','O','false','',NULL,NULL,1,1),
 	 (5921,'java.io.ByteArrayInputStream.<init>(byte[],int,int)','P1','O','false','',NULL,NULL,1,1),
 	 (5922,'java.io.InputStream.read(byte[],int,int)','O','P1','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5923,'java.io.PushbackInputStream.<init>(java.io.InputStream,int)','P1','O','false','',NULL,NULL,1,1),
 	 (5924,'java.io.InputStream.<init>(java.io.InputStream)','P1','O','false','',NULL,NULL,1,1),
 	 (5925,'java.io.ObjectInputStream.<init>(java.io.InputStream)','P1','O','all','',NULL,NULL,1,1),
@@ -174,7 +174,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5930,'java.io.ByteArrayOutputStream.toByteArray()','O','R','false','false',NULL,1662712540,1,1),
 	 (5931,'java.io.ByteArrayOutputStream.reset()','O','O','false','',NULL,NULL,1,1),
 	 (5936,'org.apache.commons.httpclient.URI.parseUriReference(java.lang.String, boolean)','P1','O','false','',NULL,NULL,1,-1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5942,'java.net.URLDecoder.decode(java.lang.String,java.lang.String)','P1','R','false','',NULL,NULL,1,1),
 	 (5943,'javax.servlet.ServletRequest.getParameterNames()','O','R','true','',NULL,NULL,1,1),
 	 (5944,'javax.servlet.ServletRequest.getParameterValues(java.lang.String)','O','R','true','',NULL,NULL,1,1),
@@ -185,7 +185,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5949,'java.lang.ProcessBuilder.<init>(java.lang.String[])','P1','O','false','',NULL,NULL,1,1),
 	 (5950,'java.lang.ProcessBuilder.<init>(java.util.List)','P1','O','false','',NULL,NULL,1,1),
 	 (5951,'java.util.Base64$Decoder.decode(byte[])','P1','R','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5952,'java.util.Base64$Decoder.decode(java.lang.String)','P1','R','false','',NULL,NULL,1,1),
 	 (5953,'java.util.Base64$Decoder.decode(java.nio.ByteBuffer)','P1','R','false','',NULL,NULL,1,1),
 	 (5954,'java.util.Base64$Decoder.decode(byte[],byte[])','P1','P2','false','',NULL,NULL,1,1),
@@ -196,7 +196,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5959,'org.apache.commons.codec.binary.BaseNCodec.decode(byte[])','P1','R','true','',NULL,NULL,1,1),
 	 (5960,'org.apache.commons.codec.binary.BaseNCodec.decode(java.lang.String)','P1','R','true','',NULL,NULL,1,1),
 	 (5961,'org.apache.commons.codec.binary.Base64.decode(byte[],int,int,org.apache.commons.codec.binary.BaseNCodec$Context)','P1','R','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5962,'java.util.Base64$Encoder.encode(byte[])','P1','R','false','',NULL,NULL,1,1),
 	 (5963,'java.util.Base64$Encoder.encodeToString(byte[])','P1','R','false','',NULL,NULL,1,1),
 	 (5964,'java.util.Base64$Encoder.encode(java.nio.ByteBuffer)','P1','R','false','',NULL,NULL,1,1),
@@ -207,7 +207,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5969,'org.apache.commons.codec.binary.BaseNCodec.encodeAsString(byte[])','P1','R','true','',NULL,NULL,1,1),
 	 (5970,'org.apache.commons.codec.binary.BaseNCodec.encodeToString(byte[])','P1','R','true','',NULL,NULL,1,1),
 	 (5971,'org.apache.commons.codec.binary.Base64.encodeBase64(byte[])','P1','R','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5972,'org.apache.commons.codec.binary.Base64.encodeBase64(byte[],boolean)','P1','R','false','',NULL,NULL,1,1),
 	 (5973,'org.apache.commons.codec.binary.Base64.encodeBase64(byte[],boolean,boolean)','P1','R','false','',NULL,NULL,1,1),
 	 (5974,'org.apache.commons.codec.binary.Base64.encodeBase64(byte[],boolean,boolean,int)','P1','R','false','',NULL,NULL,1,1),
@@ -218,7 +218,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5979,'javax.xml.transform.stream.StreamSource.<init>(java.io.Reader)','P1','O','false','',NULL,NULL,1,1),
 	 (5980,'javax.xml.transform.stream.StreamSource.<init>(java.io.Reader,java.lang.String)','P1','O','false','',NULL,NULL,1,1),
 	 (5981,'javax.xml.transform.stream.StreamSource.<init>(java.io.InputStream)','P1','O','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5982,'javax.xml.transform.stream.StreamSource.<init>(java.io.InputStream,java.lang.String)','P1','O','false','',NULL,NULL,1,1),
 	 (5983,'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.io.Reader)','P1','R','true','',NULL,NULL,1,1),
 	 (5984,'javax.xml.stream.XMLInputFactory.createXMLStreamReader(javax.xml.transform.Source)','P1','R','true','',NULL,NULL,1,1),
@@ -229,7 +229,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5989,'javax.xml.bind.Unmarshaller.unmarshal(java.io.Reader)','P1','R','true','',NULL,NULL,1,1),
 	 (5990,'javax.xml.bind.Unmarshaller.unmarshal(java.io.InputStream)','P1','R','true','',NULL,NULL,1,1),
 	 (5991,'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)','P1','R','true','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (5992,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source)','P1','R','true','',NULL,NULL,1,1),
 	 (5993,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)','P1','R','true','',NULL,NULL,1,1),
 	 (5994,'javax.xml.bind.JAXBElement.getValue()','O','R','false','',NULL,NULL,1,1),
@@ -240,7 +240,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (5999,'org.xml.sax.InputSource.<init>(java.io.InputStream)','P1','O','false','',NULL,NULL,1,1),
 	 (6000,'org.xml.sax.InputSource.<init>(java.io.Reader)','P1','O','false','',NULL,NULL,1,1),
 	 (6001,'org.xml.sax.InputSource.setCharacterStream(java.io.Reader)','P1','O','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6002,'org.xml.sax.InputSource.getCharacterStream()','O','R','false','',NULL,NULL,1,1),
 	 (6003,'org.xml.sax.InputSource.setByteStream(java.io.InputStream)','P1','O','false','',NULL,NULL,1,1),
 	 (6004,'org.xml.sax.InputSource.getByteStream()','O','R','false','',NULL,NULL,1,1),
@@ -251,7 +251,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6009,'org.springframework.cloud.config.server.resource.GenericResourceRepository.findOne(java.lang.String,java.lang.String,java.lang.String,java.lang.String)','P1,2,3,4','R','false','',NULL,NULL,1,1),
 	 (6010,'org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.getLocations(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','R','false','',NULL,NULL,1,1),
 	 (6025,'org.springframework.expression.ExpressionParser.parseExpression(java.lang.String,org.springframework.expression.ParserContext)','P1','R','true','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6026,'org.springframework.expression.ExpressionParser.parseExpression(java.lang.String)','P1','R','true','',NULL,NULL,1,1),
 	 (6027,'ognl.Ognl.parseExpression(java.lang.String)','P1','R','false','',NULL,NULL,1,1),
 	 (6028,'ognl.OgnlParser.<init>(java.io.Reader)','P1','O','false','',NULL,NULL,1,1),
@@ -262,7 +262,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6033,'org.apache.catalina.connector.CoyoteInputStream.read(byte[])','O','P1','false','',NULL,NULL,1,1),
 	 (6034,'org.apache.catalina.connector.CoyoteInputStream.read(byte[],int,int)','O','P1','false','',NULL,NULL,1,1),
 	 (6035,'org.apache.catalina.connector.CoyoteInputStream.read(java.nio.ByteBuffer)','O','P1','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6036,'java.sql.Connection.nativeSQL(java.lang.String)','P1','O','true','',NULL,NULL,1,1),
 	 (6037,'javax.mail.Message.setFrom(javax.mail.Address)','P1','','all','true',NULL,NULL,1,1),
 	 (6038,'javax.mail.Message.setHeader(java.lang.String,java.lang.String)','P1,2','','all','true',NULL,NULL,1,1),
@@ -273,7 +273,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6043,'javax.mail.Part.setText(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6044,'javax.mail.internet.MimeBodyPart.setText(javax.mail.internet.MimePart,java.lang.String,java.lang.String,java.lang.String)','P2','','all','true',NULL,NULL,1,1),
 	 (6045,'javax.mail.internet.InternetHeaders.setHeader(java.lang.String,java.lang.String)','P1,2','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6046,'javax.mail.internet.InternetHeaders.addHeader(java.lang.String,java.lang.String)','P1,2','','all','true',NULL,NULL,1,1),
 	 (6047,'javax.mail.internet.InternetHeaders.addHeaderLine(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6048,'java.net.URL.openConnection()','O','','all','true',NULL,NULL,1,1),
@@ -284,7 +284,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6054,'com.squareup.okhttp.Call.execute()','O','','false','true',NULL,NULL,1,1),
 	 (6055,'com.squareup.okhttp.Call.enqueue(com.squareup.okhttp.Callback)','O','','false','true',NULL,NULL,1,1),
 	 (6056,'okhttp3.Call.execute()','O','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6057,'okhttp3.Call.enqueue(okhttp3.Callback)','O','','all','true',NULL,NULL,1,1),
 	 (6058,'java.beans.XMLDecoder.<init>(org.xml.sax.InputSource)','P1','','all','true',NULL,NULL,1,1),
 	 (6059,'java.beans.XMLDecoder.<init>(java.io.InputStream)','P1','','all','true',NULL,NULL,1,1),
@@ -295,7 +295,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6064,'java.lang.Runtime.exec(java.lang.String[],java.lang.String[])','P1,2','','false','true',NULL,NULL,1,1),
 	 (6065,'java.lang.Runtime.exec(java.lang.String[])','P1','','false','true',NULL,NULL,1,1),
 	 (6066,'java.lang.Runtime.exec(java.lang.String)','P1','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6067,'java.lang.Runtime.exec(java.lang.String[],java.lang.String[],java.io.File)','P1,2','','false','true',NULL,NULL,1,1),
 	 (6068,'java.lang.Runtime.exec(java.lang.String,java.lang.String[],java.io.File)','P1,2','','false','true',NULL,NULL,1,1),
 	 (6069,'java.lang.Runtime.exec(java.lang.String,java.lang.String[])','P1,2','','false','true',NULL,NULL,1,1),
@@ -306,7 +306,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6074,'java.sql.Statement.execute(java.lang.String,java.lang.String[])','P1','','true','true',NULL,NULL,1,1),
 	 (6075,'java.sql.Statement.executeQuery(java.lang.String)','P1','','true','true',NULL,NULL,1,1),
 	 (6076,'java.sql.Statement.executeUpdate(java.lang.String)','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6077,'java.sql.Statement.executeUpdate(java.lang.String,int)','P1','','true','true',NULL,NULL,1,1),
 	 (6078,'java.sql.Statement.executeUpdate(java.lang.String,int[])','P1','','true','true',NULL,NULL,1,1),
 	 (6079,'java.sql.Statement.executeUpdate(java.lang.String,java.lang.String[])','P1','','true','true',NULL,NULL,1,1),
@@ -317,7 +317,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6084,'java.sql.Connection.prepareStatement(java.lang.String,int)','P1','','true','true',NULL,NULL,1,1),
 	 (6085,'java.sql.Connection.prepareStatement(java.lang.String,int,int)','P1','','true','true',NULL,NULL,1,1),
 	 (6086,'java.sql.Connection.prepareStatement(java.lang.String,int,int,int)','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6087,'java.sql.Connection.prepareStatement(java.lang.String,int[])','P1','','true','true',NULL,NULL,1,1),
 	 (6088,'java.sql.Connection.prepareStatement(java.lang.String,java.lang.String[])','P1','','true','true',NULL,NULL,1,1),
 	 (6089,'javax.naming.directory.DirContext.search(java.lang.String,java.lang.String,java.lang.Object[],javax.naming.directory.SearchControls)','P2','','all','true',NULL,NULL,1,1),
@@ -328,7 +328,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6094,'javax.naming.directory.InitialDirContext.search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls','P2','','all','true',NULL,NULL,1,1),
 	 (6095,'javax.xml.xpath.XPath.compile(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6096,'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource)','P1','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6097,'javax.xml.xpath.XPath.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)','P1','','all','true',NULL,NULL,1,1),
 	 (6098,'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object)','P1','','all','true',NULL,NULL,1,1),
 	 (6099,'javax.xml.xpath.XPath.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)','P1','','all','true',NULL,NULL,1,1),
@@ -339,7 +339,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6104,'net.sf.saxon.s9api.XPathCompiler.compile(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6105,'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.eval(java.lang.String,java.lang.Object)','P1','','all','true',NULL,NULL,1,1),
 	 (6106,'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object,javax.xml.namespace.QName)','P1','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6107,'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,java.lang.Object)','P1','','all','true',NULL,NULL,1,1),
 	 (6108,'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6109,'com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)','P1','','all','true',NULL,NULL,1,1),
@@ -350,7 +350,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6114,'org.apache.xpath.jaxp.XPathImpl.compile(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6115,'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)','P1','','all','true',NULL,NULL,1,1),
 	 (6116,'org.apache.xpath.jaxp.XPathImpl.evaluate(java.lang.String,org.xml.sax.InputSource)','P1','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6117,'java.nio.file.Paths.get(java.lang.String,java.lang.String[])','P1,2','','all','true',NULL,NULL,1,-1),
 	 (6118,'java.nio.file.Paths.get(java.net.URI)','P1','','all','true',NULL,NULL,1,-1),
 	 (6119,'java.io.File.<init>(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
@@ -361,7 +361,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6124,'java.lang.Math.random()','','','false','false',NULL,NULL,1,1),
 	 (6125,'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean,char[])','','','false','false',NULL,NULL,1,1),
 	 (6126,'org.apache.commons.lang.RandomStringUtils.random(int,int,int,boolean,boolean)','','','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6127,'org.apache.commons.lang.RandomStringUtils.randomAlphabetic(int)','','','false','false',NULL,NULL,1,1),
 	 (6128,'org.apache.commons.lang.RandomStringUtils.randomAlphanumeric(int)','','','false','false',NULL,NULL,1,1),
 	 (6129,'org.apache.commons.lang.RandomStringUtils.randomAscii(int)','','','false','false',NULL,NULL,1,1),
@@ -372,7 +372,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6134,'java.util.Random.nextFloat()','','','false','false',NULL,NULL,1,1),
 	 (6135,'java.util.Random.nextGaussian()','','','false','false',NULL,NULL,1,1),
 	 (6136,'java.util.Random.nextLong()','','','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6137,'java.security.MessageDigest.getInstance(java.lang.String)','P1','','false','false',NULL,NULL,1,1),
 	 (6138,'java.security.MessageDigest.getInstance(java.lang.String,java.security.Provider)','P1','','false','false',NULL,NULL,1,1),
 	 (6139,'java.security.MessageDigest.getInstance(java.lang.String,java.lang.String)','P1','','false','false',NULL,NULL,1,1),
@@ -383,7 +383,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6144,'org.glassfish.grizzly.http.Cookie.setSecure(boolean)','P1','','false','false',NULL,NULL,1,1),
 	 (6145,'javax.ws.rs.core.NewCookie.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,int,java.util.Date,boolean,boolean)','P9','','false','false',NULL,NULL,1,1),
 	 (6146,'javax.ws.rs.core.NewCookie.<init>(javax.ws.rs.core.Cookie,java.lang.String,int,java.util.Date,boolean,boolean)','P5','','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6147,'javax.servlet.http.HttpSession.setAttribute(java.lang.String,java.lang.Object)','P1,2','','true','true',NULL,NULL,1,1),
 	 (6148,'javax.servlet.http.HttpSession.putValue(java.lang.String,java.lang.Object)','P1,2','','true','true',NULL,NULL,1,1),
 	 (6149,'org.apache.struts2.dispatcher.SessionMap.put(java.lang.Object,java.lang.Object)','P1,2','','false','true',NULL,NULL,1,1),
@@ -394,7 +394,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6154,'org.glassfish.jersey.message.internal.ByteArrayProvider.writeTo(byte[],java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)','P1','','false','true',NULL,NULL,1,1),
 	 (6155,'org.glassfish.jersey.message.internal.DataSourceProvider.writeTo(javax.activation.DataSource,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)','P1','','false','true',NULL,NULL,1,1),
 	 (6156,'org.glassfish.jersey.message.internal.FileProvider.writeTo(java.io.File,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)','P1','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6157,'org.glassfish.jersey.message.internal.InputStreamProvider.writeTo(java.io.InputStream,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)','P1','','false','true',NULL,NULL,1,1),
 	 (6158,'org.glassfish.jersey.message.internal.ReaderProvider.writeTo(java.io.Reader,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)','P1','','false','true',NULL,NULL,1,1),
 	 (6159,'org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(java.lang.String,java.lang.Class,java.lang.reflect.Type,java.lang.annotation.Annotation[],javax.ws.rs.core.MediaType,javax.ws.rs.core.MultivaluedMap,java.io.OutputStream)','P1','','false','true',NULL,NULL,1,1),
@@ -405,7 +405,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6164,'javax.servlet.jsp.JspWriter.write(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6165,'javax.servlet.jsp.JspWriter.write(java.lang.String,int,int)','P1','','all','true',NULL,NULL,1,1),
 	 (6166,'javax.servlet.jsp.JspWriter.write(char[])','P1','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6167,'javax.servlet.jsp.JspWriter.write(char[],int,int)','P1','','all','true',NULL,NULL,1,1),
 	 (6168,'java.io.PrintWriter.format(java.util.Locale,java.lang.String,java.lang.Object[])','P2,3','','all','true',NULL,NULL,1,1),
 	 (6169,'java.io.PrintWriter.format(java.lang.String,java.lang.Object[])','P1,2','','all','true',NULL,NULL,1,1),
@@ -416,7 +416,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6174,'java.io.PrintWriter.printf(java.lang.String,java.lang.Object[])','P1,2','','all','true',NULL,NULL,1,1),
 	 (6175,'java.io.PrintWriter.println(char[])','P1','','all','true',NULL,NULL,1,1),
 	 (6176,'java.io.PrintWriter.println(java.lang.Object)','P1','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6177,'java.io.PrintWriter.println(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6178,'java.io.PrintWriter.write(char[])','P1','','all','true',NULL,NULL,1,1),
 	 (6179,'java.io.PrintWriter.write(char[],int,int)','P1','','all','true',NULL,NULL,1,1),
@@ -427,7 +427,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6184,'org.mule.module.http.internal.domain.response.DefaultHttpResponse.<init>(org.mule.module.http.internal.domain.response.ResponseStatus,org.apache.commons.collections.MultiMap,org.mule.module.http.internal.domain.HttpEntity)','P3','','false','true',NULL,NULL,1,1),
 	 (6185,'org.mule.module.http.internal.domain.response.HttpResponseBuilder.setEntity(org.mule.module.http.internal.domain.HttpEntity)','P1','','false','true',NULL,NULL,1,1),
 	 (6186,'org.mule.module.http.internal.domain.response.HttpResponseBuilder.build(org.mule.module.http.internal.domain.HttpEntity)','P1','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6187,'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.DefaultMuleEvent,java.lang.Object)','P1','','false','true',NULL,NULL,1,1),
 	 (6188,'org.mule.transformer.simple.SetPayloadMessageProcessor.resolveDataType(org.mule.api.MuleEvent,java.lang.Object)','P1','','false','true',NULL,NULL,1,1),
 	 (6189,'org.apache.jasper.runtime.JspWriterImpl.println(java.lang.String)','P1','','false','true',NULL,NULL,1,1),
@@ -438,7 +438,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6194,'javax.xml.parsers.DocumentBuilder.parse(org.xml.sax.InputSource)','P1','','true','true',NULL,NULL,1,1),
 	 (6195,'nu.xom.Builder.build(java.io.File)','P1','','true','true',NULL,NULL,1,1),
 	 (6196,'nu.xom.Builder.build(java.io.InputStream)','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6197,'nu.xom.Builder.build(java.io.InputStream,java.lang.String)','P1','','true','true',NULL,NULL,1,1),
 	 (6198,'nu.xom.Builder.build(java.io.Reader)','P1','','true','true',NULL,NULL,1,1),
 	 (6199,'nu.xom.Builder.build(java.io.Reader,java.lang.String)','P1','','true','true',NULL,NULL,1,1),
@@ -449,7 +449,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6204,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.transform.Source,java.lang.Class)','P1','','true','true',NULL,NULL,1,1),
 	 (6205,'javax.xml.bind.Unmarshaller.unmarshal(org.xml.sax.InputSource)','P1','','true','true',NULL,NULL,1,1),
 	 (6206,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader)','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6207,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLStreamReader,java.lang.Class)','P1','','true','true',NULL,NULL,1,1),
 	 (6208,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader)','P1','','true','true',NULL,NULL,1,1),
 	 (6209,'javax.xml.bind.Unmarshaller.unmarshal(javax.xml.stream.XMLEventReader,java.lang.Class)','P1','','true','true',NULL,NULL,1,1),
@@ -460,7 +460,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6214,'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.HandlerBase)','P1','','true','true',NULL,NULL,1,1),
 	 (6215,'javax.xml.parsers.SAXParser.parse(org.xml.sax.InputSource,org.xml.sax.helpers.DefaultHandler)','P1','','true','true',NULL,NULL,1,1),
 	 (6216,'org.xml.sax.XMLReader.parse(org.xml.sax.InputSource)','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6217,'javax.xml.stream.XMLStreamReader.getElementText()','O','','true','true',NULL,NULL,1,1),
 	 (6218,'javax.servlet.jsp.el.ExpressionEvaluator.evaluate(java.lang.String,java.lang.Class,javax.servlet.jsp.el.VariableResolver,javax.servlet.jsp.el.FunctionMapper)','P1','','all','true',NULL,NULL,1,1),
 	 (6219,'ognl.Ognl.getValue(java.lang.Object,java.util.Map,java.lang.Object)','P1','','all','true',NULL,NULL,1,1),
@@ -471,7 +471,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6224,'ognl.Ognl.getValue(java.lang.Object,java.lang.Object,java.lang.Class)','P1','','all','true',NULL,NULL,1,1),
 	 (6225,'ognl.Ognl.getValue(java.lang.String,java.lang.Object)','P1','','all','true',NULL,NULL,1,1),
 	 (6226,'ognl.Ognl.getValue(java.lang.String,java.lang.Object,java.lang.Class)','P1','','all','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6227,'org.apache.commons.ognl.Ognl.parseExpression(java.lang.String)','P1','','all','true',NULL,NULL,1,1),
 	 (6228,'org.springframework.expression.Expression.getValue()','O','','true','true',NULL,NULL,1,1),
 	 (6229,'org.springframework.expression.Expression.getValue(java.lang.Class)','O','','true','true',NULL,NULL,1,1),
@@ -482,7 +482,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6234,'org.springframework.expression.Expression.getValue(java.lang.Object)','O','','true','true',NULL,NULL,1,1),
 	 (6235,'org.springframework.expression.Expression.getValue(java.lang.Object,java.lang.Class)','O','','true','true',NULL,NULL,1,1),
 	 (6236,'org.springframework.expression.Expression.getValueTypeDescriptor(java.lang.Object)','O','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6237,'org.springframework.expression.Expression.getValueTypeDescriptor()','O','','true','true',NULL,NULL,1,1),
 	 (6238,'org.springframework.expression.Expression.getValueTypeDescriptor(org.springframework.expression.EvaluationContext,java.lang.Object)','O','','true','true',NULL,NULL,1,1),
 	 (6239,'org.springframework.expression.Expression.getValueTypeDescriptor(org.springframework.expression.EvaluationContext)','O','','true','true',NULL,NULL,1,1),
@@ -493,7 +493,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6244,'java.io.ObjectInput.readObject()','O','','true','true',NULL,NULL,1,1),
 	 (6245,'java.io.ObjectInputStream.readObject()','O','','all','true',NULL,NULL,1,1),
 	 (6246,'com.thoughtworks.xstream.XStream.fromXML(java.lang.String)','P1','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6247,'com.thoughtworks.xstream.XStream.fromXML(java.lang.String,java.lang.Object)','P1','','false','true',NULL,NULL,1,1),
 	 (6248,'com.thoughtworks.xstream.XStream.fromXML(java.io.Reader)','P1','','false','true',NULL,NULL,1,1),
 	 (6249,'com.thoughtworks.xstream.XStream.fromXML(java.io.Reader,java.lang.Object)','P1','','false','true',NULL,NULL,1,1),
@@ -504,7 +504,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6254,'com.esotericsoftware.kryo.Kryo.readObject(com.esotericsoftware.kryo.io.Input,java.lang.Class)','P1','','false','true',NULL,NULL,1,1),
 	 (6255,'com.esotericsoftware.kryo.Kryo.readObjectOrNull(com.esotericsoftware.kryo.io.Input,java.lang.Class)','P1','','false','true',NULL,NULL,1,1),
 	 (6256,'com.esotericsoftware.kryo.Kryo.readObject(com.esotericsoftware.kryo.io.Input,java.lang.Class,com.esotericsoftware.kryo.Serializer)','P1','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6257,'com.esotericsoftware.kryo.Kryo.readObjectOrNull(com.esotericsoftware.kryo.io.Input,java.lang.Class,com.esotericsoftware.kryo.Serializer)','P1','','false','true',NULL,NULL,1,1),
 	 (6258,'com.esotericsoftware.kryo.Kryo.readClassAndObject(com.esotericsoftware.kryo.io.Input)','P1','','false','true',NULL,NULL,1,1),
 	 (6259,'org.hibernate.Session.createFilter(java.lang.Object,java.lang.String)','P2','','true','true',NULL,NULL,1,1),
@@ -515,7 +515,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6264,'org.hibernate.Session.delete(java.lang.String)','P1','','true','true',NULL,NULL,1,1),
 	 (6265,'org.hibernate.Session.delete(java.lang.String,java.lang.Object,org.hibernate.type.Type)','P1','','true','true',NULL,NULL,1,1),
 	 (6266,'org.hibernate.Session.delete(java.lang.String,java.lang.Object[],org.hibernate.type.Type[])','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6267,'org.hibernate.Session.filter(java.lang.Object,java.lang.String)','P2','','true','true',NULL,NULL,1,1),
 	 (6268,'org.hibernate.Session.filter(java.lang.Object,java.lang.String,java.lang.Object,org.hibernate.type.Type)','P2','','true','true',NULL,NULL,1,1),
 	 (6269,'org.hibernate.Session.filter(java.lang.Object,java.lang.String,java.lang.Object[],org.hibernate.type.Type[])','P2','','true','true',NULL,NULL,1,1),
@@ -526,7 +526,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6274,'org.hibernate.Session.iterate(java.lang.String,java.lang.Object,org.hibernate.type.Type)','P1','','true','true',NULL,NULL,1,1),
 	 (6275,'org.hibernate.Session.iterate(java.lang.String,java.lang.Object[],org.hibernate.type.Type[])','P1','','true','true',NULL,NULL,1,1),
 	 (6276,'org.hibernate.SharedSessionContract.createQuery(java.lang.String)','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6277,'org.hibernate.SharedSessionContract.createSQLQuery(java.lang.String)','P1','','true','true',NULL,NULL,1,1),
 	 (6278,'com.mongodb.DB.doEval(java.lang.String,java.lang.Object[])','P1','','true','true',NULL,NULL,1,1),
 	 (6279,'java.io.BufferedReader.readLine()','O','','true','true',NULL,NULL,1,1),
@@ -537,7 +537,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6284,'javax.ws.rs.core.Response.temporaryRedirect(java.net.URI)','P1','','true','true',NULL,NULL,1,1),
 	 (6285,'javax.servlet.http.HttpServletResponse.sendRedirect(java.lang.String)','P1','','true','true',NULL,NULL,1,1),
 	 (6286,'javax.servlet.http.HttpServletResponse.setHeader(java.lang.String,java.lang.String)','P2','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6287,'io.netty.handler.codec.http.DefaultHttpHeaders.add0(int,int,java.lang.CharSequence,java.lang.CharSequence)','P4','','true','true',NULL,1665646278,1,1),
 	 (6288,'javax.servlet.http.HttpServletResponse.addHeader(java.lang.String,java.lang.String)','P2','','true','true',NULL,NULL,1,1),
 	 (6289,'javax.servlet.http.HttpServletResponse.setHeader(java.lang.String,java.lang.String)','P1,2','','false','true',NULL,NULL,1,0),
@@ -548,7 +548,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6294,'com.mysql.jdbc.MysqlIO.sqlQueryDirect(com.mysql.jdbc.StatementImpl,java.lang.String,java.lang.String,com.mysql.jdbc.Buffer,int,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])','P4','','false','false',NULL,NULL,1,0),
 	 (6295,'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,com.mysql.cj.protocol.ColumnDefinition,boolean)','P4','','false','false',NULL,NULL,1,0),
 	 (6296,'com.mysql.cj.NativeSession.execSQL(com.mysql.cj.Query,java.lang.String,int,com.mysql.cj.protocol.a.NativePacketPayload,boolean,com.mysql.cj.protocol.ProtocolEntityFactory,java.lang.String,com.mysql.cj.protocol.ColumnDefinition,boolean)','P4','','false','false',NULL,NULL,1,0);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6297,'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])','P4','','false','false',NULL,NULL,1,0),
 	 (6298,'com.mysql.cj.fabric.jdbc.FabricMySQLConnectionProxy.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)','P4','','false','false',NULL,NULL,1,0),
 	 (6299,'com.mysql.cj.jdbc.ConnectionImpl.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)','P4','','false','false',NULL,NULL,1,0),
@@ -559,7 +559,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6304,'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)','P4','','false','false',NULL,NULL,1,0),
 	 (6305,'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])','P4','','false','false',NULL,NULL,1,0),
 	 (6306,'com.mysql.cj.jdbc.ConnectionWrapper.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[],boolean)','P4','','false','false',NULL,NULL,1,0);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6307,'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition)','P4','','false','false',NULL,NULL,1,0),
 	 (6308,'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.api.mysqla.io.PacketPayload,boolean,java.lang.String,com.mysql.cj.api.mysqla.result.ColumnDefinition,boolean)','P4','','false','false',NULL,NULL,1,0),
 	 (6309,'com.mysql.cj.jdbc.ha.MultiHostMySQLConnection.execSQL(com.mysql.cj.jdbc.StatementImpl,java.lang.String,int,com.mysql.cj.mysqla.io.Buffer,int,int,boolean,java.lang.String,com.mysql.cj.core.result.Field[])','P4','','false','false',NULL,NULL,1,0),
@@ -570,7 +570,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6314,'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])','P4','','false','false',NULL,NULL,1,0),
 	 (6315,'java.sql.Connection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)','P4','','false','false',NULL,NULL,1,0),
 	 (6316,'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])','P4','','false','false',NULL,NULL,1,0);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6317,'com.mysql.jdbc.LoadBalancedMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)','P4','','false','false',NULL,NULL,1,0),
 	 (6318,'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[])','P4','','false','false',NULL,NULL,1,0),
 	 (6319,'com.mysql.jdbc.MultiHostMySQLConnection.execSQL(com.mysql.jdbc.StatementImpl,java.lang.String,int,com.mysql.jdbc.Buffer,int,int,boolean,java.lang.String,com.mysql.jdbc.Field[],boolean)','P4','','false','false',NULL,NULL,1,0),
@@ -581,7 +581,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6324,'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String)','','','false','',NULL,NULL,1,1),
 	 (6325,'org.springframework.web.util.HtmlUtils.htmlEscape(java.lang.String,java.lang.String)','','','false','',NULL,NULL,1,1),
 	 (6326,'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String)','','','false','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6327,'org.springframework.web.util.HtmlUtils.htmlEscapeDecimal(java.lang.String,java.lang.String)','','','false','',NULL,NULL,1,1),
 	 (6328,'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.lang.String)','','','false','',NULL,NULL,1,1),
 	 (6329,'org.apache.commons.lang.StringEscapeUtils.escapeHtml(java.io.Writer,java.lang.String)','','','false','',NULL,NULL,1,1),
@@ -592,7 +592,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6334,'javax.xml.transform.TransformerFactory.setFeature(java.lang.String, boolean)','','','true','',NULL,NULL,1,1),
 	 (6335,'com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration.setFeature(java.lang.String, boolean)','','','true','',NULL,NULL,1,1),
 	 (6336,'com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader.setFeature(java.lang.String, boolean)','','','true','',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6337,'java.util.Arrays.asList(java.lang.Object[])','P1','R','false','false',NULL,NULL,1,1),
 	 (6338,'java.util.Collection.addAll(java.util.Collection)','P1','O','true',' ',NULL,NULL,1,1),
 	 (6339,'org.apache.solr.servlet.SolrRequestParsers.parseQueryString(java.lang.String,java.util.Map)','P1','P2','false','false',NULL,NULL,1,1),
@@ -603,7 +603,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6344,'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6345,'com.opensymphony.xwork2.util.ValueStack.findString(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6346,'com.opensymphony.xwork2.util.ValueStack.findValue(java.lang.String,java.lang.Class)','P1','R','true','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6347,'java.lang.StringUTF16.newString(byte[],int,int)','P1','R','false','false',NULL,NULL,1,1),
 	 (6348,'java.lang.StringLatin1.newString(byte[],int,int)','P1','R','false','false',NULL,NULL,1,1),
 	 (6349,'java.lang.StringConcatHelper.newString(byte[],int,byte)','P1','R','false','false',NULL,NULL,1,1),
@@ -614,7 +614,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6354,'javax.servlet.ServletRequest.getParameter(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6355,'javax.servlet.ServletRequest.getParameterNames()','O','R','true','false',NULL,NULL,1,1),
 	 (6356,'javax.servlet.ServletRequest.getParameterValues(java.lang.String)','P1','R','true','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6357,'javax.servlet.ServletRequest.getParameterMap()','O','R','true','false',NULL,NULL,1,1),
 	 (6358,'javax.servlet.ServletRequest.getReader()','O','R','true','false',NULL,NULL,1,1),
 	 (6359,'javax.servlet.http.HttpServletRequest.getHeader(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
@@ -625,7 +625,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6364,'javax.servlet.http.HttpServletRequest.getCookies()','O','R','true','false',NULL,NULL,1,1),
 	 (6365,'javax.servlet.http.HttpServletRequest.getHeaders(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6366,'javax.servlet.http.HttpServletRequest.getQueryString()','O','R','true','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6367,'javax.servlet.http.HttpServletRequest.getInputStream()','O','R','true','false',NULL,NULL,1,1),
 	 (6368,'javax.servlet.http.HttpServletRequest.getParameter(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6369,'javax.servlet.http.HttpServletRequest.getParameterNames()','O','R','true','false',NULL,NULL,1,1),
@@ -636,7 +636,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6374,'org.apache.commons.fileupload.FileItem.write(java.io.File)','P1','','true','true',NULL,NULL,1,1),
 	 (6375,'java.sql.Statement.executeLargeUpdate(java.lang.String,java.lang.String[])','P1','','true','true',NULL,NULL,1,1),
 	 (6376,'java.sql.Statement.executeLargeUpdate(java.lang.String,int[])','P1','','true','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6377,'java.sql.Statement.executeLargeUpdate(java.lang.String,int)','P1','','true','true',NULL,NULL,1,1),
 	 (6378,'java.sql.Statement.executeLargeUpdate(java.lang.String)','P1','','true','true',NULL,NULL,1,1),
 	 (6379,'java.lang.StringConcatHelper.newString(byte[],long)','P1','R','false','false',NULL,NULL,1,1),
@@ -647,7 +647,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6384,'com.caucho.hessian.io.HessianInput.init(java.io.InputStream)','P1','O','false','false',NULL,NULL,1,1),
 	 (6385,'com.caucho.hessian.io.HessianInput.readObject()','O','','false','true',NULL,NULL,1,1),
 	 (6386,'java.lang.StringConcatHelper.prepend(long,byte[],byte,java.lang.String)','P1','R','false','false',NULL,NULL,1,-1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6387,'java.lang.String.valueOf(java.lang.Object)','P1','R','false','false',NULL,NULL,1,1),
 	 (6388,'org.apache.commons.httpclient.HttpClient.executeMethod(org.apache.commons.httpclient.HostConfiguration,org.apache.commons.httpclient.HttpMethod,org.apache.commons.httpclient.HttpState)','P2','','false','true',NULL,NULL,1,1),
 	 (6389,'org.springframework.web.multipart.MultipartFile.getOriginalFilename()','O','R','true','false',NULL,NULL,1,1),
@@ -658,7 +658,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6394,'org.unbescape.html.Html5EscapeSymbolsInitializer.initializeHtml5()','O','R','false','false',NULL,NULL,1,1),
 	 (6395,'basename','P','R','false','false',NULL,NULL,1,1),
 	 (6396,'dirname','P','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6397,'explode','P','R','false','false',NULL,NULL,1,1),
 	 (6398,'implode','P','R','false','false',NULL,NULL,1,1),
 	 (6399,'join','P','R','false','false',NULL,NULL,1,1),
@@ -669,7 +669,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6404,'split','P','R','false','false',NULL,NULL,1,1),
 	 (6405,'sprintf','P','R','false','false',NULL,NULL,1,1),
 	 (6406,'str_ireplace','P','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6407,'str_pad','P','R','false','false',NULL,NULL,1,1),
 	 (6408,'str_replace','P','R','false','false',NULL,NULL,1,1),
 	 (6409,'stripslashes','P','R','false','false',NULL,NULL,1,1),
@@ -680,7 +680,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6414,'substr','P','R','false','false',NULL,NULL,1,1),
 	 (6415,'trim','P','R','false','false',NULL,NULL,1,1),
 	 (6416,'vsprintf','P','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6417,'.ZEND_ASSIGN_CONCAT','P','R','false','false',NULL,NULL,1,1),
 	 (6418,'.ZEND_CONCAT','P','R','false','false',NULL,NULL,1,1),
 	 (6419,'.ZEND_INIT_USER_CALL','P','R','false','false',NULL,NULL,1,1),
@@ -691,7 +691,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6424,'.mysqli_multi_query','P','','false','true',NULL,NULL,1,1),
 	 (6425,'.system','P','','false','true',NULL,NULL,1,1),
 	 (6426,'.passthru','P','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6427,'.exec','P','','false','true',NULL,NULL,1,1),
 	 (6428,'.shell_exec','P','','false','true',NULL,NULL,1,1),
 	 (6429,'.popen','P','','false','true',NULL,NULL,1,1),
@@ -702,7 +702,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6434,'sqlite3.Cursor.execute','P2','','false','true',NULL,NULL,1,1),
 	 (6435,'sqlite3.Cursor.executemany','P2','','false','true',NULL,NULL,1,1),
 	 (6436,'sqlite3.Cursor.executescript','P2','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6437,'psycopg2._psycopg.cursor.execute','P2,query','','false','true',NULL,NULL,1,1),
 	 (6438,'psycopg2._psycopg.cursor.executemany','P2,query','','false','true',NULL,NULL,1,1),
 	 (6439,'mysql.connector.cursor.CursorBase.execute','P2,operation','','false','true',NULL,NULL,1,1),
@@ -713,7 +713,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6444,'pymysql.cursors.Cursor.executemany','P2,query','','false','true',NULL,NULL,1,1),
 	 (6445,'builtins.eval','P1','','false','true',NULL,NULL,1,1),
 	 (6446,'yaml.unsafe_load','P1,stream','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6447,'yaml.load','P1,stream','','false','true',NULL,NULL,1,1),
 	 (6448,'os.system','P1,command','','false','true',NULL,NULL,1,1),
 	 (6449,'os.popen','P1,cmd','','false','true',NULL,NULL,1,1),
@@ -724,7 +724,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6454,'lxml.etree.parse','P1,source','','false','true',NULL,NULL,1,1),
 	 (6455,'urllib.request.urlopen','P3,url','','false','true',NULL,NULL,1,1),
 	 (6456,'requests.sessions.Session.request','P3,url','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6457,'django.utils.datastructures.MultiValueDict.get','P','R','false','false',NULL,NULL,1,1),
 	 (6458,'django.utils.datastructures.MultiValueDict.__getitem__','P','R','false','false',NULL,NULL,1,1),
 	 (6459,'django.http.request.HttpRequest.read','P','R','false','false',NULL,NULL,1,1),
@@ -735,7 +735,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6464,'builtins.str.format','P','R','false','false',NULL,NULL,1,1),
 	 (6465,'builtins.str.join','P','R','false','false',NULL,NULL,1,1),
 	 (6466,'builtins.str.lower','P1','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6467,'builtins.str.ljust','P1','R','false','false',NULL,NULL,1,1),
 	 (6468,'builtins.str.rjust','P1','R','false','false',NULL,NULL,1,1),
 	 (6469,'builtins.str.split','P1','R','false','false',NULL,NULL,1,1),
@@ -746,7 +746,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6474,'flask.jsonify','P','R','false','false',NULL,NULL,1,1),
 	 (6475,'django.template.base.Template.render','P','R','false','false',NULL,NULL,1,1),
 	 (6476,'django.template.base.render_value_in_context','P','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6477,'django.urls.resolvers.RoutePattern.match','P2,path','R','false','false',NULL,NULL,1,1),
 	 (6478,'urllib.parse.unquote','P1,string','R','false','false',NULL,NULL,1,1),
 	 (6479,'builtins.exec','P1','','false','true',NULL,NULL,1,1),
@@ -757,7 +757,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6484,'builtins.bytearray.cformat','P','R','false','false',NULL,NULL,1,1),
 	 (6485,'builtins.bytes.decode','P1','R','false','false',NULL,NULL,1,1),
 	 (6486,'werkzeug.wrappers.base_request.BaseRequest.get_data','P','R','all','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6487,'pickle.load','P1,file','','all','true',NULL,NULL,1,1),
 	 (6488,'builtins.bytearray.__init__','P1,source','R','false','false',NULL,NULL,1,1),
 	 (6489,'builtins.bytes.__new__','P1,source','R','false','false',NULL,NULL,1,1),
@@ -768,7 +768,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6494,'jinja2.runtime.escape','P','R','false','false',NULL,NULL,1,1),
 	 (6495,'html.escape','P1,s','R','false','false',NULL,NULL,1,1),
 	 (6496,'pickle.loads','P1,data','','false','true',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6497,'yaml.unsafe_load_all','P1,stream','','false','true',NULL,NULL,1,1),
 	 (6498,'yaml.load_all','P1,stream','','false','true',NULL,NULL,1,1),
 	 (6499,'builtins.str.capitalize','P1','R','false','false',NULL,NULL,1,1),
@@ -779,7 +779,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6504,'builtins.str.partition','P1','R','false','false',NULL,NULL,1,1),
 	 (6505,'builtins.str.removeprefix','P1','R','false','false',NULL,NULL,1,1),
 	 (6506,'builtins.str.removesuffix','P1','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6507,'builtins.str.repeat','P','R','false','false',NULL,NULL,1,1),
 	 (6508,'builtins.str.rpartition','P1','R','false','false',NULL,NULL,1,1),
 	 (6509,'builtins.str.rsplit','P1','R','false','false',NULL,NULL,1,1),
@@ -790,7 +790,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6514,'builtins.str.title','P1','R','false','false',NULL,NULL,1,1),
 	 (6515,'builtins.str.upper','P1','R','false','false',NULL,NULL,1,1),
 	 (6516,'builtins.str.zfill','P1','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6517,'base64.b64encode','P1,s','R','false','false',NULL,NULL,1,1),
 	 (6518,'base64.b64decode','P1,s','R','false','false',NULL,NULL,1,1),
 	 (6519,'yaml.dump','P1,data','R','false','false',NULL,NULL,1,1),
@@ -801,7 +801,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6524,'ldap.ldapobject.SimpleLDAPObject.search_ext','P4,filterstr','','false','true',NULL,NULL,1,1),
 	 (6525,'ldap.filter.escape_filter_chars','P1,assertion_value','R','false','false',NULL,NULL,1,1),
 	 (6526,'ldap3.utils.conv.escape_filter_chars','P1,text','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6527,'org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(java.sql.Statement)','P1','R','false','false',NULL,NULL,1,1),
 	 (6528,'com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(org.apache.ibatis.session.SqlSession,java.lang.Object[])','P1,2','R','false','false',NULL,NULL,1,1),
 	 (6529,'java.lang.StringBuilder.substring(int,int)','O','R','false','false',NULL,NULL,1,1),
@@ -812,7 +812,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6534,'org.apache.commons.fileupload.FileUploadBase.parseRequest(org.apache.commons.fileupload.RequestContext)','P1','R','all','false',NULL,NULL,1,1),
 	 (6535,'org.apache.kafka.clients.producer.ProducerRecord.<init>(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)','P4,5','O','false','false',NULL,NULL,1,1),
 	 (6536,'org.apache.kafka.clients.consumer.ConsumerRecord.value()','O','R','false','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6540,'org.apache.commons.fileupload.FileItem.getString()','O','R','true','false',NULL,NULL,1,1),
 	 (6541,'com.fasterxml.jackson.databind.ObjectMapper.readValue(java.lang.String,java.lang.Class)','P1','R','all','false',NULL,NULL,1,1),
 	 (6542,'com.fasterxml.jackson.databind.ObjectMapper.readValue(java.lang.String,com.fasterxml.jackson.databind.JavaType)','P1','R','all','false',NULL,NULL,1,1),
@@ -823,7 +823,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6547,'jakarta.servlet.ServletRequest.getInputStream()','O','R','true','false',NULL,NULL,1,1),
 	 (6548,'jakarta.servlet.ServletRequest.getParameter(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6549,'jakarta.servlet.ServletRequest.getParameterNames()','O','R','true','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6550,'jakarta.servlet.ServletRequest.getParameterValues(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
 	 (6551,'jakarta.servlet.ServletRequest.getReader()','O','R','true','false',NULL,NULL,1,1),
 	 (6552,'jakarta.servlet.http.HttpServletRequest.getHeader(java.lang.String)','P1','R','true','false',NULL,NULL,1,1),
@@ -834,7 +834,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6557,'jakarta.servlet.http.HttpServletRequest.getCookies()','O','R','true','false',NULL,NULL,1,1),
 	 (6558,'jakarta.servlet.http.HttpServletRequest.getQueryString()','O','R','true','false',NULL,NULL,1,1),
 	 (6559,'java.sql.Statement.setString(int,java.lang.String)','P2','O','true','false',NULL,NULL,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6560,'java.sql.Statement.executeQuery()','O','','true','true',NULL,NULL,1,0),
 	 (6561,'java.net.URL.openStream()','O','','false','true',NULL,NULL,1,1),
 	 (6562,'javax.xml.stream.XMLInputFactory.createXMLStreamReader(java.io.Reader)','P1','','all','true',NULL,NULL,1,1),
@@ -845,7 +845,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6567,'https://www.murphysec.com/auth/login/cli?uuid=XGzYFtf7DCywc5RgLx&source=ide&type=JETBRAINS_IDE&version=3.0.2&os=LINUX','P1','O','false','false',1662087093,1662087093,1,-1),
 	 (6568,'java.lang.String.<init>(byte[],byte)','P1','O','false','false',1662087103,1662087103,1,1),
 	 (6569,'java.lang.StringBuffer.toString()','O','R','false','false',1662087133,1662087133,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6570,'java.lang.StringBuffer.<init>(java.lang.String)','P1','O','false','false',1662087149,1662087149,1,1),
 	 (6571,'java.lang.StringBuffer.<init>(java.lang.CharSequence)','P1','O','false','false',1662087162,1662087162,1,1),
 	 (6572,'java.io.ByteArrayOutputStream.toString()','O','R','false','false',1662087177,1662087177,1,1),
@@ -856,7 +856,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6577,'java.lang.AbstractStringBuilder.append(java.lang.String)','P1','O','false','false',1662087242,1662087242,1,1),
 	 (6578,'java.lang.StringBuffer.append(java.lang.String)','P1','O','false','false',1662087265,1662087265,1,1),
 	 (6579,'java.lang.StringBuffer.append(java.lang.StringBuffer)','P1','O','false','false',1662087281,1662087281,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6580,'java.lang.StringBuffer.append(char[])','P1','O','false','false',1662087301,1662087301,1,1),
 	 (6581,'java.lang.StringBuffer.append(java.lang.CharSequence)','P1','O','false','false',1662087313,1662087313,1,1),
 	 (6582,'java.lang.StringBuffer.append(java.lang.CharSequence,int,int)','P1','O','false','false',1662087325,1662087325,1,1),
@@ -867,7 +867,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6587,'java.io.StringWriter.write(java.lang.String,int,int)','P1','O','false','false',1662087401,1662087401,1,1),
 	 (6588,'java.lang.String.<init>(byte[],java.nio.charset.Charset)','P1','O','false','false',1662087454,1662087454,1,1),
 	 (6589,'java.lang.StringLatin1$LinesSpliterator.<init>(byte[],int,int)','P1','O','false','false',1662087479,1662087479,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6590,'java.lang.StringUTF16$LinesSpliterator.<init>(byte[],int,int)','P1','O','false','false',1662087492,1662087492,1,1),
 	 (6591,'java.lang.StringBuilder.substring(int)','O','R','false','false',1662087509,1662087509,1,1),
 	 (6592,'java.lang.StringBuilder.substring(int,int)','O','R','false','false',1662087520,1662087520,1,1),
@@ -878,7 +878,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6597,'java.lang.AbstractStringBuilder.getChars(int,int,char[],int)','O','P3','false','false',1662087580,1662087580,1,1),
 	 (6598,'java.lang.StringBuffer.substring(int)','O','R','false','false',1662087594,1662087594,1,1),
 	 (6599,'java.lang.StringBuffer.substring(int,int)','O','R','false','false',1662087604,1662087604,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6600,'java.lang.StringBuffer.setLength(int)','O','O','false','false',1662087622,1662087622,1,1),
 	 (6601,'java.lang.StringBuffer.getChars(int,int,char[],int)','O','P3','false','false',1662087639,1662087639,1,1),
 	 (6602,'java.nio.ByteBuffer.wrap(byte[],int,int)','P1','R','false','false',1662087666,1662087666,1,1),
@@ -889,7 +889,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6607,'java.io.PipedReader.read(char[],int,int)','P1','O','false','false',1662087785,1662087785,1,1),
 	 (6608,'java.io.PipedInputStream.read(byte[],int,int)','P1','O','false','false',1662087795,1662087795,1,1),
 	 (6609,'java.lang.StringBuilder.insert(int,java.lang.String)','P2','O','false','false',1662087817,1662087817,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6610,'java.lang.StringBuilder.insert(int,char[])','P2','O','false','false',1662087829,1662087829,1,1),
 	 (6611,'java.lang.StringBuilder.insert(int,char)','P2','O','false','false',1662087843,1662087843,1,1),
 	 (6612,'java.lang.StringBuilder.insert(int,java.lang.CharSequence)','P2','O','false','false',1662087856,1662087856,1,1),
@@ -900,7 +900,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6617,'java.lang.StringBuffer.insert(int,char)','P2','O','false','false',1662087951,1662087951,1,1),
 	 (6618,'java.lang.StringBuffer.insert(int,java.lang.CharSequence)','P2','O','false','false',1662087967,1662087967,1,1),
 	 (6619,'java.lang.StringBuffer.insert(int,java.lang.CharSequence,int,int)','P2','O','false','false',1662087979,1662087979,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6620,'java.lang.StringBuffer.insert(int,char[],int,int)','P2','O','false','false',1662087990,1662087990,1,1),
 	 (6621,'java.lang.StringBuilder.deleteCharAt(int)','O','O','false','false',1662088003,1662088003,1,1),
 	 (6622,'java.lang.StringBuffer.delete(int,int)','O','O','false','false',1662088022,1662088022,1,1),
@@ -911,7 +911,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6627,'java.lang.String.stripTrailing()','O','R','false','false',1662088093,1662088093,1,1),
 	 (6628,'java.lang.String.trim()','O','R','false','false',1662088104,1662088104,1,1),
 	 (6629,'org.springframework.web.util.pattern.PathPattern.getPatternString()','O','R','false','false',1662088131,1662088131,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6630,'java.net.URI.<init>(java.lang.String)','P1','O','false','false',1662091052,1662091052,1,1),
 	 (6631,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','O','false','false',1662091130,1662091130,1,1),
 	 (6632,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)','P1,2,3,4,5','O','false','false',1662091177,1663233069,1,1),
@@ -922,7 +922,7 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6637,'java.net.URL.<init>(java.lang.String,java.lang.String,java.lang.String)','P1,2,3','O','false','false',1662091262,1662091262,1,0),
 	 (6638,'java.net.URL.<init>(java.net.URL,java.lang.String)','P1,2','O','false','false',1662091275,1662091275,1,0),
 	 (6639,'com.mysql.jdbc.ResultSetImpl.next()','O','R','false','false',1663232833,1663232833,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6640,'java.net.URI.<init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)','P1,2,3,5,6,7','O','false','false',1663232957,1663232957,1,1),
 	 (6641,'java.net.URL.<init>(java.net.URL,java.lang.String,java.net.URLStreamHandler)','P1,2','O','false','false',1663233017,1663233017,1,1),
 	 (6642,'org.jruby.runtime.load.LibrarySearcher.isAbsolute(java.lang.String)','P1','R','false','false',1665648149,1665648149,1,1),
@@ -933,11 +933,11 @@ INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time
 	 (6647,'jakarta.servlet.http.HttpServletResponse.setHeader(java.lang.String,java.lang.String)','P2','','true','true',1665648349,1665648373,1,1),
 	 (6648,'jakarta.servlet.http.HttpServletResponse.addHeader(java.lang.String,java.lang.String)','P2','','true','true',1665648364,1665648364,1,1),
 	 (6649,'java.nio.file.FileSystem.getPath(java.lang.String,java.lang.String[])','P1,2','','all','true',1665648422,1665655207,1,1);
-INSERT INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
+INSERT IGNORE INTO iast_hook_strategy (id,value,source,target,inherit,track,create_time,update_time,created_by,enable) VALUES
 	 (6650,'java.nio.file.spi.FileSystemProvider.newFileSystem(java.net.URI,java.util.Map)','P1','','true','true',1665648439,1665648439,1,1),
 	 (6651,'java.nio.file.spi.FileSystemProvider.getFileSystem(java.net.URI)','P1','','true','true',1665648454,1665648459,1,1),
 	 (6652,'java.lang.StringBuffer.replace(int,int,java.lang.String)','P3','O','false','false',1665648527,1665648527,1,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1,1,13),
 	 (2,2,13),
 	 (3,3,13),
@@ -948,7 +948,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (8,8,1),
 	 (9,9,1),
 	 (10,10,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (11,11,1),
 	 (12,12,1),
 	 (13,13,1),
@@ -959,7 +959,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (18,18,1),
 	 (19,19,1),
 	 (20,20,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (21,21,1),
 	 (22,22,1),
 	 (23,23,1),
@@ -970,7 +970,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (28,28,1),
 	 (29,29,2),
 	 (30,30,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (31,31,2),
 	 (32,32,2),
 	 (33,33,2),
@@ -981,7 +981,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (38,38,2),
 	 (39,39,3),
 	 (40,40,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (41,41,3),
 	 (42,42,3),
 	 (43,43,3),
@@ -992,7 +992,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (48,48,3),
 	 (49,49,4),
 	 (50,50,4);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (51,51,4),
 	 (52,52,4),
 	 (53,53,4),
@@ -1003,7 +1003,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (58,58,14),
 	 (59,59,14),
 	 (60,60,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (61,61,14),
 	 (62,62,14),
 	 (63,63,14),
@@ -1014,7 +1014,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (69,68,14),
 	 (70,69,14),
 	 (71,70,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (72,71,14),
 	 (73,72,14),
 	 (74,73,14),
@@ -1025,7 +1025,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (79,78,14),
 	 (80,79,14),
 	 (81,80,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (82,81,15),
 	 (83,82,15),
 	 (84,83,15),
@@ -1036,7 +1036,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (89,88,16),
 	 (90,89,16),
 	 (91,90,16);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (92,91,17),
 	 (93,92,18),
 	 (94,93,18),
@@ -1047,7 +1047,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (99,98,20),
 	 (100,99,20),
 	 (101,100,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (102,101,21),
 	 (103,102,21),
 	 (104,103,21),
@@ -1058,7 +1058,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (109,108,21),
 	 (110,109,21),
 	 (111,110,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (112,111,22),
 	 (113,112,22),
 	 (114,113,22),
@@ -1069,7 +1069,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (119,118,22),
 	 (120,119,22),
 	 (121,120,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (122,121,22),
 	 (123,122,22),
 	 (124,123,22),
@@ -1080,7 +1080,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (129,128,25),
 	 (130,129,25),
 	 (131,130,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (132,131,25),
 	 (133,132,25),
 	 (134,133,25),
@@ -1091,7 +1091,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (139,138,25),
 	 (140,139,25),
 	 (141,140,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (142,141,25),
 	 (143,142,25),
 	 (144,143,25),
@@ -1102,7 +1102,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (149,148,26),
 	 (150,149,26),
 	 (151,150,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (152,151,26),
 	 (153,152,26),
 	 (154,153,26),
@@ -1113,7 +1113,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (159,158,27),
 	 (160,159,27),
 	 (161,160,28);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (162,161,28),
 	 (163,162,29),
 	 (164,163,29),
@@ -1124,7 +1124,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (169,168,30),
 	 (170,169,30),
 	 (171,170,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (172,171,31),
 	 (173,172,31),
 	 (174,173,31),
@@ -1135,7 +1135,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (179,178,33),
 	 (180,179,33),
 	 (181,180,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (182,181,34),
 	 (183,182,35),
 	 (184,183,35),
@@ -1146,7 +1146,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (189,188,37),
 	 (190,189,37),
 	 (191,190,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (192,191,37),
 	 (193,192,37),
 	 (194,193,37),
@@ -1157,7 +1157,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (199,198,38),
 	 (200,199,38),
 	 (201,200,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (202,201,38),
 	 (203,202,38),
 	 (204,203,38),
@@ -1168,7 +1168,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (209,208,39),
 	 (210,209,39),
 	 (211,210,39);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (212,211,40),
 	 (213,212,40),
 	 (214,213,40),
@@ -1179,7 +1179,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (219,218,40),
 	 (220,219,41),
 	 (221,220,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (222,221,41),
 	 (223,222,41),
 	 (224,223,41),
@@ -1190,7 +1190,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (229,228,41),
 	 (230,229,41),
 	 (231,230,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (232,231,41),
 	 (233,232,41),
 	 (234,233,41),
@@ -1201,7 +1201,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (239,238,42),
 	 (240,239,42),
 	 (241,240,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (242,241,42),
 	 (243,242,42),
 	 (244,243,42),
@@ -1212,7 +1212,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (249,248,43),
 	 (250,249,43),
 	 (251,250,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (252,251,43),
 	 (253,252,43),
 	 (254,253,43),
@@ -1223,7 +1223,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (259,258,43),
 	 (260,259,43),
 	 (261,260,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (262,261,43),
 	 (263,262,43),
 	 (264,263,43),
@@ -1234,7 +1234,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (269,268,44),
 	 (270,269,44),
 	 (271,270,44);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (272,271,44),
 	 (273,272,44),
 	 (274,273,45),
@@ -1245,7 +1245,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (279,278,45),
 	 (280,279,45),
 	 (281,280,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (282,281,45),
 	 (283,282,45),
 	 (284,283,45),
@@ -1256,7 +1256,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (289,288,46),
 	 (290,289,46),
 	 (291,290,47);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (292,291,47),
 	 (293,292,47),
 	 (294,293,48),
@@ -1267,7 +1267,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (299,298,49),
 	 (300,299,49),
 	 (301,300,49);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (302,301,49),
 	 (303,302,50),
 	 (304,303,50),
@@ -1278,7 +1278,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (309,308,50),
 	 (310,309,50),
 	 (311,310,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (312,311,50),
 	 (313,312,50),
 	 (314,313,50),
@@ -1289,7 +1289,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (319,318,50),
 	 (320,319,50),
 	 (321,320,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (322,321,50),
 	 (323,322,50),
 	 (324,323,50),
@@ -1300,7 +1300,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (329,328,50),
 	 (330,329,50),
 	 (331,330,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (332,331,50),
 	 (333,332,50),
 	 (334,333,50),
@@ -1311,7 +1311,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (339,338,50),
 	 (340,339,50),
 	 (341,340,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (342,341,51),
 	 (343,342,51),
 	 (344,343,51),
@@ -1322,7 +1322,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (349,348,51),
 	 (350,349,51),
 	 (351,350,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (352,351,51),
 	 (353,352,51),
 	 (354,353,51),
@@ -1333,7 +1333,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (359,358,51),
 	 (360,359,51),
 	 (361,360,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (362,361,51),
 	 (363,362,51),
 	 (364,363,51),
@@ -1344,7 +1344,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (369,368,52),
 	 (370,369,52),
 	 (371,370,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (372,371,52),
 	 (373,372,52),
 	 (374,373,52),
@@ -1355,7 +1355,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (379,378,52),
 	 (380,379,52),
 	 (381,380,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (382,381,52),
 	 (383,382,52),
 	 (384,383,52),
@@ -1366,7 +1366,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (389,388,52),
 	 (390,389,52),
 	 (391,390,53);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (392,391,53),
 	 (393,392,54),
 	 (394,393,54),
@@ -1377,7 +1377,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (399,398,55),
 	 (400,399,55),
 	 (401,400,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (402,401,55),
 	 (403,402,55),
 	 (404,403,55),
@@ -1388,7 +1388,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (409,408,55),
 	 (410,409,56),
 	 (411,410,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (412,411,56),
 	 (413,412,56),
 	 (414,413,56),
@@ -1399,7 +1399,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (419,418,56),
 	 (420,419,56),
 	 (421,420,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (422,421,56),
 	 (423,422,56),
 	 (424,423,56),
@@ -1410,7 +1410,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (429,428,57),
 	 (430,429,58),
 	 (431,430,59);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (432,431,59),
 	 (433,432,60),
 	 (434,433,60),
@@ -1421,7 +1421,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (439,438,60),
 	 (440,439,61),
 	 (441,440,61);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (442,441,61),
 	 (443,442,62),
 	 (444,443,63),
@@ -1432,7 +1432,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (910,448,64),
 	 (911,449,64),
 	 (912,450,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (913,451,64),
 	 (914,452,64),
 	 (915,453,64),
@@ -1443,7 +1443,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (920,458,64),
 	 (921,459,64),
 	 (922,460,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (923,461,64),
 	 (924,462,64),
 	 (925,463,64),
@@ -1454,7 +1454,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (930,468,64),
 	 (931,469,64),
 	 (932,470,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (933,471,64),
 	 (934,472,64),
 	 (935,473,64),
@@ -1465,7 +1465,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (940,478,65),
 	 (941,479,65),
 	 (942,480,65);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (943,481,66),
 	 (944,482,66),
 	 (945,483,66),
@@ -1476,7 +1476,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (952,488,68),
 	 (953,493,69),
 	 (954,495,71);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (955,496,71),
 	 (956,497,71),
 	 (957,498,71),
@@ -1487,7 +1487,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (969,510,33),
 	 (970,511,33),
 	 (971,512,87);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (972,513,88),
 	 (973,514,1),
 	 (974,515,1),
@@ -1498,7 +1498,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (979,520,5),
 	 (980,521,67),
 	 (981,522,67);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (982,523,76),
 	 (983,524,66),
 	 (984,525,66),
@@ -1509,7 +1509,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (989,530,76),
 	 (990,531,76),
 	 (991,532,76);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (992,533,76),
 	 (993,534,67),
 	 (994,535,76),
@@ -1520,7 +1520,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (999,540,76),
 	 (1000,541,95),
 	 (1001,542,97);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1002,543,98),
 	 (1003,544,99),
 	 (1004,545,95),
@@ -1531,7 +1531,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1009,550,101),
 	 (1010,551,101),
 	 (1011,552,101);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1012,553,101),
 	 (1013,554,101),
 	 (1014,555,101),
@@ -1542,7 +1542,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1019,560,38),
 	 (1020,561,102),
 	 (1021,562,102);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1022,563,102),
 	 (1023,564,102),
 	 (1024,565,102),
@@ -1553,7 +1553,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1029,570,103),
 	 (1030,571,103),
 	 (1031,572,104);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1032,573,103),
 	 (1033,574,103),
 	 (1034,575,103),
@@ -1564,7 +1564,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1039,580,17),
 	 (1040,581,16),
 	 (1041,582,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1042,583,41),
 	 (1043,584,103),
 	 (1044,585,103),
@@ -1575,7 +1575,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1049,590,55),
 	 (1050,591,103),
 	 (1051,592,110);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1052,593,112),
 	 (1053,594,44),
 	 (1054,595,104),
@@ -1586,7 +1586,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1059,600,104),
 	 (1060,601,104),
 	 (1061,602,76);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1062,603,44),
 	 (1063,604,104),
 	 (1064,605,104),
@@ -1597,7 +1597,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1069,610,104),
 	 (1070,611,76),
 	 (1071,612,15);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1072,613,38),
 	 (1073,614,38),
 	 (1074,615,38),
@@ -1608,7 +1608,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1079,620,38),
 	 (1080,621,48),
 	 (1081,622,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1082,623,1),
 	 (1083,624,1),
 	 (1084,625,1),
@@ -1619,7 +1619,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1089,630,128),
 	 (1090,631,128),
 	 (1091,632,128);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1092,633,128),
 	 (1093,634,128),
 	 (1094,635,128),
@@ -1630,7 +1630,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1099,640,128),
 	 (1100,641,128),
 	 (1101,642,128);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1102,643,128),
 	 (1103,644,128),
 	 (1104,645,128),
@@ -1641,7 +1641,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1109,650,128),
 	 (1110,651,128),
 	 (1111,652,128);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1112,653,128),
 	 (1113,654,128),
 	 (1114,655,128),
@@ -1652,7 +1652,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1119,660,128),
 	 (1120,661,128),
 	 (1121,662,128);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1122,663,128),
 	 (1123,664,128),
 	 (1124,665,128),
@@ -1663,7 +1663,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1129,670,129),
 	 (1130,671,131),
 	 (1153,694,142);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1158,699,142),
 	 (1161,699,143),
 	 (1159,700,142),
@@ -1674,7 +1674,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1165,705,143),
 	 (1166,706,143),
 	 (1167,707,143);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1168,708,143),
 	 (1169,709,147),
 	 (1170,710,148),
@@ -1685,7 +1685,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1175,715,41),
 	 (1176,716,41),
 	 (1177,717,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1178,718,55),
 	 (1201,741,155),
 	 (1206,746,155),
@@ -1696,7 +1696,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1211,750,156),
 	 (1212,751,156),
 	 (1213,752,156);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1214,753,156),
 	 (1215,754,156),
 	 (1216,755,156),
@@ -1707,7 +1707,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1287,825,350),
 	 (1288,826,350),
 	 (1289,827,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1290,828,350),
 	 (1291,829,350),
 	 (1292,830,350),
@@ -1718,7 +1718,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1297,835,350),
 	 (1298,836,350),
 	 (1299,837,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1300,838,350),
 	 (1301,839,350),
 	 (1302,840,350),
@@ -1729,7 +1729,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1307,845,350),
 	 (1308,846,350),
 	 (1309,847,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1310,848,350),
 	 (1311,849,350),
 	 (1312,850,350),
@@ -1740,7 +1740,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1317,855,224),
 	 (1318,856,223),
 	 (1319,857,223);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1320,858,223),
 	 (1321,859,223),
 	 (1322,860,223),
@@ -1751,7 +1751,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1327,865,161),
 	 (1328,866,161),
 	 (1329,867,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1330,868,161),
 	 (1331,869,161),
 	 (1332,870,161),
@@ -1762,7 +1762,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1337,875,161),
 	 (1338,876,352),
 	 (1339,877,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1340,878,175),
 	 (1341,879,160),
 	 (1342,880,160),
@@ -1773,7 +1773,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1347,885,171),
 	 (1348,886,158),
 	 (1349,887,158);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1350,888,145),
 	 (1351,889,145),
 	 (1352,890,145),
@@ -1784,7 +1784,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1357,895,144),
 	 (1358,896,144),
 	 (1359,897,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1360,898,144),
 	 (1361,899,144),
 	 (1362,900,144),
@@ -1795,7 +1795,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1367,905,144),
 	 (1368,906,144),
 	 (1369,907,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1370,908,145),
 	 (1371,909,144),
 	 (1372,910,352),
@@ -1806,7 +1806,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1377,915,144),
 	 (1378,916,144),
 	 (1379,917,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1380,918,175),
 	 (1381,919,144),
 	 (1382,920,144),
@@ -1817,7 +1817,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1387,925,146),
 	 (1388,926,146),
 	 (1389,927,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1390,928,175),
 	 (1391,929,175),
 	 (1392,930,144),
@@ -1828,7 +1828,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1397,935,144),
 	 (1398,936,144),
 	 (1399,937,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1400,938,144),
 	 (1401,939,144),
 	 (1402,940,144),
@@ -1839,7 +1839,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1407,945,144),
 	 (1408,946,144),
 	 (1409,947,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1410,948,144),
 	 (1411,949,144),
 	 (1412,950,144),
@@ -1850,7 +1850,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1417,955,162),
 	 (1418,956,146),
 	 (1419,957,146);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1420,958,353),
 	 (1421,959,354),
 	 (1422,960,354),
@@ -1861,7 +1861,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1427,965,1),
 	 (1428,966,1),
 	 (1429,967,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1430,968,1),
 	 (1431,969,1),
 	 (1432,970,1),
@@ -1872,7 +1872,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1437,975,1),
 	 (1438,976,1),
 	 (1439,977,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1440,978,1),
 	 (1441,979,1),
 	 (1442,980,1),
@@ -1883,7 +1883,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1447,985,1),
 	 (1448,986,2),
 	 (1449,987,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1450,988,2),
 	 (1451,989,2),
 	 (1452,990,2),
@@ -1894,7 +1894,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1457,995,2),
 	 (1458,996,3),
 	 (1459,997,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1460,998,3),
 	 (1461,999,3),
 	 (1462,1000,3),
@@ -1905,7 +1905,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1467,1005,3),
 	 (1468,1006,4),
 	 (1469,1007,4);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1470,1008,4),
 	 (1471,1009,4),
 	 (1472,1010,4),
@@ -1916,7 +1916,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1477,1015,14),
 	 (1478,1016,14),
 	 (1479,1017,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1480,1018,14),
 	 (1481,1019,14),
 	 (1482,1020,14),
@@ -1927,7 +1927,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1487,1025,14),
 	 (1488,1026,14),
 	 (1489,1027,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1490,1028,14),
 	 (1491,1029,14),
 	 (1492,1030,14),
@@ -1938,7 +1938,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1497,1035,14),
 	 (1498,1036,14),
 	 (1499,1037,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1500,1038,15),
 	 (1501,1039,15),
 	 (1502,1040,15),
@@ -1949,7 +1949,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1507,1045,16),
 	 (1508,1046,16),
 	 (1509,1047,16);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1510,1048,17),
 	 (1511,1049,18),
 	 (1512,1050,18),
@@ -1960,7 +1960,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1517,1055,20),
 	 (1518,1056,20),
 	 (1519,1057,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1520,1058,21),
 	 (1521,1059,21),
 	 (1522,1060,21),
@@ -1971,7 +1971,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1527,1065,21),
 	 (1528,1066,21),
 	 (1529,1067,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1530,1068,22),
 	 (1531,1069,22),
 	 (1532,1070,22),
@@ -1982,7 +1982,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1537,1075,22),
 	 (1538,1076,22),
 	 (1539,1077,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1540,1078,22),
 	 (1541,1079,22),
 	 (1542,1080,22),
@@ -1993,7 +1993,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1547,1085,25),
 	 (1548,1086,25),
 	 (1549,1087,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1550,1088,25),
 	 (1551,1089,25),
 	 (1552,1090,25),
@@ -2004,7 +2004,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1557,1095,25),
 	 (1558,1096,25),
 	 (1559,1097,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1560,1098,25),
 	 (1561,1099,25),
 	 (1562,1100,25),
@@ -2015,7 +2015,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1567,1105,26),
 	 (1568,1106,26),
 	 (1569,1107,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1570,1108,26),
 	 (1571,1109,26),
 	 (1572,1110,26),
@@ -2026,7 +2026,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1577,1115,27),
 	 (1578,1116,27),
 	 (1579,1117,28);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1580,1118,28),
 	 (1581,1119,29),
 	 (1582,1120,29),
@@ -2037,7 +2037,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1587,1125,30),
 	 (1588,1126,30),
 	 (1589,1127,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1590,1128,31),
 	 (1591,1129,31),
 	 (1592,1130,31),
@@ -2048,7 +2048,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1597,1135,33),
 	 (1598,1136,33),
 	 (1599,1137,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1600,1138,34),
 	 (1601,1139,35),
 	 (1602,1140,35),
@@ -2059,7 +2059,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1607,1145,37),
 	 (1608,1146,37),
 	 (1609,1147,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1610,1148,37),
 	 (1611,1149,37),
 	 (1612,1150,37),
@@ -2070,7 +2070,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1617,1155,38),
 	 (1618,1156,38),
 	 (1619,1157,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1620,1158,38),
 	 (1621,1159,38),
 	 (1622,1160,38),
@@ -2081,7 +2081,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1627,1165,39),
 	 (1628,1166,39),
 	 (1629,1167,39);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1630,1168,40),
 	 (1631,1169,40),
 	 (1632,1170,40),
@@ -2092,7 +2092,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1637,1175,40),
 	 (1638,1176,41),
 	 (1639,1177,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1640,1178,41),
 	 (1641,1179,41),
 	 (1642,1180,41),
@@ -2103,7 +2103,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1647,1185,41),
 	 (1648,1186,41),
 	 (1649,1187,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1650,1188,41),
 	 (1651,1189,41),
 	 (1652,1190,41),
@@ -2114,7 +2114,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1657,1195,42),
 	 (1658,1196,42),
 	 (1659,1197,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1660,1198,42),
 	 (1661,1199,42),
 	 (1662,1200,42),
@@ -2125,7 +2125,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1667,1205,43),
 	 (1668,1206,43),
 	 (1669,1207,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1670,1208,43),
 	 (1671,1209,43),
 	 (1672,1210,43),
@@ -2136,7 +2136,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1677,1215,43),
 	 (1678,1216,43),
 	 (1679,1217,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1680,1218,43),
 	 (1681,1219,43),
 	 (1682,1220,43),
@@ -2147,7 +2147,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1687,1225,44),
 	 (1688,1226,44),
 	 (1689,1227,44);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1690,1228,44),
 	 (1691,1229,44),
 	 (1692,1230,45),
@@ -2158,7 +2158,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1697,1235,45),
 	 (1698,1236,45),
 	 (1699,1237,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1700,1238,45),
 	 (1701,1239,45),
 	 (1702,1240,45),
@@ -2169,7 +2169,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1708,1245,46),
 	 (1709,1246,47),
 	 (1710,1247,47);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1711,1248,47),
 	 (1712,1249,48),
 	 (1713,1250,48),
@@ -2180,7 +2180,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1718,1255,49),
 	 (1719,1256,49),
 	 (1720,1257,49);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1721,1258,50),
 	 (1722,1259,50),
 	 (1723,1260,50),
@@ -2191,7 +2191,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1728,1265,50),
 	 (1729,1266,50),
 	 (1730,1267,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1731,1268,50),
 	 (1732,1269,50),
 	 (1733,1270,50),
@@ -2202,7 +2202,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1738,1275,50),
 	 (1739,1276,50),
 	 (1740,1277,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1741,1278,50),
 	 (1742,1279,50),
 	 (1743,1280,50),
@@ -2213,7 +2213,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1748,1285,50),
 	 (1749,1286,50),
 	 (1750,1287,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1751,1288,50),
 	 (1752,1289,50),
 	 (1753,1290,50),
@@ -2224,7 +2224,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1758,1295,50),
 	 (1759,1296,51),
 	 (1760,1297,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1761,1298,51),
 	 (1762,1299,51),
 	 (1763,1300,51),
@@ -2235,7 +2235,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1768,1305,51),
 	 (1769,1306,51),
 	 (1770,1307,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1771,1308,51),
 	 (1772,1309,51),
 	 (1773,1310,51),
@@ -2246,7 +2246,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1778,1315,51),
 	 (1779,1316,51),
 	 (1780,1317,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1781,1318,51),
 	 (1782,1319,51),
 	 (1783,1320,51),
@@ -2257,7 +2257,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1788,1325,52),
 	 (1789,1326,52),
 	 (1790,1327,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1791,1328,52),
 	 (1792,1329,52),
 	 (1793,1330,52),
@@ -2268,7 +2268,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1798,1335,52),
 	 (1799,1336,52),
 	 (1800,1337,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1801,1338,52),
 	 (1802,1339,52),
 	 (1803,1340,52),
@@ -2279,7 +2279,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1808,1345,52),
 	 (1809,1346,53),
 	 (1810,1347,53);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1811,1348,54),
 	 (1812,1349,54),
 	 (1813,1350,55),
@@ -2290,7 +2290,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1818,1355,55),
 	 (1819,1356,55),
 	 (1820,1357,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1821,1358,55),
 	 (1822,1359,55),
 	 (1823,1360,55),
@@ -2301,7 +2301,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1828,1365,56),
 	 (1829,1366,56),
 	 (1830,1367,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1831,1368,56),
 	 (1832,1369,56),
 	 (1833,1370,56),
@@ -2312,7 +2312,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1838,1375,56),
 	 (1839,1376,56),
 	 (1840,1377,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1841,1378,56),
 	 (1842,1379,56),
 	 (1843,1380,56),
@@ -2323,7 +2323,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1848,1385,58),
 	 (1849,1386,59),
 	 (1850,1387,59);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1851,1388,60),
 	 (1852,1389,60),
 	 (1853,1390,60),
@@ -2334,7 +2334,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1858,1395,61),
 	 (1859,1396,61),
 	 (1860,1397,61);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1861,1398,62),
 	 (1862,1399,63),
 	 (1863,1400,64),
@@ -2345,7 +2345,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1868,1405,64),
 	 (1869,1406,64),
 	 (1870,1407,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1871,1408,64),
 	 (1872,1409,64),
 	 (1873,1410,64),
@@ -2356,7 +2356,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1878,1415,64),
 	 (1879,1416,64),
 	 (1880,1417,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1881,1418,64),
 	 (1882,1419,64),
 	 (1883,1420,64),
@@ -2367,7 +2367,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1888,1425,64),
 	 (1889,1426,64),
 	 (1890,1427,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1891,1428,64),
 	 (1892,1429,64),
 	 (1893,1430,65),
@@ -2378,7 +2378,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1898,1435,65),
 	 (1899,1436,65),
 	 (1900,1437,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1901,1438,66),
 	 (1902,1439,66),
 	 (1903,1440,66),
@@ -2389,7 +2389,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1908,1445,71),
 	 (1909,1446,71),
 	 (1910,1447,71);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1911,1448,71),
 	 (1912,1449,76),
 	 (1913,1450,33),
@@ -2400,7 +2400,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1918,1455,1),
 	 (1919,1456,2),
 	 (1920,1457,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1921,1458,1),
 	 (1922,1459,102),
 	 (1923,1460,102),
@@ -2411,7 +2411,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1928,1465,103),
 	 (1929,1466,103),
 	 (1930,1467,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1931,1468,103),
 	 (1932,1469,104),
 	 (1933,1470,103),
@@ -2422,7 +2422,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1938,1475,103),
 	 (1939,1476,103),
 	 (1940,1477,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1941,1478,103),
 	 (1942,1479,127),
 	 (1943,1480,131),
@@ -2433,7 +2433,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1948,1485,1),
 	 (1949,1486,1),
 	 (1950,1487,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1951,1488,55),
 	 (1952,1489,355),
 	 (1953,1490,356),
@@ -2444,7 +2444,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1958,1495,149),
 	 (1959,1496,41),
 	 (1960,1497,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1961,1498,41),
 	 (1962,1499,41),
 	 (1963,1500,55),
@@ -2455,7 +2455,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1968,1505,283),
 	 (1969,1506,283),
 	 (1970,1507,283);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1971,1508,357),
 	 (1972,1509,354),
 	 (1973,1510,354),
@@ -2466,7 +2466,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1978,1515,677),
 	 (1979,1516,144),
 	 (1980,1517,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1981,1518,144),
 	 (1982,1519,144),
 	 (1983,1520,144),
@@ -2477,7 +2477,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1988,1525,167),
 	 (1989,1526,167),
 	 (1990,1527,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1991,1528,167),
 	 (1992,1529,167),
 	 (1993,1530,167),
@@ -2488,7 +2488,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (1998,1535,173),
 	 (1999,1536,173),
 	 (2000,1537,173);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2001,1538,173),
 	 (2002,1539,173),
 	 (2003,1540,173),
@@ -2499,7 +2499,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2008,1545,175),
 	 (2009,1546,175),
 	 (2010,1547,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2011,1548,1),
 	 (2012,1549,1),
 	 (2013,1550,1),
@@ -2510,7 +2510,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2018,1555,1),
 	 (2019,1556,1),
 	 (2020,1557,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2021,1558,1),
 	 (2022,1559,1),
 	 (2023,1560,1),
@@ -2521,7 +2521,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2028,1565,1),
 	 (2029,1566,1),
 	 (2030,1567,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2031,1568,1),
 	 (2032,1569,1),
 	 (2033,1570,1),
@@ -2532,7 +2532,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2038,1575,2),
 	 (2039,1576,2),
 	 (2040,1577,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2041,1578,2),
 	 (2042,1579,2),
 	 (2043,1580,2),
@@ -2543,7 +2543,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2048,1585,3),
 	 (2049,1586,3),
 	 (2050,1587,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2051,1588,3),
 	 (2052,1589,3),
 	 (2053,1590,3),
@@ -2554,7 +2554,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2058,1595,4),
 	 (2059,1596,4),
 	 (2060,1597,5);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2061,1598,14),
 	 (2062,1599,14),
 	 (2063,1600,14),
@@ -2565,7 +2565,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2068,1605,14),
 	 (2069,1606,14),
 	 (2070,1607,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2071,1608,14),
 	 (2072,1609,14),
 	 (2073,1610,14),
@@ -2576,7 +2576,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2078,1615,14),
 	 (2079,1616,14),
 	 (2080,1617,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2081,1618,14),
 	 (2082,1619,14),
 	 (2083,1620,14),
@@ -2587,7 +2587,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2088,1625,15),
 	 (2089,1626,15),
 	 (2090,1627,15);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2091,1628,15),
 	 (2092,1629,16),
 	 (2093,1630,16),
@@ -2598,7 +2598,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2098,1635,18),
 	 (2099,1636,18),
 	 (2100,1637,19);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2101,1638,19),
 	 (2102,1639,20),
 	 (2103,1640,20),
@@ -2609,7 +2609,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2108,1645,21),
 	 (2109,1646,21),
 	 (2110,1647,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2111,1648,21),
 	 (2112,1649,21),
 	 (2113,1650,21),
@@ -2620,7 +2620,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2118,1655,22),
 	 (2119,1656,22),
 	 (2120,1657,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2121,1658,22),
 	 (2122,1659,22),
 	 (2123,1660,22),
@@ -2631,7 +2631,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2128,1665,22),
 	 (2129,1666,22),
 	 (2130,1667,23);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2131,1668,24),
 	 (2132,1669,24),
 	 (2133,1670,25),
@@ -2642,7 +2642,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2138,1675,25),
 	 (2139,1676,25),
 	 (2140,1677,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2141,1678,25),
 	 (2142,1679,25),
 	 (2143,1680,25),
@@ -2653,7 +2653,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2148,1685,25),
 	 (2149,1686,25),
 	 (2150,1687,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2151,1688,25),
 	 (2152,1689,25),
 	 (2153,1690,26),
@@ -2664,7 +2664,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2158,1695,26),
 	 (2159,1696,26),
 	 (2160,1697,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2161,1698,26),
 	 (2162,1699,27),
 	 (2163,1700,27),
@@ -2675,7 +2675,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2168,1705,29),
 	 (2169,1706,29),
 	 (2170,1707,29);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2171,1708,29),
 	 (2172,1709,30),
 	 (2173,1710,30),
@@ -2686,7 +2686,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2178,1715,31),
 	 (2179,1716,31),
 	 (2180,1717,32);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2181,1718,32),
 	 (2182,1719,33),
 	 (2183,1720,33),
@@ -2697,7 +2697,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2188,1725,35),
 	 (2189,1726,35),
 	 (2190,1727,35);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2191,1728,36),
 	 (2192,1729,37),
 	 (2193,1730,37),
@@ -2708,7 +2708,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2198,1735,37),
 	 (2199,1736,37),
 	 (2200,1737,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2201,1738,37),
 	 (2202,1739,37),
 	 (2203,1740,38),
@@ -2719,7 +2719,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2208,1745,38),
 	 (2209,1746,38),
 	 (2210,1747,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2211,1748,38),
 	 (2212,1749,38),
 	 (2213,1750,39),
@@ -2730,7 +2730,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2218,1755,40),
 	 (2219,1756,40),
 	 (2220,1757,40);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2221,1758,40),
 	 (2222,1759,40),
 	 (2223,1760,40),
@@ -2741,7 +2741,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2228,1765,41),
 	 (2229,1766,41),
 	 (2230,1767,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2231,1768,41),
 	 (2232,1769,41),
 	 (2233,1770,41),
@@ -2752,7 +2752,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2238,1775,41),
 	 (2239,1776,41),
 	 (2240,1777,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2241,1778,41),
 	 (2242,1779,41),
 	 (2243,1780,41),
@@ -2763,7 +2763,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2248,1785,42),
 	 (2249,1786,42),
 	 (2250,1787,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2251,1788,43),
 	 (2252,1789,43),
 	 (2253,1790,43),
@@ -2774,7 +2774,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2258,1795,43),
 	 (2259,1796,43),
 	 (2260,1797,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2261,1798,43),
 	 (2262,1799,43),
 	 (2263,1800,43),
@@ -2785,7 +2785,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2268,1805,43),
 	 (2269,1806,43),
 	 (2270,1807,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2271,1808,43),
 	 (2272,1809,44),
 	 (2273,1810,44),
@@ -2796,7 +2796,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2278,1815,44),
 	 (2279,1816,45),
 	 (2280,1817,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2281,1818,45),
 	 (2282,1819,45),
 	 (2283,1820,45),
@@ -2807,7 +2807,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2288,1825,45),
 	 (2289,1826,45),
 	 (2290,1827,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2292,1828,45),
 	 (2293,1829,46),
 	 (2294,1830,46),
@@ -2818,7 +2818,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2299,1835,48),
 	 (2300,1836,48),
 	 (2301,1837,48);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2302,1838,48),
 	 (2303,1839,49),
 	 (2304,1840,49),
@@ -2829,7 +2829,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2309,1845,50),
 	 (2310,1846,50),
 	 (2311,1847,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2312,1848,50),
 	 (2313,1849,50),
 	 (2314,1850,50),
@@ -2840,7 +2840,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2319,1855,50),
 	 (2320,1856,50),
 	 (2321,1857,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2322,1858,50),
 	 (2323,1859,50),
 	 (2324,1860,50),
@@ -2851,7 +2851,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2329,1865,50),
 	 (2330,1866,50),
 	 (2331,1867,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2332,1868,50),
 	 (2333,1869,50),
 	 (2334,1870,50),
@@ -2862,7 +2862,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2339,1875,50),
 	 (2340,1876,50),
 	 (2341,1877,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2342,1878,50),
 	 (2343,1879,50),
 	 (2344,1880,50),
@@ -2873,7 +2873,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2349,1885,51),
 	 (2350,1886,51),
 	 (2351,1887,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2352,1888,51),
 	 (2353,1889,51),
 	 (2354,1890,51),
@@ -2884,7 +2884,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2359,1895,51),
 	 (2360,1896,51),
 	 (2361,1897,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2362,1898,51),
 	 (2363,1899,51),
 	 (2364,1900,51),
@@ -2895,7 +2895,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2369,1905,51),
 	 (2370,1906,51),
 	 (2371,1907,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2372,1908,51),
 	 (2373,1909,51),
 	 (2374,1910,52),
@@ -2906,7 +2906,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2379,1915,52),
 	 (2380,1916,52),
 	 (2381,1917,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2382,1918,52),
 	 (2383,1919,52),
 	 (2384,1920,52),
@@ -2917,7 +2917,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2389,1925,52),
 	 (2390,1926,52),
 	 (2391,1927,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2392,1928,52),
 	 (2393,1929,52),
 	 (2394,1930,52),
@@ -2928,7 +2928,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2399,1935,54),
 	 (2400,1936,55),
 	 (2401,1937,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2402,1938,55),
 	 (2403,1939,55),
 	 (2404,1940,55),
@@ -2939,7 +2939,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2409,1945,55),
 	 (2410,1946,55),
 	 (2411,1947,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2412,1948,55),
 	 (2413,1949,55),
 	 (2414,1950,55),
@@ -2950,7 +2950,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2419,1955,56),
 	 (2420,1956,56),
 	 (2421,1957,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2422,1958,56),
 	 (2423,1959,56),
 	 (2424,1960,56),
@@ -2961,7 +2961,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2429,1965,56),
 	 (2430,1966,56),
 	 (2431,1967,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2432,1968,56),
 	 (2433,1969,56),
 	 (2434,1970,57),
@@ -2972,7 +2972,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2439,1975,60),
 	 (2440,1976,60),
 	 (2441,1977,60);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2442,1978,60),
 	 (2443,1979,60),
 	 (2444,1980,60),
@@ -2983,7 +2983,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2449,1985,63),
 	 (2450,1986,64),
 	 (2451,1987,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2452,1988,64),
 	 (2453,1989,64),
 	 (2454,1990,64),
@@ -2994,7 +2994,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2459,1995,64),
 	 (2460,1996,64),
 	 (2461,1997,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2462,1998,64),
 	 (2463,1999,64),
 	 (2464,2000,64),
@@ -3005,7 +3005,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2469,2005,64),
 	 (2470,2006,64),
 	 (2471,2007,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2472,2008,64),
 	 (2473,2009,64),
 	 (2474,2010,64),
@@ -3016,7 +3016,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2479,2015,64),
 	 (2480,2016,65),
 	 (2481,2017,65);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2482,2018,65),
 	 (2483,2019,65),
 	 (2484,2020,65),
@@ -3027,7 +3027,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2489,2025,66),
 	 (2490,2026,66),
 	 (2491,2027,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2492,2028,66),
 	 (2493,2029,67),
 	 (2494,2030,68),
@@ -3038,7 +3038,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2499,2035,76),
 	 (2500,2036,33),
 	 (2501,2037,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2502,2038,33),
 	 (2503,2039,1),
 	 (2504,2040,1),
@@ -3049,7 +3049,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2509,2045,102),
 	 (2510,2046,102),
 	 (2511,2047,102);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2512,2048,102),
 	 (2513,2049,102),
 	 (2514,2050,102),
@@ -3060,7 +3060,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2519,2055,104),
 	 (2520,2056,103),
 	 (2521,2057,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2522,2058,103),
 	 (2523,2059,103),
 	 (2524,2060,103),
@@ -3071,7 +3071,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2529,2065,127),
 	 (2530,2066,131),
 	 (2531,2067,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2532,2068,41),
 	 (2533,2069,41),
 	 (2534,2070,41),
@@ -3082,7 +3082,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2539,2075,355),
 	 (2540,2076,356),
 	 (2541,2077,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2542,2078,147),
 	 (2543,2079,148),
 	 (2544,2080,148),
@@ -3093,7 +3093,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2549,2085,41),
 	 (2550,2086,55),
 	 (2551,2087,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2552,2088,1),
 	 (2553,2089,38),
 	 (2554,2090,38),
@@ -3104,7 +3104,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2559,2095,679),
 	 (2560,2096,224),
 	 (2561,2097,357);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2562,2098,350),
 	 (2563,2099,350),
 	 (2564,2100,350),
@@ -3115,7 +3115,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2569,2105,350),
 	 (2570,2106,350),
 	 (2571,2107,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2572,2108,350),
 	 (2573,2109,350),
 	 (2574,2110,350),
@@ -3126,7 +3126,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2579,2115,350),
 	 (2580,2116,350),
 	 (2581,2117,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2582,2118,350),
 	 (2583,2119,350),
 	 (2584,2120,350),
@@ -3137,7 +3137,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2589,2125,350),
 	 (2590,2126,350),
 	 (2591,2127,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2592,2128,224),
 	 (2593,2129,224),
 	 (2594,2130,223),
@@ -3148,7 +3148,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2599,2135,223),
 	 (2600,2136,223),
 	 (2601,2137,351);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2602,2138,164),
 	 (2603,2139,161),
 	 (2604,2140,161),
@@ -3159,7 +3159,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2609,2145,161),
 	 (2610,2146,161),
 	 (2611,2147,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2612,2148,161),
 	 (2613,2149,161),
 	 (2614,2150,680),
@@ -3170,7 +3170,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2619,2155,160),
 	 (2620,2156,170),
 	 (2621,2157,170);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2622,2158,171),
 	 (2623,2159,171),
 	 (2624,2160,158),
@@ -3181,7 +3181,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2629,2165,145),
 	 (2630,2166,145),
 	 (2631,2167,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2632,2168,145),
 	 (2633,2169,144),
 	 (2634,2170,144),
@@ -3192,7 +3192,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2639,2175,144),
 	 (2640,2176,144),
 	 (2641,2177,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2642,2178,144),
 	 (2643,2179,144),
 	 (2644,2180,144),
@@ -3203,7 +3203,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2649,2185,144),
 	 (2650,2186,144),
 	 (2651,2187,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2652,2188,144),
 	 (2653,2189,144),
 	 (2654,2190,144),
@@ -3214,7 +3214,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2659,2195,144),
 	 (2660,2196,144),
 	 (2661,2197,146);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2662,2198,146),
 	 (2663,2199,146),
 	 (2664,2200,146),
@@ -3225,7 +3225,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2669,2205,144),
 	 (2670,2206,144),
 	 (2671,2207,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2672,2208,144),
 	 (2673,2209,144),
 	 (2674,2210,144),
@@ -3236,7 +3236,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2679,2215,144),
 	 (2680,2216,144),
 	 (2681,2217,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2682,2218,144),
 	 (2683,2219,144),
 	 (2684,2220,144),
@@ -3247,7 +3247,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2689,2225,144),
 	 (2690,2226,144),
 	 (2691,2227,177);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2692,2228,162),
 	 (2693,2229,162),
 	 (2694,2230,146),
@@ -3258,7 +3258,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2699,2235,2),
 	 (2700,2236,358),
 	 (2701,2237,681);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2702,2238,52),
 	 (2703,2239,353),
 	 (2704,2240,353),
@@ -3269,7 +3269,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2741,2245,353),
 	 (2742,2246,353),
 	 (2743,2247,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2744,2248,353),
 	 (2745,2249,353),
 	 (2746,2250,353),
@@ -3280,7 +3280,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2751,2255,366),
 	 (2752,2256,351),
 	 (2753,2257,351);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2754,2258,351),
 	 (2755,2259,351),
 	 (2756,2260,351),
@@ -3291,7 +3291,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2761,2265,353),
 	 (2764,2265,677),
 	 (2762,2266,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2763,2267,353),
 	 (2765,2268,677),
 	 (2766,2269,144),
@@ -3302,7 +3302,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2771,2274,167),
 	 (2772,2275,167),
 	 (2773,2276,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2774,2277,167),
 	 (2775,2278,167),
 	 (2776,2279,167),
@@ -3313,7 +3313,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2781,2284,167),
 	 (2782,2285,167),
 	 (2783,2286,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2784,2287,173),
 	 (2785,2288,173),
 	 (2786,2289,173),
@@ -3324,7 +3324,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2791,2294,173),
 	 (2792,2295,146),
 	 (2793,2296,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2794,2297,175),
 	 (2795,2298,175),
 	 (2796,2299,353),
@@ -3335,7 +3335,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2801,2304,353),
 	 (2802,2305,353),
 	 (2803,2306,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2804,2307,1),
 	 (2805,2308,1),
 	 (2806,2309,1),
@@ -3346,7 +3346,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2811,2314,1),
 	 (2812,2315,1),
 	 (2813,2316,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2814,2317,1),
 	 (2815,2318,1),
 	 (2816,2319,1),
@@ -3357,7 +3357,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2821,2324,1),
 	 (2822,2325,1),
 	 (2823,2326,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2824,2327,1),
 	 (2825,2328,1),
 	 (2826,2329,1),
@@ -3368,7 +3368,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2831,2334,2),
 	 (2832,2335,2),
 	 (2833,2336,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2834,2337,2),
 	 (2835,2338,2),
 	 (2836,2339,2),
@@ -3379,7 +3379,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2841,2344,3),
 	 (2842,2345,3),
 	 (2843,2346,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2844,2347,3),
 	 (2845,2348,3),
 	 (2846,2349,3),
@@ -3390,7 +3390,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2851,2354,4),
 	 (2852,2355,4),
 	 (2853,2356,4);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2854,2357,5),
 	 (2855,2358,14),
 	 (2856,2359,14),
@@ -3401,7 +3401,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2861,2364,14),
 	 (2862,2365,14),
 	 (2863,2366,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2864,2367,14),
 	 (2865,2368,14),
 	 (2866,2369,14),
@@ -3412,7 +3412,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2871,2374,14),
 	 (2872,2375,14),
 	 (2873,2376,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2874,2377,14),
 	 (2875,2378,14),
 	 (2876,2379,14),
@@ -3423,7 +3423,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2881,2384,15),
 	 (2882,2385,15),
 	 (2883,2386,15);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2884,2387,15),
 	 (2885,2388,15),
 	 (2886,2389,16),
@@ -3434,7 +3434,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2891,2394,17),
 	 (2892,2395,18),
 	 (2893,2396,18);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2894,2397,19),
 	 (2895,2398,19),
 	 (2896,2399,20),
@@ -3445,7 +3445,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2901,2404,21),
 	 (2902,2405,21),
 	 (2903,2406,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2904,2407,21),
 	 (2905,2408,21),
 	 (2906,2409,21),
@@ -3456,7 +3456,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2911,2414,22),
 	 (2912,2415,22),
 	 (2913,2416,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2914,2417,22),
 	 (2915,2418,22),
 	 (2916,2419,22),
@@ -3467,7 +3467,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2921,2424,22),
 	 (2922,2425,22),
 	 (2923,2426,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2924,2427,23),
 	 (2925,2428,24),
 	 (2926,2429,24),
@@ -3478,7 +3478,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2931,2434,25),
 	 (2932,2435,25),
 	 (2933,2436,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2934,2437,25),
 	 (2935,2438,25),
 	 (2936,2439,25),
@@ -3489,7 +3489,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2941,2444,25),
 	 (2942,2445,25),
 	 (2943,2446,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2944,2447,25),
 	 (2945,2448,25),
 	 (2946,2449,25),
@@ -3500,7 +3500,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2951,2454,26),
 	 (2952,2455,26),
 	 (2953,2456,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2954,2457,26),
 	 (2955,2458,26),
 	 (2956,2459,27),
@@ -3511,7 +3511,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2961,2464,28),
 	 (2962,2465,29),
 	 (2963,2466,29);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2964,2467,29),
 	 (2965,2468,29),
 	 (2966,2469,30),
@@ -3522,7 +3522,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2971,2474,31),
 	 (2972,2475,31),
 	 (2973,2476,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2974,2477,32),
 	 (2975,2478,32),
 	 (2976,2479,33),
@@ -3533,7 +3533,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2981,2484,34),
 	 (2982,2485,35),
 	 (2983,2486,35);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2984,2487,35),
 	 (2985,2488,36),
 	 (2986,2489,37),
@@ -3544,7 +3544,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2991,2494,37),
 	 (2992,2495,37),
 	 (2993,2496,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (2994,2497,37),
 	 (2995,2498,37),
 	 (2996,2499,37),
@@ -3555,7 +3555,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3001,2504,38),
 	 (3002,2505,38),
 	 (3003,2506,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3004,2507,38),
 	 (3005,2508,38),
 	 (3006,2509,38),
@@ -3566,7 +3566,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3011,2514,40),
 	 (3012,2515,40),
 	 (3013,2516,40);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3014,2517,40),
 	 (3015,2518,40),
 	 (3016,2519,40),
@@ -3577,7 +3577,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3021,2524,41),
 	 (3022,2525,41),
 	 (3023,2526,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3024,2527,41),
 	 (3025,2528,41),
 	 (3026,2529,41),
@@ -3588,7 +3588,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3031,2534,41),
 	 (3032,2535,41),
 	 (3033,2536,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3034,2537,41),
 	 (3035,2538,41),
 	 (3036,2539,41),
@@ -3599,7 +3599,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3041,2544,42),
 	 (3042,2545,42),
 	 (3043,2546,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3044,2547,43),
 	 (3045,2548,43),
 	 (3046,2549,43),
@@ -3610,7 +3610,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3051,2554,43),
 	 (3052,2555,43),
 	 (3053,2556,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3054,2557,43),
 	 (3055,2558,43),
 	 (3056,2559,43),
@@ -3621,7 +3621,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3061,2564,43),
 	 (3062,2565,43),
 	 (3063,2566,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3064,2567,43),
 	 (3065,2568,43),
 	 (3066,2569,44),
@@ -3632,7 +3632,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3071,2574,44),
 	 (3072,2575,44),
 	 (3073,2576,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3074,2577,45),
 	 (3075,2578,45),
 	 (3076,2579,45),
@@ -3643,7 +3643,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3081,2584,45),
 	 (3082,2585,45),
 	 (3083,2586,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3084,2587,45),
 	 (3085,2588,45),
 	 (3086,2589,46),
@@ -3654,7 +3654,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3091,2594,47),
 	 (3092,2595,48),
 	 (3093,2596,48);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3094,2597,48),
 	 (3095,2598,48),
 	 (3096,2599,49),
@@ -3665,7 +3665,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3101,2604,50),
 	 (3102,2605,50),
 	 (3103,2606,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3104,2607,50),
 	 (3105,2608,50),
 	 (3106,2609,50),
@@ -3676,7 +3676,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3111,2614,50),
 	 (3112,2615,50),
 	 (3113,2616,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3114,2617,50),
 	 (3115,2618,50),
 	 (3116,2619,50),
@@ -3687,7 +3687,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3121,2624,50),
 	 (3122,2625,50),
 	 (3123,2626,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3124,2627,50),
 	 (3125,2628,50),
 	 (3126,2629,50),
@@ -3698,7 +3698,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3131,2634,50),
 	 (3132,2635,50),
 	 (3133,2636,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3134,2637,50),
 	 (3135,2638,50),
 	 (3136,2639,50),
@@ -3709,7 +3709,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3141,2644,51),
 	 (3142,2645,51),
 	 (3143,2646,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3144,2647,51),
 	 (3145,2648,51),
 	 (3146,2649,51),
@@ -3720,7 +3720,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3151,2654,51),
 	 (3152,2655,51),
 	 (3153,2656,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3154,2657,51),
 	 (3155,2658,51),
 	 (3156,2659,51),
@@ -3731,7 +3731,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3161,2664,51),
 	 (3162,2665,51),
 	 (3163,2666,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3164,2667,51),
 	 (3165,2668,51),
 	 (3166,2669,51),
@@ -3742,7 +3742,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3171,2674,52),
 	 (3172,2675,52),
 	 (3173,2676,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3174,2677,52),
 	 (3175,2678,52),
 	 (3176,2679,52),
@@ -3753,7 +3753,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3181,2684,52),
 	 (3182,2685,52),
 	 (3183,2686,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3184,2687,52),
 	 (3185,2688,52),
 	 (3186,2689,52),
@@ -3764,7 +3764,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3191,2694,54),
 	 (3192,2695,54),
 	 (3193,2696,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3194,2697,55),
 	 (3195,2698,55),
 	 (3196,2699,55),
@@ -3775,7 +3775,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3201,2704,55),
 	 (3202,2705,55),
 	 (3203,2706,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3204,2707,55),
 	 (3205,2708,55),
 	 (3206,2709,55),
@@ -3786,7 +3786,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3211,2714,56),
 	 (3212,2715,56),
 	 (3213,2716,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3214,2717,56),
 	 (3215,2718,56),
 	 (3216,2719,56),
@@ -3797,7 +3797,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3221,2724,56),
 	 (3222,2725,56),
 	 (3223,2726,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3224,2727,56),
 	 (3225,2728,56),
 	 (3226,2729,56),
@@ -3808,7 +3808,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3231,2734,60),
 	 (3232,2735,60),
 	 (3233,2736,60);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3234,2737,60),
 	 (3235,2738,60),
 	 (3236,2739,60),
@@ -3819,7 +3819,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3241,2744,62),
 	 (3242,2745,63),
 	 (3243,2746,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3244,2747,64),
 	 (3245,2748,64),
 	 (3246,2749,64),
@@ -3830,7 +3830,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3251,2754,64),
 	 (3252,2755,64),
 	 (3253,2756,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3254,2757,64),
 	 (3255,2758,64),
 	 (3256,2759,64),
@@ -3841,7 +3841,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3261,2764,64),
 	 (3262,2765,64),
 	 (3263,2766,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3264,2767,64),
 	 (3265,2768,64),
 	 (3266,2769,64),
@@ -3852,7 +3852,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3271,2774,64),
 	 (3272,2775,64),
 	 (3273,2776,65);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3274,2777,65),
 	 (3275,2778,65),
 	 (3276,2779,65),
@@ -3863,7 +3863,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3281,2784,66),
 	 (3282,2785,66),
 	 (3283,2786,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3284,2787,66),
 	 (3285,2788,66),
 	 (3286,2789,67),
@@ -3874,7 +3874,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3291,2794,71),
 	 (3292,2795,76),
 	 (3293,2796,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3294,2797,33),
 	 (3295,2798,33),
 	 (3296,2799,1),
@@ -3885,7 +3885,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3301,2804,1),
 	 (3302,2805,102),
 	 (3303,2806,102);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3304,2807,102),
 	 (3305,2808,102),
 	 (3306,2809,102),
@@ -3896,7 +3896,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3311,2814,103),
 	 (3312,2815,104),
 	 (3313,2816,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3314,2817,103),
 	 (3315,2818,103),
 	 (3316,2819,103),
@@ -3907,7 +3907,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3321,2824,103),
 	 (3322,2825,127),
 	 (3323,2826,131);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3338,2826,149),
 	 (3324,2827,41),
 	 (3325,2828,41),
@@ -3918,7 +3918,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3329,2832,1),
 	 (3330,2833,2),
 	 (3331,2834,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3332,2835,355),
 	 (3333,2836,147),
 	 (3334,2837,55),
@@ -3929,7 +3929,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3349,2842,283),
 	 (3350,2843,283),
 	 (3351,2844,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3352,2845,224),
 	 (3353,2846,357),
 	 (3355,2847,350),
@@ -3940,7 +3940,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3360,2852,350),
 	 (3361,2853,350),
 	 (3362,2854,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3363,2855,350),
 	 (3364,2856,350),
 	 (3365,2857,350),
@@ -3951,7 +3951,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3370,2862,350),
 	 (3371,2863,350),
 	 (3372,2864,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3373,2865,350),
 	 (3374,2866,350),
 	 (3375,2867,350),
@@ -3962,7 +3962,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3380,2872,350),
 	 (3381,2873,350),
 	 (3382,2874,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3383,2875,350),
 	 (3385,2876,224),
 	 (3386,2877,223),
@@ -3973,7 +3973,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3391,2882,223),
 	 (3392,2883,223),
 	 (3393,2884,351);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3394,2885,164),
 	 (3395,2886,161),
 	 (3396,2887,161),
@@ -3984,7 +3984,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3401,2892,161),
 	 (3402,2893,161),
 	 (3403,2894,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3404,2895,161),
 	 (3405,2896,161),
 	 (3406,2897,680),
@@ -3995,7 +3995,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3411,2902,160),
 	 (3412,2903,170),
 	 (3413,2904,170);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3414,2905,171),
 	 (3415,2906,171),
 	 (3416,2907,158),
@@ -4006,7 +4006,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3421,2912,145),
 	 (3422,2913,145),
 	 (3423,2914,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3424,2915,145),
 	 (3425,2916,144),
 	 (3426,2917,144),
@@ -4017,7 +4017,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3431,2922,144),
 	 (3432,2923,144),
 	 (3433,2924,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3434,2925,144),
 	 (3435,2926,144),
 	 (3436,2927,144),
@@ -4028,7 +4028,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3441,2932,144),
 	 (3442,2933,144),
 	 (3443,2934,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3444,2935,144),
 	 (3445,2936,144),
 	 (3446,2937,144),
@@ -4039,7 +4039,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3451,2942,144),
 	 (3452,2943,144),
 	 (3453,2944,146);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3454,2945,146),
 	 (3455,2946,146),
 	 (3456,2947,146),
@@ -4050,7 +4050,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3461,2952,144),
 	 (3462,2953,144),
 	 (3463,2954,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3464,2955,144),
 	 (3465,2956,144),
 	 (3466,2957,144),
@@ -4061,7 +4061,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3471,2962,144),
 	 (3472,2963,144),
 	 (3473,2964,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3474,2965,144),
 	 (3475,2966,144),
 	 (3476,2967,144),
@@ -4072,7 +4072,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3481,2972,144),
 	 (3482,2973,144),
 	 (3483,2974,177);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3484,2975,162),
 	 (3485,2976,162),
 	 (3486,2977,146),
@@ -4083,7 +4083,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3491,2982,2),
 	 (3492,2983,358),
 	 (3493,2984,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3494,2985,682),
 	 (3495,2986,683),
 	 (3496,2987,684),
@@ -4094,7 +4094,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3501,2992,686),
 	 (3502,2993,678),
 	 (3503,2994,372);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3504,2995,360),
 	 (3505,2996,362),
 	 (3506,2997,366),
@@ -4105,7 +4105,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3511,3002,351),
 	 (3512,3003,351),
 	 (3513,3004,351);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3514,3005,681),
 	 (3515,3006,52),
 	 (3516,3007,353),
@@ -4116,7 +4116,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3521,3011,144),
 	 (3522,3012,144),
 	 (3523,3013,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3524,3014,144),
 	 (3525,3015,167),
 	 (3526,3016,167),
@@ -4127,7 +4127,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3531,3021,167),
 	 (3532,3022,167),
 	 (3533,3023,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3534,3024,167),
 	 (3535,3025,167),
 	 (3536,3026,167),
@@ -4138,7 +4138,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3541,3031,173),
 	 (3542,3032,173),
 	 (3543,3033,173);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3544,3034,173),
 	 (3545,3035,173),
 	 (3546,3036,173),
@@ -4149,7 +4149,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3551,3041,353),
 	 (3552,3042,353),
 	 (3553,3043,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3554,3044,353),
 	 (3555,3045,353),
 	 (3556,3046,353),
@@ -4160,7 +4160,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3561,3051,1),
 	 (3562,3052,1),
 	 (3563,3053,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3564,3054,1),
 	 (3565,3055,1),
 	 (3566,3056,1),
@@ -4171,7 +4171,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3571,3061,1),
 	 (3572,3062,1),
 	 (3573,3063,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3574,3064,1),
 	 (3575,3065,1),
 	 (3576,3066,1),
@@ -4182,7 +4182,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3581,3071,1),
 	 (3582,3072,1),
 	 (3583,3073,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3584,3074,2),
 	 (3585,3075,2),
 	 (3586,3076,2),
@@ -4193,7 +4193,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3591,3081,2),
 	 (3592,3082,2),
 	 (3593,3083,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3594,3084,3),
 	 (3595,3085,3),
 	 (3596,3086,3),
@@ -4204,7 +4204,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3601,3091,3),
 	 (3602,3092,3),
 	 (3603,3093,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3604,3094,4),
 	 (3605,3095,4),
 	 (3606,3096,4),
@@ -4215,7 +4215,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3611,3101,14),
 	 (3612,3102,14),
 	 (3613,3103,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3614,3104,14),
 	 (3615,3105,14),
 	 (3616,3106,14),
@@ -4226,7 +4226,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3621,3111,14),
 	 (3622,3112,14),
 	 (3623,3113,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3624,3114,14),
 	 (3625,3115,14),
 	 (3626,3116,14),
@@ -4237,7 +4237,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3631,3121,14),
 	 (3632,3122,14),
 	 (3633,3123,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3634,3124,14),
 	 (3635,3125,14),
 	 (3636,3126,15),
@@ -4248,7 +4248,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3641,3131,16),
 	 (3642,3132,16),
 	 (3643,3133,16);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3644,3134,16),
 	 (3645,3135,16),
 	 (3646,3136,17),
@@ -4259,7 +4259,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3651,3141,20),
 	 (3652,3142,20),
 	 (3653,3143,20);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3654,3144,20),
 	 (3655,3145,21),
 	 (3656,3146,21),
@@ -4270,7 +4270,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3661,3151,21),
 	 (3662,3152,21),
 	 (3663,3153,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3664,3154,21),
 	 (3665,3155,21),
 	 (3666,3156,22),
@@ -4281,7 +4281,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3671,3161,22),
 	 (3672,3162,22),
 	 (3673,3163,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3674,3164,22),
 	 (3675,3165,22),
 	 (3676,3166,22),
@@ -4292,7 +4292,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3681,3171,24),
 	 (3682,3172,25),
 	 (3683,3173,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3684,3174,25),
 	 (3685,3175,25),
 	 (3686,3176,25),
@@ -4303,7 +4303,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3691,3181,25),
 	 (3692,3182,25),
 	 (3693,3183,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3694,3184,25),
 	 (3695,3185,25),
 	 (3696,3186,25),
@@ -4314,7 +4314,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3701,3191,25),
 	 (3702,3192,26),
 	 (3703,3193,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3704,3194,26),
 	 (3705,3195,26),
 	 (3706,3196,26),
@@ -4325,7 +4325,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3711,3201,27),
 	 (3712,3202,27),
 	 (3713,3203,27);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3714,3204,27),
 	 (3715,3205,28),
 	 (3716,3206,28),
@@ -4336,7 +4336,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3721,3211,30),
 	 (3722,3212,30),
 	 (3723,3213,30);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3724,3214,30),
 	 (3725,3215,31),
 	 (3726,3216,31),
@@ -4347,7 +4347,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3731,3221,33),
 	 (3732,3222,33),
 	 (3733,3223,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3734,3224,33),
 	 (3735,3225,33),
 	 (3736,3226,34),
@@ -4358,7 +4358,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3741,3231,37),
 	 (3742,3232,37),
 	 (3743,3233,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3744,3234,37),
 	 (3745,3235,37),
 	 (3746,3236,37),
@@ -4369,7 +4369,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3751,3241,37),
 	 (3752,3242,38),
 	 (3753,3243,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3754,3244,38),
 	 (3755,3245,38),
 	 (3756,3246,38),
@@ -4380,7 +4380,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3761,3251,38),
 	 (3762,3252,39),
 	 (3763,3253,39);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3764,3254,39),
 	 (3765,3255,39),
 	 (3766,3256,40),
@@ -4391,7 +4391,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3771,3261,40),
 	 (3772,3262,40),
 	 (3773,3263,40);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3774,3264,41),
 	 (3775,3265,41),
 	 (3776,3266,41),
@@ -4402,7 +4402,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3781,3271,41),
 	 (3782,3272,41),
 	 (3783,3273,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3784,3274,41),
 	 (3785,3275,41),
 	 (3786,3276,41),
@@ -4413,7 +4413,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3791,3281,41),
 	 (3792,3282,41),
 	 (3793,3283,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3794,3284,42),
 	 (3795,3285,42),
 	 (3796,3286,42),
@@ -4424,7 +4424,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3801,3291,43),
 	 (3802,3292,43),
 	 (3803,3293,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3804,3294,43),
 	 (3805,3295,43),
 	 (3806,3296,43),
@@ -4435,7 +4435,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3811,3301,43),
 	 (3812,3302,43),
 	 (3813,3303,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3814,3304,43),
 	 (3815,3305,43),
 	 (3816,3306,43),
@@ -4446,7 +4446,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3821,3311,44),
 	 (3822,3312,44),
 	 (3823,3313,44);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3824,3314,44),
 	 (3825,3315,44),
 	 (3826,3316,44),
@@ -4457,7 +4457,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3831,3321,45),
 	 (3832,3322,45),
 	 (3833,3323,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3834,3324,45),
 	 (3835,3325,45),
 	 (3836,3326,45),
@@ -4468,7 +4468,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3841,3331,46),
 	 (3842,3332,46),
 	 (3843,3333,46);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3844,3334,47),
 	 (3845,3335,47),
 	 (3846,3336,47),
@@ -4479,7 +4479,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3851,3341,49),
 	 (3852,3342,49),
 	 (3853,3343,49);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3854,3344,49),
 	 (3855,3345,49),
 	 (3856,3346,50),
@@ -4490,7 +4490,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3861,3351,50),
 	 (3862,3352,50),
 	 (3863,3353,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3864,3354,50),
 	 (3865,3355,50),
 	 (3866,3356,50),
@@ -4501,7 +4501,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3871,3361,50),
 	 (3872,3362,50),
 	 (3873,3363,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3874,3364,50),
 	 (3875,3365,50),
 	 (3876,3366,50),
@@ -4512,7 +4512,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3881,3371,50),
 	 (3882,3372,50),
 	 (3883,3373,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3884,3374,50),
 	 (3885,3375,50),
 	 (3886,3376,50),
@@ -4523,7 +4523,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3891,3381,50),
 	 (3892,3382,50),
 	 (3893,3383,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3894,3384,51),
 	 (3895,3385,51),
 	 (3896,3386,51),
@@ -4534,7 +4534,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3901,3391,51),
 	 (3902,3392,51),
 	 (3903,3393,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3904,3394,51),
 	 (3905,3395,51),
 	 (3906,3396,51),
@@ -4545,7 +4545,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3911,3401,51),
 	 (3912,3402,51),
 	 (3913,3403,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3914,3404,51),
 	 (3915,3405,51),
 	 (3916,3406,51),
@@ -4556,7 +4556,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3921,3411,51),
 	 (3922,3412,52),
 	 (3923,3413,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3924,3414,52),
 	 (3925,3415,52),
 	 (3926,3416,52),
@@ -4567,7 +4567,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3931,3421,52),
 	 (3932,3422,52),
 	 (3933,3423,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3934,3424,52),
 	 (3935,3425,52),
 	 (3936,3426,52),
@@ -4578,7 +4578,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3941,3431,52),
 	 (3942,3432,52),
 	 (3943,3433,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3944,3434,53),
 	 (3945,3435,53),
 	 (3946,3436,54),
@@ -4589,7 +4589,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3951,3441,55),
 	 (3952,3442,55),
 	 (3953,3443,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3954,3444,55),
 	 (3955,3445,55),
 	 (3956,3446,55),
@@ -4600,7 +4600,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3961,3451,55),
 	 (3962,3452,55),
 	 (3963,3453,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3964,3454,56),
 	 (3965,3455,56),
 	 (3966,3456,56),
@@ -4611,7 +4611,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3971,3461,56),
 	 (3972,3462,56),
 	 (3973,3463,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3974,3464,56),
 	 (3975,3465,56),
 	 (3976,3466,56),
@@ -4622,7 +4622,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3981,3471,56),
 	 (3982,3472,57),
 	 (3983,3473,58);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3984,3474,59),
 	 (3985,3475,59),
 	 (3986,3476,60),
@@ -4633,7 +4633,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3991,3481,60),
 	 (3992,3482,60),
 	 (3993,3483,61);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (3994,3484,61),
 	 (3995,3485,61),
 	 (3996,3486,62),
@@ -4644,7 +4644,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4001,3491,64),
 	 (4002,3492,64),
 	 (4003,3493,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4004,3494,64),
 	 (4005,3495,64),
 	 (4006,3496,64),
@@ -4655,7 +4655,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4011,3501,64),
 	 (4012,3502,64),
 	 (4013,3503,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4014,3504,64),
 	 (4015,3505,64),
 	 (4016,3506,64),
@@ -4666,7 +4666,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4021,3511,64),
 	 (4022,3512,64),
 	 (4023,3513,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4024,3514,64),
 	 (4025,3515,64),
 	 (4026,3516,64),
@@ -4677,7 +4677,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4031,3521,65),
 	 (4032,3522,65),
 	 (4033,3523,65);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4034,3524,65),
 	 (4035,3525,66),
 	 (4036,3526,66),
@@ -4688,7 +4688,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4041,3531,67),
 	 (4042,3532,68),
 	 (4043,3533,71);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4044,3534,71),
 	 (4045,3535,71),
 	 (4046,3536,71),
@@ -4699,7 +4699,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4051,3541,1),
 	 (4052,3542,1),
 	 (4053,3543,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4054,3544,2),
 	 (4055,3545,1),
 	 (4056,3546,1),
@@ -4710,7 +4710,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4061,3551,102),
 	 (4062,3552,102),
 	 (4063,3553,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4064,3554,103),
 	 (4065,3555,103),
 	 (4066,3556,103),
@@ -4721,7 +4721,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4071,3561,103),
 	 (4072,3562,103),
 	 (4073,3563,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4074,3564,103),
 	 (4075,3565,103),
 	 (4076,3566,103),
@@ -4732,7 +4732,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4080,3570,41),
 	 (4081,3571,41),
 	 (4082,3572,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4083,3573,1),
 	 (4091,3573,148),
 	 (4084,3574,1),
@@ -4743,7 +4743,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4089,3579,55),
 	 (4092,3580,148),
 	 (4100,3581,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4101,3582,38),
 	 (4103,3583,283),
 	 (4104,3584,283),
@@ -4754,7 +4754,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4110,3589,350),
 	 (4111,3590,350),
 	 (4112,3591,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4113,3592,350),
 	 (4114,3593,350),
 	 (4115,3594,350),
@@ -4765,7 +4765,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4120,3599,350),
 	 (4121,3600,350),
 	 (4122,3601,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4123,3602,350),
 	 (4124,3603,350),
 	 (4125,3604,350),
@@ -4776,7 +4776,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4130,3609,350),
 	 (4131,3610,350),
 	 (4132,3611,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4133,3612,350),
 	 (4134,3613,350),
 	 (4135,3614,350),
@@ -4787,7 +4787,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4141,3619,223),
 	 (4142,3620,223),
 	 (4143,3621,223);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4144,3622,223),
 	 (4145,3623,223),
 	 (4146,3624,223),
@@ -4798,7 +4798,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4151,3629,161),
 	 (4152,3630,161),
 	 (4153,3631,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4154,3632,161),
 	 (4155,3633,161),
 	 (4156,3634,161),
@@ -4809,7 +4809,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4161,3639,680),
 	 (4162,3640,175),
 	 (4163,3641,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4164,3642,160),
 	 (4165,3643,160),
 	 (4166,3644,160),
@@ -4820,7 +4820,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4171,3649,158),
 	 (4172,3650,158),
 	 (4173,3651,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4174,3652,145),
 	 (4175,3653,145),
 	 (4176,3654,145),
@@ -4831,7 +4831,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4181,3659,144),
 	 (4182,3660,144),
 	 (4183,3661,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4184,3662,144),
 	 (4185,3663,144),
 	 (4186,3664,144),
@@ -4842,7 +4842,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4191,3669,144),
 	 (4192,3670,144),
 	 (4193,3671,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4194,3672,144),
 	 (4195,3673,680),
 	 (4196,3674,144),
@@ -4853,7 +4853,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4201,3679,144),
 	 (4202,3680,145),
 	 (4203,3681,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4204,3682,144),
 	 (4205,3683,144),
 	 (4206,3684,144),
@@ -4864,7 +4864,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4211,3689,146),
 	 (4212,3690,175),
 	 (4213,3691,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4214,3692,175),
 	 (4215,3693,144),
 	 (4216,3694,144),
@@ -4875,7 +4875,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4221,3699,144),
 	 (4222,3700,144),
 	 (4223,3701,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4224,3702,144),
 	 (4225,3703,144),
 	 (4226,3704,144),
@@ -4886,7 +4886,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4231,3709,144),
 	 (4232,3710,144),
 	 (4233,3711,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4234,3712,144),
 	 (4235,3713,144),
 	 (4236,3714,144),
@@ -4897,7 +4897,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4241,3719,146),
 	 (4242,3720,146),
 	 (4243,3721,354);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4244,3722,354),
 	 (4245,3723,2),
 	 (4246,3724,2),
@@ -4908,7 +4908,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4251,3729,684),
 	 (4252,3730,684),
 	 (4253,3731,685);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4254,3732,685),
 	 (4255,3733,31),
 	 (4256,3734,686),
@@ -4919,7 +4919,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4261,3739,1),
 	 (4262,3740,1),
 	 (4263,3741,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4264,3742,1),
 	 (4265,3743,1),
 	 (4266,3744,1),
@@ -4930,7 +4930,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4271,3749,1),
 	 (4272,3750,1),
 	 (4273,3751,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4274,3752,1),
 	 (4275,3753,1),
 	 (4276,3754,1),
@@ -4941,7 +4941,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4281,3759,1),
 	 (4282,3760,2),
 	 (4283,3761,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4284,3762,2),
 	 (4285,3763,2),
 	 (4286,3764,2),
@@ -4952,7 +4952,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4291,3769,2),
 	 (4292,3770,3),
 	 (4293,3771,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4294,3772,3),
 	 (4295,3773,3),
 	 (4296,3774,3),
@@ -4963,7 +4963,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4301,3779,3),
 	 (4302,3780,4),
 	 (4303,3781,4);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4304,3782,4),
 	 (4305,3783,4),
 	 (4306,3784,4),
@@ -4974,7 +4974,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4311,3789,14),
 	 (4312,3790,14),
 	 (4313,3791,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4314,3792,14),
 	 (4315,3793,14),
 	 (4316,3794,14),
@@ -4985,7 +4985,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4321,3799,14),
 	 (4322,3800,14),
 	 (4323,3801,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4324,3802,14),
 	 (4325,3803,14),
 	 (4326,3804,14),
@@ -4996,7 +4996,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4331,3809,14),
 	 (4332,3810,14),
 	 (4333,3811,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4334,3812,15),
 	 (4335,3813,15),
 	 (4336,3814,15),
@@ -5007,7 +5007,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4341,3819,16),
 	 (4342,3820,16),
 	 (4343,3821,16);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4344,3822,17),
 	 (4345,3823,18),
 	 (4346,3824,18),
@@ -5018,7 +5018,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4351,3829,20),
 	 (4352,3830,20),
 	 (4353,3831,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4354,3832,21),
 	 (4355,3833,21),
 	 (4356,3834,21),
@@ -5029,7 +5029,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4361,3839,21),
 	 (4362,3840,21),
 	 (4363,3841,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4364,3842,22),
 	 (4365,3843,22),
 	 (4366,3844,22),
@@ -5040,7 +5040,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4371,3849,22),
 	 (4372,3850,22),
 	 (4373,3851,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4374,3852,22),
 	 (4375,3853,22),
 	 (4376,3854,22),
@@ -5051,7 +5051,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4381,3859,25),
 	 (4382,3860,25),
 	 (4383,3861,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4384,3862,25),
 	 (4385,3863,25),
 	 (4386,3864,25),
@@ -5062,7 +5062,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4391,3869,25),
 	 (4392,3870,25),
 	 (4393,3871,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4394,3872,25),
 	 (4395,3873,25),
 	 (4396,3874,25),
@@ -5073,7 +5073,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4401,3879,26),
 	 (4402,3880,26),
 	 (4403,3881,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4404,3882,26),
 	 (4405,3883,26),
 	 (4406,3884,26),
@@ -5084,7 +5084,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4411,3889,27),
 	 (4412,3890,27),
 	 (4413,3891,28);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4414,3892,28),
 	 (4415,3893,29),
 	 (4416,3894,29),
@@ -5095,7 +5095,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4421,3899,30),
 	 (4422,3900,30),
 	 (4423,3901,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4424,3902,31),
 	 (4425,3903,31),
 	 (4426,3904,31),
@@ -5106,7 +5106,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4431,3909,33),
 	 (4432,3910,33),
 	 (4433,3911,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4434,3912,34),
 	 (4435,3913,35),
 	 (4436,3914,35),
@@ -5117,7 +5117,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4441,3919,37),
 	 (4442,3920,37),
 	 (4443,3921,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4444,3922,37),
 	 (4445,3923,37),
 	 (4446,3924,37),
@@ -5128,7 +5128,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4451,3929,38),
 	 (4452,3930,38),
 	 (4453,3931,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4454,3932,38),
 	 (4455,3933,38),
 	 (4456,3934,38),
@@ -5139,7 +5139,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4461,3939,39),
 	 (4462,3940,39),
 	 (4463,3941,39);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4464,3942,40),
 	 (4465,3943,40),
 	 (4466,3944,40),
@@ -5150,7 +5150,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4471,3949,40),
 	 (4472,3950,41),
 	 (4473,3951,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4474,3952,41),
 	 (4475,3953,41),
 	 (4476,3954,41),
@@ -5161,7 +5161,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4481,3959,41),
 	 (4482,3960,41),
 	 (4483,3961,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4484,3962,41),
 	 (4485,3963,41),
 	 (4486,3964,41),
@@ -5172,7 +5172,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4491,3969,42),
 	 (4492,3970,42),
 	 (4493,3971,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4494,3972,42),
 	 (4495,3973,42),
 	 (4496,3974,42),
@@ -5183,7 +5183,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4501,3979,43),
 	 (4502,3980,43),
 	 (4503,3981,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4504,3982,43),
 	 (4505,3983,43),
 	 (4506,3984,43),
@@ -5194,7 +5194,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4511,3989,43),
 	 (4512,3990,43),
 	 (4513,3991,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4514,3992,43),
 	 (4515,3993,43),
 	 (4516,3994,43),
@@ -5205,7 +5205,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4521,3999,44),
 	 (4522,4000,44),
 	 (4523,4001,44);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4524,4002,44),
 	 (4525,4003,44),
 	 (4526,4004,45),
@@ -5216,7 +5216,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4531,4009,45),
 	 (4532,4010,45),
 	 (4533,4011,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4534,4012,45),
 	 (4535,4013,45),
 	 (4536,4014,45),
@@ -5227,7 +5227,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4542,4019,46),
 	 (4543,4020,47),
 	 (4544,4021,47);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4545,4022,47),
 	 (4546,4023,48),
 	 (4547,4024,48),
@@ -5238,7 +5238,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4552,4029,49),
 	 (4553,4030,49),
 	 (4554,4031,49);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4555,4032,50),
 	 (4556,4033,50),
 	 (4557,4034,50),
@@ -5249,7 +5249,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4562,4039,50),
 	 (4563,4040,50),
 	 (4564,4041,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4565,4042,50),
 	 (4566,4043,50),
 	 (4567,4044,50),
@@ -5260,7 +5260,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4572,4049,50),
 	 (4573,4050,50),
 	 (4574,4051,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4575,4052,50),
 	 (4576,4053,50),
 	 (4577,4054,50),
@@ -5271,7 +5271,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4582,4059,50),
 	 (4583,4060,50),
 	 (4584,4061,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4585,4062,50),
 	 (4586,4063,50),
 	 (4587,4064,50),
@@ -5282,7 +5282,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4592,4069,50),
 	 (4593,4070,51),
 	 (4594,4071,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4595,4072,51),
 	 (4596,4073,51),
 	 (4597,4074,51),
@@ -5293,7 +5293,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4602,4079,51),
 	 (4603,4080,51),
 	 (4604,4081,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4605,4082,51),
 	 (4606,4083,51),
 	 (4607,4084,51),
@@ -5304,7 +5304,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4612,4089,51),
 	 (4613,4090,51),
 	 (4614,4091,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4615,4092,51),
 	 (4616,4093,51),
 	 (4617,4094,51),
@@ -5315,7 +5315,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4622,4099,52),
 	 (4623,4100,52),
 	 (4624,4101,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4625,4102,52),
 	 (4626,4103,52),
 	 (4627,4104,52),
@@ -5326,7 +5326,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4632,4109,52),
 	 (4633,4110,52),
 	 (4634,4111,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4635,4112,52),
 	 (4636,4113,52),
 	 (4637,4114,52),
@@ -5337,7 +5337,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4642,4119,52),
 	 (4643,4120,53),
 	 (4644,4121,53);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4645,4122,54),
 	 (4646,4123,54),
 	 (4647,4124,55),
@@ -5348,7 +5348,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4652,4129,55),
 	 (4653,4130,55),
 	 (4654,4131,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4655,4132,55),
 	 (4656,4133,55),
 	 (4657,4134,55),
@@ -5359,7 +5359,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4662,4139,56),
 	 (4663,4140,56),
 	 (4664,4141,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4665,4142,56),
 	 (4666,4143,56),
 	 (4667,4144,56),
@@ -5370,7 +5370,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4672,4149,56),
 	 (4673,4150,56),
 	 (4674,4151,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4675,4152,56),
 	 (4676,4153,56),
 	 (4677,4154,56),
@@ -5381,7 +5381,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4682,4159,58),
 	 (4683,4160,59),
 	 (4684,4161,59);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4685,4162,60),
 	 (4686,4163,60),
 	 (4687,4164,60),
@@ -5392,7 +5392,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4692,4169,61),
 	 (4693,4170,61),
 	 (4694,4171,61);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4695,4172,62),
 	 (4696,4173,63),
 	 (4697,4174,64),
@@ -5403,7 +5403,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4702,4179,64),
 	 (4703,4180,64),
 	 (4704,4181,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4705,4182,64),
 	 (4706,4183,64),
 	 (4707,4184,64),
@@ -5414,7 +5414,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4712,4189,64),
 	 (4713,4190,64),
 	 (4714,4191,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4715,4192,64),
 	 (4716,4193,64),
 	 (4717,4194,64),
@@ -5425,7 +5425,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4722,4199,64),
 	 (4723,4200,64),
 	 (4724,4201,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4725,4202,64),
 	 (4726,4203,64),
 	 (4727,4204,65),
@@ -5436,7 +5436,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4732,4209,65),
 	 (4733,4210,65),
 	 (4734,4211,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4735,4212,66),
 	 (4736,4213,66),
 	 (4737,4214,66),
@@ -5447,7 +5447,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4742,4219,71),
 	 (4743,4220,71),
 	 (4744,4221,71);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4745,4222,71),
 	 (4746,4223,76),
 	 (4747,4224,33),
@@ -5458,7 +5458,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4752,4229,1),
 	 (4753,4230,2),
 	 (4754,4231,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4755,4232,1),
 	 (4756,4233,102),
 	 (4757,4234,102),
@@ -5469,7 +5469,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4762,4239,103),
 	 (4763,4240,103),
 	 (4764,4241,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4765,4242,103),
 	 (4766,4243,104),
 	 (4767,4244,103),
@@ -5480,7 +5480,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4772,4249,103),
 	 (4773,4250,103),
 	 (4774,4251,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4775,4252,103),
 	 (4776,4253,127),
 	 (4777,4254,131),
@@ -5491,7 +5491,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4782,4259,1),
 	 (4783,4260,1),
 	 (4784,4261,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4785,4262,55),
 	 (4786,4263,355),
 	 (4787,4264,356),
@@ -5502,7 +5502,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4792,4269,149),
 	 (4793,4270,41),
 	 (4794,4271,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4795,4272,41),
 	 (4796,4273,41),
 	 (4797,4274,55),
@@ -5513,7 +5513,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4802,4279,283),
 	 (4803,4280,283),
 	 (4804,4281,283);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4805,4282,357),
 	 (4806,4283,354),
 	 (4807,4284,354),
@@ -5524,7 +5524,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4812,4289,372),
 	 (4813,4290,360),
 	 (4814,4291,362);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4815,4292,366),
 	 (4816,4293,351),
 	 (4817,4294,351),
@@ -5535,7 +5535,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4822,4299,351),
 	 (4823,4300,681),
 	 (4824,4301,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4825,4302,353),
 	 (4828,4302,677),
 	 (4826,4303,353),
@@ -5546,7 +5546,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4832,4308,144),
 	 (4833,4309,144),
 	 (4834,4310,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4835,4311,167),
 	 (4836,4312,167),
 	 (4837,4313,167),
@@ -5557,7 +5557,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4842,4318,167),
 	 (4843,4319,167),
 	 (4844,4320,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4845,4321,167),
 	 (4846,4322,167),
 	 (4847,4323,167),
@@ -5568,7 +5568,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4852,4328,173),
 	 (4853,4329,173),
 	 (4854,4330,173);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4855,4331,173),
 	 (4856,4332,146),
 	 (4857,4333,175),
@@ -5579,7 +5579,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4862,4338,353),
 	 (4863,4339,353),
 	 (4864,4340,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4865,4341,353),
 	 (4866,4342,353),
 	 (4867,4343,353),
@@ -5590,7 +5590,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4872,4348,1),
 	 (4873,4349,1),
 	 (4874,4350,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4875,4351,1),
 	 (4876,4352,1),
 	 (4877,4353,1),
@@ -5601,7 +5601,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4882,4358,1),
 	 (4883,4359,1),
 	 (4884,4360,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4885,4361,1),
 	 (4886,4362,1),
 	 (4887,4363,1),
@@ -5612,7 +5612,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4892,4368,1),
 	 (4893,4369,2),
 	 (4894,4370,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4895,4371,2),
 	 (4896,4372,2),
 	 (4897,4373,2),
@@ -5623,7 +5623,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4902,4378,2),
 	 (4903,4379,3),
 	 (4904,4380,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4905,4381,3),
 	 (4906,4382,3),
 	 (4907,4383,3),
@@ -5634,7 +5634,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4912,4388,3),
 	 (4913,4389,4),
 	 (4914,4390,4);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4915,4391,4),
 	 (4916,4392,4),
 	 (4917,4393,4),
@@ -5645,7 +5645,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4922,4398,14),
 	 (4923,4399,14),
 	 (4924,4400,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4925,4401,14),
 	 (4926,4402,14),
 	 (4927,4403,14),
@@ -5656,7 +5656,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4932,4408,14),
 	 (4933,4409,14),
 	 (4934,4410,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4935,4411,14),
 	 (4936,4412,14),
 	 (4937,4413,14),
@@ -5667,7 +5667,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4942,4418,14),
 	 (4943,4419,14),
 	 (4944,4420,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4945,4421,15),
 	 (4946,4422,15),
 	 (4947,4423,15),
@@ -5678,7 +5678,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4952,4428,16),
 	 (4953,4429,16),
 	 (4954,4430,16);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4955,4431,17),
 	 (4956,4432,18),
 	 (4957,4433,18),
@@ -5689,7 +5689,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4962,4438,20),
 	 (4963,4439,20),
 	 (4964,4440,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4965,4441,21),
 	 (4966,4442,21),
 	 (4967,4443,21),
@@ -5700,7 +5700,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4972,4448,21),
 	 (4973,4449,21),
 	 (4974,4450,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4975,4451,22),
 	 (4976,4452,22),
 	 (4977,4453,22),
@@ -5711,7 +5711,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4982,4458,22),
 	 (4983,4459,22),
 	 (4984,4460,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4985,4461,22),
 	 (4986,4462,22),
 	 (4987,4463,22),
@@ -5722,7 +5722,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4992,4468,25),
 	 (4993,4469,25),
 	 (4994,4470,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (4995,4471,25),
 	 (4996,4472,25),
 	 (4997,4473,25),
@@ -5733,7 +5733,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5002,4478,25),
 	 (5003,4479,25),
 	 (5004,4480,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5005,4481,25),
 	 (5006,4482,25),
 	 (5007,4483,25),
@@ -5744,7 +5744,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5012,4488,26),
 	 (5013,4489,26),
 	 (5014,4490,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5015,4491,26),
 	 (5016,4492,26),
 	 (5017,4493,26),
@@ -5755,7 +5755,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5022,4498,27),
 	 (5023,4499,27),
 	 (5024,4500,28);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5025,4501,28),
 	 (5026,4502,29),
 	 (5027,4503,29),
@@ -5766,7 +5766,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5032,4508,30),
 	 (5033,4509,30),
 	 (5034,4510,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5035,4511,31),
 	 (5036,4512,31),
 	 (5037,4513,31),
@@ -5777,7 +5777,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5042,4518,33),
 	 (5043,4519,33),
 	 (5044,4520,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5045,4521,34),
 	 (5046,4522,35),
 	 (5047,4523,35),
@@ -5788,7 +5788,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5052,4528,37),
 	 (5053,4529,37),
 	 (5054,4530,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5055,4531,37),
 	 (5056,4532,37),
 	 (5057,4533,37),
@@ -5799,7 +5799,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5062,4538,38),
 	 (5063,4539,38),
 	 (5064,4540,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5065,4541,38),
 	 (5066,4542,38),
 	 (5067,4543,38),
@@ -5810,7 +5810,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5072,4548,39),
 	 (5073,4549,39),
 	 (5074,4550,39);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5075,4551,40),
 	 (5076,4552,40),
 	 (5077,4553,40),
@@ -5821,7 +5821,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5082,4558,40),
 	 (5083,4559,41),
 	 (5084,4560,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5085,4561,41),
 	 (5086,4562,41),
 	 (5087,4563,41),
@@ -5832,7 +5832,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5092,4568,41),
 	 (5093,4569,41),
 	 (5094,4570,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5095,4571,41),
 	 (5096,4572,41),
 	 (5097,4573,41),
@@ -5843,7 +5843,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5102,4578,42),
 	 (5103,4579,42),
 	 (5104,4580,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5105,4581,42),
 	 (5106,4582,42),
 	 (5107,4583,42),
@@ -5854,7 +5854,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5112,4588,43),
 	 (5113,4589,43),
 	 (5114,4590,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5115,4591,43),
 	 (5116,4592,43),
 	 (5117,4593,43),
@@ -5865,7 +5865,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5122,4598,43),
 	 (5123,4599,43),
 	 (5124,4600,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5125,4601,43),
 	 (5126,4602,43),
 	 (5127,4603,43),
@@ -5876,7 +5876,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5132,4608,44),
 	 (5133,4609,44),
 	 (5134,4610,44);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5135,4611,44),
 	 (5136,4612,44),
 	 (5137,4613,45),
@@ -5887,7 +5887,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5142,4618,45),
 	 (5143,4619,45),
 	 (5144,4620,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5145,4621,45),
 	 (5146,4622,45),
 	 (5147,4623,45),
@@ -5898,7 +5898,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5152,4628,46),
 	 (5153,4629,47),
 	 (5154,4630,47);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5155,4631,47),
 	 (5156,4632,48),
 	 (5157,4633,48),
@@ -5909,7 +5909,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5162,4638,49),
 	 (5163,4639,49),
 	 (5164,4640,49);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5165,4641,50),
 	 (5166,4642,50),
 	 (5167,4643,50),
@@ -5920,7 +5920,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5172,4648,50),
 	 (5173,4649,50),
 	 (5174,4650,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5175,4651,50),
 	 (5176,4652,50),
 	 (5177,4653,50),
@@ -5931,7 +5931,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5182,4658,50),
 	 (5183,4659,50),
 	 (5184,4660,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5185,4661,50),
 	 (5186,4662,50),
 	 (5187,4663,50),
@@ -5942,7 +5942,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5192,4668,50),
 	 (5193,4669,50),
 	 (5194,4670,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5195,4671,50),
 	 (5196,4672,50),
 	 (5197,4673,50),
@@ -5953,7 +5953,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5202,4678,50),
 	 (5203,4679,51),
 	 (5204,4680,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5205,4681,51),
 	 (5206,4682,51),
 	 (5207,4683,51),
@@ -5964,7 +5964,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5212,4688,51),
 	 (5213,4689,51),
 	 (5214,4690,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5215,4691,51),
 	 (5216,4692,51),
 	 (5217,4693,51),
@@ -5975,7 +5975,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5222,4698,51),
 	 (5223,4699,51),
 	 (5224,4700,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5225,4701,51),
 	 (5226,4702,51),
 	 (5227,4703,51),
@@ -5986,7 +5986,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5232,4708,52),
 	 (5233,4709,52),
 	 (5234,4710,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5235,4711,52),
 	 (5236,4712,52),
 	 (5237,4713,52),
@@ -5997,7 +5997,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5242,4718,52),
 	 (5243,4719,52),
 	 (5244,4720,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5245,4721,52),
 	 (5246,4722,52),
 	 (5247,4723,52),
@@ -6008,7 +6008,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5252,4728,52),
 	 (5253,4729,53),
 	 (5254,4730,53);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5255,4731,54),
 	 (5256,4732,54),
 	 (5257,4733,55),
@@ -6019,7 +6019,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5262,4738,55),
 	 (5263,4739,55),
 	 (5264,4740,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5265,4741,55),
 	 (5266,4742,55),
 	 (5267,4743,55),
@@ -6030,7 +6030,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5272,4748,56),
 	 (5273,4749,56),
 	 (5274,4750,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5275,4751,56),
 	 (5276,4752,56),
 	 (5277,4753,56),
@@ -6041,7 +6041,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5282,4758,56),
 	 (5283,4759,56),
 	 (5284,4760,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5285,4761,56),
 	 (5286,4762,56),
 	 (5287,4763,56),
@@ -6052,7 +6052,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5292,4768,58),
 	 (5293,4769,59),
 	 (5294,4770,59);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5295,4771,60),
 	 (5296,4772,60),
 	 (5297,4773,60),
@@ -6063,7 +6063,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5302,4778,61),
 	 (5303,4779,61),
 	 (5304,4780,61);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5305,4781,62),
 	 (5306,4782,63),
 	 (5307,4783,64),
@@ -6074,7 +6074,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5312,4788,64),
 	 (5313,4789,64),
 	 (5314,4790,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5315,4791,64),
 	 (5316,4792,64),
 	 (5317,4793,64),
@@ -6085,7 +6085,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5322,4798,64),
 	 (5323,4799,64),
 	 (5324,4800,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5325,4801,64),
 	 (5326,4802,64),
 	 (5327,4803,64),
@@ -6096,7 +6096,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5332,4808,64),
 	 (5333,4809,64),
 	 (5334,4810,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5335,4811,64),
 	 (5336,4812,64),
 	 (5337,4813,65),
@@ -6107,7 +6107,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5342,4818,65),
 	 (5343,4819,65),
 	 (5344,4820,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5345,4821,66),
 	 (5346,4822,66),
 	 (5347,4823,66),
@@ -6118,7 +6118,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5352,4828,71),
 	 (5353,4829,71),
 	 (5354,4830,71);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5355,4831,71),
 	 (5356,4832,76),
 	 (5357,4833,33),
@@ -6129,7 +6129,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5362,4838,1),
 	 (5363,4839,2),
 	 (5364,4840,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5365,4841,1),
 	 (5366,4842,102),
 	 (5367,4843,102),
@@ -6140,7 +6140,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5372,4848,103),
 	 (5373,4849,103),
 	 (5374,4850,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5375,4851,103),
 	 (5376,4852,104),
 	 (5377,4853,103),
@@ -6151,7 +6151,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5382,4858,103),
 	 (5383,4859,103),
 	 (5384,4860,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5385,4861,103),
 	 (5386,4862,127),
 	 (5387,4863,131),
@@ -6162,7 +6162,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5391,4867,41),
 	 (5392,4868,1),
 	 (5400,4868,148);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5393,4869,1),
 	 (5394,4870,2),
 	 (5395,4871,55),
@@ -6173,7 +6173,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5409,4876,1),
 	 (5410,4877,38),
 	 (5412,4878,283);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5413,4879,283),
 	 (5414,4880,283),
 	 (5415,4881,350),
@@ -6184,7 +6184,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5421,4886,350),
 	 (5422,4887,350),
 	 (5423,4888,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5424,4889,350),
 	 (5425,4890,350),
 	 (5426,4891,350),
@@ -6195,7 +6195,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5431,4896,350),
 	 (5432,4897,350),
 	 (5433,4898,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5434,4899,350),
 	 (5435,4900,350),
 	 (5436,4901,350),
@@ -6206,7 +6206,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5441,4906,350),
 	 (5442,4907,350),
 	 (5443,4908,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5444,4909,350),
 	 (5445,4910,350),
 	 (5446,4911,350),
@@ -6217,7 +6217,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5452,4916,223),
 	 (5453,4917,223),
 	 (5454,4918,223);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5455,4919,223),
 	 (5456,4920,223),
 	 (5457,4921,351),
@@ -6228,7 +6228,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5462,4926,161),
 	 (5463,4927,161),
 	 (5464,4928,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5465,4929,161),
 	 (5466,4930,161),
 	 (5467,4931,161),
@@ -6239,7 +6239,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5472,4936,175),
 	 (5473,4937,160),
 	 (5474,4938,160);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5475,4939,160),
 	 (5476,4940,170),
 	 (5477,4941,170),
@@ -6250,7 +6250,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5482,4946,145),
 	 (5483,4947,145),
 	 (5484,4948,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5485,4949,145),
 	 (5486,4950,145),
 	 (5487,4951,145),
@@ -6261,7 +6261,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5492,4956,144),
 	 (5493,4957,144),
 	 (5494,4958,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5495,4959,144),
 	 (5496,4960,144),
 	 (5497,4961,144),
@@ -6272,7 +6272,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5502,4966,145),
 	 (5503,4967,144),
 	 (5504,4968,680);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5505,4969,144),
 	 (5506,4970,144),
 	 (5507,4971,144),
@@ -6283,7 +6283,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5512,4976,175),
 	 (5513,4977,144),
 	 (5514,4978,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5515,4979,144),
 	 (5516,4980,144),
 	 (5517,4981,146),
@@ -6294,7 +6294,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5522,4986,175),
 	 (5523,4987,175),
 	 (5524,4988,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5525,4989,144),
 	 (5526,4990,144),
 	 (5527,4991,144),
@@ -6305,7 +6305,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5532,4996,144),
 	 (5533,4997,144),
 	 (5534,4998,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5535,4999,144),
 	 (5536,5000,144),
 	 (5537,5001,144),
@@ -6316,7 +6316,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5542,5006,144),
 	 (5543,5007,144),
 	 (5544,5008,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5545,5009,144),
 	 (5546,5010,144),
 	 (5547,5011,177),
@@ -6327,7 +6327,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5552,5016,354),
 	 (5553,5017,354),
 	 (5554,5018,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5555,5019,2),
 	 (5556,5020,358),
 	 (5557,5021,144),
@@ -6338,7 +6338,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5562,5026,685),
 	 (5563,5027,685),
 	 (5564,5028,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5565,5029,686),
 	 (5566,5030,687),
 	 (5567,5031,687),
@@ -6349,7 +6349,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5572,5036,681),
 	 (5573,5037,52),
 	 (5574,5038,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5577,5038,677),
 	 (5575,5039,353),
 	 (5576,5040,353),
@@ -6360,7 +6360,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5582,5045,144),
 	 (5583,5046,167),
 	 (5584,5047,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5585,5048,167),
 	 (5586,5049,167),
 	 (5587,5050,167),
@@ -6371,7 +6371,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5592,5055,167),
 	 (5593,5056,167),
 	 (5594,5057,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5595,5058,167),
 	 (5596,5059,167),
 	 (5597,5060,173),
@@ -6382,7 +6382,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5602,5065,173),
 	 (5603,5066,173),
 	 (5604,5067,173);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5605,5068,146),
 	 (5606,5069,175),
 	 (5607,5070,175),
@@ -6393,7 +6393,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5612,5075,353),
 	 (5613,5076,353),
 	 (5614,5077,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5615,5078,353),
 	 (5616,5079,353),
 	 (5617,5080,1),
@@ -6404,7 +6404,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5622,5085,1),
 	 (5623,5086,1),
 	 (5624,5087,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5625,5088,1),
 	 (5626,5089,1),
 	 (5627,5090,1),
@@ -6415,7 +6415,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5632,5095,1),
 	 (5633,5096,1),
 	 (5634,5097,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5635,5098,1),
 	 (5636,5099,1),
 	 (5637,5100,1),
@@ -6426,7 +6426,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5642,5105,2),
 	 (5643,5106,2),
 	 (5644,5107,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5645,5108,2),
 	 (5646,5109,2),
 	 (5647,5110,2),
@@ -6437,7 +6437,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5652,5115,3),
 	 (5653,5116,3),
 	 (5654,5117,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5655,5118,3),
 	 (5656,5119,3),
 	 (5657,5120,3),
@@ -6448,7 +6448,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5662,5125,4),
 	 (5663,5126,4),
 	 (5664,5127,4);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5665,5128,4),
 	 (5666,5129,4),
 	 (5667,5130,5),
@@ -6459,7 +6459,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5672,5135,14),
 	 (5673,5136,14),
 	 (5674,5137,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5675,5138,14),
 	 (5676,5139,14),
 	 (5677,5140,14),
@@ -6470,7 +6470,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5682,5145,14),
 	 (5683,5146,14),
 	 (5684,5147,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5685,5148,14),
 	 (5686,5149,14),
 	 (5687,5150,14),
@@ -6481,7 +6481,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5692,5155,14),
 	 (5693,5156,14),
 	 (5694,5157,15);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5695,5158,15),
 	 (5696,5159,15),
 	 (5697,5160,15),
@@ -6492,7 +6492,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5702,5165,16),
 	 (5703,5166,16),
 	 (5704,5167,17);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5705,5168,18),
 	 (5706,5169,18),
 	 (5707,5170,19),
@@ -6503,7 +6503,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5712,5175,20),
 	 (5713,5176,21),
 	 (5714,5177,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5715,5178,21),
 	 (5716,5179,21),
 	 (5717,5180,21),
@@ -6514,7 +6514,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5722,5185,21),
 	 (5723,5186,21),
 	 (5724,5187,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5725,5188,22),
 	 (5726,5189,22),
 	 (5727,5190,22),
@@ -6525,7 +6525,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5732,5195,22),
 	 (5733,5196,22),
 	 (5734,5197,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5735,5198,22),
 	 (5736,5199,22),
 	 (5737,5200,23),
@@ -6536,7 +6536,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5742,5205,25),
 	 (5743,5206,25),
 	 (5744,5207,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5745,5208,25),
 	 (5746,5209,25),
 	 (5747,5210,25),
@@ -6547,7 +6547,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5752,5215,25),
 	 (5753,5216,25),
 	 (5754,5217,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5755,5218,25),
 	 (5756,5219,25),
 	 (5757,5220,25),
@@ -6558,7 +6558,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5762,5225,26),
 	 (5763,5226,26),
 	 (5764,5227,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5765,5228,26),
 	 (5766,5229,26),
 	 (5767,5230,26),
@@ -6569,7 +6569,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5772,5235,27),
 	 (5773,5236,28),
 	 (5774,5237,28);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5775,5238,29),
 	 (5776,5239,29),
 	 (5777,5240,29),
@@ -6580,7 +6580,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5782,5245,30),
 	 (5783,5246,31),
 	 (5784,5247,31);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5785,5248,31),
 	 (5786,5249,31),
 	 (5787,5250,32),
@@ -6591,7 +6591,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5792,5255,33),
 	 (5793,5256,33),
 	 (5794,5257,34);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5795,5258,35),
 	 (5796,5259,35),
 	 (5797,5260,35),
@@ -6602,7 +6602,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5802,5265,37),
 	 (5803,5266,37),
 	 (5804,5267,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5805,5268,37),
 	 (5806,5269,37),
 	 (5807,5270,37),
@@ -6613,7 +6613,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5812,5275,38),
 	 (5813,5276,38),
 	 (5814,5277,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5815,5278,38),
 	 (5816,5279,38),
 	 (5817,5280,38),
@@ -6624,7 +6624,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5822,5285,39),
 	 (5823,5286,39),
 	 (5824,5287,40);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5825,5288,40),
 	 (5826,5289,40),
 	 (5827,5290,40),
@@ -6635,7 +6635,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5832,5295,41),
 	 (5833,5296,41),
 	 (5834,5297,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5835,5298,41),
 	 (5836,5299,41),
 	 (5837,5300,41),
@@ -6646,7 +6646,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5842,5305,41),
 	 (5843,5306,41),
 	 (5844,5307,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5845,5308,41),
 	 (5846,5309,41),
 	 (5847,5310,41),
@@ -6657,7 +6657,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5852,5315,42),
 	 (5853,5316,42),
 	 (5854,5317,42);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5855,5318,42),
 	 (5856,5319,42),
 	 (5857,5320,43),
@@ -6668,7 +6668,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5862,5325,43),
 	 (5863,5326,43),
 	 (5864,5327,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5865,5328,43),
 	 (5866,5329,43),
 	 (5867,5330,43),
@@ -6679,7 +6679,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5872,5335,43),
 	 (5873,5336,43),
 	 (5874,5337,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5875,5338,43),
 	 (5876,5339,43),
 	 (5877,5340,43),
@@ -6690,7 +6690,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5882,5345,44),
 	 (5883,5346,44),
 	 (5884,5347,44);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5885,5348,44),
 	 (5886,5349,45),
 	 (5887,5350,45),
@@ -6701,7 +6701,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5892,5355,45),
 	 (5893,5356,45),
 	 (5894,5357,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5895,5358,45),
 	 (5896,5359,45),
 	 (5897,5360,45),
@@ -6712,7 +6712,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5902,5365,47),
 	 (5903,5366,47),
 	 (5904,5367,47);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5905,5368,48),
 	 (5906,5369,48),
 	 (5907,5370,48),
@@ -6723,7 +6723,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5912,5375,49),
 	 (5913,5376,49),
 	 (5914,5377,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5915,5378,50),
 	 (5916,5379,50),
 	 (5917,5380,50),
@@ -6734,7 +6734,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5922,5385,50),
 	 (5923,5386,50),
 	 (5924,5387,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5925,5388,50),
 	 (5926,5389,50),
 	 (5927,5390,50),
@@ -6745,7 +6745,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5932,5395,50),
 	 (5933,5396,50),
 	 (5934,5397,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5935,5398,50),
 	 (5936,5399,50),
 	 (5937,5400,50),
@@ -6756,7 +6756,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5942,5405,50),
 	 (5943,5406,50),
 	 (5944,5407,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5945,5408,50),
 	 (5946,5409,50),
 	 (5947,5410,50),
@@ -6767,7 +6767,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5952,5415,51),
 	 (5953,5416,51),
 	 (5954,5417,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5955,5418,51),
 	 (5956,5419,51),
 	 (5957,5420,51),
@@ -6778,7 +6778,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5962,5425,51),
 	 (5963,5426,51),
 	 (5964,5427,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5965,5428,51),
 	 (5966,5429,51),
 	 (5967,5430,51),
@@ -6789,7 +6789,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5972,5435,51),
 	 (5973,5436,51),
 	 (5974,5437,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5975,5438,51),
 	 (5976,5439,51),
 	 (5977,5440,51),
@@ -6800,7 +6800,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5982,5445,52),
 	 (5983,5446,52),
 	 (5984,5447,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5985,5448,52),
 	 (5986,5449,52),
 	 (5987,5450,52),
@@ -6811,7 +6811,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5992,5455,52),
 	 (5993,5456,52),
 	 (5994,5457,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (5995,5458,52),
 	 (5996,5459,52),
 	 (5997,5460,52),
@@ -6822,7 +6822,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6002,5465,53),
 	 (6003,5466,53),
 	 (6004,5467,54);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6005,5468,54),
 	 (6006,5469,55),
 	 (6007,5470,55),
@@ -6833,7 +6833,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6012,5475,55),
 	 (6013,5476,55),
 	 (6014,5477,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6015,5478,55),
 	 (6016,5479,55),
 	 (6017,5480,55),
@@ -6844,7 +6844,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6022,5485,56),
 	 (6023,5486,56),
 	 (6024,5487,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6025,5488,56),
 	 (6026,5489,56),
 	 (6027,5490,56),
@@ -6855,7 +6855,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6032,5495,56),
 	 (6033,5496,56),
 	 (6034,5497,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6035,5498,56),
 	 (6036,5499,56),
 	 (6037,5500,56),
@@ -6866,7 +6866,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6042,5505,59),
 	 (6043,5506,59),
 	 (6044,5507,60);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6045,5508,60),
 	 (6046,5509,60),
 	 (6047,5510,60),
@@ -6877,7 +6877,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6052,5515,61),
 	 (6053,5516,61),
 	 (6054,5517,62);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6055,5518,63),
 	 (6056,5519,64),
 	 (6057,5520,64),
@@ -6888,7 +6888,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6062,5525,64),
 	 (6063,5526,64),
 	 (6064,5527,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6065,5528,64),
 	 (6066,5529,64),
 	 (6067,5530,64),
@@ -6899,7 +6899,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6072,5535,64),
 	 (6073,5536,64),
 	 (6074,5537,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6075,5538,64),
 	 (6076,5539,64),
 	 (6077,5540,64),
@@ -6910,7 +6910,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6082,5545,64),
 	 (6083,5546,64),
 	 (6084,5547,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6085,5548,64),
 	 (6086,5549,65),
 	 (6087,5550,65),
@@ -6921,7 +6921,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6092,5555,65),
 	 (6093,5556,66),
 	 (6094,5557,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6095,5558,66),
 	 (6096,5559,66),
 	 (6097,5560,66),
@@ -6932,7 +6932,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6102,5565,71),
 	 (6103,5566,71),
 	 (6104,5567,71);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6105,5568,76),
 	 (6106,5569,33),
 	 (6107,5570,33),
@@ -6943,7 +6943,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6112,5575,2),
 	 (6113,5576,1),
 	 (6114,5577,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6115,5578,102),
 	 (6116,5579,102),
 	 (6117,5580,102),
@@ -6954,7 +6954,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6122,5585,103),
 	 (6123,5586,103),
 	 (6124,5587,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6125,5588,104),
 	 (6126,5589,103),
 	 (6127,5590,103),
@@ -6965,7 +6965,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6132,5595,103),
 	 (6133,5596,103),
 	 (6134,5597,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6135,5598,127),
 	 (6136,5599,131),
 	 (6151,5599,149),
@@ -6976,7 +6976,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6141,5604,1),
 	 (6142,5605,1),
 	 (6143,5606,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6144,5607,55),
 	 (6145,5608,355),
 	 (6146,5609,147),
@@ -6987,7 +6987,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6161,5614,283),
 	 (6162,5615,283),
 	 (6163,5616,283);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6164,5617,350),
 	 (6165,5618,224),
 	 (6166,5619,357),
@@ -6998,7 +6998,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6172,5624,350),
 	 (6173,5625,350),
 	 (6174,5626,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6175,5627,350),
 	 (6176,5628,350),
 	 (6177,5629,350),
@@ -7009,7 +7009,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6182,5634,350),
 	 (6183,5635,350),
 	 (6184,5636,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6185,5637,350),
 	 (6186,5638,350),
 	 (6187,5639,350),
@@ -7020,7 +7020,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6192,5644,350),
 	 (6193,5645,350),
 	 (6194,5646,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6195,5647,350),
 	 (6196,5648,350),
 	 (6198,5649,224),
@@ -7031,7 +7031,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6203,5654,223),
 	 (6204,5655,223),
 	 (6205,5656,223);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6206,5657,351),
 	 (6207,5658,164),
 	 (6208,5659,161),
@@ -7042,7 +7042,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6213,5664,161),
 	 (6214,5665,161),
 	 (6215,5666,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6216,5667,161),
 	 (6217,5668,161),
 	 (6218,5669,161),
@@ -7053,7 +7053,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6223,5674,160),
 	 (6224,5675,160),
 	 (6225,5676,170);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6226,5677,170),
 	 (6227,5678,171),
 	 (6228,5679,171),
@@ -7064,7 +7064,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6233,5684,145),
 	 (6234,5685,145),
 	 (6235,5686,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6236,5687,145),
 	 (6237,5688,145),
 	 (6238,5689,144),
@@ -7075,7 +7075,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6243,5694,144),
 	 (6244,5695,144),
 	 (6245,5696,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6246,5697,144),
 	 (6247,5698,144),
 	 (6248,5699,144),
@@ -7086,7 +7086,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6253,5704,680),
 	 (6254,5705,144),
 	 (6255,5706,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6256,5707,144),
 	 (6257,5708,144),
 	 (6258,5709,144),
@@ -7097,7 +7097,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6263,5714,144),
 	 (6264,5715,144),
 	 (6265,5716,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6266,5717,146),
 	 (6267,5718,146),
 	 (6268,5719,146),
@@ -7108,7 +7108,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6273,5724,144),
 	 (6274,5725,144),
 	 (6275,5726,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6276,5727,144),
 	 (6277,5728,144),
 	 (6278,5729,144),
@@ -7119,7 +7119,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6283,5734,144),
 	 (6284,5735,144),
 	 (6285,5736,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6286,5737,144),
 	 (6287,5738,144),
 	 (6288,5739,144),
@@ -7130,7 +7130,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6293,5744,144),
 	 (6294,5745,144),
 	 (6295,5746,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6296,5747,177),
 	 (6297,5748,162),
 	 (6298,5749,162),
@@ -7141,7 +7141,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6303,5754,2),
 	 (6304,5755,2),
 	 (6305,5756,358);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6306,5757,144),
 	 (6307,5758,682),
 	 (6308,5759,683),
@@ -7152,7 +7152,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6313,5764,31),
 	 (6314,5765,686),
 	 (6320,5766,102);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6321,5767,102),
 	 (6322,5768,102),
 	 (6323,5769,102),
@@ -7163,7 +7163,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6328,5774,103),
 	 (6329,5775,103),
 	 (6330,5776,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6331,5777,103),
 	 (6332,5778,49),
 	 (6333,5779,362),
@@ -7174,7 +7174,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6338,5784,351),
 	 (6339,5785,351),
 	 (6340,5786,351);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6341,5787,351),
 	 (6342,5788,351),
 	 (6343,5789,351),
@@ -7185,7 +7185,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6348,5794,51),
 	 (6349,5795,45),
 	 (6350,5796,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6351,5797,689),
 	 (6352,5798,103),
 	 (6353,5799,678),
@@ -7196,7 +7196,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6358,5804,351),
 	 (6359,5805,351),
 	 (6360,5806,351);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6361,5807,351),
 	 (6362,5808,351),
 	 (6363,5809,351),
@@ -7207,7 +7207,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6370,5813,677),
 	 (6368,5814,353),
 	 (6369,5815,353);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6371,5816,677),
 	 (6372,5817,144),
 	 (6373,5818,144),
@@ -7218,7 +7218,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6378,5823,167),
 	 (6379,5824,167),
 	 (6380,5825,167);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6381,5826,167),
 	 (6382,5827,167),
 	 (6383,5828,167),
@@ -7229,7 +7229,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6388,5833,167),
 	 (6389,5834,167),
 	 (6390,5835,173);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6391,5836,173),
 	 (6392,5837,173),
 	 (6393,5838,173),
@@ -7240,7 +7240,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6398,5843,146),
 	 (6399,5844,175),
 	 (6400,5845,175);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6401,5846,175),
 	 (6402,5847,353),
 	 (6403,5848,353),
@@ -7251,7 +7251,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6408,5853,353),
 	 (6409,5854,353),
 	 (6410,5855,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6411,5856,1),
 	 (6412,5857,1),
 	 (6413,5858,1),
@@ -7262,7 +7262,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6418,5863,1),
 	 (6419,5864,1),
 	 (7228,5865,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6421,5866,1),
 	 (6422,5867,1),
 	 (6423,5868,1),
@@ -7273,7 +7273,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6428,5873,1),
 	 (6429,5874,1),
 	 (6430,5875,1);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6431,5876,1),
 	 (6432,5877,1),
 	 (6433,5878,1),
@@ -7284,7 +7284,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6438,5883,2),
 	 (6439,5884,2),
 	 (6440,5885,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6441,5886,2),
 	 (6442,5887,2),
 	 (6443,5888,2),
@@ -7295,7 +7295,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7227,5893,3),
 	 (6449,5894,3),
 	 (6450,5895,3);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6451,5896,3),
 	 (6452,5897,3),
 	 (6453,5898,3),
@@ -7306,7 +7306,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6458,5903,4),
 	 (6459,5904,4),
 	 (6460,5905,5);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6461,5906,14),
 	 (6462,5907,14),
 	 (6463,5908,14),
@@ -7317,7 +7317,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6468,5913,14),
 	 (6469,5914,14),
 	 (6470,5915,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6471,5916,14),
 	 (6472,5917,14),
 	 (6473,5918,14),
@@ -7328,7 +7328,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6478,5923,14),
 	 (6479,5924,14),
 	 (6480,5925,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6481,5926,14),
 	 (6482,5927,14),
 	 (6483,5928,14),
@@ -7339,7 +7339,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6488,5933,15),
 	 (6489,5934,15),
 	 (6490,5935,15);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6491,5936,15),
 	 (6492,5937,16),
 	 (6493,5938,16),
@@ -7350,7 +7350,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6498,5943,18),
 	 (6499,5944,18),
 	 (6500,5945,19);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6501,5946,19),
 	 (6502,5947,20),
 	 (6503,5948,20),
@@ -7361,7 +7361,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6508,5953,21),
 	 (6509,5954,21),
 	 (6510,5955,21);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6511,5956,21),
 	 (6512,5957,21),
 	 (6513,5958,21),
@@ -7372,7 +7372,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6518,5963,22),
 	 (6519,5964,22),
 	 (6520,5965,22);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6521,5966,22),
 	 (6522,5967,22),
 	 (6523,5968,22),
@@ -7383,7 +7383,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6528,5973,22),
 	 (6529,5974,22),
 	 (6530,5975,23);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6531,5976,24),
 	 (6532,5977,24),
 	 (6533,5978,25),
@@ -7394,7 +7394,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6538,5983,25),
 	 (6539,5984,25),
 	 (6540,5985,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6541,5986,25),
 	 (6542,5987,25),
 	 (6543,5988,25),
@@ -7405,7 +7405,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6548,5993,25),
 	 (6549,5994,25),
 	 (6550,5995,25);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6551,5996,25),
 	 (6552,5997,25),
 	 (6553,5998,26),
@@ -7416,7 +7416,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6558,6003,26),
 	 (6559,6004,26),
 	 (6560,6005,26);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6561,6006,26),
 	 (6562,6007,27),
 	 (6563,6008,27),
@@ -7427,7 +7427,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6568,6013,29),
 	 (6569,6014,29),
 	 (6570,6015,29);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6571,6016,29),
 	 (6572,6017,30),
 	 (6573,6018,30),
@@ -7438,7 +7438,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6578,6023,31),
 	 (6579,6024,31),
 	 (6580,6025,32);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6581,6026,32),
 	 (6582,6027,33),
 	 (6583,6028,33),
@@ -7449,7 +7449,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6588,6033,35),
 	 (6589,6034,35),
 	 (6590,6035,35);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6591,6036,36),
 	 (6592,6037,37),
 	 (6593,6038,37),
@@ -7460,7 +7460,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6598,6043,37),
 	 (6599,6044,37),
 	 (6600,6045,37);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6601,6046,37),
 	 (6602,6047,37),
 	 (6603,6048,38),
@@ -7471,7 +7471,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6608,6053,38),
 	 (6609,6054,38),
 	 (6610,6055,38);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6611,6056,38),
 	 (6612,6057,38),
 	 (6613,6058,39),
@@ -7482,7 +7482,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6618,6063,40),
 	 (6619,6064,40),
 	 (6620,6065,40);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6621,6066,40),
 	 (6622,6067,40),
 	 (6623,6068,40),
@@ -7493,7 +7493,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6628,6073,41),
 	 (6629,6074,41),
 	 (6630,6075,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6631,6076,41),
 	 (6632,6077,41),
 	 (6633,6078,41),
@@ -7504,7 +7504,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6638,6083,41),
 	 (6639,6084,41),
 	 (6640,6085,41);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6641,6086,41),
 	 (6642,6087,41),
 	 (6643,6088,41),
@@ -7515,7 +7515,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6648,6093,42),
 	 (6649,6094,42),
 	 (6650,6095,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6651,6096,43),
 	 (6652,6097,43),
 	 (6653,6098,43),
@@ -7526,7 +7526,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6658,6103,43),
 	 (6659,6104,43),
 	 (6660,6105,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6661,6106,43),
 	 (6662,6107,43),
 	 (6663,6108,43),
@@ -7537,7 +7537,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6668,6113,43),
 	 (6669,6114,43),
 	 (6670,6115,43);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6671,6116,43),
 	 (6672,6117,44),
 	 (6673,6118,44),
@@ -7548,7 +7548,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6678,6123,44),
 	 (6679,6124,45),
 	 (6680,6125,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6681,6126,45),
 	 (6682,6127,45),
 	 (6683,6128,45),
@@ -7559,7 +7559,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6688,6133,45),
 	 (6689,6134,45),
 	 (6690,6135,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6691,6136,45),
 	 (6692,6137,46),
 	 (6693,6138,46),
@@ -7570,7 +7570,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6698,6143,48),
 	 (6699,6144,48),
 	 (6700,6145,48);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6701,6146,48),
 	 (6702,6147,49),
 	 (6703,6148,49),
@@ -7581,7 +7581,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6708,6153,50),
 	 (6709,6154,50),
 	 (6710,6155,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6711,6156,50),
 	 (6712,6157,50),
 	 (6713,6158,50),
@@ -7592,7 +7592,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6718,6163,50),
 	 (6719,6164,50),
 	 (6720,6165,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6721,6166,50),
 	 (6722,6167,50),
 	 (6723,6168,50),
@@ -7603,7 +7603,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6728,6173,50),
 	 (6729,6174,50),
 	 (6730,6175,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6731,6176,50),
 	 (6732,6177,50),
 	 (6733,6178,50),
@@ -7614,7 +7614,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6738,6183,50),
 	 (6739,6184,50),
 	 (6740,6185,50);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6741,6186,50),
 	 (6742,6187,50),
 	 (6743,6188,50),
@@ -7625,7 +7625,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6748,6193,51),
 	 (6749,6194,51),
 	 (6750,6195,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6751,6196,51),
 	 (6752,6197,51),
 	 (6753,6198,51),
@@ -7636,7 +7636,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6758,6203,51),
 	 (6759,6204,51),
 	 (6760,6205,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6761,6206,51),
 	 (6762,6207,51),
 	 (6763,6208,51),
@@ -7647,7 +7647,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6768,6213,51),
 	 (6769,6214,51),
 	 (6770,6215,51);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6771,6216,51),
 	 (6772,6217,51),
 	 (6773,6218,52),
@@ -7658,7 +7658,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6778,6223,52),
 	 (6779,6224,52),
 	 (6780,6225,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6781,6226,52),
 	 (6782,6227,52),
 	 (6783,6228,52),
@@ -7669,7 +7669,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6788,6233,52),
 	 (6789,6234,52),
 	 (6790,6235,52);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6791,6236,52),
 	 (6792,6237,52),
 	 (6793,6238,52),
@@ -7680,7 +7680,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6798,6243,54),
 	 (6799,6244,55),
 	 (6800,6245,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6801,6246,55),
 	 (6802,6247,55),
 	 (6803,6248,55),
@@ -7691,7 +7691,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6808,6253,55),
 	 (6809,6254,55),
 	 (6810,6255,55);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6811,6256,55),
 	 (6812,6257,55),
 	 (6813,6258,55),
@@ -7702,7 +7702,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6818,6263,56),
 	 (6819,6264,56),
 	 (6820,6265,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6821,6266,56),
 	 (6822,6267,56),
 	 (6823,6268,56),
@@ -7713,7 +7713,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6828,6273,56),
 	 (6829,6274,56),
 	 (6830,6275,56);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6831,6276,56),
 	 (6832,6277,56),
 	 (6833,6278,57),
@@ -7724,7 +7724,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6838,6283,60),
 	 (6839,6284,60),
 	 (6840,6285,60);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6841,6286,60),
 	 (7236,6287,60),
 	 (6843,6288,60),
@@ -7735,7 +7735,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6848,6293,63),
 	 (6849,6294,64),
 	 (6850,6295,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6851,6296,64),
 	 (6852,6297,64),
 	 (6853,6298,64),
@@ -7746,7 +7746,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6858,6303,64),
 	 (6859,6304,64),
 	 (6860,6305,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6861,6306,64),
 	 (6862,6307,64),
 	 (6863,6308,64),
@@ -7757,7 +7757,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6868,6313,64),
 	 (6869,6314,64),
 	 (6870,6315,64);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6871,6316,64),
 	 (6872,6317,64),
 	 (6873,6318,64),
@@ -7768,7 +7768,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6878,6323,64),
 	 (6879,6324,65),
 	 (6880,6325,65);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6881,6326,65),
 	 (6882,6327,65),
 	 (6883,6328,65),
@@ -7779,7 +7779,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6888,6333,66),
 	 (6889,6334,66),
 	 (6890,6335,66);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6891,6336,66),
 	 (6892,6337,67),
 	 (6893,6338,68),
@@ -7790,7 +7790,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6898,6343,76),
 	 (6899,6344,33),
 	 (6900,6345,33);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6901,6346,33),
 	 (6902,6347,1),
 	 (6903,6348,1),
@@ -7801,7 +7801,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6908,6353,102),
 	 (6909,6354,102),
 	 (6910,6355,102);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6911,6356,102),
 	 (6912,6357,102),
 	 (6913,6358,102),
@@ -7812,7 +7812,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6918,6363,104),
 	 (6919,6364,103),
 	 (6920,6365,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6921,6366,103),
 	 (6922,6367,103),
 	 (6923,6368,103),
@@ -7823,7 +7823,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6928,6373,127),
 	 (6929,6374,131),
 	 (6944,6374,149);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6930,6375,41),
 	 (6931,6376,41),
 	 (6932,6377,41),
@@ -7834,7 +7834,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6936,6381,2),
 	 (6937,6382,55),
 	 (6938,6383,355);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6939,6384,147),
 	 (6940,6385,55),
 	 (6943,6386,148),
@@ -7845,7 +7845,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6956,6391,283),
 	 (6957,6392,350),
 	 (6958,6393,224);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6959,6394,357),
 	 (6961,6395,350),
 	 (6962,6396,350),
@@ -7856,7 +7856,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6967,6401,350),
 	 (6968,6402,350),
 	 (6969,6403,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6970,6404,350),
 	 (6971,6405,350),
 	 (6972,6406,350),
@@ -7867,7 +7867,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6977,6411,350),
 	 (6978,6412,350),
 	 (6979,6413,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6980,6414,350),
 	 (6981,6415,350),
 	 (6982,6416,350),
@@ -7878,7 +7878,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6987,6421,350),
 	 (6988,6422,350),
 	 (6989,6423,350);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6991,6424,224),
 	 (6992,6425,223),
 	 (6993,6426,223),
@@ -7889,7 +7889,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (6998,6431,223),
 	 (6999,6432,351),
 	 (7000,6433,164);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7001,6434,161),
 	 (7002,6435,161),
 	 (7003,6436,161),
@@ -7900,7 +7900,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7008,6441,161),
 	 (7009,6442,161),
 	 (7010,6443,161);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7011,6444,161),
 	 (7012,6445,680),
 	 (7013,6446,175),
@@ -7911,7 +7911,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7018,6451,170),
 	 (7019,6452,170),
 	 (7020,6453,171);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7021,6454,171),
 	 (7022,6455,158),
 	 (7023,6456,158),
@@ -7922,7 +7922,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7028,6461,145),
 	 (7029,6462,145),
 	 (7030,6463,145);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7031,6464,144),
 	 (7032,6465,144),
 	 (7033,6466,144),
@@ -7933,7 +7933,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7038,6471,144),
 	 (7039,6472,144),
 	 (7040,6473,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7041,6474,144),
 	 (7042,6475,144),
 	 (7043,6476,144),
@@ -7944,7 +7944,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7048,6481,144),
 	 (7049,6482,144),
 	 (7050,6483,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7051,6484,144),
 	 (7052,6485,144),
 	 (7053,6486,145),
@@ -7955,7 +7955,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7058,6491,144),
 	 (7059,6492,146),
 	 (7060,6493,146);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7061,6494,146),
 	 (7062,6495,146),
 	 (7063,6496,175),
@@ -7966,7 +7966,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7068,6501,144),
 	 (7069,6502,144),
 	 (7070,6503,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7071,6504,144),
 	 (7072,6505,144),
 	 (7073,6506,144),
@@ -7977,7 +7977,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7078,6511,144),
 	 (7079,6512,144),
 	 (7080,6513,144);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7081,6514,144),
 	 (7082,6515,144),
 	 (7083,6516,144),
@@ -7988,7 +7988,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7088,6521,144),
 	 (7089,6522,177),
 	 (7090,6523,162);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7091,6524,162),
 	 (7092,6525,146),
 	 (7093,6526,146),
@@ -7999,7 +7999,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7098,6531,358),
 	 (7099,6532,144),
 	 (7100,6533,682);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7101,6534,683),
 	 (7102,6535,684),
 	 (7103,6536,684),
@@ -8010,7 +8010,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7108,6541,687),
 	 (7109,6542,687),
 	 (7110,6543,687);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7111,6544,55),
 	 (7112,6545,55),
 	 (7113,6546,362),
@@ -8021,7 +8021,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7118,6551,102),
 	 (7119,6552,103),
 	 (7120,6553,103);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7121,6554,103),
 	 (7122,6555,103),
 	 (7123,6556,103),
@@ -8032,7 +8032,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7141,6561,38),
 	 (7142,6562,51),
 	 (7143,6563,45);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7144,6564,50),
 	 (7145,6565,689),
 	 (7146,6566,103),
@@ -8043,7 +8043,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7151,6571,697),
 	 (7152,6572,14),
 	 (7153,6573,14);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7154,6574,14),
 	 (7155,6575,14),
 	 (7156,6576,14),
@@ -8054,7 +8054,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7161,6581,697),
 	 (7162,6582,697),
 	 (7163,6583,697);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7164,6584,14),
 	 (7165,6585,14),
 	 (7166,6586,14),
@@ -8065,7 +8065,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7171,6591,2),
 	 (7172,6592,2),
 	 (7173,6593,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7174,6594,2),
 	 (7175,6595,2),
 	 (7176,6596,2),
@@ -8076,7 +8076,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7181,6601,697),
 	 (7182,6602,698),
 	 (7183,6603,67);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7184,6604,67),
 	 (7185,6605,67),
 	 (7186,6606,67),
@@ -8087,7 +8087,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7191,6611,2),
 	 (7192,6612,2),
 	 (7193,6613,2);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7194,6614,2),
 	 (7195,6615,697),
 	 (7196,6616,697),
@@ -8098,7 +8098,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7201,6621,2),
 	 (7202,6622,697),
 	 (7203,6623,697);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7204,6624,14),
 	 (7205,6625,1),
 	 (7206,6626,1),
@@ -8109,7 +8109,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7211,6631,15),
 	 (7235,6632,15),
 	 (7213,6633,15);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7214,6634,16),
 	 (7215,6635,16),
 	 (7216,6636,16),
@@ -8120,7 +8120,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7234,6641,16),
 	 (7238,6642,677),
 	 (7241,6643,59);
-INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
+INSERT IGNORE INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7240,6644,59),
 	 (7242,6645,59),
 	 (7243,6646,59),
@@ -8130,7 +8130,7 @@ INSERT INTO iast_hook_strategy_type (id,hookstrategy_id,hooktype_id) VALUES
 	 (7248,6650,44),
 	 (7250,6651,44),
 	 (7251,6652,697);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (1,1,'字符串传播-01','String',1610535130,1610535130,1,1,'Propagator:String','字符串传播-01',1,0),
 	 (2,1,'字符串传播-02','StringBuilder',1610535130,1610535130,1,1,'Propagator:StringBuilder','字符串传播-02',1,0),
 	 (3,1,'List类型传播','List',1610535130,1610535130,1,1,'Propagator:List','List类型传播',1,0),
@@ -8141,7 +8141,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (15,1,'URI传播','URI',1610535130,1610535130,1,1,'Propagator:Uri','URI传播',1,0),
 	 (16,1,'URL类型传播','URL',1610535130,1610535130,1,1,'Propagator:Url','URL类型传播',1,0),
 	 (17,1,'URLDecoder传播','URLDecoder',1610535130,1610535130,1,1,'Propagator:Url Decoder','URLDecoder传播',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (18,1,'RequestFacade传播','RequestFacade',1610535130,1610535130,1,1,'Propagator:Request','RequestFacade传播',1,0),
 	 (19,1,'Cookie传播','Cookie',1610535130,1610535130,1,1,'Propagator:Cookie','Cookie传播',1,0),
 	 (20,1,'ProcessBuilder传播','ProcessBuilder',1610535130,1610535130,1,1,'Propagator:ProcessBuilder','ProcessBuilder传播',1,0),
@@ -8152,7 +8152,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (25,1,'Javax传播','javax',1610535131,1610535131,1,1,'Propagator:For XXE','Javax传播',1,0),
 	 (26,1,'Xml.Sax传播','xml.sax',1610535131,1610535131,1,1,'Propagator:For XXE','Xml.Sax传播',1,0),
 	 (27,1,'Spring传播','spring',1610535131,1610535131,1,1,'Propagator: Spring','Spring传播',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (28,1,'httpclient传播','httpclient',1610535131,1610535131,1,1,'Propagator:HttpClient','httpclient传播',1,0),
 	 (29,1,'httpclient5传播','httpclient5',1610535131,1610535131,1,1,'Propagator:HttpClient5','httpclient5传播',1,0),
 	 (30,1,'okhttp传播','okhttp',1610535131,1610535131,1,1,'Propagator:OkHttp','okhttp传播',1,0),
@@ -8163,7 +8163,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (35,1,'serverlt-stream传播','servelt-stream',1610535131,1610535131,1,1,'Propagator:Serverlt-Stream','serverlt-stream传播',1,0),
 	 (36,1,'JDBC传播','jdbc',1610535131,1610535131,1,1,'Propagator:JDBC','JDBC传播',1,0),
 	 (37,4,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',1,2);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (38,4,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',1,3),
 	 (39,4,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',1,4),
 	 (40,4,'命令执行 ','cmd-injection',1610535131,1610535131,1,1,'OS Command Injection','命令执行 ',1,1),
@@ -8174,7 +8174,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (45,4,'不安全的随机数','crypto-weak-randomness',1610535131,1610535131,1,1,'Weak Random Number Generation','不安全的随机数',1,9),
 	 (46,4,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',1,10),
 	 (47,4,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',1,24);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (48,4,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',1,12),
 	 (49,4,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',1,13),
 	 (50,4,'反射型XSS','reflected-xss',1610535131,1610535131,1,1,'Cross-Site Scripting','反射型XSS',1,14),
@@ -8185,7 +8185,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (55,4,'不安全的反序列化','unsafe-json-deserialize',1610535131,1610535131,1,1,'Untrusted Deserialization','不安全的反序列化',1,27),
 	 (56,4,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',1,16),
 	 (57,4,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',1,21);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (58,4,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',1,17),
 	 (59,4,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',1,23),
 	 (60,4,'不安全的重定向','unvalidated-redirect',1610535131,1610535131,1,1,'Unvalidated Redirect','不安全的重定向',1,22),
@@ -8196,7 +8196,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (65,3,'反射型XSS过滤类型','reflected-xss-filter',1610535131,1610535131,1,0,'Cross-Site Scripting Filter','反射型XSS过滤类型',1,0),
 	 (66,3,'XXE过滤类型','xxe-filter',1610535131,1610535131,1,1,'XML External Entity Injection (XXE) Filter','XXE过滤类型',1,0),
 	 (67,1,'Arrays辅助传播策略','Arrays',1614601101,1614601101,1,1,'Propagator:Arrays','Arrays辅助传播策略',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (68,1,'Collection辅助传播识别策略','Collection',1614601101,1614601101,1,1,'Propagator:Collection','Collection辅助传播识别策略',1,0),
 	 (71,1,'Solr参数解析','SolrParamParser',1616036563,1616036563,1,1,'Propagator:Apache Solr','Solr参数解析',1,0),
 	 (74,2,'exp1','表达式注入',1616564094,1616564094,44,0,'exp1','exp1',1,0),
@@ -8207,7 +8207,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (79,2,'Exp-01','Exploit',1618472497,1618472497,72,0,'Exp-01','Exp-01',1,0),
 	 (80,4,'Exploit-01','Exploit',1618472531,1618472531,72,-1,'Exploit-01','Exploit-01',1,0),
 	 (81,4,'exp','自定义危险方法',1618472680,1618472680,72,-1,'exp','exp',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (89,2,'test','test',1618554457,1618554457,102,0,'test','test',1,0),
 	 (90,4,'readObject01','ObjectInputStream',1619024535,1619024535,148,-1,'readObject01','readObject01',1,0),
 	 (91,4,'12','aaaa',1619024581,1619024581,148,-1,'12','12',1,0),
@@ -8218,7 +8218,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (96,1,'test1','com.demo.test',1620640750,1620640750,155,0,'test1','test1',1,0),
 	 (97,1,'test','customT',1620640788,1620640788,155,1,'test','test',1,0),
 	 (98,3,'test','customF',1620640842,1620640842,155,1,'test','test',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (99,4,'test','customSink',1620640877,1620640877,155,-1,'test','test',1,0),
 	 (100,3,'路径穿越过滤方法','path-traversal-filter',1620893202,1620893202,18,1,'路径穿越过滤方法','路径穿越过滤方法',1,0),
 	 (101,3,'apache工具包过滤组件','Apache-Commons-Lang-Filter',1621475489,1621475489,18,1,'apache工具包过滤组件','apache工具包过滤组件',1,0),
@@ -8229,7 +8229,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (106,4,'test123','test123',1626774485,1626774485,447,-1,'test123','test123',1,0),
 	 (107,4,'<script>alert("xss");</script>','<script>alert("xss");</script>',1626774523,1626774523,447,-1,'<script>alert("xss");</script>','<script>alert("xss");</script>',1,0),
 	 (108,4,'<script>alert("xss");</script>','<p>testadsadasd</p>',1626774680,1626774680,447,-1,'<script>alert("xss");</script>','<script>alert("xss");</script>',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (109,4,'<p>asdad</p>','<p>asdad</p>',1626774715,1626774715,447,-1,'<p>asdad</p>','<p>asdad</p>',1,0),
 	 (110,2,'py-get','python-任意文件读取',1627830222,1627830222,93,1,'Source:py-get','py-get',1,0),
 	 (111,4,'io.open(str)','python-任意文件读取',1627831304,1627831304,93,1,'io.open(str)','io.open(str)',1,0),
@@ -8240,7 +8240,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (116,2,'不安全的反序列化','java.io.ObjectInput.readObject()',1630854089,1630854089,689,1,NULL,'不安全的反序列化',1,0),
 	 (117,1,'加密算法','Propagation:Cipher',1630873564,1630873564,442,1,'加密算法',NULL,1,0),
 	 (118,2,'"><img src=1 onerror=alert(1)>','"><img src=1 onerror=alert(1)>',1630905213,1630905213,724,1,NULL,'"><img src=1 onerror=alert(1)>',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (119,1,'DD','ff',1630911294,1630911294,105,1,NULL,'DD',1,0),
 	 (120,1,'DD','ff',1630911295,1630911295,105,1,NULL,'DD',1,0),
 	 (121,1,'DD','ff',1630911296,1630911296,105,1,NULL,'DD',1,0),
@@ -8251,7 +8251,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (126,2,'测试自定义规则类型','测试自定义规则类型名称',1631591609,1631591609,54,1,NULL,'测试自定义规则类型',1,0),
 	 (127,1,'自定义加密算法','custom-encrypt',1632667036,1632667036,1,1,NULL,'自定义加密算法',1,0),
 	 (128,1,'自定义传播','custom-pro',1632832622,1632832622,442,1,NULL,'自定义传播',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (129,1,'文件上传','PartFile',1632836255,1632836255,442,1,NULL,'文件上传',1,0),
 	 (130,4,'文件上传','commons-fileupload',1632838742,1632838742,442,1,NULL,'文件上传',1,0),
 	 (131,4,'文件写入','FileWrite',1633666003,1633666003,1,1,NULL,'文件写入',1,0),
@@ -8262,7 +8262,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (136,4,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',1,32),
 	 (137,4,'path-traversal','path-traversal',1634110525,1634110525,1,1,NULL,'path-traversal',2,8),
 	 (138,4,'sql-injection','sql-injection',1634110525,1634110525,1,1,NULL,'sql-injection',2,5);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (139,4,'exec-code','exec-code',1634110527,1634110527,1,1,NULL,'exec-code',2,0),
 	 (140,4,'exec-command','exec-command',1634110527,1634110527,1,1,NULL,'exec-command',2,0),
 	 (141,2,'path-traversal','path-traversal',1634110528,1634110528,1,1,NULL,'path-traversal',2,0),
@@ -8273,7 +8273,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (146,3,'general-rules','general-rules',1634110529,1634110529,1,1,NULL,'general-rules',2,0),
 	 (147,1,'Propagator:Hessian','Propagator:Hessian',1636081832,1636081832,1,1,NULL,'Propagator:Hessian',1,0),
 	 (148,1,'字符串传播-01','String',1610535130,1610535130,1,1,'字符串传播-01','字符串传播-01',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (149,4,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',1,0),
 	 (150,4,'path-traversal','path-traversal',1634110525,1634110525,203,1,NULL,'path-traversal',2,8),
 	 (151,4,'sql-injection','sql-injection',1634110525,1634110525,203,1,NULL,'sql-injection',2,5),
@@ -8284,7 +8284,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (156,3,'path-traversal','path-traversal',1634110529,1634110529,203,1,NULL,'path-traversal',2,8),
 	 (157,4,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',2,2),
 	 (158,4,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',2,3);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (159,4,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',2,4),
 	 (160,4,'命令执行 ','cmd-injection',1610535131,1610535131,1,1,'OS Command Injection','命令执行 ',2,1),
 	 (161,4,'Sql注入','sql-injection',1610535131,1610535131,1,1,'SQL Injection','Sql注入',2,5),
@@ -8295,7 +8295,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (166,4,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',2,10),
 	 (167,4,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',2,24),
 	 (168,4,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',2,12);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (169,4,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',2,13),
 	 (170,4,'反射型XSS','reflected-xss',1610535131,1610535131,1,1,'Cross-Site Scripting','反射型XSS',2,14),
 	 (171,4,'XML外部实体注入','xxe',1610535131,1610535131,1,1,'XML External Entity Injection (XXE)','XML外部实体注入',2,26),
@@ -8306,7 +8306,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (176,4,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',2,16),
 	 (177,4,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',2,21),
 	 (178,4,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',2,17);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (179,4,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',2,23),
 	 (180,4,'不安全的重定向','unvalidated-redirect',1610535131,1610535131,1,1,'Unvalidated Redirect','不安全的重定向',2,22),
 	 (181,4,'Header头注入','header-injection',1610535131,1610535131,1,1,'Header Injection','Header头注入',2,15),
@@ -8317,7 +8317,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (186,3,'XXE过滤类型','xxe-filter',1610535131,1610535131,1,1,'XML External Entity Injection (XXE) Filter','XXE过滤类型',2,0),
 	 (187,4,'文件写入','FileWrite',1633666003,1633666003,1,1,NULL,'文件写入',2,0),
 	 (188,4,'Response Without Content-Security-Policy Header','Response Without Content-Security-Policy Header',1634887532,1634887532,1,1,'Response Without Content-Security-Policy Header','没有Content-Security-Policy的响应',2,28);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (189,4,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',2,29),
 	 (190,4,'Response With Insecurely Configured Strict-Transport-Security Header','Response With Insecurely Configured Strict-Transport-Security Header',1634887591,1634887591,1,1,'Strict-Transport-Security','使用不安全配置的 Strict-Transport-Security 标头进行响应',2,30),
 	 (191,4,'Pages Without Anti-Clickjacking Controls','Pages Without Anti-Clickjacking Controls',1634887601,1634887601,1,1,'Pages Without Anti-Clickjacking Controls','没有反点击劫持控制的页面',2,31),
@@ -8328,7 +8328,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (222,4,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',3,4),
 	 (223,4,'命令执行 ','cmd-injection',1610535131,1610535131,1,1,'OS Command Injection','命令执行 ',3,1),
 	 (224,4,'Sql注入','sql-injection',1610535131,1610535131,1,1,'SQL Injection','Sql注入',3,5);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (225,4,'LDAP注入','ldap-injection',1610535131,1610535131,1,1,'LDAP Injection','LDAP注入',3,6),
 	 (226,4,'XPATH注入','xpath-injection',1610535131,1610535131,1,1,'XPath Injection','XPATH注入',3,7),
 	 (227,4,'路径穿越','path-traversal',1610535131,1610535131,1,1,'Path Traversal','路径穿越',3,8),
@@ -8339,7 +8339,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (232,4,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',3,13),
 	 (233,4,'反射型XSS','reflected-xss',1610535131,1610535131,1,1,'Cross-Site Scripting','反射型XSS',3,14),
 	 (234,4,'XML外部实体注入','xxe',1610535131,1610535131,1,1,'XML External Entity Injection (XXE)','XML外部实体注入',3,26);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (235,4,'表达式注入','expression-language-injection',1610535131,1610535131,1,1,'Expression Language Injection','表达式注入',3,18),
 	 (236,4,'正则表达式Dos攻击','redos',1610535131,1610535131,1,1,'Regular Expression DoS','正则表达式Dos攻击',3,19),
 	 (237,4,'反射注入','reflection-injection',1610535131,1610535131,1,1,'Reflection Injection','反射注入',3,20),
@@ -8350,7 +8350,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (242,4,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',3,23),
 	 (243,4,'不安全的重定向','unvalidated-redirect',1610535131,1610535131,1,1,'Unvalidated Redirect','不安全的重定向',3,22),
 	 (244,4,'Header头注入','header-injection',1610535131,1610535131,1,1,'Header Injection','Header头注入',3,15);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (245,4,'动态库加载','dynamic-library-load',1610535131,1610535131,1,1,'JNI Injection','动态库加载',3,25),
 	 (246,4,'SpringCloudConfigServer','spring-cloud-config-server',1610535131,1610535131,1,0,'SpringCloudConfigServer','SpringCloudConfigServer',3,0),
 	 (247,4,'SQL越权类型','sql-over-power',1610535131,1610535131,1,0,'Over Power','SQL越权类型',3,0),
@@ -8361,7 +8361,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (252,4,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',3,29),
 	 (253,4,'Response With Insecurely Configured Strict-Transport-Security Header','Response With Insecurely Configured Strict-Transport-Security Header',1634887591,1634887591,1,1,'Strict-Transport-Security','使用不安全配置的 Strict-Transport-Security 标头进行响应',3,30),
 	 (254,4,'Pages Without Anti-Clickjacking Controls','Pages Without Anti-Clickjacking Controls',1634887601,1634887601,1,1,'Pages Without Anti-Clickjacking Controls','没有反点击劫持控制的页面',3,31);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (255,4,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',3,32),
 	 (256,4,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',3,0),
 	 (283,1,'文件上传','Spring',1638532562,1638532562,1,1,NULL,'文件上传',1,0),
@@ -8372,7 +8372,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (288,4,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',0,3),
 	 (289,4,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',0,4),
 	 (290,4,'命令执行 ','cmd-injection',1610535131,1610535131,1,1,'OS Command Injection','命令执行 ',0,1);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (291,4,'Sql注入','sql-injection',1610535131,1610535131,1,1,'SQL Injection','Sql注入',0,5),
 	 (292,4,'LDAP注入','ldap-injection',1610535131,1610535131,1,1,'LDAP Injection','LDAP注入',0,6),
 	 (293,4,'XPATH注入','xpath-injection',1610535131,1610535131,1,1,'XPath Injection','XPATH注入',0,7),
@@ -8383,7 +8383,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (298,4,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',0,12),
 	 (299,4,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',0,13),
 	 (300,4,'反射型XSS','reflected-xss',1610535131,1610535131,1,1,'Cross-Site Scripting','反射型XSS',0,14);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (301,4,'XML外部实体注入','xxe',1610535131,1610535131,1,1,'XML External Entity Injection (XXE)','XML外部实体注入',0,26),
 	 (302,4,'表达式注入','expression-language-injection',1610535131,1610535131,1,1,'Expression Language Injection','表达式注入',0,18),
 	 (303,4,'正则表达式Dos攻击','redos',1610535131,1610535131,1,1,'Regular Expression DoS','正则表达式Dos攻击',0,19),
@@ -8394,7 +8394,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (308,4,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',0,17),
 	 (309,4,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',0,23),
 	 (310,4,'不安全的重定向','unvalidated-redirect',1610535131,1610535131,1,1,'Unvalidated Redirect','不安全的重定向',0,22);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (311,4,'Header头注入','header-injection',1610535131,1610535131,1,1,'Header Injection','Header头注入',0,15),
 	 (312,4,'动态库加载','dynamic-library-load',1610535131,1610535131,1,1,'JNI Injection','动态库加载',0,25),
 	 (313,4,'SpringCloudConfigServer','spring-cloud-config-server',1610535131,1610535131,1,0,'SpringCloudConfigServer','SpringCloudConfigServer',0,0),
@@ -8405,7 +8405,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (318,4,'Response Without Content-Security-Policy Header','Response Without Content-Security-Policy Header',1634887532,1634887532,1,1,'Response Without Content-Security-Policy Header','没有Content-Security-Policy的响应',0,28),
 	 (319,4,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',0,29),
 	 (320,4,'Response With Insecurely Configured Strict-Transport-Security Header','Response With Insecurely Configured Strict-Transport-Security Header',1634887591,1634887591,1,1,'Strict-Transport-Security','使用不安全配置的 Strict-Transport-Security 标头进行响应',0,30);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (321,4,'Pages Without Anti-Clickjacking Controls','Pages Without Anti-Clickjacking Controls',1634887601,1634887601,1,1,'Pages Without Anti-Clickjacking Controls','没有反点击劫持控制的页面',0,31),
 	 (322,4,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',0,32),
 	 (323,4,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',0,0),
@@ -8416,7 +8416,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (354,1,'Mybatis传播','Mybatis传播',1640834833,1640834833,1,1,NULL,'Mybatis传播',1,0),
 	 (355,1,'Propagator:Jackson','Propagator:Jackson',1635484681,1635484681,1,1,NULL,'Propagator:Jackson',1,0),
 	 (356,1,'Propagator:Hessian','Propagator:Hessian',1635996780,1635996780,1,1,NULL,'Propagator:Hessian',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (357,1,'Invalid:Html5EscapeSymbols','Invalid:Html5EscapeSymbols',1640304468,1640304468,1,1,NULL,'Invalid:Html5EscapeSymbols',1,0),
 	 (358,4,'JNDI注入','JNDI注入',1641449965,1641449965,1,1,NULL,'JNDI注入',1,0),
 	 (359,4,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',4,2),
@@ -8427,7 +8427,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (364,4,'LDAP注入','ldap-injection',1610535131,1610535131,1,1,'LDAP Injection','LDAP注入',4,6),
 	 (365,4,'XPATH注入','xpath-injection',1610535131,1610535131,1,1,'XPath Injection','XPATH注入',4,7),
 	 (366,4,'路径穿越','path-traversal',1610535131,1610535131,1,1,'Path Traversal','路径穿越',4,8);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (367,4,'不安全的随机数','crypto-weak-randomness',1610535131,1610535131,1,1,'Weak Random Number Generation','不安全的随机数',4,9),
 	 (368,4,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',4,10),
 	 (369,4,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',4,24),
@@ -8438,7 +8438,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (374,4,'表达式注入','expression-language-injection',1610535131,1610535131,1,1,'Expression Language Injection','表达式注入',4,18),
 	 (375,4,'正则表达式Dos攻击','redos',1610535131,1610535131,1,1,'Regular Expression DoS','正则表达式Dos攻击',4,19),
 	 (376,4,'反射注入','reflection-injection',1610535131,1610535131,1,1,'Reflection Injection','反射注入',4,20);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (377,4,'不安全的反序列化','unsafe-json-deserialize',1610535131,1610535131,1,1,'Untrusted Deserialization','不安全的反序列化',4,27),
 	 (378,4,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',4,16),
 	 (379,4,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',4,21),
@@ -8449,7 +8449,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (384,4,'动态库加载','dynamic-library-load',1610535131,1610535131,1,1,'JNI Injection','动态库加载',4,25),
 	 (385,4,'SpringCloudConfigServer','spring-cloud-config-server',1610535131,1610535131,1,0,'SpringCloudConfigServer','SpringCloudConfigServer',4,0),
 	 (386,4,'SQL越权类型','sql-over-power',1610535131,1610535131,1,0,'Over Power','SQL越权类型',4,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (387,3,'反射型XSS过滤类型','reflected-xss-filter',1610535131,1610535131,1,0,'Cross-Site Scripting Filter','反射型XSS过滤类型',4,0),
 	 (388,3,'XXE过滤类型','xxe-filter',1610535131,1610535131,1,1,'XML External Entity Injection (XXE) Filter','XXE过滤类型',4,0),
 	 (389,4,'文件写入','FileWrite',1633666003,1633666003,1,1,NULL,'文件写入',4,0),
@@ -8460,7 +8460,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (394,4,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',4,32),
 	 (395,4,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',4,0),
 	 (396,4,'JNDI注入','JNDI注入',1641449965,1641449965,1,1,NULL,'JNDI注入',4,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (422,3,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',1,2),
 	 (423,3,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',1,3),
 	 (424,3,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',1,4),
@@ -8471,7 +8471,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (429,3,'路径穿越','path-traversal',1610535131,1610535131,1,1,'Path Traversal','路径穿越',1,8),
 	 (430,3,'不安全的随机数','crypto-weak-randomness',1610535131,1610535131,1,1,'Weak Random Number Generation','不安全的随机数',1,9),
 	 (431,3,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',1,10);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (432,3,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',1,24),
 	 (433,3,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',1,12),
 	 (434,3,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',1,13),
@@ -8482,7 +8482,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (439,3,'反射注入','reflection-injection',1610535131,1610535131,1,1,'Reflection Injection','反射注入',1,20),
 	 (440,3,'不安全的反序列化','unsafe-json-deserialize',1610535131,1610535131,1,1,'Untrusted Deserialization','不安全的反序列化',1,27),
 	 (441,3,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',1,16);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (442,3,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',1,21),
 	 (443,3,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',1,17),
 	 (444,3,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',1,23),
@@ -8493,7 +8493,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (449,3,'SQL越权类型','sql-over-power',1610535131,1610535131,1,0,'Over Power','SQL越权类型',1,0),
 	 (450,3,'Exploit-01','Exploit',1618472531,1618472531,72,-1,'Exploit-01','Exploit-01',1,0),
 	 (451,3,'exp','自定义危险方法',1618472680,1618472680,72,-1,'exp','exp',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (452,3,'readObject01','ObjectInputStream',1619024535,1619024535,148,-1,'readObject01','readObject01',1,0),
 	 (453,3,'12','aaaa',1619024581,1619024581,148,-1,'12','12',1,0),
 	 (454,3,'exec','Runtime',1619404459,1619404459,168,-1,'exec','exec',1,0),
@@ -8504,7 +8504,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (459,3,'<script>alert("xss");</script>','<p>testadsadasd</p>',1626774680,1626774680,447,-1,'<script>alert("xss");</script>','<script>alert("xss");</script>',1,0),
 	 (460,3,'<p>asdad</p>','<p>asdad</p>',1626774715,1626774715,447,-1,'<p>asdad</p>','<p>asdad</p>',1,0),
 	 (461,3,'io.open(str)','python-任意文件读取',1627831304,1627831304,93,1,'io.open(str)','io.open(str)',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (462,3,'vul-test-0906','vul-test-0906',1630998630,1630998630,105,1,NULL,'vul-test-0906',1,0),
 	 (463,3,'文件上传','commons-fileupload',1632838742,1632838742,442,1,NULL,'文件上传',1,0),
 	 (464,3,'文件写入','FileWrite',1633666003,1633666003,1,1,NULL,'文件写入',1,0),
@@ -8515,7 +8515,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (469,3,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',1,32),
 	 (470,3,'path-traversal','path-traversal',1634110525,1634110525,1,1,NULL,'path-traversal',2,8),
 	 (471,3,'sql-injection','sql-injection',1634110525,1634110525,1,1,NULL,'sql-injection',2,5);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (472,3,'exec-code','exec-code',1634110527,1634110527,1,1,NULL,'exec-code',2,0),
 	 (473,3,'exec-command','exec-command',1634110527,1634110527,1,1,NULL,'exec-command',2,0),
 	 (474,3,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',1,0),
@@ -8526,7 +8526,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (479,3,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',2,2),
 	 (480,3,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',2,3),
 	 (481,3,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',2,4);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (482,3,'命令执行 ','cmd-injection',1610535131,1610535131,1,1,'OS Command Injection','命令执行 ',2,1),
 	 (483,3,'Sql注入','sql-injection',1610535131,1610535131,1,1,'SQL Injection','Sql注入',2,5),
 	 (484,3,'LDAP注入','ldap-injection',1610535131,1610535131,1,1,'LDAP Injection','LDAP注入',2,6),
@@ -8537,7 +8537,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (489,3,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',2,24),
 	 (490,3,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',2,12),
 	 (491,3,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',2,13);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (492,3,'反射型XSS','reflected-xss',1610535131,1610535131,1,1,'Cross-Site Scripting','反射型XSS',2,14),
 	 (493,3,'XML外部实体注入','xxe',1610535131,1610535131,1,1,'XML External Entity Injection (XXE)','XML外部实体注入',2,26),
 	 (494,3,'表达式注入','expression-language-injection',1610535131,1610535131,1,1,'Expression Language Injection','表达式注入',2,18),
@@ -8548,7 +8548,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (499,3,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',2,21),
 	 (500,3,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',2,17),
 	 (501,3,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',2,23);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (502,3,'不安全的重定向','unvalidated-redirect',1610535131,1610535131,1,1,'Unvalidated Redirect','不安全的重定向',2,22),
 	 (503,3,'Header头注入','header-injection',1610535131,1610535131,1,1,'Header Injection','Header头注入',2,15),
 	 (504,3,'动态库加载','dynamic-library-load',1610535131,1610535131,1,1,'JNI Injection','动态库加载',2,25),
@@ -8559,7 +8559,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (509,3,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',2,29),
 	 (510,3,'Response With Insecurely Configured Strict-Transport-Security Header','Response With Insecurely Configured Strict-Transport-Security Header',1634887591,1634887591,1,1,'Strict-Transport-Security','使用不安全配置的 Strict-Transport-Security 标头进行响应',2,30),
 	 (511,3,'Pages Without Anti-Clickjacking Controls','Pages Without Anti-Clickjacking Controls',1634887601,1634887601,1,1,'Pages Without Anti-Clickjacking Controls','没有反点击劫持控制的页面',2,31);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (512,3,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',2,32),
 	 (513,3,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',2,0),
 	 (514,3,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',3,2),
@@ -8570,7 +8570,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (519,3,'LDAP注入','ldap-injection',1610535131,1610535131,1,1,'LDAP Injection','LDAP注入',3,6),
 	 (520,3,'XPATH注入','xpath-injection',1610535131,1610535131,1,1,'XPath Injection','XPATH注入',3,7),
 	 (521,3,'路径穿越','path-traversal',1610535131,1610535131,1,1,'Path Traversal','路径穿越',3,8);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (522,3,'不安全的随机数','crypto-weak-randomness',1610535131,1610535131,1,1,'Weak Random Number Generation','不安全的随机数',3,9),
 	 (523,3,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',3,10),
 	 (524,3,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',3,24),
@@ -8581,7 +8581,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (529,3,'表达式注入','expression-language-injection',1610535131,1610535131,1,1,'Expression Language Injection','表达式注入',3,18),
 	 (530,3,'正则表达式Dos攻击','redos',1610535131,1610535131,1,1,'Regular Expression DoS','正则表达式Dos攻击',3,19),
 	 (531,3,'反射注入','reflection-injection',1610535131,1610535131,1,1,'Reflection Injection','反射注入',3,20);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (532,3,'不安全的反序列化','unsafe-json-deserialize',1610535131,1610535131,1,1,'Untrusted Deserialization','不安全的反序列化',3,27),
 	 (533,3,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',3,16),
 	 (534,3,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',3,21),
@@ -8592,7 +8592,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (539,3,'动态库加载','dynamic-library-load',1610535131,1610535131,1,1,'JNI Injection','动态库加载',3,25),
 	 (540,3,'SpringCloudConfigServer','spring-cloud-config-server',1610535131,1610535131,1,0,'SpringCloudConfigServer','SpringCloudConfigServer',3,0),
 	 (541,3,'SQL越权类型','sql-over-power',1610535131,1610535131,1,0,'Over Power','SQL越权类型',3,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (542,3,'文件写入','FileWrite',1633666003,1633666003,1,1,NULL,'文件写入',3,0),
 	 (543,3,'Response Without Content-Security-Policy Header','Response Without Content-Security-Policy Header',1634887532,1634887532,1,1,'Response Without Content-Security-Policy Header','没有Content-Security-Policy的响应',3,28),
 	 (544,3,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',3,29),
@@ -8603,7 +8603,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (549,3,'reflected-xss','reflected-xss',1636026489,1636026489,1,1,NULL,'reflected-xss',2,14),
 	 (550,3,'xxe','xxe',1636026489,1636026489,1,1,NULL,'xxe',2,26),
 	 (551,3,'ssrf','ssrf',1636026490,1636026490,1,1,NULL,'ssrf',2,3);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (552,3,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',0,2),
 	 (553,3,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',0,3),
 	 (554,3,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',0,4),
@@ -8614,7 +8614,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (559,3,'路径穿越','path-traversal',1610535131,1610535131,1,1,'Path Traversal','路径穿越',0,8),
 	 (560,3,'不安全的随机数','crypto-weak-randomness',1610535131,1610535131,1,1,'Weak Random Number Generation','不安全的随机数',0,9),
 	 (561,3,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',0,10);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (562,3,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',0,24),
 	 (563,3,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',0,12),
 	 (564,3,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',0,13),
@@ -8625,7 +8625,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (569,3,'反射注入','reflection-injection',1610535131,1610535131,1,1,'Reflection Injection','反射注入',0,20),
 	 (570,3,'不安全的反序列化','unsafe-json-deserialize',1610535131,1610535131,1,1,'Untrusted Deserialization','不安全的反序列化',0,27),
 	 (571,3,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',0,16);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (572,3,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',0,21),
 	 (573,3,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',0,17),
 	 (574,3,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',0,23),
@@ -8636,7 +8636,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (579,3,'SQL越权类型','sql-over-power',1610535131,1610535131,1,0,'Over Power','SQL越权类型',0,0),
 	 (580,3,'文件写入','FileWrite',1633666003,1633666003,1,1,NULL,'文件写入',0,0),
 	 (581,3,'Response Without Content-Security-Policy Header','Response Without Content-Security-Policy Header',1634887532,1634887532,1,1,'Response Without Content-Security-Policy Header','没有Content-Security-Policy的响应',0,28);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (582,3,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',0,29),
 	 (583,3,'Response With Insecurely Configured Strict-Transport-Security Header','Response With Insecurely Configured Strict-Transport-Security Header',1634887591,1634887591,1,1,'Strict-Transport-Security','使用不安全配置的 Strict-Transport-Security 标头进行响应',0,30),
 	 (584,3,'Pages Without Anti-Clickjacking Controls','Pages Without Anti-Clickjacking Controls',1634887601,1634887601,1,1,'Pages Without Anti-Clickjacking Controls','没有反点击劫持控制的页面',0,31),
@@ -8647,7 +8647,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (589,3,'JNDI注入','JNDI注入',1641449965,1641449965,1,1,NULL,'JNDI注入',1,0),
 	 (590,3,'SMTP注入','smtp-injection',1610535131,1610535131,1,1,'SMTP Injection','SMTP注入',4,2),
 	 (591,3,'服务器端请求伪造','ssrf',1610535131,1610535131,1,1,'Server-Side Request Forgery (SSRF)','服务器端请求伪造',4,3);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (592,3,'不安全的XMl Decode','unsafe-xml-decode',1610535131,1610535131,1,1,'Unsafe XML Decoding','不安全的XMl Decode',4,4),
 	 (593,3,'命令执行 ','cmd-injection',1610535131,1610535131,1,1,'OS Command Injection','命令执行 ',4,1),
 	 (594,3,'Sql注入','sql-injection',1610535131,1610535131,1,1,'SQL Injection','Sql注入',4,5),
@@ -8658,7 +8658,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (599,3,'不安全的hash算法','crypto-bad-mac',1610535131,1610535131,1,1,'Insecure Hash Algorithms','不安全的hash算法',4,10),
 	 (600,3,'不安全的加密算法','crypto-bad-ciphers',1610535131,1610535131,1,1,'Insecure Encryption Algorithms','不安全的加密算法',4,24),
 	 (601,3,'Cookie-flag缺失','cookie-flags-missing',1610535131,1610535131,1,1,'Application Disables ''''secure'''' Flag on Cookies','Cookie-flag缺失',4,12);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (602,3,'信任边界','trust-boundary-violation',1610535131,1610535131,1,1,'Trust Boundary Violation','信任边界',4,13),
 	 (603,3,'反射型XSS','reflected-xss',1610535131,1610535131,1,1,'Cross-Site Scripting','反射型XSS',4,14),
 	 (604,3,'XML外部实体注入','xxe',1610535131,1610535131,1,1,'XML External Entity Injection (XXE)','XML外部实体注入',4,26),
@@ -8669,7 +8669,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (609,3,'Hql注入','hql-injection',1610535131,1610535131,1,1,'Hibernate Injection','Hql注入',4,16),
 	 (610,3,'NoSql注入','nosql-injection',1610535131,1610535131,1,1,'NoSQL Injection','NoSql注入',4,21),
 	 (611,3,'不安全的readline','unsafe-readline',1610535131,1610535131,1,1,'Use of readLine on Untrusted Streams','不安全的readline',4,17);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (612,3,'不安全的转发','unvalidated-forward',1610535131,1610535131,1,1,'Arbitrary Server Side Forwards','不安全的转发',4,23),
 	 (613,3,'不安全的重定向','unvalidated-redirect',1610535131,1610535131,1,1,'Unvalidated Redirect','不安全的重定向',4,22),
 	 (614,3,'Header头注入','header-injection',1610535131,1610535131,1,1,'Header Injection','Header头注入',4,15),
@@ -8680,7 +8680,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (619,3,'Response Without Content-Security-Policy Header','Response Without Content-Security-Policy Header',1634887532,1634887532,1,1,'Response Without Content-Security-Policy Header','没有Content-Security-Policy的响应',4,28),
 	 (620,3,'Response With X-XSS-Protection Disabled','Response With X-XSS-Protection Disabled',1634887580,1634887580,1,1,'Response With X-XSS-Protection Disabled','禁用 X-XSS-Protection 的响应',4,29),
 	 (621,3,'Response With Insecurely Configured Strict-Transport-Security Header','Response With Insecurely Configured Strict-Transport-Security Header',1634887591,1634887591,1,1,'Strict-Transport-Security','使用不安全配置的 Strict-Transport-Security 标头进行响应',4,30);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (622,3,'Pages Without Anti-Clickjacking Controls','Pages Without Anti-Clickjacking Controls',1634887601,1634887601,1,1,'Pages Without Anti-Clickjacking Controls','没有反点击劫持控制的页面',4,31),
 	 (623,3,'Response Without X-Content-Type-Options Header','Response Without X-Content-Type-Options Header',1634887612,1634887612,1,1,'Response Without X-Content-Type-Options Header','没有 X-Content-Type-Options 标头的响应',4,32),
 	 (624,3,'任意文件写入','FileWrite',1636085906,1636085906,1,1,NULL,'任意文件写入',4,0),
@@ -8691,7 +8691,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (680,4,'代码执行','exec-code',1634110527,1634110527,1,1,NULL,'代码执行',2,0),
 	 (681,2,'Source:GrpcV1','Source:GrpcV1',1647413256,1647413256,1,1,NULL,'Source:GrpcV1',1,0),
 	 (682,2,'Feign源方法','feign.ReflectiveFeign',NULL,NULL,1,1,NULL,'Feign源方法',1,0);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (683,2,'FileUploadBase接口','org.apache.commons.fileupload.FileUploadBase',NULL,NULL,1,1,NULL,'FileUploadBase接口',1,0),
 	 (684,1,'Kafka传播','Kafka传播',NULL,NULL,1,1,NULL,'Kafka传播',1,0),
 	 (685,1,'Iterator传播','java.util.Iterator',NULL,NULL,1,1,NULL,'Iterator传播',1,0),
@@ -8702,7 +8702,7 @@ INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created
 	 (690,3,'身份认证','身份认证',1652843515,1652843515,1,1,NULL,'身份认证',2,40),
 	 (691,4,'身份认证','身份认证',1652843515,1652843515,1,1,NULL,'身份认证',2,40),
 	 (692,3,'身份认证','身份认证',1652843515,1652843515,1,1,NULL,'身份认证',3,40);
-INSERT INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
+INSERT IGNORE INTO iast_hook_type (id,`type`,name,value,create_time,update_time,created_by,enable,name_en,name_zh,language_id,strategy_id) VALUES
 	 (693,4,'身份认证','身份认证',1652843515,1652843515,1,1,NULL,'身份认证',3,40),
 	 (694,3,'身份认证','身份认证',1652843515,1652843515,1,1,NULL,'身份认证',4,40),
 	 (695,4,'身份认证','身份认证',1652843515,1652843515,1,1,NULL,'身份认证',4,40),

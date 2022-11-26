@@ -16594,9 +16594,9 @@ CREATE TABLE `iast_vul_recheck_payload` (`id` integer AUTO_INCREMENT NOT NULL PR
 
 
 
-INSERT INTO `web_button` (`id`, `name`, `webroute_id`) VALUES (14, '主动验证', 18);
+INSERT IGNORE INTO `web_button` (`id`, `name`, `webroute_id`) VALUES (14, '主动验证', 18);
 
-INSERT INTO `web_button` (`id`, `name`, `webroute_id`) VALUES (15, '熔断管理', 18);
+INSERT IGNORE INTO `web_button` (`id`, `name`, `webroute_id`) VALUES (15, '熔断管理', 18);
 
 UPDATE `web_button` SET `name` = '降级配置', `webroute_id` = 18 WHERE `id` = 13;
 
@@ -16620,47 +16620,47 @@ DELETE FROM `web_role_button_relation` WHERE `id` = 112;
 
 DELETE FROM `web_role_button_relation` WHERE `id` = 113;
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (226, 6, 14);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (226, 6, 14);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (227, 6, 15);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (227, 6, 15);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (228, 6, 1);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (228, 6, 1);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (229, 6, 13);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (229, 6, 13);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (230, 6, 11);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (230, 6, 11);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (231, 6, 2);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (231, 6, 2);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (232, 6, 3);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (232, 6, 3);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (233, 6, 8);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (233, 6, 8);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (234, 6, 9);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (234, 6, 9);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (235, 6, 4);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (235, 6, 4);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (236, 6, 7);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (236, 6, 7);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (237, 6, 6);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (237, 6, 6);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (256, 7, 1);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (256, 7, 1);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (257, 7, 13);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (257, 7, 13);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (258, 7, 11);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (258, 7, 11);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (259, 7, 2);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (259, 7, 2);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (260, 7, 3);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (260, 7, 3);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (261, 7, 8);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (261, 7, 8);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (262, 7, 9);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (262, 7, 9);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (263, 7, 4);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (263, 7, 4);
 
-INSERT INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (264, 7, 7);
+INSERT IGNORE INTO `web_role_button_relation` (`id`, `role_id`, `button_id`) VALUES (264, 7, 7);
 
 DELETE FROM `web_role_url_relation` WHERE `id` = 743;
 
@@ -16786,201 +16786,201 @@ DELETE FROM `web_role_url_relation` WHERE `id` = 803;
 
 DELETE FROM `web_role_url_relation` WHERE `id` = 804;
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1602, 6, 1);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1602, 6, 1);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1603, 6, 2);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1603, 6, 2);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1604, 6, 3);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1604, 6, 3);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1605, 6, 4);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1605, 6, 4);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1606, 6, 5);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1606, 6, 5);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1607, 6, 6);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1607, 6, 6);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1608, 6, 7);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1608, 6, 7);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1609, 6, 8);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1609, 6, 8);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1610, 6, 9);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1610, 6, 9);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1611, 6, 10);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1611, 6, 10);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1612, 6, 11);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1612, 6, 11);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1613, 6, 12);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1613, 6, 12);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1614, 6, 13);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1614, 6, 13);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1615, 6, 14);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1615, 6, 14);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1616, 6, 15);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1616, 6, 15);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1617, 6, 17);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1617, 6, 17);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1618, 6, 18);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1618, 6, 18);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1619, 6, 19);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1619, 6, 19);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1620, 6, 20);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1620, 6, 20);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1621, 6, 21);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1621, 6, 21);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1622, 6, 22);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1622, 6, 22);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1623, 6, 23);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1623, 6, 23);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1624, 6, 24);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1624, 6, 24);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1625, 6, 26);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1625, 6, 26);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1626, 6, 27);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1626, 6, 27);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1627, 6, 28);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1627, 6, 28);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1628, 6, 29);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1628, 6, 29);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1629, 6, 30);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1629, 6, 30);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1630, 6, 33);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1630, 6, 33);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1631, 6, 34);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1631, 6, 34);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1632, 6, 35);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1632, 6, 35);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1633, 6, 36);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1633, 6, 36);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1634, 6, 37);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1634, 6, 37);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1635, 6, 38);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1635, 6, 38);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1636, 6, 39);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1636, 6, 39);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1637, 6, 41);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1637, 6, 41);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1638, 6, 42);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1638, 6, 42);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1639, 6, 43);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1639, 6, 43);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1640, 6, 44);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1640, 6, 44);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1641, 6, 45);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1641, 6, 45);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1642, 6, 46);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1642, 6, 46);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1643, 6, 47);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1643, 6, 47);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1644, 6, 48);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1644, 6, 48);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1645, 6, 49);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1645, 6, 49);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1646, 6, 50);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1646, 6, 50);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1647, 6, 51);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1647, 6, 51);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1708, 7, 1);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1708, 7, 1);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1709, 7, 2);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1709, 7, 2);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1710, 7, 3);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1710, 7, 3);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1711, 7, 4);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1711, 7, 4);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1712, 7, 5);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1712, 7, 5);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1713, 7, 6);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1713, 7, 6);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1714, 7, 9);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1714, 7, 9);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1715, 7, 10);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1715, 7, 10);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1716, 7, 11);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1716, 7, 11);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1717, 7, 12);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1717, 7, 12);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1718, 7, 13);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1718, 7, 13);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1719, 7, 14);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1719, 7, 14);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1720, 7, 15);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1720, 7, 15);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1721, 7, 17);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1721, 7, 17);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1722, 7, 18);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1722, 7, 18);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1723, 7, 19);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1723, 7, 19);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1724, 7, 20);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1724, 7, 20);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1725, 7, 21);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1725, 7, 21);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1726, 7, 22);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1726, 7, 22);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1727, 7, 26);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1727, 7, 26);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1728, 7, 34);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1728, 7, 34);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1729, 7, 42);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1729, 7, 42);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1730, 7, 43);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1730, 7, 43);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1731, 7, 44);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1731, 7, 44);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1732, 7, 45);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1732, 7, 45);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1733, 7, 46);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1733, 7, 46);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1734, 7, 48);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1734, 7, 48);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1735, 7, 49);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1735, 7, 49);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1736, 7, 50);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1736, 7, 50);
 
-INSERT INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1737, 7, 51);
+INSERT IGNORE INTO `web_role_url_relation` (`id`, `role_id`, `url_id`) VALUES (1737, 7, 51);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (16, 6, 3);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (16, 6, 3);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (17, 6, 4);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (17, 6, 4);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (18, 6, 6);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (18, 6, 6);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (19, 6, 13);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (19, 6, 13);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (20, 7, 213);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (20, 7, 213);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (21, 7, 564);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (21, 7, 564);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (22, 6, 566);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (22, 6, 566);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (25, 7, 570);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (25, 7, 570);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (27, 7, 572);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (27, 7, 572);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (30, 7, 573);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (30, 7, 573);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (31, 7, 574);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (31, 7, 574);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (32, 7, 575);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (32, 7, 575);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (33, 6, 576);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (33, 6, 576);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (34, 7, 577);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (34, 7, 577);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (35, 7, 578);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (35, 7, 578);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (36, 7, 579);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (36, 7, 579);
 
-INSERT INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (37, 7, 203);
+INSERT IGNORE INTO `web_role_user_relation` (`id`, `role_id`, `user_id`) VALUES (37, 7, 203);
 
-INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (47, 'about', 'about', 'views/setting/about.vue', 'False', 'True', 'menu.about', 'False', 6, 'menu.about', '', '', '', '');
+INSERT IGNORE INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (47, 'about', 'about', 'views/setting/about.vue', 'False', 'True', 'menu.about', 'False', 6, 'menu.about', '', '', '', '');
 
-INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (48, 'feishu', 'feishu', 'views/setting/feishu.vue', 'False', 'True', 'menu.feishu', 'False', 6, 'menu.feishu', '', '', '', '');
+INSERT IGNORE INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (48, 'feishu', 'feishu', 'views/setting/feishu.vue', 'False', 'True', 'menu.feishu', 'False', 6, 'menu.feishu', '', '', '', '');
 
-INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (49, 'dingding', 'dingding', 'views/setting/dingding.vue', 'False', 'True', 'menu.dingding', 'False', 6, 'menu.dingding', '', '', '', '');
+INSERT IGNORE INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (49, 'dingding', 'dingding', 'views/setting/dingding.vue', 'False', 'True', 'menu.dingding', 'False', 6, 'menu.dingding', '', '', '', '');
 
-INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (50, 'weixin', 'weixin', 'views/setting/weixin.vue', 'False', 'True', 'menu.weixin', 'False', 6, 'menu.weixin', '', '', '', '');
+INSERT IGNORE INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (50, 'weixin', 'weixin', 'views/setting/weixin.vue', 'False', 'True', 'menu.weixin', 'False', 6, 'menu.weixin', '', '', '', '');
 
-INSERT INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (51, 'webhook', 'webhook', 'views/setting/webhook.vue', 'False', 'True', 'menu.webhook', 'False', 6, 'menu.webhook', '', '', '', '');
+INSERT IGNORE INTO `web_url_route` (`id`, `path`, `name`, `component`, `meta_keepAlive`, `meta_disabled`, `meta_i18n`, `meta_isMenu`, `parent`, `meta_name`, `redirect`, `name_i18n_zh`, `name_i18n_en`, `name_i18n`) VALUES (51, 'webhook', 'webhook', 'views/setting/webhook.vue', 'False', 'True', 'menu.webhook', 'False', 6, 'menu.webhook', '', '', '', '');
 
 UPDATE `web_url_route` SET `path` = '/taint', `name` = 'taint', `component` = 'views/taint/Index.vue', `meta_keepAlive` = 'True', `meta_disabled` = 'True', `meta_i18n` = 'menu.taintPool', `meta_isMenu` = 'False', `parent` = 0, `meta_name` = '', `redirect` = '/taint/search', `name_i18n_zh` = '', `name_i18n_en` = '', `name_i18n` = '' WHERE `id` = 4;
 
@@ -17027,7 +17027,7 @@ WHERE v.id = tmp.irc_id ;
 
 
 
-INSERT INTO iast_profile (`key`, value) VALUES('circuit_break', '0');
+INSERT IGNORE INTO iast_profile (`key`, value) VALUES('circuit_break', '0');
 INSERT
 	IGNORE
 INTO
@@ -54177,9 +54177,9 @@ INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES
 
 
 
-INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('系统配置', '系统CPU使用率阈值、系统内存使用率阈值、系统内存使用值阈值', '全部', 1, 1, 0, 1, 1, 1, -6, 1652181113, 1652181113, 1);
-INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('JVM', 'JVM内存使用率阈值、JVM内存使用值阈值、总线程数阈值、守护线程数阈值、洞态IAST线程数阈值', '全部', 1, 1, 0, 1, 1, 2, -1, 1652003124, 1652003124, 1);
-INSERT INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('应用配置', '单请求HOOK限流、每秒限制处理请求数量（QPS）', '全部', 1, 1, 0, 1, 1, 3, -3, 1652181113, 1652181113, 1);
+INSERT IGNORE INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('系统配置', '系统CPU使用率阈值、系统内存使用率阈值、系统内存使用值阈值', '全部', 1, 1, 0, 1, 1, 1, -6, 1652181113, 1652181113, 1);
+INSERT IGNORE INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('JVM', 'JVM内存使用率阈值、JVM内存使用值阈值、总线程数阈值、守护线程数阈值、洞态IAST线程数阈值', '全部', 1, 1, 0, 1, 1, 2, -1, 1652003124, 1652003124, 1);
+INSERT IGNORE INTO iast_circuit_configs (name, metric_types, targets, system_type, is_enable, is_deleted, deal, `interval`, metric_group, priority, create_time, update_time, user_id) VALUES('应用配置', '单请求HOOK限流、每秒限制处理请求数量（QPS）', '全部', 1, 1, 0, 1, 1, 3, -3, 1652181113, 1652181113, 1);
 
 
 

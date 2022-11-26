@@ -14,10 +14,10 @@ hook_strategy_dict = {}
 	
 for i in sql:
     if i.startswith(
-            'INSERT INTO iast_hook_type (id, `type`, name, value, create_time, update_time, created_by, enable, name_en, name_zh, language_id, strategy_id) VALUES('
+            'INSERT IGNORE INTO iast_hook_type (id, `type`, name, value, create_time, update_time, created_by, enable, name_en, name_zh, language_id, strategy_id) VALUES('
     ):
         a = i.replace(
-            'INSERT INTO iast_hook_type (id, `type`, name, value, create_time, update_time, created_by, enable, name_en, name_zh, language_id, strategy_id) VALUES(',
+            'INSERT IGNORE INTO iast_hook_type (id, `type`, name, value, create_time, update_time, created_by, enable, name_en, name_zh, language_id, strategy_id) VALUES(',
             '').replace(');\n', '')
         id_, type_, name, value, create_time, update_time, created_by, enable, name_en, name_zh, language_id, strategy_id = res = a.split(
             ',')
@@ -50,10 +50,10 @@ AND enable = {enable} AND name_en = {name_en}AND name_zh = {name_zh} AND languag
                 name_zh=name_zh,
                 language_id=language_id)
     elif i.startswith(
-            'INSERT INTO iast_hook_strategy (id, value, source, target, inherit, track, create_time, update_time, created_by, enable) VALUES('
+            'INSERT IGNORE INTO iast_hook_strategy (id, value, source, target, inherit, track, create_time, update_time, created_by, enable) VALUES('
     ):
         a = i.replace(
-            'INSERT INTO iast_hook_strategy (id, value, source, target, inherit, track, create_time, update_time, created_by, enable) VALUES(',
+            'INSERT IGNORE INTO iast_hook_strategy (id, value, source, target, inherit, track, create_time, update_time, created_by, enable) VALUES(',
             '').replace(');', '')
         print(a.split(','))
         id_, value, source, target, inherit, track, create_time, update_time, created_by, enable = res = a.split(
@@ -76,10 +76,10 @@ SET @IAST_HOOK_STRATEGY_ID = (SELECT `id` FROM iast_hook_strategy WHERE
            created_by=created_by,
            enable=enable)
     elif i.startswith(
-            'INSERT INTO iast_hook_strategy_type (id, hookstrategy_id, hooktype_id) VALUES('
+            'INSERT IGNORE INTO iast_hook_strategy_type (id, hookstrategy_id, hooktype_id) VALUES('
     ):
         a = i.replace(
-            'INSERT INTO iast_hook_strategy_type (id, hookstrategy_id, hooktype_id) VALUES(',
+            'INSERT IGNORE INTO iast_hook_strategy_type (id, hookstrategy_id, hooktype_id) VALUES(',
             '').replace(');', '')
         id_, hookstrategy_id, hooktype_id = res = a.split(',')
         hook_strategy_pair.append([int(hookstrategy_id), int(hooktype_id)])
@@ -89,5 +89,5 @@ for k, v in hook_strategy_pair:
     res = hook_type_dict[int(v)]
     print(hook_strategy_dict[int(k)])
     print(
-        'INSERT INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);'
+        'INSERT IGNORE INTO iast_hook_strategy_type (hookstrategy_id, hooktype_id) VALUES (@IAST_HOOK_STRATEGY_ID, @HOOK_TYPE_ID);'
     )
