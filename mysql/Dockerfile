@@ -1,4 +1,4 @@
-FROM mysql:8.0 as builder
+FROM mysql:5.7 as builder
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
@@ -8,7 +8,7 @@ RUN chmod 777 /docker-entrypoint-initdb.d -R
 RUN ["sed", "-i", "s/exec \"$@\"/echo \"not running $@\"/", "/usr/local/bin/docker-entrypoint.sh"]
 RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--datadir", "/tmp/initialized-db"]
 
-FROM mysql:8.0
+FROM mysql:5.7
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
