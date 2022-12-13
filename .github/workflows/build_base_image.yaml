@@ -59,6 +59,18 @@ jobs:
             registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-logstash-unittest:1.0.${{github.run_number}}
             registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-logstash-unittest:latest
 
+      - name: Build and push logrotate
+        uses: docker/build-push-action@v3
+        with:
+          context: ./logrotate
+          file: ./logrotate/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: | 
+            registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-logrotate-unittest:1.0.${{github.run_number}}
+            registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-logrotate-unittest:latest
+
+
       # - uses: actions/checkout@master
       # - name: deploy to cluster
       #   uses: wahyd4/kubectl-helm-action@master
