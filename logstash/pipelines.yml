@@ -3,3 +3,4 @@
   pipeline.workers: 6
   pipeline.batch.size: 1500
   pipeline.batch.delay: 10
+  pipeline.ecs_compatibility: disabled
