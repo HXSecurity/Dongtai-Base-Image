@@ -47,6 +47,8 @@ jobs:
           tags: | 
             registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:1.0.${{github.run_number}}
             registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:latest
+            dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}} 
+            dongtai/dongtai-mysql-unittest:latest
 
 #       - name: Build and push logstash
 #         uses: docker/build-push-action@v3
