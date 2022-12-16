@@ -10,4 +10,12 @@ INSERT INTO web_role_url_relation (role_id, url_id) VALUES(6, 59);
 ALTER TABLE iast_agent ADD events json NULL COMMENT 'events';
 ALTER TABLE iast_profile MODIFY COLUMN value text  NULL;
 
+
+DELETE FROM iast_circuit_configs 
+WHERE metric_group  != 1;
+
+UPDATE iast_circuit_configs SET deal = 2
+WHERE deal = 1;
+
+
 SET FOREIGN_KEY_CHECKS=1;
