@@ -150,3 +150,17 @@ jobs:
           tags: | 
             dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
             dongtai/dongtai-mysql:latest
+            
+      - name: Install Mysql 8.0
+        working-directory: ./mysql
+        run: |
+          sed -i 's#5.7#8.0#g' Dockerfile
+      - name: Build Mysql 8.0
+        uses: docker/build-push-action@v3
+        with:
+          context: ./mysql
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: | 
+            dongtai/dongtai-mysql-8:${{ steps.release.outputs.version }}
+            dongtai/dongtai-mysql-8:latest
