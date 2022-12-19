@@ -12,6 +12,10 @@ ALTER TABLE iast_agent ADD events json NULL COMMENT 'events';
 ALTER TABLE iast_profile MODIFY COLUMN value text  NULL;
 
 
+UPDATE  iast_server  isr SET  isr.ipaddresslist = '"[]"' 
+WHERE ipaddresslist IS NULL ;
+
+
 DELETE FROM iast_circuit_configs 
 WHERE metric_group  != 1;
 
