@@ -20,4 +20,15 @@ CREATE TABLE `iast_request_chains_vul_context` (
   KEY `iast_request_chains_vul_context_vul_id_IDX` (`vul_id`,`method_pool_id`,`project_id`,`level_id`,`project_path`) USING BTREE
 );
 
+-- dongtai_webapi.iast_agent_event definition
+
+CREATE TABLE `iast_agent_event` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `agent_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 SET FOREIGN_KEY_CHECKS=1;
