@@ -79,4 +79,38 @@ JOIN auth_user_department aud ON ia.user_id = aud.user_id
 SET ia.department_id = aud.department_id WHERE 1=1;
 
 
+
+ALTER TABLE iast_agent_black_rule ADD project_id int(11) DEFAULT -1 NULL;
+ALTER TABLE iast_agent_black_rule ADD project_template_id int(11) DEFAULT -1 NULL;
+
+-- iast_project_template definition
+
+CREATE TABLE `iast_project_template` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `template_name` varchar(255) DEFAULT NULL COMMENT '项目名称',
+  `latest_time` int(11) DEFAULT NULL COMMENT '最新时间',
+  `user_id` int(11) DEFAULT NULL COMMENT 'user id',
+  `scan_id` bigint(20) unsigned DEFAULT NULL COMMENT '扫描策略ID',
+  `vul_validation` int(11) NOT NULL DEFAULT '0' COMMENT '漏洞验证 0-跟随全局,1-启用,2-禁用',
+  `is_system` int(11) NOT NULL DEFAULT '0' COMMENT '是否为默认配置',
+  `data_gather` json DEFAULT NULL COMMENT '数据采集设置',
+  `data_gather_is_followglobal` int(11) NOT NULL DEFAULT '0' COMMENT '数据采集设置是否跟随全局',
+  `blacklist_is_followglobal` int(11) NOT NULL DEFAULT '0' COMMENT '黑名单设置是否跟随全局',
+  PRIMARY KEY (`id`),
+  KEY `iast_project_id_IDX` (`id`,`template_name`) USING BTREE,
+  KEY `iast_project_name_IDX` (`template_name`) USING BTREE,
+  KEY `scan_id` (`scan_id`) USING BTREE,
+  KEY `user_id` (`user_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE iast_project ADD data_gather json NULL COMMENT '数据采集设置';
+ALTER TABLE iast_project ADD data_gather_is_followglobal int(11) DEFAULT 1 NOT NULL COMMENT '数据采集设置是否跟随全局';
+ALTER TABLE iast_project ADD blacklist_is_followglobal int(11) DEFAULT 1 NOT NULL COMMENT '黑名单设置是否跟随全局';
+
+INSERT INTO web_url_route (id, `path`, name, component, meta_keepAlive, meta_disabled, meta_i18n, meta_isMenu, parent, meta_name, redirect, name_i18n_zh, name_i18n_en, name_i18n) VALUES(60, 'projectTemplate', 'projectTemplate', 'views/setting/projectTemplate.vue', 'False', 'False', 'menu.projectTemplate', 'False', 6, 'menu.projectTemplate', '', '', '', '');
+INSERT INTO web_role_url_relation (role_id, url_id) VALUES(6, 60);
+INSERT INTO iast_project_template (template_name, latest_time, user_id, scan_id, vul_validation, is_system, data_gather, data_gather_is_followglobal, blacklist_is_followglobal) VALUES('默认模版', 1674901260, 1, 5, 0, 1, '{"gather_res_body": false, "version_header_name": "DongTai", "enable_version_header": true, "method_pool_max_length": 5000}', 0, 0);
+
+
+
 SET FOREIGN_KEY_CHECKS=1;
