@@ -30,8 +30,8 @@ CREATE TABLE `iast_agent_event` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE auth_department ADD token varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '部门token';
-ALTER TABLE auth_department ADD department_path varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '部门层级';
+ALTER TABLE auth_department ADD token varchar(255)  NULL COMMENT '部门token';
+ALTER TABLE auth_department ADD department_path varchar(255)  NULL COMMENT '部门层级';
 ALTER TABLE iast_vulnerability ADD project_id int(11) DEFAULT 0 NULL COMMENT '项目ID';
 ALTER TABLE iast_vulnerability ADD project_version_id int(11) DEFAULT 0 NULL COMMENT '应用ID';
 ALTER TABLE iast_api_route ADD project_id int(11) DEFAULT 0 NULL COMMENT '项目ID';
@@ -65,20 +65,16 @@ UPDATE iast_vulnerability iv
 JOIN iast_agent ia ON iv.agent_id = ia.id 
 SET iv.language = ia.language WHERE 1 = 1;
 
-
-ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN res_body TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '响应体';
-ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN res_header TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '响应头';
-ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN req_data TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '请求体';
-ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN req_params TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '请求参数';
-ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN req_header TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '请求头';
-
+ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN res_body TEXT  NULL COMMENT '响应体';
+ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN res_header TEXT  NULL COMMENT '响应头';
+ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN req_data TEXT  NULL COMMENT '请求体';
+ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN req_params TEXT  NULL COMMENT '请求参数';
+ALTER TABLE iast_agent_method_pool_replay MODIFY COLUMN req_header TEXT  NULL COMMENT '请求头';
 ALTER TABLE iast_strategy_user ADD department_id int(11) NULL COMMENT '部门id';
 
 UPDATE iast_strategy_user  ia 
 JOIN auth_user_department aud ON ia.user_id = aud.user_id
 SET ia.department_id = aud.department_id WHERE 1=1;
-
-
 
 ALTER TABLE iast_agent_black_rule ADD project_id int(11) DEFAULT -1 NULL;
 ALTER TABLE iast_agent_black_rule ADD project_template_id int(11) DEFAULT -1 NULL;
@@ -101,7 +97,7 @@ CREATE TABLE `iast_project_template` (
   KEY `iast_project_name_IDX` (`template_name`) USING BTREE,
   KEY `scan_id` (`scan_id`) USING BTREE,
   KEY `user_id` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE iast_project ADD data_gather json NULL COMMENT '数据采集设置';
 ALTER TABLE iast_project ADD data_gather_is_followglobal int(11) DEFAULT 1 NOT NULL COMMENT '数据采集设置是否跟随全局';
@@ -110,7 +106,5 @@ ALTER TABLE iast_project ADD blacklist_is_followglobal int(11) DEFAULT 1 NOT NUL
 INSERT INTO web_url_route (id, `path`, name, component, meta_keepAlive, meta_disabled, meta_i18n, meta_isMenu, parent, meta_name, redirect, name_i18n_zh, name_i18n_en, name_i18n) VALUES(60, 'projectTemplate', 'projectTemplate', 'views/setting/projectTemplate.vue', 'False', 'False', 'menu.projectTemplate', 'False', 6, 'menu.projectTemplate', '', '', '', '');
 INSERT INTO web_role_url_relation (role_id, url_id) VALUES(6, 60);
 INSERT INTO iast_project_template (template_name, latest_time, user_id, scan_id, vul_validation, is_system, data_gather, data_gather_is_followglobal, blacklist_is_followglobal) VALUES('默认模版', 1674901260, 1, 5, 0, 1, '{"gather_res_body": false, "version_header_name": "DongTai", "enable_version_header": true, "method_pool_max_length": 5000}', 0, 0);
-
-
 
 SET FOREIGN_KEY_CHECKS=1;
