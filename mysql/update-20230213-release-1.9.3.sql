@@ -350,4 +350,8 @@ INSERT INTO web_url_route (id, `path`, name, component, meta_keepAlive, meta_dis
 INSERT INTO web_url_route (id, `path`, name, component, meta_keepAlive, meta_disabled, meta_i18n, meta_isMenu, parent, meta_name, redirect, name_i18n_zh, name_i18n_en, name_i18n) VALUES(60, 'projectTemplate', 'projectTemplate', 'views/setting/projectTemplate.vue', 'False', 'False', 'menu.projectTemplate', 'False', 6, 'menu.projectTemplate', '', '', '', '');
 
 ALTER TABLE iast_api_route  ADD is_cover int(11) DEFAULT 0 NOT NULL COMMENT '是否覆盖';
+
+ALTER TABLE iast_project DROP KEY iast_project_UN;
+CREATE INDEX iast_asset_project_id_IDX USING BTREE ON iast_asset (project_id,department_id,project_name);
+
 SET FOREIGN_KEY_CHECKS=1;
