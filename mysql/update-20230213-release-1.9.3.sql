@@ -645,6 +645,6 @@ ALTER TABLE iast_agent_method_pool MODIFY COLUMN req_data TEXT CHARACTER SET utf
 
 ALTER TABLE iast_project DROP KEY iast_project_UN;
 CREATE INDEX iast_asset_project_id_IDX USING BTREE ON iast_asset (project_id,department_id,project_name);
-
+ALTER TABLE iast_api_route  ADD is_cover int(11) DEFAULT 0 NOT NULL COMMENT '是否覆盖';
 
 SET FOREIGN_KEY_CHECKS=1;
