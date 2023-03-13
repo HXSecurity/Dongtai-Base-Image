@@ -647,4 +647,6 @@ ALTER TABLE iast_project DROP KEY iast_project_UN;
 CREATE INDEX iast_asset_project_id_IDX USING BTREE ON iast_asset (project_id,department_id,project_name);
 ALTER TABLE iast_api_route  ADD is_cover int(11) DEFAULT 0 NOT NULL COMMENT '是否覆盖';
 
+CREATE INDEX iast_api_route_path_IDX USING BTREE ON iast_api_route (method_id,`path`,project_id,project_version_id);
+
 SET FOREIGN_KEY_CHECKS=1;
