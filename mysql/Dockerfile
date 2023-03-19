@@ -1,14 +1,21 @@
-FROM mysql:5.7
-
+FROM mysql:5.7 as builder
 ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
-ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sca.sql /docker-entrypoint-initdb.d/sca.sql
-ADD https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/rule.sql /docker-entrypoint-initdb.d/rule.sql
 COPY db.sql /docker-entrypoint-initdb.d/
-COPY update-*.sql /docker-entrypoint-initdb.d/
-
+COPY update-*release*.sql /docker-entrypoint-initdb.d/
 RUN chmod 777 /docker-entrypoint-initdb.d -R
+RUN ["sed", "-i", "s/exec \"$@\"/echo \"not running $@\"/", "/usr/local/bin/docker-entrypoint.sh"]
+RUN ["/usr/local/bin/docker-entrypoint.sh", "mysqld", "--character-set-server=utf8mb4", "--datadir", "/tmp/initialized-db"]
 
-CMD [ "mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci" ]
+FROM mysql:5.7
+ENV MYSQL_DATABASE dongtai_webapi
+ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
+COPY --from=builder /tmp/initialized-db /var/lib/mysql
+COPY update-*release*.sql /sql/
+COPY mysqld.cnf /etc/mysql/conf.d/
+COPY dongtai-mysql-schema.txt /schema/
+COPY mysql8.sql /schema/
+COPY updaterecord.txt /schema/
+CMD [ "mysqld", "--max_allowed_packet=1024M", "--character-set-server=utf8mb4" ]

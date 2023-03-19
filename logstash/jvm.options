@@ -1,0 +1,12 @@
+-Xms3g
+-Xmx3g
+11-13:-XX:+UseConcMarkSweepGC
+11-13:-XX:CMSInitiatingOccupancyFraction=75
+11-13:-XX:+UseCMSInitiatingOccupancyOnly
+-Djava.awt.headless=true
+-Dfile.encoding=UTF-8
+-Djruby.compile.invokedynamic=true
+-Djruby.jit.threshold=0
+-XX:+HeapDumpOnOutOfMemoryError
+-Djava.security.egd=file:/dev/urandom
+-Dlog4j2.isThreadContextMapInheritable=true

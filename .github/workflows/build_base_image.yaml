@@ -1,53 +1,69 @@
 name: Build And Push DongTai Base Image To Aliyun Repo
 
 on:
-  pull_request:
-    branches: [ main ]
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - beta
+      - develop
 
 jobs:
   build:
-    if: github.event_name == 'push'
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'HXSecurity' }}
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
     steps:
-      - name: start-build
-        uses: joelwmale/webhook-action@master
-        with:
-          url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
-
       - name: Checkout
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Login to DockerHub
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Aliyun
         uses: docker/login-action@v1
         with:
           registry: ${{ secrets.ALIYUN_REGISTRY }}
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
+      - name: Get the release version
+        id: version
+        run: echo ::set-output name=GITHUB_REF::${GITHUB_REF##*/}
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
+          
+      - name: SQL LINT 
+        run: |
+          sudo apt install npm -y
+          sudo npm i -g sql-lint 
+          sql-lint . trailing-whitespace || true
 
-      - name: Build and push MySql
-        uses: docker/build-push-action@v2
+      - name: Build and push mysql
+        uses: docker/build-push-action@v3
         with:
           context: ./mysql
           push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest,"
-      
-      - name: Build and push Redis
-        uses: docker/build-push-action@v2
-        with:
-          context: ./redis
-          push: true
-          tags: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:latest,"
+          # platforms: linux/amd64,linux/arm64
+          tags: | 
+            registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
+            registry.cn-hongkong.aliyuncs.com/huoxian_pub/dongtai-mysql-unittest:latest
+            dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
+            dongtai/dongtai-mysql-unittest:latest
 
-      - name: finish build
-        uses: joelwmale/webhook-action@master
+      - uses: actions/checkout@master
+      - name: deploy to cluster
+        uses: wahyd4/kubectl-helm-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_TEST_DATA }}
         with:
-          url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+          args: |
+            if [ ${{ steps.version.outputs.GITHUB_REF }} = beta ] ; then find .github/deploy/deploy-dongtai-mysql-test.yaml -type f -exec sed -i 's/iast-test/iast-beta/g' {} \; 
+            kubectl rollout -n iast-${{ steps.version.outputs.GITHUB_REF }} restart statefulset redis
+            elif [ ${{ steps.version.outputs.GITHUB_REF }} = develop ] ; then kubectl rollout -n iast-test restart statefulset redis
+            else find .github/deploy/deploy-dongtai-mysql-test.yaml -type f -exec sed -i 's/iast-test/iast-main/g' {} \; 
+            kubectl rollout -n iast-main restart statefulset redis ;fi
+            find .github/deploy/deploy-dongtai-mysql-test.yaml -type f -exec sed -i 's/VERSION/1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}/g' {} \;
+            ls .github/deploy/deploy-dongtai-mysql-test.yaml | xargs -I {} kubectl apply -f {}

@@ -1,0 +1,34 @@
+containers:
+  dongtai-mysql: 
+    build_directory: ./mysql/
+    dockerfile: ./Dockerfile
+    image_pull_policy: Always
+  dongtai-database-utils:
+    build_directory: ./utils/
+    dockerfile: ./Dockerfile
+
+tasks:
+  test:
+    description: run baseimage basetest
+    run:
+      container: dongtai-database-utils
+      entrypoint: pytest -s 
+    dependencies:
+      - dongtai-mysql
+    group: test
+  shell:
+    description: bash
+    run:
+      container: dongtai-database-utils
+      entrypoint: /bin/bash 
+    dependencies:
+      - dongtai-mysql
+    group: test
+  export_strategy:
+    description: bash
+    run:
+      container: dongtai-database-utils
+      entrypoint: python hook_strategy_export.py  
+    dependencies:
+      - dongtai-mysql
+    group: test
