@@ -49,4 +49,21 @@ INSERT INTO dongtai_webapi.web_role_url_relation
 VALUES(@NormalUserId, 61);
 
 
+-- dongtai_webapi.iast_dast_integration_1 definition
+
+CREATE TABLE `iast_dast_integration_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `iastvul_id` int(11) DEFAULT NULL,
+  `dastvul_id` int(11) DEFAULT NULL,
+  `dt_mark` varchar(255) DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `iast_dast_integration_relation_iastvul_id_IDX` (`iastvul_id`,`dastvul_id`,`dt_mark`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+ALTER TABLE iast_dast_integration ADD dongtai_vul_type json NULL;
+
+
+
+
 SET FOREIGN_KEY_CHECKS=1;
