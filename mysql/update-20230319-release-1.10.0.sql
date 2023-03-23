@@ -63,7 +63,25 @@ CREATE TABLE `iast_dast_integration_relation` (
 
 ALTER TABLE iast_dast_integration ADD dongtai_vul_type json NULL;
 
+CREATE TABLE iast_iast_dtmatk_relation (
+	id int(11) auto_increment NOT NULL,
+	iastvul_id int(11) NULL,
+	dt_mark varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NULL,
+	CONSTRAINT `PRIMARY` PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COMMENT='';
 
+CREATE TABLE iast_dast_dtmatk_relation (
+	id int(11) auto_increment NOT NULL,
+	dastvul_id int(11) NULL,
+	dt_mark varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NULL,
+	CONSTRAINT `PRIMARY` PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COMMENT='';
 
 
 SET FOREIGN_KEY_CHECKS=1;
