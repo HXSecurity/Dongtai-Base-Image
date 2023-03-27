@@ -83,5 +83,7 @@ ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
 COMMENT='';
 
+ALTER TABLE iast_project ADD enable_log int(11) NULL COMMENT '开启日志';
+ALTER TABLE iast_project ADD log_level varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '日志等级';
 
 SET FOREIGN_KEY_CHECKS=1;
