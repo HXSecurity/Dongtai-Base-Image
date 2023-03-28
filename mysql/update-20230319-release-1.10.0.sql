@@ -66,7 +66,7 @@ ALTER TABLE iast_dast_integration ADD dongtai_vul_type json NULL;
 CREATE TABLE iast_iast_dtmatk_relation (
 	id int(11) auto_increment NOT NULL,
 	iastvul_id int(11) NULL,
-	dt_mark varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NULL,
+	dt_mark varchar(255)  DEFAULT '' NULL,
 	CONSTRAINT `PRIMARY` PRIMARY KEY (id)
 )
 ENGINE=InnoDB
@@ -76,7 +76,7 @@ COMMENT='';
 CREATE TABLE iast_dast_dtmatk_relation (
 	id int(11) auto_increment NOT NULL,
 	dastvul_id int(11) NULL,
-	dt_mark varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' NULL,
+	dt_mark varchar(255)  DEFAULT '' NULL,
 	CONSTRAINT `PRIMARY` PRIMARY KEY (id)
 )
 ENGINE=InnoDB
@@ -84,6 +84,10 @@ DEFAULT CHARSET=utf8mb4
 COMMENT='';
 
 ALTER TABLE iast_project ADD enable_log int(11) NULL COMMENT '开启日志';
-ALTER TABLE iast_project ADD log_level varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '日志等级';
+ALTER TABLE iast_project ADD log_level varchar(100) NULL COMMENT '日志等级';
+
+ALTER TABLE iast_hook_strategy ADD ignore_blacklist int(11) DEFAULT 0 NOT NULL;
+ALTER TABLE iast_hook_strategy ADD ignore_internal int(11) DEFAULT 0 NOT NULL;
+
 
 SET FOREIGN_KEY_CHECKS=1;
