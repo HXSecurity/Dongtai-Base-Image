@@ -1,4 +1,3 @@
-
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -21,10 +20,10 @@ CREATE TABLE `iast_dast_integration` (
   `vul_name` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `iast_dast_integration_id_IDX` (`id`,`vul_level_id`,`project_id`,`project_version_id`,`create_time`,`latest_time`,`target`,`vul_type`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-INSERT INTO dongtai_webapi.web_url_route
+INSERT INTO web_url_route
 (id, `path`, name, component, meta_keepAlive, meta_disabled, meta_i18n, meta_isMenu, parent, meta_name, redirect, name_i18n_zh, name_i18n_en, name_i18n)
 VALUES(61, 'ScanDetail/:page/:id', 'ScanDetail/:page/:id', 'views/sca/ScanDetail.vue', 'False', 'False', 'menu.scanDetail', 'False', 2, 'menu.scanDetail', '', '', '', '');
 
@@ -38,18 +37,15 @@ WHERE name = '组织管理员');
 SET @NormalUserId = (SELECT `id` FROM web_role wr
 WHERE name = '普通用户'); 
 
-INSERT INTO dongtai_webapi.web_role_url_relation
+INSERT INTO web_role_url_relation
 (role_id, url_id)
 VALUES(@SuperUserId, 61);
-INSERT INTO dongtai_webapi.web_role_url_relation
+INSERT INTO web_role_url_relation
 ( role_id, url_id)
 VALUES(@GroupUserId, 61);
-INSERT INTO dongtai_webapi.web_role_url_relation
+INSERT INTO web_role_url_relation
 (role_id, url_id)
 VALUES(@NormalUserId, 61);
-
-
--- dongtai_webapi.iast_dast_integration_1 definition
 
 CREATE TABLE `iast_dast_integration_relation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -60,6 +56,14 @@ CREATE TABLE `iast_dast_integration_relation` (
   KEY `iast_dast_integration_relation_iastvul_id_IDX` (`iastvul_id`,`dastvul_id`,`dt_mark`) USING BTREE
 ) ;
 
+
+CREATE INDEX iast_asset_IDX USING BTREE ON iast_asset (department_id,is_del,license,signature_value);
+
+CREATE INDEX iast_asset_level__InDeX USING BTREE ON iast_asset (department_id,is_del,level_id,signature_value);
+
+CREATE INDEX iast_asset_language_InDeX USING BTREE ON iast_asset (department_id,is_del,language,signature_value);
+
+CREATE INDEX iast_asset_project_InDeX USING BTREE ON iast_asset (project_id,signature_value,version);
 
 ALTER TABLE iast_dast_integration ADD dongtai_vul_type json NULL;
 
