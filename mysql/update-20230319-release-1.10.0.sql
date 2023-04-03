@@ -94,4 +94,9 @@ ALTER TABLE iast_dast_integration_relation ADD CONSTRAINT iast_dast_integration_
 
 ALTER TABLE iast_dast_integration ADD CONSTRAINT iast_dast_integration_UN UNIQUE KEY (target,vul_type,project_id,project_version_id);
 
+INSERT INTO dongtai_webapi.iast_profile
+(`key`, value)
+VALUES('dast_validation_settings', '{"strategy_id": [1, 2, 3, 4, 5, 6, 7, 8, 16, 18, 20, 21, 25, 27, 35, 39, 40, 26, 15, 17, 19, 22, 23, 41], "validation_status": true}');
+
+
 SET FOREIGN_KEY_CHECKS=1;
