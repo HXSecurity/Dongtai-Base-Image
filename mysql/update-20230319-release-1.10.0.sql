@@ -58,7 +58,7 @@ CREATE TABLE `iast_dast_integration_relation` (
   `dt_mark` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `iast_dast_integration_relation_iastvul_id_IDX` (`iastvul_id`,`dastvul_id`,`dt_mark`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ;
 
 
 ALTER TABLE iast_dast_integration ADD dongtai_vul_type json NULL;
@@ -69,8 +69,6 @@ CREATE TABLE iast_iast_dtmatk_relation (
 	dt_mark varchar(255)  DEFAULT '' NULL,
 	CONSTRAINT `PRIMARY` PRIMARY KEY (id)
 )
-ENGINE=InnoDB
-DEFAULT CHARSET=utf8mb4
 COMMENT='';
 
 CREATE TABLE iast_dast_dtmatk_relation (
@@ -79,8 +77,6 @@ CREATE TABLE iast_dast_dtmatk_relation (
 	dt_mark varchar(255)  DEFAULT '' NULL,
 	CONSTRAINT `PRIMARY` PRIMARY KEY (id)
 )
-ENGINE=InnoDB
-DEFAULT CHARSET=utf8mb4
 COMMENT='';
 
 ALTER TABLE iast_project ADD enable_log int(11) NULL COMMENT '开启日志';
@@ -88,6 +84,10 @@ ALTER TABLE iast_project ADD log_level varchar(100) NULL COMMENT '日志等级';
 
 ALTER TABLE iast_hook_strategy ADD ignore_blacklist int(11) DEFAULT 0 NOT NULL;
 ALTER TABLE iast_hook_strategy ADD ignore_internal int(11) DEFAULT 0 NOT NULL;
+UPDATE auth_user SET is_superuser = 1
+WHERE username = "admin" ;
+ALTER TABLE iast_dast_integration_relation ADD CONSTRAINT iast_dast_integration_relation_UN UNIQUE KEY (iastvul_id,dastvul_id);
 
+ALTER TABLE iast_dast_integration ADD CONSTRAINT iast_dast_integration_UN UNIQUE KEY (target,vul_type,project_id,project_version_id);
 
 SET FOREIGN_KEY_CHECKS=1;
