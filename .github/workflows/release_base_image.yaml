@@ -6,7 +6,7 @@ on:
 
 jobs:
   Release-DongTai-Infra-Service:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
     steps:
