@@ -16,4 +16,18 @@ WHERE ihs.untags  IS NULL ;
 
 UPDATE iast_hook_strategy ihs SET stack_blacklist = "[]" WHERE ihs.stack_blacklist IS NULL;
 
+-- dongtai_webapi.iast_recoginze_rule definition
+
+CREATE TABLE `iast_recoginze_rule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
+  `project_id` int(11) NOT NULL DEFAULT '0',
+  `rule_detail` varchar(255) NOT NULL DEFAULT '',
+  `rule_type` int(11) NOT NULL DEFAULT '0',
+  `created` datetime(6) NOT NULL,
+  `updated` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `iast_recoginze_rule_project_id_IDX` (`project_id`,`rule_type`,`updated`,`rule_detail`) USING BTREE,
+  KEY `iast_recoginze_rule_project_id_IDX2` (`project_id`,`rule_type`,`rule_detail`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 SET FOREIGN_KEY_CHECKS=1;
