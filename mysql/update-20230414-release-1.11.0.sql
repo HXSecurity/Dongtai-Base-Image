@@ -29,5 +29,6 @@ CREATE TABLE `iast_recoginze_rule` (
   KEY `iast_recoginze_rule_project_id_IDX` (`project_id`,`rule_type`,`updated`,`rule_detail`) USING BTREE,
   KEY `iast_recoginze_rule_project_id_IDX2` (`project_id`,`rule_type`,`rule_detail`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+ALTER TABLE iast_agent ADD allow_report INT DEFAULT 1 NOT NULL;
 
 SET FOREIGN_KEY_CHECKS=1;
