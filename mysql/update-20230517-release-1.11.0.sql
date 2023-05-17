@@ -1,6 +1,13 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS=0;
 
+CREATE INDEX iast_api_route_project_id_is_cover_IDX USING BTREE ON iast_api_route (project_id,project_version_id,is_cover,method_id);
+CREATE INDEX iast_api_route_project_version_id_IDX USING BTREE ON iast_api_route (project_version_id,method_id,`path`);
+CREATE INDEX iast_api_methods_id_IDX USING BTREE ON iast_api_methods (id,`method`);
+CREATE INDEX iast_api_route_project_id_IDX_temp USING BTREE ON iast_api_route (project_id,project_version_id,method_id,`path`);
+DELETE FROM iast_api_route WHERE id NOT IN (SELECT MAX(id) GROUP BY project_id ,project_version_id ,method_id ,`path` );
+ALTER TABLE iast_api_route ADD CONSTRAINT iast_api_route_UN UNIQUE KEY (project_id,project_version_id,method_id,`path`);
+CREATE INDEX iast_api_route_project_id_IDX USING BTREE ON iast_api_route (project_id,project_version_id,from_where,is_cover,method_id,`path`);
 ALTER TABLE dongtai_webapi.iast_hook_strategy ADD command varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT  NULL  DEFAULT '' COMMENT '污点范围';
 ALTER TABLE dongtai_webapi.iast_hook_strategy ADD tags json NULL COMMENT '污点标记';
 ALTER TABLE dongtai_webapi.iast_hook_strategy ADD untags json NULL COMMENT '污点反标记';
