@@ -5,7 +5,6 @@ SET FOREIGN_KEY_CHECKS=0;
 CREATE TABLE `iast_asset_v2` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
   `package_name` varchar(255) DEFAULT NULL COMMENT '第三方包名',
-  `package_fullname` varchar(255) DEFAULT NULL COMMENT '与info',
   `package_path` varchar(255) DEFAULT NULL COMMENT '第三方包所在路径',
   `signature_algorithm` varchar(255) DEFAULT NULL COMMENT '签名算法',
   `signature_value` varchar(255) DEFAULT NULL COMMENT '签名值',
@@ -15,7 +14,6 @@ CREATE TABLE `iast_asset_v2` (
   `project_version_id` int(11) NOT NULL DEFAULT '0' COMMENT '项目版本id',
   `department_id` int(11) DEFAULT '0' COMMENT '部门id',
   `language_id` int(11) DEFAULT '0' COMMENT '语言id',
-  `is_reconized` int(11) DEFAULT '0' COMMENT '是否识别',
   `aql` varchar(255) DEFAULT NULL COMMENT '当前版本',
   PRIMARY KEY (`id`),
   KEY `iast_asset_project_InDeX` (`project_id`,`signature_value`,`version`) USING BTREE,
@@ -28,6 +26,7 @@ CREATE TABLE `iast_asset_v2` (
 CREATE TABLE `iast_asset_v2_global` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
   `package_name` varchar(255) DEFAULT NULL COMMENT '第三方包名',
+  `package_fullname` varchar(255) DEFAULT NULL COMMENT '与info',
   `signature_algorithm` varchar(255) DEFAULT NULL COMMENT '签名算法',
   `signature_value` varchar(255) DEFAULT NULL COMMENT '签名值',
   `version` varchar(255) DEFAULT NULL COMMENT '当前版本',
@@ -92,8 +91,7 @@ CREATE TABLE `iast_asset_vul_v2_relation` (
 
 CREATE TABLE `iast_asset_v2_ga_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `package_name` varchar(255) DEFAULT NULL COMMENT 'cwe编号',
-  `asset` varchar(255) DEFAULT NULL COMMENT '漏洞类型名称',
+  `package_fullname` varchar(255) DEFAULT NULL COMMENT 'cwe编号',	
   `affected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   `unaffected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   PRIMARY KEY (`id`),
