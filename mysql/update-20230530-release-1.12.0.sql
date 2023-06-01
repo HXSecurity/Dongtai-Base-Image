@@ -1,3 +1,5 @@
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS=0;
 -- dongtai_webapi.iast_asset_v2 definition
 
 CREATE TABLE `iast_asset_v2` (
@@ -66,6 +68,8 @@ CREATE TABLE `iast_asset_vul_v2` (
   `change_time` int(11) DEFAULT NULL COMMENT '更新时间',
   `published_time` int(11) DEFAULT NULL COMMENT '更新时间',
   `vul_id` varchar(255) DEFAULT NULL COMMENT '关联 iast_aql_info',
+  `vul_type` varchar(255) DEFAULT NULL COMMENT 'iast_aql_info',	
+  `vul_codes` json DEFAULT NULL COMMENT 'references',
   PRIMARY KEY (`id`),
   KEY `create_time_order` (`create_time`) USING BTREE,
   KEY `level_update_order_desc` (`level_id`,`update_time`) USING BTREE,
@@ -94,3 +98,5 @@ CREATE TABLE `iast_asset_v2_ga_info` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `iast_asset_vul_type_UN` (`package_name`)
 );
+
+SET FOREIGN_KEY_CHECKS=1;
