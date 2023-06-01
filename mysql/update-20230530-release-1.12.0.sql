@@ -5,6 +5,7 @@ SET FOREIGN_KEY_CHECKS=0;
 CREATE TABLE `iast_asset_v2` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
   `package_name` varchar(255) DEFAULT NULL COMMENT '第三方包名',
+  `package_fullname` varchar(255) DEFAULT NULL COMMENT '与info',
   `package_path` varchar(255) DEFAULT NULL COMMENT '第三方包所在路径',
   `signature_algorithm` varchar(255) DEFAULT NULL COMMENT '签名算法',
   `signature_value` varchar(255) DEFAULT NULL COMMENT '签名值',
