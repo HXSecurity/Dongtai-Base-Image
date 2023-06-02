@@ -95,7 +95,7 @@ CREATE TABLE `iast_asset_v2_ga_info` (
   `affected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   `unaffected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `iast_asset_vul_type_UN` (`package_name`)
+  UNIQUE KEY `iast_asset_vul_type_UN` (`package_fullname`)
 );
 
 SET FOREIGN_KEY_CHECKS=1;
