@@ -91,7 +91,7 @@ CREATE TABLE `iast_asset_vul_v2_relation` (
 
 CREATE TABLE `iast_asset_v2_ga_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `package_fullname` varchar(255) DEFAULT NULL COMMENT 'cwe编号',	
+  `package_fullname` varchar(255) DEFAULT NULL COMMENT 'ecosystem + packagename',	
   `affected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   `unaffected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   PRIMARY KEY (`id`),
