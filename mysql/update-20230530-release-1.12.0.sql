@@ -16,9 +16,22 @@ CREATE TABLE `iast_asset_v2` (
   `language_id` int(11) DEFAULT '0' COMMENT '语言id',
   `aql` varchar(255) DEFAULT NULL COMMENT '当前版本',
   PRIMARY KEY (`id`),
+  UNIQUE KEY `iast_asset_v2_UN` (`project_id`,`project_version_id`,`aql`),
   KEY `iast_asset_project_InDeX` (`project_id`,`signature_value`,`version`) USING BTREE,
   KEY `idx_pid` (`project_id`) USING BTREE
-) ;
+);
+
+
+-- dongtai_webapi.iast_asset_v2_ga_info definition
+
+CREATE TABLE `iast_asset_v2_ga_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `package_fullname` varchar(255) DEFAULT NULL COMMENT 'ecosystem + packagename',
+  `affected_versions` json DEFAULT NULL COMMENT '最近修复版本',
+  `unaffected_versions` json DEFAULT NULL COMMENT '最近修复版本',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `iast_asset_vul_type_UN` (`package_fullname`)
+);
 
 
 -- dongtai_webapi.iast_asset_v2_global definition
@@ -41,8 +54,9 @@ CREATE TABLE `iast_asset_v2_global` (
   `language_id` int(11) DEFAULT '0' COMMENT '无风险漏洞数',
   `aql` varchar(255) DEFAULT NULL COMMENT '当前版本',
   PRIMARY KEY (`id`),
+  UNIQUE KEY `iast_asset_v2_global_UN` (`aql`),
   KEY `level_id` (`level_id`) USING BTREE
-) ;
+);
 
 
 -- dongtai_webapi.iast_asset_v2_license definition
@@ -51,8 +65,9 @@ CREATE TABLE `iast_asset_v2_license` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `license_id` int(11) DEFAULT NULL COMMENT 'cwe编号',
   `asset` varchar(255) DEFAULT NULL COMMENT '漏洞类型名称',
-  PRIMARY KEY (`id`)
-) ;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `iast_asset_v2_license_UN` (`license_id`,`asset`)
+);
 
 
 -- dongtai_webapi.iast_asset_vul_v2 definition
@@ -68,15 +83,16 @@ CREATE TABLE `iast_asset_vul_v2` (
   `change_time` int(11) DEFAULT NULL COMMENT '更新时间',
   `published_time` int(11) DEFAULT NULL COMMENT '更新时间',
   `vul_id` varchar(255) DEFAULT NULL COMMENT '关联 iast_aql_info',
-  `vul_type` varchar(255) DEFAULT NULL COMMENT 'iast_aql_info',	
+  `vul_type` varchar(255) DEFAULT NULL COMMENT 'iast_aql_info',
   `vul_codes` json DEFAULT NULL COMMENT 'references',
   `affected_versions` json DEFAULT NULL COMMENT 'affected_versions',
   `unaffected_versions` json DEFAULT NULL COMMENT 'unaffected_versions',
   PRIMARY KEY (`id`),
+  UNIQUE KEY `iast_asset_vul_v2_UN` (`vul_id`),
   KEY `create_time_order` (`create_time`) USING BTREE,
   KEY `level_update_order_desc` (`level_id`,`update_time`) USING BTREE,
   KEY `update_time_order` (`update_time`) USING BTREE
-) ;
+);
 
 
 -- dongtai_webapi.iast_asset_vul_v2_relation definition
@@ -85,19 +101,8 @@ CREATE TABLE `iast_asset_vul_v2_relation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vul_id` varchar(255) DEFAULT NULL COMMENT 'cwe编号',
   `asset` varchar(255) DEFAULT NULL COMMENT '漏洞类型名称',
-  PRIMARY KEY (`id`)
-) ;
-
-
--- dongtai_webapi.iast_asset_v2_ga_info definition
-
-CREATE TABLE `iast_asset_v2_ga_info` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `package_fullname` varchar(255) DEFAULT NULL COMMENT 'ecosystem + packagename',	
-  `affected_versions` json DEFAULT NULL COMMENT '最近修复版本',
-  `unaffected_versions` json DEFAULT NULL COMMENT '最近修复版本',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `iast_asset_vul_type_UN` (`package_fullname`)
+  UNIQUE KEY `iast_asset_vul_v2_relation_UN` (`vul_id`,`asset`)
 );
 
 SET FOREIGN_KEY_CHECKS=1;
