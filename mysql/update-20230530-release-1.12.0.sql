@@ -70,6 +70,8 @@ CREATE TABLE `iast_asset_vul_v2` (
   `vul_id` varchar(255) DEFAULT NULL COMMENT '关联 iast_aql_info',
   `vul_type` varchar(255) DEFAULT NULL COMMENT 'iast_aql_info',	
   `vul_codes` json DEFAULT NULL COMMENT 'references',
+  `affected_versions` json DEFAULT NULL COMMENT 'affected_versions',
+  `unaffected_versions` json DEFAULT NULL COMMENT 'unaffected_versions',
   PRIMARY KEY (`id`),
   KEY `create_time_order` (`create_time`) USING BTREE,
   KEY `level_update_order_desc` (`level_id`,`update_time`) USING BTREE,
