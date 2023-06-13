@@ -18,7 +18,8 @@ CREATE TABLE `iast_asset_v2` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `iast_asset_v2_UN` (`project_id`,`project_version_id`,`aql`),
   KEY `iast_asset_project_InDeX` (`project_id`,`signature_value`,`version`) USING BTREE,
-  KEY `idx_pid` (`project_id`) USING BTREE
+  KEY `idx_pid` (`project_id`) USING BTREE,
+  KEY `iast_asset_v2_package_name_IDX` (`package_name`,`version`,`project_id`,`language_id`) USING BTREE
 );
 
 
@@ -55,7 +56,8 @@ CREATE TABLE `iast_asset_v2_global` (
   `aql` varchar(255) DEFAULT NULL COMMENT '当前版本',
   PRIMARY KEY (`id`),
   UNIQUE KEY `iast_asset_v2_global_UN` (`aql`),
-  KEY `level_id` (`level_id`) USING BTREE
+  KEY `level_id` (`level_id`) USING BTREE,
+  KEY `iast_asset_v2_global_package_name_IDX` (`package_name`,`version`,`language_id`,`aql`) USING BTREE
 );
 
 
@@ -83,7 +85,7 @@ CREATE TABLE `iast_asset_vul_v2` (
   `change_time` int(11) DEFAULT NULL COMMENT '更新时间',
   `published_time` int(11) DEFAULT NULL COMMENT '更新时间',
   `vul_id` varchar(255) DEFAULT NULL COMMENT '关联 iast_aql_info',
-  `vul_type` varchar(255) DEFAULT NULL COMMENT 'iast_aql_info',
+  `vul_type` json DEFAULT NULL COMMENT 'iast_aql_info',
   `vul_codes` json DEFAULT NULL COMMENT 'references',
   `affected_versions` json DEFAULT NULL COMMENT 'affected_versions',
   `unaffected_versions` json DEFAULT NULL COMMENT 'unaffected_versions',
@@ -104,5 +106,16 @@ CREATE TABLE `iast_asset_vul_v2_relation` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `iast_asset_vul_v2_relation_UN` (`vul_id`,`asset`)
 );
+
+CREATE INDEX iast_vulnerability_project_id_IDX USING BTREE ON iast_vulnerability (project_id,project_version_id,server_id,is_del,level_id,latest_time_desc);
+CREATE INDEX iast_dast_integration_vul_type_IDX USING BTREE ON iast_dast_integration (vul_type);
+CREATE INDEX iast_project_department_id_IDX USING BTREE ON iast_project (department_id);
+CREATE INDEX iast_dast_integration_project_id_IDX USING BTREE ON iast_dast_integration (project_id,project_version_id);
+CREATE INDEX iast_message_to_user_id_IDX USING BTREE ON iast_message (to_user_id);
+CREATE INDEX iast_agent_filepathsimhash_IDX USING BTREE ON iast_agent (filepathsimhash,`language`);
+CREATE INDEX iast_agent_language_IDX USING BTREE ON iast_agent (`language`,server_id);
+CREATE INDEX iast_server_path_IDX USING BTREE ON iast_server (`path`);
+CREATE INDEX auth_department_token_IDX USING BTREE ON auth_department (token);
+CREATE INDEX iast_vulnerability_is_del_IDX USING BTREE ON iast_vulnerability (is_del,project_id,project_version_id);
 
 SET FOREIGN_KEY_CHECKS=1;
