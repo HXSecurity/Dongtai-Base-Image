@@ -117,5 +117,25 @@ CREATE INDEX iast_agent_language_IDX USING BTREE ON iast_agent (`language`,serve
 CREATE INDEX iast_server_path_IDX USING BTREE ON iast_server (`path`);
 CREATE INDEX auth_department_token_IDX USING BTREE ON auth_department (token);
 CREATE INDEX iast_vulnerability_is_del_IDX USING BTREE ON iast_vulnerability (is_del,project_id,project_version_id);
+CREATE INDEX iast_hook_strategy_enable_IDX USING BTREE ON iast_hook_strategy (enable,language_id);
+CREATE INDEX iast_heartbeat_agent_id_IDX USING BTREE ON iast_heartbeat (agent_id,dt);
+CREATE INDEX iast_agent_bind_project_id_IDX4 USING BTREE ON iast_agent (bind_project_id,department_id,server_id,latest_time);
+CREATE INDEX iast_replay_queue_agent_id_IDX USING BTREE ON iast_replay_queue (agent_id,`state`,replay_type);
+CREATE INDEX iast_api_route_method_id_IDX USING BTREE ON iast_api_route (method_id,project_id,project_version_id);
+CREATE INDEX iast_vulnerability_uri_IDX2 USING BTREE ON iast_vulnerability (uri,project_id,project_version_id,server_id,is_del,level_id,latest_time_desc);
+CREATE INDEX iast_asset_v2_language_id_IDX3 USING BTREE ON iast_asset_v2 (language_id,version,package_name,project_id,project_version_id,dt);
+
+INSERT INTO web_url_route
+(id, `path`, name, component, meta_keepAlive, meta_disabled, meta_i18n, meta_isMenu, parent, meta_name, redirect, name_i18n_zh, name_i18n_en, name_i18n)
+VALUES(62, 'scalistDetail/:page/:id', 'scalistDetail/:page/:id', 'views/sca/ScaDialog.vue', 'False', 'False', 'menu.scalistDetail', 'False', 3, 'menu.scanDetail', '', '', '', '');
+INSERT INTO web_role_url_relation
+(role_id, url_id)
+VALUES(6, 62);
+INSERT INTO web_role_url_relation
+(role_id, url_id)
+VALUES(7, 62);
+INSERT INTO web_role_url_relation
+(role_id, url_id)
+VALUES(8, 62);
 
 SET FOREIGN_KEY_CHECKS=1;
