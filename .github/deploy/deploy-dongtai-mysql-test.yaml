@@ -28,7 +28,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["/bin/bash","-c", "sleep 30; cat /tmp/poststart.sql | mysql -uroot -p'dongtai-iast' --default-character-set=utf8mb4 dongtai_webapi"]
+                command: ["/bin/bash","-c", "sleep 30; curl -o /tmp/hook_version.sql https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/hook_version.sql; cat /tmp/*.sql | mysql -uroot -p'dongtai-iast' --default-character-set=utf8mb4 dongtai_webapi"]
           resources:
             limits:
               cpu: "1000m"
