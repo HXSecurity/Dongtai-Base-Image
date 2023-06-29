@@ -25,3 +25,29 @@ KEY `iast_api_route_project_version_id_IDX` (`project_version_id`,`method`,`path
 
 
 SET FOREIGN_KEY_CHECKS=1;
+
+-- dongtai_engine.plugins.project_status definition
+alter table iast_project
+    add last_has_online_agent_time INT not null comment '最后有在线Agent的时间';
+
+alter table iast_project
+    add status INT not null comment '项目状态';
+
+INSERT INTO dongtai_webapi.django_celery_beat_intervalschedule (id, every, period)
+VALUES (6, 1, 'hours');
+
+INSERT INTO dongtai_webapi.django_celery_beat_periodictask (id, name, task, args,
+                                                            kwargs, queue, exchange,
+                                                            routing_key, expires,
+                                                            enabled, last_run_at,
+                                                            total_run_count,
+                                                            date_changed, description,
+                                                            crontab_id, interval_id,
+                                                            solar_id, one_off,
+                                                            start_time, priority,
+                                                            headers, clocked_id,
+                                                            expire_seconds)
+VALUES (14, 'dongtai_engine.plugins.project_status',
+        'dongtai_engine.plugins.project_status.update_project_status', '[]', '{}', null,
+        null, null, null, 1, null, 0, '2022-07-13 19:16:56.980132', '', null, 6, null,
+        0, null, null, '{}', null, null);
