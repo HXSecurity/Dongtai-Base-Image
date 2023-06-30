@@ -51,3 +51,25 @@ VALUES (14, 'dongtai_engine.plugins.project_status',
         'dongtai_engine.plugins.project_status.update_project_status', '[]', '{}', null,
         null, null, null, 1, null, 0, '2022-07-13 19:16:56.980132', '', null, 6, null,
         0, null, null, '{}', null, null);
+
+-- change vulnerability_status
+DELETE
+FROM dongtai_webapi.iast_vulnerability_status
+WHERE id = 7;
+
+DELETE
+FROM dongtai_webapi.iast_vulnerability_status
+WHERE id = 4;
+
+DELETE
+FROM dongtai_webapi.iast_vulnerability_status
+WHERE id = 2;
+
+UPDATE dongtai_webapi.iast_vulnerability_status t
+SET t.name    = '待确认',
+    t.name_zh = '待确认'
+WHERE t.id = 1;
+
+UPDATE dongtai_webapi.iast_vulnerability t
+SET t.status_id = 1
+WHERE t.status_id IN (2, 4, 7);
