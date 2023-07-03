@@ -24,3 +24,5 @@ init-connect='SET NAMES utf8mb4'
 symbolic-links=0
 max_connections=5000
 max_allowed_packet=20G
+wait_timeout=86400
+interactive_timeout=7200
