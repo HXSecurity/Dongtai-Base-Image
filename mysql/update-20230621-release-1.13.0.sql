@@ -51,3 +51,17 @@ VALUES (14, 'dongtai_engine.plugins.project_status',
         'dongtai_engine.plugins.project_status.update_project_status', '[]', '{}', null,
         null, null, null, 1, null, 0, '2022-07-13 19:16:56.980132', '', null, 6, null,
         0, null, null, '{}', null, null);
+
+-- dongtai_web.views.log_v2 definition
+CREATE TABLE `iast_log` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`action_time` datetime(6) NOT NULL COMMENT '操作时间',
+`url` varchar(150) NOT NULL COMMENT 'URL Pattern',
+`raw_url` varchar(150) NOT NULL COMMENT '访问的URL',
+`module_name` varchar(150) NOT NULL DEFAULT '' COMMENT '模块名称',
+`function_name` varchar(150) NOT NULL DEFAULT '' COMMENT '功能名称',
+`operate_type` int(11) NOT NULL DEFAULT '1' COMMENT '操作类型',
+`user_id` int(11) NOT NULL COMMENT '用户ID',
+`access_ip` varchar(150) NOT NULL DEFAULT '0' COMMENT '访问IP',
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
