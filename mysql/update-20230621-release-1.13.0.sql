@@ -33,10 +33,10 @@ alter table iast_project
 alter table iast_project
     add status INT not null comment '项目状态';
 
-INSERT INTO dongtai_webapi.django_celery_beat_intervalschedule (id, every, period)
+INSERT INTO django_celery_beat_intervalschedule (id, every, period)
 VALUES (6, 1, 'hours');
 
-INSERT INTO dongtai_webapi.django_celery_beat_periodictask (id, name, task, args,
+INSERT INTO django_celery_beat_periodictask (id, name, task, args,
                                                             kwargs, queue, exchange,
                                                             routing_key, expires,
                                                             enabled, last_run_at,
@@ -65,3 +65,26 @@ CREATE TABLE `iast_log` (
 `access_ip` varchar(150) NOT NULL DEFAULT '0' COMMENT '访问IP',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB ;
+-- change vulnerability_status
+DELETE
+FROM iast_vulnerability_status
+WHERE id = 7;
+
+DELETE
+FROM iast_vulnerability_status
+WHERE id = 4;
+
+DELETE
+FROM iast_vulnerability_status
+WHERE id = 2;
+
+UPDATE iast_vulnerability_status t
+SET t.name    = '待确认',
+    t.name_zh = '待确认'
+WHERE t.id = 1;
+
+UPDATE iast_vulnerability t
+SET t.status_id = 1
+WHERE t.status_id IN (2, 4, 7);
+
+SET FOREIGN_KEY_CHECKS=1;
