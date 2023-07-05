@@ -51,7 +51,8 @@ jobs:
           
       - name: Push sql to OSS
         run: |
-          ossutil cp -rf mysql/ --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
+          bash mysql/InitDongtaiMysql.sh
+          ossutil cp -rf mysql/ --include "mysqlBuild.sh" --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
       - name: Build and push logstash
         uses: docker/build-push-action@v3
