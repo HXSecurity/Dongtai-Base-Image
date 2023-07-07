@@ -25,6 +25,25 @@ CREATE TABLE `iast_api_route_v2` (
   KEY `iast_api_route_project_version_id_IDX` (`project_version_id`,`method`,`path`) USING BTREE
 ) ENGINE=InnoDB ;
 
+  -- dongtai_webapi.iast_share_token definition
+  CREATE TABLE `iast_share_token` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `token` varchar(50) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `expire_at` datetime(6) DEFAULT NULL,
+  `create_at` datetime(6) DEFAULT NULL,
+  `update_at` datetime(6) DEFAULT NULL,
+  `vul_id` int(11) DEFAULT NULL,
+  `sca_id` varchar(255) DEFAULT NULL,
+  `token_type` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `project_id` int(11) DEFAULT NULL,
+  `project_version_id` int(11) DEFAULT NULL,
+  `create_user_id` int(11) DEFAULT NULL,
+  `target_url` varchar(255) DEFAULT '',
+  PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 ALTER TABLE iast_request_chains_vul_context ADD url varchar(2000) DEFAULT '' NULL;
 ALTER TABLE iast_request_chains_vul_context ADD request text NULL;
