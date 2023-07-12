@@ -137,5 +137,6 @@ INSERT INTO web_role_url_relation
 (role_id, url_id)
 VALUES(6, 63);
 
+CREATE TABLE `health_check_db_testmodel` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `title` varchar(128) NOT NULL);
 
 SET FOREIGN_KEY_CHECKS=1;
