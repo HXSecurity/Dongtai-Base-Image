@@ -65,5 +65,12 @@ jobs:
             elif [ ${{ steps.version.outputs.GITHUB_REF }} = develop ] ; then kubectl rollout -n iast-test restart statefulset redis
             else find .github/deploy/deploy-dongtai-mysql-test.yaml -type f -exec sed -i 's/iast-test/iast-main/g' {} \; 
             kubectl rollout -n iast-main restart statefulset redis ;fi
+            if [ ${{ steps.version.outputs.GITHUB_REF }} = beta ] ; then find .github/deploy/deploy.yaml -type f -exec sed -i 's/iast-test/iast-beta/g' {} \; 
+            kubectl rollout -n iast-${{ steps.version.outputs.GITHUB_REF }} restart statefulset redis
+            elif [ ${{ steps.version.outputs.GITHUB_REF }} = develop ] ; then kubectl rollout -n iast-test restart statefulset redis
+            else find .github/deploy/deploy.yaml -type f -exec sed -i 's/iast-test/iast-main/g' {} \; 
+            kubectl rollout -n iast-main restart statefulset redis ;fi
             find .github/deploy/deploy-dongtai-mysql-test.yaml -type f -exec sed -i 's/VERSION/1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}/g' {} \;
             ls .github/deploy/deploy-dongtai-mysql-test.yaml | xargs -I {} kubectl apply -f {}
+            find .github/deploy/deploy.yaml -type f -exec sed -i 's/VERSION/1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}/g' {} \;
+            ls .github/deploy/deploy.yaml | xargs -I {} kubectl apply -f {}
