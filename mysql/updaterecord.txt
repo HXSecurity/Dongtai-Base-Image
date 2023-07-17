@@ -1,3 +1,6 @@
+
+1.13.0 update-20230621-release-1.13.0.sql
+1.12.0 update-20230530-release-1.12.0.sql
 1.11.0 update-20230517-release-1.11.0.sql
 1.10.0 update-20230319-release-1.10.0.sql
 1.9.3 update-20230213-release-1.9.3.sql
@@ -27,3 +30,5 @@
 1.0.5 update-20211009-release-1.0.5.sql
 1.0.4 update-20210918-release-1.0.4.sql
 1.0.3 update-20210831-release-1.0.3.sql
+1.0.2 update-20210817-release-1.0.2.sql
+1.0.1 update-20210731-release-1.0.0.sql
