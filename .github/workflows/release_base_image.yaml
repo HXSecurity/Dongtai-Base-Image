@@ -97,15 +97,15 @@ jobs:
     # needs:
     #  - Release-DongTai-Infra-Service
     runs-on: ubuntu-latest
-    #services:
-    #  dongtai-mysql:
-    #    image: dongtai/dongtai-mysql:latest
-    #    ports:
-    #      - 3306:3306
-    #  dongtai-redis:
-    #    image: dongtai/dongtai-redis:latest
-    #    ports:
-    #      - 6379:6379
+    services:
+      dongtai-mysql:
+        image: dongtai/dongtai-mysql:latest
+        ports:
+          - 3306:3306
+      dongtai-redis:
+        image: dongtai/dongtai-redis:latest
+        ports:
+          - 6379:6379
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -133,15 +133,12 @@ jobs:
           ID=`echo ${TAG_NAME##v}`
           echo "::set-output name=version::$ID"
 
-      - name: 'Docker Compose'
-        uses: isbang/compose-action@v1.5.1
-        with:
-          compose-file: "./docker-compose.yaml"
-          up-flags: "--build --force-recreate --exit-code-from dongtai-server-update -V"
 
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
+          docker run -it --name dongtai-server-update -v $(pwd)/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini --rm --link `docker ps | grep dongtai-mysql | awk '{print $1}'`:dongtai-mysql \
+          --link `docker ps | grep dongtai-redis | awk '{print $1}'`:dongtai-redis registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:latest
           docker exec -i  `docker ps | grep dongtai-mysql | awk '{print $1}'` /bin/bash -c "mysqldump dongtai_webapi -u root -p'dongtai-iast' --single-transaction" > dongtai-mysql-schema.sql || exit 1
 
       - name: Build Mysql only schema to local 
