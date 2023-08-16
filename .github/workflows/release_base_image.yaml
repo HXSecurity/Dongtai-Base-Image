@@ -42,17 +42,17 @@ jobs:
           ID=`echo ${TAG_NAME##v}`
           echo "::set-output name=version::$ID"
 
-      - name: Setup ossutil
-        uses: manyuanrong/setup-ossutil@v2.0
-        with:
-          endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
-          access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
-          access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
+      # - name: Setup ossutil
+      #   uses: manyuanrong/setup-ossutil@v2.0
+      #   with:
+      #     endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
+      #     access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
+      #     access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
           
-      - name: Push sql to OSS
-        run: |
-          bash mysql/InitDongtaiMysql.sh
-          ossutil cp -rf mysql/ --include "mysqlBuild.sh" --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
+      # - name: Push sql to OSS
+      #   run: |
+      #     bash mysql/InitDongtaiMysql.sh
+      #     ossutil cp -rf mysql/ --include "mysqlBuild.sh" --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
       - name: Build and push logstash
         uses: docker/build-push-action@v3
@@ -75,16 +75,6 @@ jobs:
           tags: | 
             dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
             dongtai/dongtai-logrotate:latest
-
-      - name: Build Mysql only schema to local 
-        uses: docker/build-push-action@v3
-        with:
-          context: ./mysql
-          push: true
-          # platforms: linux/amd64,linux/arm64
-          tags: | 
-            dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
-            dongtai/dongtai-mysql:latest
 
       - name: Build and push Redis
         uses: docker/build-push-action@v2
@@ -110,6 +100,12 @@ jobs:
     services:
       dongtai-mysql:
         image: dongtai/dongtai-mysql:latest
+        ports:
+          - 3306:3306
+      dongtai-redis:
+        image: dongtai/dongtai-redis:latest
+        ports:
+          - 6379:6379
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -119,13 +115,13 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
           password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
 
       - name: Login to AliyunRegistry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           registry: ${{ secrets.ALIYUN_REGISTRY }}
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
@@ -137,10 +133,22 @@ jobs:
           ID=`echo ${TAG_NAME##v}`
           echo "::set-output name=version::$ID"
 
+      - name: Checkout 
+        uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
+      - uses: addnab/docker-run-action@v3
+        with:
+          registry: registry.cn-hongkong.aliyuncs.com
+          username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
+          password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
+          image: registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:latest
+          options: -v ${{ github.workspace }}/mysql/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini
+          run: |
+            python manage.py migrate
+
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
-          docker exec -i  `docker ps | grep dongtai-mysql | awk '{print $1}'` /bin/bash -c "mysqldump -d dongtai_webapi -u root -p'dongtai-iast' --single-transaction --skip-set-charset --skip-comments --allow-keywords --skip-opt | sed 's/ AUTO_INCREMENT=[0-9]*//g' | sed 's/\/\*!*.*//g'" > dongtai-mysql-schema.txt || exit 1
+          docker exec -i  `docker ps | grep dongtai-mysql | awk '{print $1}'` /bin/bash -c "mysqldump dongtai_webapi -u root -p'dongtai-iast' --single-transaction > dongtai-mysql-schema.sql || exit 1
 
       - name: Build Mysql only schema to local 
         uses: docker/build-push-action@v3
@@ -150,7 +158,7 @@ jobs:
           # platforms: linux/amd64,linux/arm64
           tags: | 
             dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
-            dongtai/dongtai-mysql:latest
+          #  dongtai/dongtai-mysql:latest
             
       - name: Install Mysql 8.0
         working-directory: ./mysql
@@ -164,4 +172,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: | 
             dongtai/dongtai-mysql-8:${{ steps.release.outputs.version }}
-            dongtai/dongtai-mysql-8:latest
+          #  dongtai/dongtai-mysql-8:latest
