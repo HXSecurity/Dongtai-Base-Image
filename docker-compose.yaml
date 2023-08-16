@@ -1,0 +1,51 @@
+version: "2"
+networks:
+  dongtainetwork:
+    name: dongtainetwork
+    ipam:
+      config:
+        - subnet: 172.31.200.0/24
+services:
+  dongtai-mysql:
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-pdongtai-iast"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    networks:
+      - dongtainetwork
+    image: dongtai/dongtai-mysql:latest
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - "mysql-vol:/var/lib/mysql:rw"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+  dongtai-redis:
+    networks:
+      - dongtainetwork
+    image:  dongtai/dongtai-redis:latest
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+  dongtai-server-update:
+    networks:
+      - dongtainetwork
+    image: registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:latest
+    restart: always
+    entrypoint: ["/bin/bash","/opt/dongtai/deploy/docker/entrypoint.sh", "migrate"]
+    sysctls:
+      net.core.somaxconn: 4096
+    volumes:
+      - ./mysql/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
