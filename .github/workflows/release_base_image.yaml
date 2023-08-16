@@ -133,12 +133,12 @@ jobs:
           ID=`echo ${TAG_NAME##v}`
           echo "::set-output name=version::$ID"
 
-
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
           docker run -i --name dongtai-server-update -v $(pwd)/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini --rm --link `docker ps | grep dongtai-mysql | awk '{print $1}'`:dongtai-mysql \
-          --link `docker ps | grep dongtai-redis | awk '{print $1}'`:dongtai-redis registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:latest migrate || exit 1
+          --link `docker ps | grep dongtai-redis | awk '{print $1}'`:dongtai-redis \
+          --network ${{ job.container.network }} registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:latest migrate || exit 1
           docker exec -i  `docker ps | grep dongtai-mysql | awk '{print $1}'` /bin/bash -c "mysqldump dongtai_webapi -u root -p'dongtai-iast' --single-transaction" > dongtai-mysql-schema.sql || exit 1
 
       - name: Build Mysql only schema to local 
