@@ -94,8 +94,8 @@ jobs:
 
   dongtai-mysql:
     name: dongtai-mysql
-    needs:
-      - Release-DongTai-Infra-Service
+    # needs:
+    #  - Release-DongTai-Infra-Service
     runs-on: ubuntu-latest
     services:
       dongtai-mysql:
