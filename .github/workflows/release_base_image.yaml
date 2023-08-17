@@ -136,6 +136,7 @@ jobs:
       - name: Build Mysql only schema to local 
         working-directory: ./mysql
         run: |
+          docker pull registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }}
           docker run -i --name dongtai-server-update -v $(pwd)/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini --rm --link `docker ps | grep dongtai-mysql | awk '{print $1}'`:dongtai-mysql \
           --link `docker ps | grep dongtai-redis | awk '{print $1}'`:dongtai-redis \
           --network ${{ job.container.network }} registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }} migrate || exit 1
