@@ -41,19 +41,19 @@ jobs:
           sudo npm i -g sql-lint 
           sql-lint . trailing-whitespace || true
 
-      - name: Build and push mysql
-        uses: docker/build-push-action@v3
-        with:
-          context: ./mysql
-          push: true
-          # platforms: linux/amd64,linux/arm64
-          tags: |
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-            dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
-            dongtai/dongtai-mysql-unittest:latest
+      # - name: Build and push mysql
+      #   uses: docker/build-push-action@v3
+      #   with:
+      #     context: ./mysql
+      #     push: true
+      #     # platforms: linux/amd64,linux/arm64
+      #     tags: |
+      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+      #       dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
+      #       dongtai/dongtai-mysql-unittest:latest
 
       - name: Build Mysql only schema to local
         working-directory: ./mysql
