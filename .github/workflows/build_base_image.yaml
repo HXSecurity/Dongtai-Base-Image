@@ -47,15 +47,31 @@ jobs:
           context: ./mysql
           push: true
           # platforms: linux/amd64,linux/arm64
-          tags: | 
+          tags: |
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
             registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
             dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
             dongtai/dongtai-mysql-unittest:latest
-            
-            
+
+      - name: Build Mysql only schema to local
+        working-directory: ./mysql
+        run: |
+          docker pull registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:latest
+          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker push dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
+          docker push dongtai/dongtai-mysql-unittest:latest
+
       - name: Build and push logstash
         uses: docker/build-push-action@v3
         with:
