@@ -5,92 +5,92 @@ on:
     types: [ created, edited ]
 
 jobs:
-  # Release-DongTai-Infra-Service:
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     max-parallel: 4
-  #   steps:
-  #     - name: start-build
-  #       uses: joelwmale/webhook-action@master
-  #       with:
-  #         url: ${{ secrets.WEBHOOK_URL }}
-  #         body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+  Release-DongTai-Infra-Service:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+    steps:
+      - name: start-build
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建开始\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
 
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
-  #     - name: Set up QEMU
-  #       uses: docker/setup-qemu-action@v2
-  #     - name: Set up Docker Buildx
-  #       uses: docker/setup-buildx-action@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-  #     - name: Login to DockerHub
-  #       uses: docker/login-action@v1
-  #       with:
-  #         username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
-  #         password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
 
-  #     - name: Login to AliyunRegistry
-  #       uses: docker/login-action@v1
-  #       with:
-  #         registry: ${{ secrets.ALIYUN_REGISTRY }}
-  #         username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
-  #         password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
+      - name: Login to AliyunRegistry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ secrets.ALIYUN_REGISTRY }}
+          username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
+          password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
 
-  #     - id: release
-  #       run: |
-  #         TAG_NAME=${{ github.event.release.tag_name }}
-  #         ID=`echo ${TAG_NAME##v}`
-  #         echo "::set-output name=version::$ID"
+      - id: release
+        run: |
+          TAG_NAME=${{ github.event.release.tag_name }}
+          ID=`echo ${TAG_NAME##v}`
+          echo "::set-output name=version::$ID"
 
-  #     # - name: Setup ossutil
-  #     #   uses: manyuanrong/setup-ossutil@v2.0
-  #     #   with:
-  #     #     endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
-  #     #     access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
-  #     #     access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
+      # - name: Setup ossutil
+      #   uses: manyuanrong/setup-ossutil@v2.0
+      #   with:
+      #     endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
+      #     access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
+      #     access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
           
-  #     # - name: Push sql to OSS
-  #     #   run: |
-  #     #     bash mysql/InitDongtaiMysql.sh
-  #     #     ossutil cp -rf mysql/ --include "mysqlBuild.sh" --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
+      # - name: Push sql to OSS
+      #   run: |
+      #     bash mysql/InitDongtaiMysql.sh
+      #     ossutil cp -rf mysql/ --include "mysqlBuild.sh" --include "db.sql" --include "update-*.sql" oss://huoqi-public/iast/sql/
 
-  #     - name: Build and push logstash
-  #       uses: docker/build-push-action@v3
-  #       with:
-  #         context: ./logstash
-  #         file: ./logstash/Dockerfile
-  #         push: true
-  #         platforms: linux/amd64,linux/arm64
-  #         tags: | 
-  #           dongtai/dongtai-logstash:${{ steps.release.outputs.version }}
-  #           dongtai/dongtai-logstash:latest
+      - name: Build and push logstash
+        uses: docker/build-push-action@v3
+        with:
+          context: ./logstash
+          file: ./logstash/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: | 
+            dongtai/dongtai-logstash:${{ steps.release.outputs.version }}
+            dongtai/dongtai-logstash:latest
 
-  #     - name: Build and push logrotate
-  #       uses: docker/build-push-action@v3
-  #       with:
-  #         context: ./logrotate
-  #         file: ./logrotate/Dockerfile
-  #         push: true
-  #         platforms: linux/amd64,linux/arm64
-  #         tags: | 
-  #           dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
-  #           dongtai/dongtai-logrotate:latest
+      - name: Build and push logrotate
+        uses: docker/build-push-action@v3
+        with:
+          context: ./logrotate
+          file: ./logrotate/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: | 
+            dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
+            dongtai/dongtai-logrotate:latest
 
-  #     - name: Build and push Redis
-  #       uses: docker/build-push-action@v2
-  #       with:
-  #         context: ./redis
-  #         push: true
-  #         platforms: linux/amd64,linux/arm64
-  #         tags: | 
-  #           dongtai/dongtai-redis:${{ steps.release.outputs.version }}
-  #           dongtai/dongtai-redis:latest
+      - name: Build and push Redis
+        uses: docker/build-push-action@v2
+        with:
+          context: ./redis
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: | 
+            dongtai/dongtai-redis:${{ steps.release.outputs.version }}
+            dongtai/dongtai-redis:latest
 
-  #     - name: finish build
-  #       uses: joelwmale/webhook-action@master
-  #       with:
-  #         url: ${{ secrets.WEBHOOK_URL }}
-  #         body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
+      - name: finish build
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: '{"msg_type": "interactive","card": {"config": {"wide_screen_mode": true,"enable_forward": true},"elements": [{"tag": "div","text": {"content": "状态：构建完成\n项目：${{github.repository}}\n分支：${{github.ref}}\n流程：${{github.workflow}}\n构建编号：${{github.run_number}}\n触发事件：${{github.event_name}}\n提交人：${{github.actor}}\nSHA-1：${{github.sha}}\n","tag": "lark_md"}}]}}'
 
   dongtai-mysql:
     name: dongtai-mysql
