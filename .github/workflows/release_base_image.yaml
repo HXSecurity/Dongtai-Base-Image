@@ -142,6 +142,18 @@ jobs:
           --network ${{ job.container.network }} registry.cn-hongkong.aliyuncs.com/secnium/dongtai-server:${{ steps.release.outputs.version }} migrate || exit 1
           docker exec -i  `docker ps | grep dongtai-mysql | awk '{print $1}'` /bin/bash -c "mysqldump dongtai_webapi -u root -p'dongtai-iast' --single-transaction" > dongtai-mysql-schema.sql || exit 1
 
+      - name: Setup ossutil
+        uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
+          access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
+          
+      - name: Push sql to OSS
+        run: |
+          bash mysql/InitDongtaiMysql.sh
+          ossutil cp -rf mysql/ --include "dongtai-mysql-schema.sql" oss://huoqi-public/iast/sql/
+
       - name: Build Mysql only schema to local 
         uses: docker/build-push-action@v3
         with:
