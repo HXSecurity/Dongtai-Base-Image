@@ -48,10 +48,10 @@ jobs:
       #     push: true
       #     # platforms: linux/amd64,linux/arm64
       #     tags: |
-      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
-      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-      #       registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+      #       hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+      #       hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+      #       hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+      #       hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
       #       dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
       #       dongtai/dongtai-mysql-unittest:latest
 
@@ -59,16 +59,16 @@ jobs:
         working-directory: ./mysql
         run: |
           docker pull registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
           docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
           docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:latest
-          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
-          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-          docker push registry.cn-hongkong.aliyuncs.com/secnium/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker push hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker push hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker push hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker push hktingyun.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
           docker push dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
           docker push dongtai/dongtai-mysql-unittest:latest
 
@@ -79,10 +79,10 @@ jobs:
           file: ./logstash/Dockerfile
           push: true
           tags: | 
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logstash:${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logstash:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logstash:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logstash:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logstash:${{ steps.version.outputs.GITHUB_REF }}-latest
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logstash:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logstash:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logstash:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
 
       - name: Build and push logrotate
         uses: docker/build-push-action@v3
@@ -91,10 +91,10 @@ jobs:
           file: ./logrotate/Dockerfile
           push: true
           tags: | 
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logrotate:${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logrotate:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logrotate:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-logrotate:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logrotate:${{ steps.version.outputs.GITHUB_REF }}-latest
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logrotate:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logrotate:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-logrotate:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
 
 
       - name: Build and push Redis
@@ -103,10 +103,10 @@ jobs:
           context: ./redis
           push: true
           tags: | 
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-redis:${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-redis:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-redis:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-redis:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-redis:${{ steps.version.outputs.GITHUB_REF }}-latest
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-redis:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-redis:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+            hktingyun.tencentcloudcr.com/dongtai/dongtai-redis:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
 
       - name: deploy to cluster A
         uses: tscuite/kubectl-helm-action@main
