@@ -41,30 +41,17 @@ jobs:
           sudo npm i -g sql-lint 
           sql-lint . trailing-whitespace || true
 
-      # - name: Build and push mysql
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     context: ./mysql
-      #     push: true
-      #     # platforms: linux/amd64,linux/arm64
-      #     tags: |
-      #       wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
-      #       wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-      #       wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-      #       wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-      #       dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
-      #       dongtai/dongtai-mysql-unittest:latest
 
       - name: Build Mysql only schema to local
         working-directory: ./mysql
         run: |
-          docker pull registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
-          docker tag registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:latest
+          docker pull wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest
+          docker tag wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker tag wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
+          docker tag wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker tag wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
+          docker tag wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:1.0.${{github.run_number}}-${{ steps.version.outputs.GITHUB_REF }}
+          docker tag wukong.tencentcloudcr.com/dongtai/dongtai-mysql:latest dongtai/dongtai-mysql-unittest:latest
           docker push wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-latest
           docker push wukong.tencentcloudcr.com/dongtai/dongtai-mysql:max-${{ steps.version.outputs.GITHUB_REF }}-latest
           docker push wukong.tencentcloudcr.com/dongtai/dongtai-mysql:${{ steps.version.outputs.GITHUB_REF }}-1.0.${{github.run_number}}
