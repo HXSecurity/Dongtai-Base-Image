@@ -6,3 +6,4 @@ copy pipelines.yml /usr/share/logstash/config/
 copy jvm.options /usr/share/logstash/config/
 copy logstash-mysql.conf /usr/share/logstash/pipeline/logstash.conf
 
+
