@@ -1,0 +1,23 @@
+name: Deploy max
+
+on:
+  push:
+    branches:
+      - main
+      - beta
+      - develop
+
+jobs:
+  build:
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'HXSecurity' }}
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+    steps:
+      - name: deploy to cluster B
+        uses: tscuite/kubectl-helm-action@main
+        env:
+          MAX: true
+          PROJECT: mysql
+          TOKEN_SCA: ${{ secrets.MAX_TOKEN_SCA }}
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_TEST_DATA }}
