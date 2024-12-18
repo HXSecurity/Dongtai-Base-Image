@@ -136,10 +136,10 @@ jobs:
         with:
           context: ./mysql
           push: true
-          # platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64
           tags: | 
             dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
-          #  dongtai/dongtai-mysql:latest
+            dongtai/dongtai-mysql:latest
             
       - name: Install Mysql 8.0
         working-directory: ./mysql
@@ -153,4 +153,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: | 
             dongtai/dongtai-mysql-8:${{ steps.release.outputs.version }}
-          #  dongtai/dongtai-mysql-8:latest
+            dongtai/dongtai-mysql-8:latest
