@@ -1,4 +1,4 @@
-name: Release DongTai IAST MySQL Image (Manual)
+name: Release DongTai IAST MySQL Image (Manual, x86)
 
 on:
   workflow_dispatch:
@@ -9,20 +9,19 @@ on:
         default: "v1.0.0"
 
 jobs:
-  dongtai-mysql:
-    name: Build and Push DongTai MySQL Image (x86 only)
+  build-mysql:
     runs-on: ubuntu-latest
-    services:
-      dongtai-mysql:
-        image: dongtai/dongtai-mysql:latest
-        ports:
-          - 3306:3306
-      dongtai-redis:
-        image: dongtai/dongtai-redis:latest
-        ports:
-          - 6379:6379
-
+    env:
+      MYSQL_ROOT_PASSWORD: dongtai-iast
+      NETWORK_NAME: dongtai_net
     steps:
+      - name: start-build webhook
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: >
+            {"msg_type":"interactive","card":{"config":{"wide_screen_mode":true,"enable_forward":true},"elements":[{"tag":"div","text":{"content":"状态：构建开始\n项目：${{github.repository}}\n流程：${{github.workflow}}\n触发者：${{github.actor}}\n手动输入版本：${{ github.event.inputs.tag_name }}\n","tag":"lark_md"}}]}}
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -48,24 +47,60 @@ jobs:
           ID=$(echo ${TAG_NAME##v})
           echo "version=$ID" >> $GITHUB_OUTPUT
 
-      - name: Pull and migrate database
+      - name: Create user Docker network
+        run: |
+          if docker network ls --format '{{.Name}}' | grep -q "^${NETWORK_NAME}$"; then
+            echo "network ${NETWORK_NAME} already exists"
+          else
+            docker network create ${NETWORK_NAME}
+            echo "created network ${NETWORK_NAME}"
+          fi
+
+      - name: Start MySQL and Redis containers (on custom network)
+        run: |
+          # 启动 mysql（使用 dongtai/dongtai-mysql 镜像，确保镜像包含你需要的初始化）
+          docker run -d --name dongtai-mysql --network ${NETWORK_NAME} -e MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} dongtai/dongtai-mysql:latest || (docker logs dongtai-mysql && exit 1)
+          # 启动 redis（仅作为依赖）
+          docker run -d --name dongtai-redis --network ${NETWORK_NAME} redis:6-alpine || (docker logs dongtai-redis && exit 1)
+          echo "MySQL & Redis started"
+
+      - name: Wait for MySQL ready
+        run: |
+          set -e
+          n=0
+          until docker exec dongtai-mysql mysql -u root -p'${MYSQL_ROOT_PASSWORD}' -e "SELECT 1" >/dev/null 2>&1; do
+            n=$((n+1))
+            echo "waiting mysql... attempt=$n"
+            if [ $n -ge 30 ]; then
+              echo "mysql not ready after 30 attempts"
+              docker logs dongtai-mysql || true
+              exit 1
+            fi
+            sleep 2
+          done
+          echo "mysql is ready"
+
+      - name: Pull dongtai-server image
+        run: |
+          docker pull wukong.tencentcloudcr.com/dongtai/dongtai-server:${{ steps.release.outputs.version }} || (echo "pull failed" && exit 1)
+          echo "pulled dongtai-server:${{ steps.release.outputs.version }}"
+
+      - name: Run migrate in same network and export schema
         working-directory: ./mysql
         run: |
-          echo "开始拉取 dongtai-server:${{ steps.release.outputs.version }}"
-          docker pull wukong.tencentcloudcr.com/dongtai/dongtai-server:${{ steps.release.outputs.version }}
-          echo "执行 migrate 初始化数据库结构..."
-          docker run -i --name dongtai-server-update \
+          set -e
+          # 以同一个网络启动临时容器来运行 migrate，保证能访问 dongtai-mysql & dongtai-redis
+          docker run --rm --name dongtai-server-migrate --network ${NETWORK_NAME} \
             -v $(pwd)/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini \
-            --rm \
-            --link $(docker ps | grep dongtai-mysql | awk '{print $1}')":dongtai-mysql" \
-            --link $(docker ps | grep dongtai-redis | awk '{print $1}')":dongtai-redis" \
-            wukong.tencentcloudcr.com/dongtai/dongtai-server:${{ steps.release.outputs.version }} migrate || exit 1
+            wukong.tencentcloudcr.com/dongtai/dongtai-server:${{ steps.release.outputs.version }} migrate || (docker logs dongtai-server-migrate || true; echo "migrate failed"; exit 1)
 
-          echo "导出数据库结构为 dongtai-mysql-schema.sql..."
-          docker exec -i $(docker ps | grep dongtai-mysql | awk '{print $1}') /bin/bash -c \
-            "mysqldump dongtai_webapi -u root -p'dongtai-iast' --single-transaction" > dongtai-mysql-schema.sql || exit 1
+          # 导出 schema（将数据导出到 runner 工作目录）
+          docker exec -i $(docker ps -aqf "name=dongtai-mysql") /bin/bash -c \
+            "mysqldump dongtai_webapi -u root -p'${MYSQL_ROOT_PASSWORD}' --single-transaction" > dongtai-mysql-schema.sql || (docker logs dongtai-mysql && exit 1)
+          echo "exported schema to dongtai-mysql-schema.sql"
+          ls -l dongtai-mysql-schema.sql
 
-      - name: Build and Push MySQL 5.7 Image
+      - name: Build and Push MySQL image (5.7)
         uses: docker/build-push-action@v3
         with:
           context: ./mysql
@@ -80,7 +115,7 @@ jobs:
         run: |
           sed -i 's#5.7#8.0#g' Dockerfile
 
-      - name: Build and Push MySQL 8.0 Image
+      - name: Build and Push MySQL image (8.0)
         uses: docker/build-push-action@v3
         with:
           context: ./mysql
@@ -89,3 +124,19 @@ jobs:
           tags: |
             dongtai/dongtai-mysql-8:${{ steps.release.outputs.version }}
             dongtai/dongtai-mysql-8:latest
+
+      - name: Cleanup containers and network
+        if: always()
+        run: |
+          docker rm -f dongtai-server-migrate || true
+          docker rm -f dongtai-mysql || true
+          docker rm -f dongtai-redis || true
+          docker network rm ${NETWORK_NAME} || true
+
+      - name: finish-build webhook
+        if: always()
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
+          body: >
+            {"msg_type":"interactive","card":{"config":{"wide_screen_mode":true,"enable_forward":true},"elements":[{"tag":"div","text":{"content":"状态：构建完成\n项目：${{github.repository}}\n触发者：${{github.actor}}\n版本：${{ github.event.inputs.tag_name }}\n","tag":"lark_md"}}]}}
