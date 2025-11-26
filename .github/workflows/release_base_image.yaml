@@ -40,7 +40,8 @@ jobs:
         run: |
           TAG_NAME=${{ github.event.release.tag_name }}
           ID=`echo ${TAG_NAME##v}`
-          echo "::set-output name=version::$ID"
+          # 修正为新语法
+          echo "version=$ID" >> $GITHUB_OUTPUT
 
       - name: Build and push logstash
         uses: docker/build-push-action@v3
@@ -49,7 +50,7 @@ jobs:
           file: ./logstash/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: | 
+          tags: |
             dongtai/dongtai-logstash:${{ steps.release.outputs.version }}
             dongtai/dongtai-logstash:latest
 
@@ -60,7 +61,7 @@ jobs:
           file: ./logrotate/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: | 
+          tags: |
             dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
             dongtai/dongtai-logrotate:latest
 
@@ -70,7 +71,7 @@ jobs:
           context: ./redis
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: | 
+          tags: |
             dongtai/dongtai-redis:${{ steps.release.outputs.version }}
             dongtai/dongtai-redis:latest
 
@@ -82,23 +83,14 @@ jobs:
 
   dongtai-mysql:
     name: dongtai-mysql
-    # needs:
-    #  - Release-DongTai-Infra-Service
     runs-on: ubuntu-latest
-    services:
-      dongtai-mysql:
-        image: dongtai/dongtai-mysql:latest
-        ports:
-          - 3306:3306
-      dongtai-redis:
-        image: dongtai/dongtai-redis:latest
-        ports:
-          - 6379:6379
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
@@ -119,38 +111,29 @@ jobs:
         run: |
           TAG_NAME=${{ github.event.release.tag_name }}
           ID=`echo ${TAG_NAME##v}`
-          echo "::set-output name=version::$ID"
+          # 修正为新语法
+          echo "version=$ID" >> $GITHUB_OUTPUT
 
-      - name: Build Mysql only schema to local 
-        working-directory: ./mysql
-        run: |
-          docker pull wukong.tencentcloudcr.com/dongtai/dongtai-server:${{ steps.release.outputs.version }}
-          docker run -i --name dongtai-server-update -v $(pwd)/config-tutorial.ini:/opt/dongtai/dongtai_conf/conf/config.ini --rm --link `docker ps | grep dongtai-mysql | awk '{print $1}'`:dongtai-mysql \
-          --link `docker ps | grep dongtai-redis | awk '{print $1}'`:dongtai-redis \
-          --network ${{ job.container.network }} wukong.tencentcloudcr.com/dongtai/dongtai-server:${{ steps.release.outputs.version }} migrate || exit 1
-          docker exec -i  `docker ps | grep dongtai-mysql | awk '{print $1}'` /bin/bash -c "mysqldump dongtai_webapi -u root -p'dongtai-iast' --single-transaction" > dongtai-mysql-schema.sql || exit 1
-
-  
-      - name: Build Mysql only schema to local 
+      - name: Build and push Mysql (5.7)
         uses: docker/build-push-action@v3
         with:
           context: ./mysql
           push: true
-          #platforms: linux/amd64,linux/arm64
-          tags: | 
+          # platforms: linux/amd64,linux/arm64
+          tags: |
             dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
-          #  dongtai/dongtai-mysql:latest
-            
+
       - name: Install Mysql 8.0
         working-directory: ./mysql
         run: |
           sed -i 's#5.7#8.0#g' Dockerfile
-      - name: Build Mysql 8.0
+
+      - name: Build and push Mysql 8.0
         uses: docker/build-push-action@v3
         with:
           context: ./mysql
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: | 
+          tags: |
             dongtai/dongtai-mysql-8:${{ steps.release.outputs.version }}
             dongtai/dongtai-mysql-8:latest
