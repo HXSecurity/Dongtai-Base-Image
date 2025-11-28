@@ -12931,4 +12931,7 @@ INSERT INTO `webapi_api_site` (`id`, `path`, `method`, `name`) VALUES (4, 'api/v
 INSERT INTO `webapi_api_site` (`id`, `path`, `method`, `name`) VALUES (5, 'api/v1/license/current_concurrency', 'GET', '当前并发');
 COMMIT;
 
+alter table iast_api_route_v2
+    add is_new int default 0 not null comment 'API route change status: 0-Existing, 1-New, 2-Deleted';
+
 SET FOREIGN_KEY_CHECKS = 1;
