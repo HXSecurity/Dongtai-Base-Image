@@ -12,7 +12,7 @@ ENV MYSQL_DATABASE dongtai_webapi
 ENV MYSQL_ROOT_PASSWORD dongtai-iast
 
 COPY --from=builder /tmp/initialized-db /var/lib/mysql
-COPY update-*release*.sql /sql/
+#COPY update-*release*.sql /sql/
 COPY mysqld.cnf /etc/mysql/conf.d/
 COPY dongtai-mysql-schema.sql /schema/
 COPY mysql8.sql /schema/
