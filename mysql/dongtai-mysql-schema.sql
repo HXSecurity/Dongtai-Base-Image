@@ -1,17 +1,17 @@
 /*
  Navicat Premium Dump SQL
 
- Source Server         : 10.128.9.33
+ Source Server         : 10.128.9.58
  Source Server Type    : MySQL
- Source Server Version : 50744 (5.7.44)
- Source Host           : 10.128.9.33:3306
- Source Schema         : dongtai_webapi
+ Source Server Version : 50718 (5.7.18-txsql-log)
+ Source Host           : 10.128.9.58:3306
+ Source Schema         : iast-test-max-base
 
  Target Server Type    : MySQL
- Target Server Version : 50744 (5.7.44)
+ Target Server Version : 50718 (5.7.18-txsql-log)
  File Encoding         : 65001
 
- Date: 26/11/2025 10:40:37
+ Date: 03/12/2025 13:55:06
 */
 
 SET NAMES utf8mb4;
@@ -1066,102 +1066,55 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of django_migrations
 -- ----------------------------
 BEGIN;
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (1, 'contenttypes', '0001_initial', '2023-07-25 12:21:52.973418');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (2, 'contenttypes', '0002_remove_content_type_name', '2023-07-25 12:21:52.999633');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (3, 'auth', '0001_initial', '2023-07-25 12:21:53.024375');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (4, 'auth', '0002_alter_permission_name_max_length', '2023-07-25 12:21:53.050493');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (5, 'auth', '0003_alter_user_email_max_length', '2023-07-25 12:21:53.077039');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (6, 'auth', '0004_alter_user_username_opts', '2023-07-25 12:21:53.100575');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (7, 'auth', '0005_alter_user_last_login_null', '2023-07-25 12:21:53.128253');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (8, 'auth', '0006_require_contenttypes_0002', '2023-07-25 12:21:53.155052');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (9, 'auth', '0007_alter_validators_add_error_messages', '2023-07-25 12:21:53.181554');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (10, 'auth', '0008_alter_user_username_max_length', '2023-07-25 12:21:53.206427');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (11, 'auth', '0009_alter_user_last_name_max_length', '2023-07-25 12:21:53.231629');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (12, 'auth', '0010_alter_group_name_max_length', '2023-07-25 12:21:53.257781');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (13, 'auth', '0011_update_proxy_permissions', '2023-07-25 12:21:53.283621');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (14, 'auth', '0012_alter_user_first_name_max_length', '2023-07-25 12:21:53.308950');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (15, 'dongtai_common', '0001_initial', '2023-07-25 12:21:53.337702');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (16, 'admin', '0001_initial', '2023-07-25 12:26:00.818747');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (17, 'admin', '0002_logentry_remove_auto_add', '2023-07-25 12:26:00.843293');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (18, 'admin', '0003_logentry_add_action_flag_choices', '2023-07-25 12:26:00.865496');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (19, 'authtoken', '0001_initial', '2023-07-25 12:26:00.889270');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (20, 'authtoken', '0002_auto_20160226_1747', '2023-07-25 12:26:00.916869');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (21, 'authtoken', '0003_tokenproxy', '2023-07-25 12:26:00.941297');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (22, 'captcha', '0001_initial', '2023-07-25 12:26:00.966500');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (23, 'captcha', '0002_alter_captchastore_id', '2023-07-25 12:26:00.993328');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (24, 'health_check_db', '0001_initial', '2023-07-25 12:26:01.017436');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (25, 'django_celery_beat', '0001_initial', '2023-07-25 12:26:01.039374');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (26, 'django_celery_beat', '0002_auto_20161118_0346', '2023-07-25 12:26:01.067768');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (27, 'django_celery_beat', '0003_auto_20161209_0049', '2023-07-25 12:26:01.090803');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (28, 'django_celery_beat', '0004_auto_20170221_0000', '2023-07-25 12:26:01.114745');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (29, 'django_celery_beat', '0005_add_solarschedule_events_choices', '2023-07-25 12:26:01.140750');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (30, 'django_celery_beat', '0006_auto_20180322_0932', '2023-07-25 12:26:01.166507');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (31, 'django_celery_beat', '0007_auto_20180521_0826', '2023-07-25 12:26:01.189412');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (32, 'django_celery_beat', '0008_auto_20180914_1922', '2023-07-25 12:26:01.213171');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (33, 'django_celery_beat', '0006_auto_20180210_1226', '2023-07-25 12:26:01.236002');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (34, 'django_celery_beat', '0006_periodictask_priority', '2023-07-25 12:26:01.257645');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (35, 'django_celery_beat', '0009_periodictask_headers', '2023-07-25 12:26:01.278845');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (36, 'django_celery_beat', '0010_auto_20190429_0326', '2023-07-25 12:26:01.302530');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (37, 'django_celery_beat', '0011_auto_20190508_0153', '2023-07-25 12:26:01.325078');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (38, 'django_celery_beat', '0012_periodictask_expire_seconds', '2023-07-25 12:26:01.350067');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (39, 'django_celery_beat', '0013_auto_20200609_0727', '2023-07-25 12:26:01.377458');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (40, 'django_celery_beat', '0014_remove_clockedschedule_enabled', '2023-07-25 12:26:01.401963');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (41, 'django_celery_beat', '0015_edit_solarschedule_events_choices', '2023-07-25 12:26:01.432434');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (42, 'sessions', '0001_initial', '2023-07-25 12:26:01.457106');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (43, 'db', '0001_initial', '2023-07-25 12:26:01.499305');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (44, 'dongtai_common', '0002_auto_20230726_1433', '2025-11-25 11:35:45.747122');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (45, 'dongtai_common', '0003_auto_20230728_1444', '2025-11-25 11:35:46.131833');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (46, 'dongtai_common', '0004_auto_20230731_1556', '2025-11-25 11:35:46.334164');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (47, 'dongtai_common', '0005_iastprojectmetadata', '2025-11-25 11:35:46.393569');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (48, 'dongtai_common', '0006_auto_20230803_1407', '2025-11-25 11:35:46.500011');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (49, 'dongtai_common', '0007_auto_20230803_1810', '2025-11-25 11:35:46.553721');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (50, 'dongtai_common', '0008_alter_iastprojectmetadata_project', '2025-11-25 11:35:46.611092');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (51, 'dongtai_common', '0009_auto_20230808_1456', '2025-11-25 11:35:46.759753');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (52, 'dongtai_common', '0010_auto_20230809_1838', '2025-11-25 11:35:46.864283');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (53, 'dongtai_common', '0011_auto_20230814_1537', '2025-11-25 11:35:47.093682');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (54, 'dongtai_common', '0012_session', '2025-11-25 11:35:47.152030');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (55, 'dongtai_common', '0013_auto_20230822_1202', '2025-11-25 11:35:47.288318');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (56, 'dongtai_common', '0014_auto_20230828_1132', '2025-11-25 11:35:47.451921');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (57, 'dongtai_common', '0015_vul_status', '2025-11-25 11:35:47.514239');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (58, 'dongtai_common', '0016_auto_20230829_1145', '2025-11-25 11:35:49.103249');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (59, 'dongtai_common', '0017_alter_vulmethodpool_pool_sign', '2025-11-25 11:35:49.138886');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (60, 'dongtai_common', '0018_auto_20230830_1105', '2025-11-25 11:35:49.177490');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (61, 'dongtai_common', '0019_assetv2global_iast_asset__is_focu_31e975_idx', '2025-11-25 11:35:49.192864');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (62, 'dongtai_common', '0020_iastagentrequestchainstopograph_iastagentrequestchainstopographvec_iastagentrequestchainstotalprojec', '2025-11-25 11:35:49.631609');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (63, 'dongtai_common', '0021_iastwebhooklog', '2025-11-25 11:35:49.643864');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (64, 'dongtai_common', '0022_iastproject_token', '2025-11-25 11:35:49.750958');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (65, 'dongtai_common', '0023_auto_20230912_1211', '2025-11-25 11:35:49.788047');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (66, 'dongtai_common', '0024_iastsensitiveinforule_system_type', '2025-11-25 11:35:49.849000');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (67, 'dongtai_common', '0025_alter_iastagentrequestchainstopographvec_unique_together', '2025-11-25 11:35:49.879600');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (68, 'dongtai_common', '0026_auto_20230918_1413', '2025-11-25 11:35:50.030320');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (69, 'dongtai_common', '0027_auto_20230919_1233', '2025-11-25 11:35:50.034750');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (70, 'dongtai_common', '0028_hookstrategy_modified', '2025-11-25 11:35:50.092811');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (71, 'dongtai_common', '0029_user_totp_secret', '2025-11-25 11:35:50.151287');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (72, 'dongtai_common', '0030_iastagentblackrule_iastagentblackruledetail_iastagentrequestchainstopototalprojectversiongraph_iasta', '2025-11-25 11:35:50.462349');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (73, 'dongtai_common', '0031_auto_20230926_1510', '2025-11-25 11:35:50.518785');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (74, 'dongtai_common', '0032_update_vul_index_task', '2025-11-25 11:35:50.591012');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (75, 'dongtai_common', '0033_auto_20231007_1152', '2025-11-25 11:35:50.704490');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (76, 'dongtai_common', '0034_auto_20231007_1200', '2025-11-25 11:35:50.780599');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (77, 'dongtai_common', '0035_alter_user_phone', '2025-11-25 11:35:50.836710');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (78, 'dongtai_common', '0036_auto_20230919_1233', '2025-11-25 11:35:50.904670');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (79, 'dongtai_common', '0037_new_permission', '2025-11-25 11:35:51.152717');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (80, 'dongtai_common', '0038_agent_cleanup', '2025-11-25 11:35:51.221386');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (81, 'dongtai_common', '0039_iasthealthcheck', '2025-11-25 11:35:51.237363');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (82, 'dongtai_common', '0040_new_permission', '2025-11-25 11:35:51.307138');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (83, 'dongtai_common', '0041_iastworkerstatus', '2025-11-25 11:35:51.319970');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (84, 'dongtai_common', '0042_update_periodic_task', '2025-11-25 11:35:51.389906');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (85, 'dongtai_common', '0043_auto_20240221_1005', '2025-11-25 11:35:51.451174');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (86, 'dongtai_common', '0044_auto_20240304_1008', '2025-11-25 11:35:51.625081');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (87, 'dongtai_common', '0045_auto_20240411_1754', '2025-11-25 11:35:51.734825');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (88, 'dongtai_common', '0046_auto_20240419_1630', '2025-11-25 11:35:52.108176');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (89, 'dongtai_common', '0047_auto_20250305_1517', '2025-11-25 11:35:52.154599');
-INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (90, 'dongtai_common', '0048_auto_20250818_1533', '2025-11-25 11:35:52.391519');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (91, 'contenttypes', '0001_initial', '2025-12-03 10:52:43.598063');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (92, 'contenttypes', '0002_remove_content_type_name', '2025-12-03 10:58:25.158394');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (93, 'auth', '0001_initial', '2025-12-03 10:58:25.255839');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (94, 'auth', '0002_alter_permission_name_max_length', '2025-12-03 10:58:25.352164');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (95, 'auth', '0003_alter_user_email_max_length', '2025-12-03 10:58:25.451236');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (96, 'auth', '0004_alter_user_username_opts', '2025-12-03 10:58:25.545870');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (97, 'auth', '0005_alter_user_last_login_null', '2025-12-03 10:58:25.645224');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (98, 'auth', '0006_require_contenttypes_0002', '2025-12-03 10:58:25.741711');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (99, 'auth', '0007_alter_validators_add_error_messages', '2025-12-03 10:58:25.836890');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (100, 'auth', '0008_alter_user_username_max_length', '2025-12-03 10:58:25.932185');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (101, 'auth', '0009_alter_user_last_name_max_length', '2025-12-03 10:58:26.028650');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (102, 'auth', '0010_alter_group_name_max_length', '2025-12-03 10:58:26.124549');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (103, 'auth', '0011_update_proxy_permissions', '2025-12-03 10:58:26.220728');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (104, 'auth', '0012_alter_user_first_name_max_length', '2025-12-03 10:58:26.316343');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (105, 'dongtai_common', '0001_initial', '2025-12-03 10:58:26.415699');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (106, 'admin', '0001_initial', '2025-12-03 10:58:26.514088');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (107, 'admin', '0002_logentry_remove_auto_add', '2025-12-03 10:58:26.608675');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (108, 'admin', '0003_logentry_add_action_flag_choices', '2025-12-03 10:58:26.719272');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (109, 'authtoken', '0001_initial', '2025-12-03 10:58:26.817727');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (110, 'authtoken', '0002_auto_20160226_1747', '2025-12-03 10:58:26.914785');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (111, 'authtoken', '0003_tokenproxy', '2025-12-03 10:58:27.017259');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (112, 'captcha', '0001_initial', '2025-12-03 10:58:27.117686');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (113, 'captcha', '0002_alter_captchastore_id', '2025-12-03 10:58:27.218257');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (114, 'health_check_db', '0001_initial', '2025-12-03 10:58:27.314005');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (115, 'django_celery_beat', '0001_initial', '2025-12-03 10:58:27.417255');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (116, 'django_celery_beat', '0002_auto_20161118_0346', '2025-12-03 10:58:27.518434');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (117, 'django_celery_beat', '0003_auto_20161209_0049', '2025-12-03 10:58:27.613860');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (118, 'django_celery_beat', '0004_auto_20170221_0000', '2025-12-03 10:58:27.715802');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (119, 'django_celery_beat', '0005_add_solarschedule_events_choices', '2025-12-03 10:58:27.813522');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (120, 'django_celery_beat', '0006_auto_20180322_0932', '2025-12-03 10:58:27.910540');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (121, 'django_celery_beat', '0007_auto_20180521_0826', '2025-12-03 10:58:28.017185');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (122, 'django_celery_beat', '0008_auto_20180914_1922', '2025-12-03 10:58:28.114431');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (123, 'django_celery_beat', '0006_auto_20180210_1226', '2025-12-03 10:58:28.428638');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (124, 'django_celery_beat', '0006_periodictask_priority', '2025-12-03 10:58:28.526439');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (125, 'django_celery_beat', '0009_periodictask_headers', '2025-12-03 10:58:28.625631');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (126, 'django_celery_beat', '0010_auto_20190429_0326', '2025-12-03 10:58:28.722151');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (127, 'django_celery_beat', '0011_auto_20190508_0153', '2025-12-03 10:58:28.815986');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (128, 'django_celery_beat', '0012_periodictask_expire_seconds', '2025-12-03 10:58:28.916255');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (129, 'django_celery_beat', '0013_auto_20200609_0727', '2025-12-03 10:58:29.014141');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (130, 'django_celery_beat', '0014_remove_clockedschedule_enabled', '2025-12-03 10:58:29.112527');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (131, 'django_celery_beat', '0015_edit_solarschedule_events_choices', '2025-12-03 10:58:29.213298');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (132, 'sessions', '0001_initial', '2025-12-03 10:58:29.310401');
+INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES (133, 'db', '0001_initial', '2025-12-03 10:58:29.508656');
 COMMIT;
 
 -- ----------------------------
@@ -12930,8 +12883,5 @@ INSERT INTO `webapi_api_site` (`id`, `path`, `method`, `name`) VALUES (3, 'api/v
 INSERT INTO `webapi_api_site` (`id`, `path`, `method`, `name`) VALUES (4, 'api/v1/profile/batch/modified', 'POST', '配置修改');
 INSERT INTO `webapi_api_site` (`id`, `path`, `method`, `name`) VALUES (5, 'api/v1/license/current_concurrency', 'GET', '当前并发');
 COMMIT;
-
-alter table iast_api_route_v2
-    add is_new int default 0 not null comment 'API route change status: 0-Existing, 1-New, 2-Deleted';
 
 SET FOREIGN_KEY_CHECKS = 1;
