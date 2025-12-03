@@ -133,7 +133,7 @@ jobs:
           #platforms: linux/amd64,linux/arm64
           tags: |
             dongtai/dongtai-mysql:${{ steps.release.outputs.version }}
-            #  dongtai/dongtai-mysql:latest
+            dongtai/dongtai-mysql:latest
 
       - name: Install Mysql 8.0
         working-directory: ./mysql
