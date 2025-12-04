@@ -47,7 +47,7 @@ jobs:
           context: ./logstash
           file: ./logstash/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64   #,linux/arm64
           tags: |
             dongtai/dongtai-logstash:${{ steps.release.outputs.version }}
             dongtai/dongtai-logstash:latest
@@ -57,7 +57,7 @@ jobs:
           context: ./logrotate
           file: ./logrotate/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64   #,linux/arm64
           tags: |
             dongtai/dongtai-logrotate:${{ steps.release.outputs.version }}
             dongtai/dongtai-logrotate:latest
