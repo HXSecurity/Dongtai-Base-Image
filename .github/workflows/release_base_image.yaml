@@ -78,8 +78,8 @@ jobs:
 
   dongtai-mysql:
     name: dongtai-mysql
-    # needs:
-    #  - Release-DongTai-Infra-Service
+    needs:
+      - Release-DongTai-Infra-Service
     runs-on: ubuntu-latest
 #    services:
 #      dongtai-mysql:
@@ -111,11 +111,11 @@ jobs:
           username: ${{ secrets.ALIYUN_DOCKERHUB_USER }}
           password: ${{ secrets.ALIYUN_DOCKERHUB_PASSWORD }}
 
-#      - id: release
-#        run: |
-#          TAG_NAME=${{ github.event.release.tag_name }}
-#          ID=`echo ${TAG_NAME##v}`
-#          echo "::set-output name=version::$ID"
+      - id: release
+        run: |
+          TAG_NAME=${{ github.event.release.tag_name }}
+          ID=`echo ${TAG_NAME##v}`
+          echo "version=$ID" >> $GITHUB_OUTPUT
 #      - name: Build Mysql only schema to local
 #        working-directory: ./mysql
 #        run: |
